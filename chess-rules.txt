@@ -8,15 +8,15 @@ PAWN POSITIONS
 
 PAWN MOVES
 	f = forward, b = backward, r = right, l = left, d = diagonal, a = any, g = ( 2( f || b ) + 1( l || r ) || ( 2( l || r ) + 1( f || b ) ) )
-	
+
 	SOLDIER: 1f, 2f on first move, 1df on capturing
 	ROOK: f, b, r, l
 	BISHOP: d
 	KNIGHT: g
 	QUEEN: a
 	KING: 1a
-	
-	No pawn can move past a captured pawn
+
+	No pawn_ can move past a captured pawn_
 
 EN PASSANT
 	Soldier can capture other soldier if:
@@ -34,18 +34,18 @@ SOLDIER PROMOTION
 	Soldiers advancing 6f reaching either row 1 || 8 can be promoted to queen, knight, bishop, or rook
 
 CHECK
-	King could be captured in the following move if the checking pawn is not captured, blocked or the king moved
+	King could be captured in the following move if the checking pawn_ is not captured, blocked or the king moved
 
 CHECKMATE
-	The king is in check and there isn't any valid following move to break it 
+	The king is in check and there isn't any valid following move to break it
 
 DEAD POSITION
 	No valid sequence of moves can win the game for any player
-	Common cases:	
+	Common cases:
 		1. King against king
 		2. King against king and bishop
 		3. King against king and knight
-		4. King and bishop against king and bishop, with both bishops on squares of the same color 
+		4. King and bishop against king and bishop, with both bishops on Squares of the same color
 		5. Any of the above with extra pawns in the checkboard if they can't be moved legally
 
 DRAW

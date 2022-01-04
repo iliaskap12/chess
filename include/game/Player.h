@@ -3,16 +3,16 @@
 #define PLAYER_H
 
 #include <string>
-#include "Side.h"
+#include "PawnColor.h"
 
 class Player {
 private:
   std::string name;
-  Side side;
+  PawnColor side;
 
 public:
-  Player(std::string name, Side side);
-  [[nodiscard]] const Side &getSide() const;
+  Player(std::string name, PawnColor side);
+  [[nodiscard]] const PawnColor &getSide() const;
 };
 
 #endif // PLAYER_H

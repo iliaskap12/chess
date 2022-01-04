@@ -52,7 +52,7 @@
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="ucP7xTiUGV1ml" isQuery="false" isLeaf="false" isRoot="false" isAbstract="true" name="move" isOverride="true"/>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="u6sCnnHFyL8Mc" isQuery="false" isLeaf="false" isRoot="false" isAbstract="false" name="capture" isOverride="false">
          <UML:BehavioralFeature.parameter>
-          <UML:Parameter value="" visibility="private" isSpecification="false" xmi.id="uQCsjjHwwzvTn" type="uXYzYi4uPFbGp" name="pawn"/>
+          <UML:Parameter value="" visibility="private" isSpecification="false" xmi.id="uQCsjjHwwzvTn" type="uXYzYi4uPFbGp" name="pawn_"/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="udXvleSU6HEbo" isQuery="false" isLeaf="false" isRoot="false" isAbstract="false" name="registerSounds" isOverride="false"/>
@@ -121,7 +121,7 @@
       <UML:Generalization discriminator="" child="uJMVexcs6qkzs" namespace="Logical_View" parent="uG1L8AVapCvst" visibility="public" isSpecification="false" xmi.id="uXZuyzfFmETLX" name=""/>
       <UML:Class namespace="Logical_View" visibility="public" isSpecification="false" xmi.id="ui03Dzr23bVIE" isLeaf="false" isRoot="false" isAbstract="false" name="Checkboard">
        <UML:Classifier.feature>
-        <UML:Attribute visibility="private" isSpecification="false" xmi.id="uNLdPq7e4xvrE" type="u1jfz6EO2q87s" name="squares"/>
+        <UML:Attribute visibility="private" isSpecification="false" xmi.id="uNLdPq7e4xvrE" type="u1jfz6EO2q87s" name="Squares"/>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="u7of1uMcjPDjW" isQuery="false" isLeaf="false" isRoot="false" isAbstract="false" name="Checkboard" isOverride="false"/>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="uUzdzlYdqaGZJ" isQuery="true" isLeaf="false" isRoot="false" isAbstract="false" name="getSquares" isOverride="false">
          <UML:BehavioralFeature.parameter>
@@ -138,7 +138,7 @@
       </UML:Interface>
       <UML:Class namespace="Logical_View" visibility="public" isSpecification="false" xmi.id="ugc5JlideaJpO" isLeaf="false" isRoot="false" isAbstract="false" name="Square">
        <UML:Classifier.feature>
-        <UML:Attribute visibility="private" isSpecification="false" xmi.id="u0ldLRADiRyQ6" type="uXYzYi4uPFbGp" name="pawn"/>
+        <UML:Attribute visibility="private" isSpecification="false" xmi.id="u0ldLRADiRyQ6" type="uXYzYi4uPFbGp" name="pawn_"/>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="ufnBkHwxY99Hh" isQuery="true" isLeaf="false" isRoot="false" isAbstract="false" name="hasPawn" isOverride="false">
          <UML:BehavioralFeature.parameter>
           <UML:Parameter xmi.id="uvDXhqmfcNk6H" kind="return" type="usNxI8QAt3ajR"/>
@@ -151,7 +151,7 @@
         </UML:Operation>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="uAHnRIeNLfF9E" isQuery="false" isLeaf="false" isRoot="false" isAbstract="false" name="registerPawn" isOverride="false">
          <UML:BehavioralFeature.parameter>
-          <UML:Parameter value="" visibility="private" isSpecification="false" xmi.id="uALyHRki7QGyp" type="uXYzYi4uPFbGp" name="pawn"/>
+          <UML:Parameter value="" visibility="private" isSpecification="false" xmi.id="uALyHRki7QGyp" type="uXYzYi4uPFbGp" name="pawn_"/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="uCpfL1G9xpEo2" isQuery="false" isLeaf="false" isRoot="false" isAbstract="false" name="unregisterPawn" isOverride="false"/>
@@ -163,7 +163,7 @@
         <UML:Operation isInline="false" visibility="public" isSpecification="false" isVirtual="false" xmi.id="ujWhNWjn2f9Sa" isQuery="false" isLeaf="false" isRoot="false" isAbstract="true" name="promote" isOverride="false">
          <UML:BehavioralFeature.parameter>
           <UML:Parameter xmi.id="ukXLU9Ps3jk2u" kind="return" type="uG1L8AVapCvst"/>
-          <UML:Parameter value="" visibility="private" isSpecification="false" xmi.id="ud4TicmVB5gh5" type="uG1L8AVapCvst" name="pawn"/>
+          <UML:Parameter value="" visibility="private" isSpecification="false" xmi.id="ud4TicmVB5gh5" type="uG1L8AVapCvst" name="pawn_"/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
        </UML:Classifier.feature>
@@ -876,7 +876,7 @@
            <startpoint startx="-2388.07" starty="-4701.83"/>
            <endpoint endx="-2388.07" endy="-4761.35"/>
           </linepath>
-          <floatingtext usesdiagramfillcolor="1" role="710" isinstance="0" localid="upAyhBfmKTIf4" text="pawn" linecolor="#ff0000" fillcolor="none" posttext="" y="-4779.29" font="Ubuntu,11,-1,5,50,0,0,0,0,0" x="-2440.8" usefillcolor="1" autoresize="1" textcolor="none" xmi.id="u7Fi2NOfcSFF6" usesdiagramusefillcolor="1" linewidth="0" showstereotype="1" pretext="-" height="21" width="49"/>
+          <floatingtext usesdiagramfillcolor="1" role="710" isinstance="0" localid="upAyhBfmKTIf4" text="pawn_" linecolor="#ff0000" fillcolor="none" posttext="" y="-4779.29" font="Ubuntu,11,-1,5,50,0,0,0,0,0" x="-2440.8" usefillcolor="1" autoresize="1" textcolor="none" xmi.id="u7Fi2NOfcSFF6" usesdiagramusefillcolor="1" linewidth="0" showstereotype="1" pretext="-" height="21" width="49"/>
          </assocwidget>
          <assocwidget usesdiagramfillcolor="1" indexb="1" widgetbid="u1LSYH4IvRGcH" widgetaid="u9RtnYrEEXAIL" localid="uWSTwUHIRR4fQ" seqnum="" indexa="1" totalcounta="2" linecolor="#ff0000" fillcolor="none" font="Ubuntu,11,-1,5,50,0,0,0,0,0" usefillcolor="1" autoresize="1" textcolor="none" xmi.id="uFzXWfhJue1Je" usesdiagramusefillcolor="1" totalcountb="2" linewidth="0" type="500">
           <linepath layout="Direct">
@@ -889,7 +889,7 @@
            <startpoint startx="-2847.8" starty="-4676.96"/>
            <endpoint endx="-2461.31" endy="-4676.96"/>
           </linepath>
-          <floatingtext usesdiagramfillcolor="1" role="710" isinstance="0" localid="ur74DxdWv8b5w" text="squares" linecolor="#ff0000" fillcolor="none" posttext="" y="-4694.13" font="Ubuntu,11,-1,5,50,0,0,0,0,0" x="-2506.8" usefillcolor="1" autoresize="1" textcolor="none" xmi.id="ugzwYfVYucSje" usesdiagramusefillcolor="1" linewidth="0" showstereotype="1" pretext="-" height="21" width="65"/>
+          <floatingtext usesdiagramfillcolor="1" role="710" isinstance="0" localid="ur74DxdWv8b5w" text="Squares" linecolor="#ff0000" fillcolor="none" posttext="" y="-4694.13" font="Ubuntu,11,-1,5,50,0,0,0,0,0" x="-2506.8" usefillcolor="1" autoresize="1" textcolor="none" xmi.id="ugzwYfVYucSje" usesdiagramusefillcolor="1" linewidth="0" showstereotype="1" pretext="-" height="21" width="65"/>
          </assocwidget>
          <assocwidget usesdiagramfillcolor="1" indexb="1" widgetbid="ui03Dzr23bVIE" widgetaid="uQ3UsGa3W4QIQ" localid="us5TAJSoechPJ" visibilityB="1" seqnum="" indexa="1" linecolor="#ff0000" totalcounta="2" visibilityA="1" fillcolor="none" font="Ubuntu,11,-1,5,50,0,0,0,0,0" changeabilityB="900" usefillcolor="1" autoresize="1" textcolor="none" xmi.id="uqHaUy7Z55xDL" changeabilityA="900" usesdiagramusefillcolor="1" totalcountb="2" linewidth="0" type="510">
           <linepath layout="Direct">
@@ -1146,11 +1146,11 @@
   </listview>
   <codegeneration>
    <codegenerator language="C++">
-    <sourcecode value="return this->squares;" id="uUzdzlYdqaGZJ"/>
-    <sourcecode value="return this->pawn != nullptr;" id="ufnBkHwxY99Hh"/>
-    <sourcecode value="return this->pawn;" id="uaQ5kC0pc9JSk"/>
-    <sourcecode value="if (this->pawn != nullptr) {&#xa;    this->pawn = pawn;&#xa;} else {&#xa;    pawn.capture(this->pawn);&#xa;    this->pawn = pawn;&#xa;}&#xa;&#xa;" id="uAHnRIeNLfF9E"/>
-    <sourcecode value="this->pawn = nullptr;" id="uCpfL1G9xpEo2"/>
+    <sourcecode value="return this->Squares;" id="uUzdzlYdqaGZJ"/>
+    <sourcecode value="return this->pawn_ != nullptr;" id="ufnBkHwxY99Hh"/>
+    <sourcecode value="return this->pawn_;" id="uaQ5kC0pc9JSk"/>
+    <sourcecode value="if (this->pawn_ != nullptr) {&#xa;    this->pawn_ = pawn_;&#xa;} else {&#xa;    pawn_.capture(this->pawn_);&#xa;    this->pawn_ = pawn_;&#xa;}&#xa;&#xa;" id="uAHnRIeNLfF9E"/>
+    <sourcecode value="this->pawn_ = nullptr;" id="uCpfL1G9xpEo2"/>
     <sourcecode value="this->sound = soundFile;" id="u9yJ0EjPeXgYF"/>
    </codegenerator>
   </codegeneration>

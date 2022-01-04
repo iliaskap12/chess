@@ -16,11 +16,15 @@ SCENARIO ( "Pressing play" ) {
       app.createNewGame();
       auto game = app.getGame();
       THEN ( "I pick a name and a side" ) {
-        auto player1 = Player("player1", Side::WHITE);
-        auto player2 = Player("player2", Side::BLACK);
+        auto player1 = Player("player1", PawnColor::WHITE);
+        auto player2 = Player("player2", PawnColor::BLACK);
         game->registerPlayers(std::make_pair(player1, player2));
         AND_THEN ( "the game starts" ) {
           REQUIRE ( game->start() );
+          AND_THEN ( "a chessboard appears filled with pawns" ) {
+            auto checkboard = game->getCheckboard();
+            auto squares = checkboard.getSquares();
+          }
         }
       }
     }

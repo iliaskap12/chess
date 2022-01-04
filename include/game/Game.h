@@ -6,17 +6,21 @@
 #include "Player.h"
 #include "graphics/Drawable.h"
 #include "graphics/Updateable.h"
+#include "Checkboard.h"
 
 class Game : public Drawable, public Updateable{
 private:
   std::optional<std::pair<Player, Player>> players;
+  Checkboard checkboard { Checkboard() };
 
 public:
   Game();
   bool start();
   void registerPlayers(const std::pair<Player, Player> &pair);
-  const Player &getPlayer(Side side);
-  
+  const Player &getPlayer(PawnColor side);
+  [[nodiscard]] const Checkboard &getCheckboard() const;
+  void draw() override;
+  void update(float ms) override;
 };
 
 #endif // GAME_H
