@@ -3,8 +3,12 @@
 #define OPENINGSCREEN_H
 
 #include "Screen.h"
+#include "MainMenu.h"
+#include <memory>
 
 class OpeningScreen : public Screen {
+  std::unique_ptr<Menu> mainMenu = std::make_unique<MainMenu>();
+  std::optional<HUD> welcomeMessage;
 
 public:
   OpeningScreen();

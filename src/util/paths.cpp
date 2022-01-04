@@ -13,3 +13,8 @@ std::string getSoundsPath() {
   std::string root = getProjectRootPath();
   return std::filesystem::path(root + "/assets/sounds/", std::filesystem::path::native_format);
 }
+
+std::string getFontsPath() {
+  std::string root = getProjectRootPath();
+  return std::filesystem::path(root + "/assets/fonts/", std::filesystem::path::native_format);
+}

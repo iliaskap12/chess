@@ -7,11 +7,10 @@
 #include "PawnColor.h"
 
 class Pawn : public Drawable, public Updateable {
-protected:
   PawnColor color;
 
 public:
-  Pawn();
+  explicit Pawn(PawnColor color);
   void draw() override = 0;
   void update(float ms) override = 0;
 };

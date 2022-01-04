@@ -25,9 +25,11 @@ bool Game::start() {
 }
 
 void Game::draw() {
+  this->checkboard.draw();
 }
 
 void Game::update(float ms) {
+  this->checkboard.update(ms);
 }
 
 const Checkboard &Game::getCheckboard() const {

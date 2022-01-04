@@ -1,3 +1,3 @@
 #include <game/Pawn.h>
 
-Pawn::Pawn() = default;
+Pawn::Pawn(PawnColor color) : color(color) {}

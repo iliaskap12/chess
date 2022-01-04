@@ -1,8 +1,5 @@
-//
-// Created by ilias on 2/1/22.
-//
-
 #include <App.h>
+#include <util/paths.h>
 
 App::App() = default;
 
@@ -23,23 +20,31 @@ void App::createNewGame() {
 
 void App::run() {
   graphics::createWindow(1024, 768, "Chess");
+//  graphics::setFullScreen(true);
+  graphics::preloadBitmaps(getImagesPath());
+
   graphics::setUserData(this);
   graphics::setDrawFunction(std::bind_front(&App::draw, this));
   graphics::setUpdateFunction(std::bind_front(&App::update, this));
-  graphics::setCanvasSize(100.0f, 100.0f);
+  graphics::setCanvasSize(1024, 768);
   graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
+  graphics::setFont(getFontsPath() + "typography-times.ttf");
 
   graphics::startMessageLoop();
   graphics::destroyWindow();
 }
 
 void App::draw() {
+  this->activeScreen->draw();
   if (this->game) {
-    this->game.draw();
+    (*this->game).draw();
   }
 }
 
 void App::update(float ms) {
-
+  this->activeScreen->update(ms);
+  if (this->game) {
+    (*this->game).update(ms);
+  }
 }
 

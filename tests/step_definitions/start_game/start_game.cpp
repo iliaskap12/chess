@@ -23,6 +23,7 @@ SCENARIO ( "Pressing play" ) {
           REQUIRE ( game->start() );
           AND_THEN ( "a chessboard appears filled with pawns" ) {
             auto checkboard = game->getCheckboard();
+            checkboard.draw();
             auto squares = checkboard.getSquares();
           }
         }

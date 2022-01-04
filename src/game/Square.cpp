@@ -1,7 +1,8 @@
 #include <game/Square.h>
-#include <utility>
 
-Square::Square(unsigned int row, unsigned int column) : row(row), column(column) {}
+Square::Square() = default;
+
+Square::Square(unsigned short int row, unsigned short int column) : row(row), column(column) {}
 
 void Square::draw() {
 }
@@ -9,8 +10,8 @@ void Square::draw() {
 void Square::update(float ms) {
 }
 
-unsigned int Square::getRow() const { return this->row; }
-unsigned int Square::getColumn() const { return this->column; }
+unsigned short int Square::getRow() const { return this->row; }
+unsigned short int Square::getColumn() const { return this->column; }
 char Square::getColumnAsChar() const {
   const char A = 'A';
   return static_cast<char>(A + static_cast<char>(this->column));
