@@ -1,0 +1,1 @@
+#include <game/Bishop.h>

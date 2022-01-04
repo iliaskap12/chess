@@ -1,0 +1,6 @@
+
+#ifndef CHECKINDICATOR_H
+#define CHECKINDICATOR_H
+
+
+#endif // CHECKINDICATOR_H

@@ -1,0 +1,5 @@
+
+#ifndef ENDGAMESOUND_H
+#define ENDGAMESOUND_H
+
+#endif // ENDGAMESOUND_H

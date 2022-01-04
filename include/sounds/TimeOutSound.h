@@ -1,0 +1,7 @@
+
+#ifndef TIMEOUTSOUND_H
+#define TIMEOUTSOUND_H
+
+
+
+#endif // TIMEOUTSOUND_H

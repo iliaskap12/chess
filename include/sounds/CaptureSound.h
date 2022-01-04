@@ -1,0 +1,5 @@
+
+#ifndef CAPTURESOUND_H
+#define CAPTURESOUND_H
+
+#endif // CAPTURESOUND_H

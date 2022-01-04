@@ -1,0 +1,6 @@
+
+#ifndef RESIGNSOUND_H
+#define RESIGNSOUND_H
+
+
+#endif // RESIGNSOUND_H
