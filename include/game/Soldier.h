@@ -9,7 +9,6 @@ class Soldier : public Pawn {
 
 public:
   explicit Soldier(PawnColor color);
-  void draw() override;
   void update(float ms) override;
 };
 

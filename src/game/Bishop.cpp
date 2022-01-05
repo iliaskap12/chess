@@ -1,9 +1,7 @@
 #include <game/Bishop.h>
 
-Bishop::Bishop(PawnColor color) : Pawn(color) {}
-
-void Bishop::draw() {
-//  Pawn::draw();
+Bishop::Bishop(PawnColor color) : Pawn(color) {
+  Pawn::setTexture("bishop");
 }
 
 void Bishop::update(float ms) {

@@ -5,12 +5,16 @@
 #include <memory>
 #include "graphics/Drawable.h"
 #include "graphics/Updateable.h"
+#include "graphics/Rectangle.h"
 #include "Pawn.h"
+
+class Pawn; // break cyclic dependency
 
 class Square : public Drawable, public Updateable {
   unsigned short int row {};
   unsigned short int column {};
   std::shared_ptr<Pawn> pawn_{ nullptr };
+  Rectangle drawingArea { Rectangle() };
 
 public:
   Square();
@@ -23,6 +27,7 @@ public:
   void unregisterPawn();
   [[nodiscard]] std::shared_ptr<Pawn> getPawn() const;
   [[nodiscard]] bool hasPawn() const;
+  Rectangle getDrawingArea() const;
 
   void draw() override;
   void update(float ms) override;

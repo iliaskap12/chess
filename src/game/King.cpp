@@ -1,9 +1,7 @@
 #include <game/King.h>
 
-King::King(PawnColor color) : Pawn(color) {}
-
-void King::draw() {
-//  Pawn::draw();
+King::King(PawnColor color) : Pawn(color) {
+  Pawn::setTexture("king");
 }
 
 void King::update(float ms) {

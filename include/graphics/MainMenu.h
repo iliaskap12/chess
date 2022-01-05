@@ -11,6 +11,7 @@ public:
   void draw() override;
   void update(float ms) override;
   static MenuOption createMenuOption(std::string message, float verticalPoint);
+  void pressButton(const ButtonType &type) const override;
 };
 
 #endif // MAINMENU_H

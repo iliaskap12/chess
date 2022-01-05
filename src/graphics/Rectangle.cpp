@@ -9,18 +9,18 @@ Rectangle::Rectangle(Point leftBottom, float height, float width) : leftBottom(l
   this->rightBottom = { Point(this->leftBottom.getX() + width, this->leftBottom.getY()) };
   this->rightTop = { Point(this->rightBottom.getX(), this->leftTop.getY()) };
   this->center = { Point((this->leftTop.getX() + this->rightTop.getX()) / 2, (this->leftBottom.getY() + this->leftTop.getY()) / 2) };
-  this->backgroundColor.fill_color[0] = { 0.4588f };
-  this->backgroundColor.fill_color[1] = { 0.2901f };
-  this->backgroundColor.fill_color[2] = { 0.0f };
-  this->backgroundColor.outline_opacity = { 0.0f };
+  this->brush_.fill_color[0] = { 0.4588f };
+  this->brush_.fill_color[1] = { 0.2901f };
+  this->brush_.fill_color[2] = { 0.0f };
+  this->brush_.outline_opacity = { 0.0f };
 }
 
-const graphics::Brush &Rectangle::getBackgroundColor() const {
-  return this->backgroundColor;
+const graphics::Brush &Rectangle::getBrush() const {
+  return this->brush_;
 }
 
-void Rectangle::setBackgroundColor(const graphics::Brush &background_color) {
-  this->backgroundColor = background_color;
+void Rectangle::setBrush(graphics::Brush brush) {
+  this->brush_ = { std::move(brush) };
 }
 
 const Point &Rectangle::getLeftTop() const {
@@ -56,6 +56,5 @@ void Rectangle::draw() {
       this->center.getY(),
       this->width,
       this->height,
-      this->backgroundColor
-      );
+      this->brush_);
 }

@@ -7,7 +7,6 @@
 class Knight : public Pawn {
 public:
   explicit Knight(PawnColor color);
-  void draw() override;
   void update(float ms) override;
 };
 

@@ -3,6 +3,7 @@
 
 #include "Point.h"
 #include "Drawable.h"
+#include <sgg/graphics.h>
 
 class Rectangle : public Drawable {
   Point leftTop;
@@ -12,13 +13,13 @@ class Rectangle : public Drawable {
   Point center;
   float height {};
   float width {};
-  graphics::Brush backgroundColor { graphics::Brush() };
+  graphics::Brush brush_ { graphics::Brush() };
 
 public:
   Rectangle();
   explicit Rectangle(Point leftBottom, float height, float width);
-  [[nodiscard]] const graphics::Brush &getBackgroundColor() const;
-  void setBackgroundColor(const graphics::Brush &background_color);
+  [[nodiscard]] const graphics::Brush &getBrush() const;
+  void setBrush(graphics::Brush brush);
   [[nodiscard]] const Point &getLeftTop() const;
   [[nodiscard]] const Point &getRightTop() const;
   [[nodiscard]] const Point &getLeftBottom() const;

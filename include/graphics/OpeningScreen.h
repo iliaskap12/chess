@@ -14,7 +14,6 @@ public:
   OpeningScreen();
   void draw() override;
   void update(float ms) override;
-  void pressButton(ButtonType type) override;
 };
 
 #endif // OPENINGSCREEN_H

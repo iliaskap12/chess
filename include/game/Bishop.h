@@ -8,7 +8,6 @@ class Bishop : public Pawn {
 
 public:
   explicit Bishop(PawnColor color);
-  void draw() override;
   void update(float ms) override;
 };
 

@@ -1,9 +1,7 @@
 #include <game/Rook.h>
 
-Rook::Rook(PawnColor color) : Pawn(color) {}
-
-void Rook::draw() {
-//  Pawn::draw();
+Rook::Rook(PawnColor color) : Pawn(color) {
+  Pawn::setTexture("rook");
 }
 
 void Rook::update(float ms) {

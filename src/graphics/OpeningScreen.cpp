@@ -21,10 +21,6 @@ void OpeningScreen::draw() {
   (*this->welcomeMessage).draw();
 }
 
-void OpeningScreen::pressButton(ButtonType type) {
-  // press button
-}
-
 void OpeningScreen::update(float ms) {
   this->mainMenu->update(ms);
 }

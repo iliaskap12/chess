@@ -1,5 +1,4 @@
 #include <game/Game.h>
-#include <stdexcept>
 
 Game::Game() = default;
 
@@ -12,11 +11,7 @@ const Player &Game::getPlayer(PawnColor side) {
     return this->players->first;
   }
 
-  if (this->players->second.getSide() == side) {
-    return this->players->second;
-  }
-
-  throw std::runtime_error("PawnColor not found.");
+  return this->players->second;
 }
 
 bool Game::start() {

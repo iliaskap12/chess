@@ -12,6 +12,7 @@ set(
         Rook.cpp
         Soldier.cpp
         Square.cpp
+        PawnColor.cpp
 )
 
 add_library(GAME ${GAME_SRC})

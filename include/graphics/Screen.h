@@ -12,7 +12,6 @@ public:
   Screen();
   void draw() override = 0;
   void update(float ms) override = 0;
-  virtual void pressButton(ButtonType type) = 0;
 };
 
 #endif // SCREEN_H

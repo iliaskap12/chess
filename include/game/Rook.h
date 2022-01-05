@@ -1,4 +1,3 @@
-
 #ifndef ROOK_H
 #define ROOK_H
 
@@ -8,7 +7,6 @@ class Rook : public Pawn {
 
 public:
   explicit Rook(PawnColor color);
-  void draw() override;
   void update(float ms) override;
 };
 

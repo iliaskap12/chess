@@ -8,7 +8,6 @@ class King : public Pawn {
 
 public:
   explicit King(PawnColor color);
-  void draw() override;
   void update(float ms) override;
 };
 

@@ -8,7 +8,6 @@ class Queen : public Pawn {
 
 public:
   explicit Queen(PawnColor color);
-  void draw() override;
   void update(float ms) override;
 };
 

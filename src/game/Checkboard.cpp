@@ -8,43 +8,48 @@
 #include <game/Queen.h>
 #include <game/King.h>
 #include <sgg/graphics.h>
-#include <util/paths.h>
 
-using Squares = std::array<std::array<Square, Checkboard::sideSize>, Checkboard::sideSize>;
+using Squares = std::array<std::array<std::shared_ptr<Square>, Checkboard::sideSize>, Checkboard::sideSize>;
 
 Checkboard::Checkboard() {
   for (unsigned short int i = 0; i < Checkboard::sideSize * Checkboard::sideSize; ++i) {
-    PawnColor color = i / Checkboard::sideSize < 2 ? PawnColor::WHITE : PawnColor::BLACK;
-    (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize] = Square(i / Checkboard::sideSize, i % Checkboard::sideSize);
-    if (i / Checkboard::sideSize == 1 || i / Checkboard::sideSize == 6) {
-      (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize].registerPawn(std::make_shared<Soldier>(color));
+    const std::size_t row { i / Checkboard::sideSize };
+    constexpr unsigned short int firstRow { 0 };
+    const size_t column { row == firstRow ? i : i % Checkboard::sideSize };
+    const PawnColor color { row < 2 ? PawnColor::WHITE : PawnColor::BLACK };
+
+    (*this->squares)[row][column] = { std::make_shared<Square>(row, column) };
+
+    if (row == 1 || row == 6) {
+      (*this->squares)[row][column]->registerPawn(std::make_shared<Soldier>(color));
     }
-    if (i / Checkboard::sideSize == 0 || i / Checkboard::sideSize == 7) {
-      switch (i % Checkboard::sideSize) {
+
+    if (row == 0 || row == 7) {
+      switch (column) {
         case 0:
         case 7:
-          (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize].registerPawn(std::make_shared<Rook>(color));
+          (*this->squares)[row][column]->registerPawn(std::make_shared<Rook>(color));
           break;
         case 1:
         case 6:
-          (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize].registerPawn(std::make_shared<Knight>(color));
+          (*this->squares)[row][column]->registerPawn(std::make_shared<Knight>(color));
           break;
         case 2:
         case 5:
-          (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize].registerPawn(std::make_shared<Bishop>(color));
+          (*this->squares)[row][column]->registerPawn(std::make_shared<Bishop>(color));
           break;
-        case 4:
-          (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize].registerPawn(std::make_shared<Queen>(color));
+        case 3:
+          (*this->squares)[row][column]->registerPawn(std::make_shared<Queen>(color));
           break;
         default:
-          (*this->squares)[i / Checkboard::sideSize][i % Checkboard::sideSize].registerPawn(std::make_shared<King>(color));
+          (*this->squares)[row][column]->registerPawn(std::make_shared<King>(color));
           break;
       }
     }
   }
 }
 
-const Squares *Checkboard::getSquares() const {
+std::shared_ptr<Squares> Checkboard::getSquares() const {
   return this->squares;
 }
 
@@ -54,16 +59,23 @@ void Checkboard::draw() {
   checkboard.fill_color[1] = { 1.0f };
   checkboard.fill_color[2] = { 1.0f };
   checkboard.fill_opacity = { 1.0f };
-  checkboard.outline_width = { 0.0f };
-  checkboard.outline_opacity = { 0.0f };
-  checkboard.texture = getImagesPath() + "chessboard.png";
-  graphics::drawRect(50.0f, 50.0f, 100.0f, 100.0f, checkboard);
+  checkboard.outline_width = { 10 };
+  checkboard.outline_opacity = { 1.0f };
+  checkboard.outline_color[0] = { 0.4588f };
+  checkboard.outline_color[1] = { 0.2901f };
+  checkboard.outline_color[2] = { 0.0f };
+  graphics::drawRect(600, 500, 800, 800, checkboard);
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      square->draw();
+    }
+  }
 }
 
 void Checkboard::update(float ms) {
-//  this->draw();
-}
-
-Checkboard::~Checkboard() {
-  delete this->squares;
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      square->update(ms);
+    }
+  }
 }
