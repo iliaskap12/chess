@@ -3,9 +3,10 @@
 
 OpeningScreen::OpeningScreen() {
   const std::string headline { "Let's play chess!" };
-  const std::size_t size = 60;
-  const auto coordinates { std::make_pair(768 - static_cast<float>(headline.length() * size) / 2, 76.8f) };
-  this->welcomeMessage = HUD(headline, coordinates, size);
+  const std::size_t size{ 90 };
+  const auto coordinates { std::make_pair(975 - static_cast<float>(headline.length() * size) / 2, 160) };
+  this->welcomeMessage = { HUD(headline, coordinates, size) };
+  this->welcomeMessage->setTextBrush(0.4588f, 0.2901f, 0.0f);
 }
 
 void OpeningScreen::draw() {

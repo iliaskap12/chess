@@ -26,7 +26,7 @@ void App::run() {
   graphics::setUserData(this);
   graphics::setDrawFunction(std::bind_front(&App::draw, this));
   graphics::setUpdateFunction(std::bind_front(&App::update, this));
-  graphics::setCanvasSize(1024, 768);
+  graphics::setCanvasSize(1200, 800);
   graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
   graphics::setFont(getFontsPath() + "typography-times.ttf");
 

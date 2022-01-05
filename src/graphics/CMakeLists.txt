@@ -8,6 +8,8 @@ set(
         OpeningScreen.cpp
         PlayingScreen.cpp
         Screen.cpp
+        Point.cpp
+        Rectangle.cpp
 )
 
 add_library(GRAPHICS ${GRAPHICS_SRC})

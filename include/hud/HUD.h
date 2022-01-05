@@ -18,6 +18,7 @@ public:
   [[nodiscard]] const std::pair<float, float> &getCoordinates() const;
   [[nodiscard]] size_t getSize() const;
   [[nodiscard]] float getLength() const;
+  void setTextBrush(float red, float green, float blue);
 };
 
 #endif // HUD_H

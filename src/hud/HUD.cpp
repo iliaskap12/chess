@@ -3,9 +3,9 @@
 
 HUD::HUD(std::string message, std::pair<float, float> coordinates, size_t size)
     : message(std::move(message)), coordinates(std::move(coordinates)), size(size) {
-  this->textBrush.fill_color[0] = { 0.4588f };
-  this->textBrush.fill_color[1] = { 0.2901f };
-  this->textBrush.fill_color[2] = { 0.0f };
+  this->textBrush.fill_color[0] = { 1.0f };
+  this->textBrush.fill_color[1] = { 0.9137f };
+  this->textBrush.fill_color[2] = { 0.7725f };
   this->textBrush.fill_opacity = { 1.0f };
 }
 
@@ -23,4 +23,10 @@ size_t HUD::getSize() const {
 
 float HUD::getLength() const {
   return static_cast<float>(this->message.length());
+}
+
+void HUD::setTextBrush(float red, float green, float blue) {
+  this->textBrush.fill_color[0] = { red };
+  this->textBrush.fill_color[1] = { green };
+  this->textBrush.fill_color[2] = { blue };
 }
