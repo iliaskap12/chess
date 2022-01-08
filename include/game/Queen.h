@@ -8,7 +8,7 @@ class Queen : public Pawn {
 
 public:
   explicit Queen(PawnColor color);
-  void update(float ms) override;
+  std::vector<std::pair<int, int>> getAdvanceableSquares() override;
 };
 
 #endif // QUEEN_H

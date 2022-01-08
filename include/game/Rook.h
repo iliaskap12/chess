@@ -7,7 +7,7 @@ class Rook : public Pawn {
 
 public:
   explicit Rook(PawnColor color);
-  void update(float ms) override;
+  std::vector<std::pair<int, int>> getAdvanceableSquares() override;
 };
 
 #endif // ROOK_H

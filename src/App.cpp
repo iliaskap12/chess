@@ -17,6 +17,7 @@ void App::run() {
   graphics::setCanvasSize(1200, 1020);
   graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
   graphics::setFont(getFontsPath() + "typography-times.ttf");
+  Rectangle::populateBrushes();
 
   graphics::startMessageLoop();
   graphics::destroyWindow();
@@ -32,4 +33,12 @@ void App::update(float ms) {
 
 void App::changeScreen(std::shared_ptr<Screen> screen) {
   this->activeScreen = { std::move(screen) };
+}
+
+void App::registerGame(Game *game) {
+  this->game_ = { game };
+}
+
+Game *App::getGame() const {
+  return this->game_;
 }

@@ -7,7 +7,7 @@
 class Knight : public Pawn {
 public:
   explicit Knight(PawnColor color);
-  void update(float ms) override;
+  std::vector<std::pair<int, int>> getAdvanceableSquares() override;
 };
 
 #endif // KNIGHT_H

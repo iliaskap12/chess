@@ -8,7 +8,7 @@ class Bishop : public Pawn {
 
 public:
   explicit Bishop(PawnColor color);
-  void update(float ms) override;
+  std::vector<std::pair<int, int>> getAdvanceableSquares() override;
 };
 
 

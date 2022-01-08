@@ -1,6 +1,9 @@
 #include <game/Game.h>
+#include <App.h>
 
-Game::Game() = default;
+Game::Game() {
+    this->start();
+}
 
 void Game::registerPlayers(const std::pair<Player, Player> &pair) {
   this->players = pair;
@@ -15,18 +18,19 @@ const Player &Game::getPlayer(PawnColor side) {
 }
 
 bool Game::start() {
-  // Start game code
+  App* app { static_cast<App*>(graphics::getUserData()) };
+  app->registerGame(this);
   return true;
 }
 
 void Game::draw() {
-  this->checkboard.draw();
+  this->checkboard->draw();
 }
 
 void Game::update(float ms) {
-  this->checkboard.update(ms);
+  this->checkboard->update(ms);
 }
 
-const Checkboard &Game::getCheckboard() const {
+std::shared_ptr<Checkboard> Game::getCheckboard() const {
   return this->checkboard;
 }

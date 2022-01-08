@@ -10,12 +10,7 @@ OpeningScreen::OpeningScreen() {
 }
 
 void OpeningScreen::draw() {
-  graphics::Brush openingScreen { graphics::Brush() };
-  openingScreen.fill_color[0] = { 1.0f };
-  openingScreen.fill_color[1] = { 0.9137f };
-  openingScreen.fill_color[2] = { 0.7725f };
-  openingScreen.fill_opacity = { 1.0f };
-  graphics::setWindowBackground(openingScreen);
+  graphics::setWindowBackground(Rectangle::colors.at(Brush::LIGHT_BROWN));
 
   this->mainMenu->draw();
   (*this->welcomeMessage).draw();

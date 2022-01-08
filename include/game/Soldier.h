@@ -9,7 +9,7 @@ class Soldier : public Pawn {
 
 public:
   explicit Soldier(PawnColor color);
-  void update(float ms) override;
+  std::vector<std::pair<int, int>> getAdvanceableSquares() override;
 };
 
 #endif // SOLDIER_H

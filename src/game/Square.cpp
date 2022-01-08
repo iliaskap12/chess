@@ -1,27 +1,31 @@
 #include <game/Square.h>
 #include <sgg/graphics.h>
+#include <App.h>
 
 Square::Square() = default;
 
-Square::Square(unsigned short int row, unsigned short int column) : row(row), column(column) {
-  graphics::Brush square { graphics::Brush() };
-  if ((this->column + this->row) % 2 == 0) {
-    square.fill_color[0] = { 0.4588f };
-    square.fill_color[1] = { 0.2901f };
-    square.fill_color[2] = { 0.0f };
-  } else {
-    square.fill_color[0] = { 1.0f };
-    square.fill_color[1] = { 0.9137f };
-    square.fill_color[2] = { 0.7725f };
-  }
-  square.fill_opacity = { 1.0f };
-  square.outline_opacity = { 0.0f };
-  square.outline_width = { 0.0f };
+Square::Square(unsigned short int row, unsigned short int column) : row_(row), column_(column) {
   constexpr float offset { 200.0f };
   constexpr float squareWidth { 100.0f };
-  const float reverseRowIndex { static_cast<float>(7 - this->row) }; // coordinates start top left (0, 0) but checkboard row index start from bottom.
-  this->drawingArea = { Rectangle(Point(offset + squareWidth * static_cast<float>(this->column), offset + squareWidth * reverseRowIndex), squareWidth, squareWidth) };
-  this->drawingArea.setBrush(square);
+  const float reverseRowIndex { static_cast<float>(7 - this->row_) }; // coordinates start top left (0, 0) but checkboard row index start from bottom.
+  this->drawingArea.setWidth(squareWidth);
+  this->drawingArea.setHeight(squareWidth);
+  this->drawingArea.setLeftBottom(Point(offset + squareWidth * static_cast<float>(this->column_), offset + squareWidth * reverseRowIndex));
+  if ((this->column_ + this->row_) % 2 == 0) {
+    this->drawingArea.setBrush(Brush::DARK_BROWN, Rectangle::colors.at(Brush::DARK_BROWN));
+    this->drawingArea.setMarkBrush(Brush::DARK_GREEN);
+  } else {
+    this->drawingArea.setBrush(Brush::LIGHT_BROWN, Rectangle::colors.at(Brush::LIGHT_BROWN));
+    this->drawingArea.setMarkBrush(Brush::LIGHT_GREEN);
+  }
+}
+
+void Square::initialize(Point leftBottom, const graphics::Brush &brush, Brush type) {
+  constexpr float squareWidth { 100.0f };
+  this->drawingArea.setWidth(squareWidth);
+  this->drawingArea.setHeight(squareWidth);
+  this->drawingArea.setLeftBottom(leftBottom);
+  this->drawingArea.setBrush(type, brush);
 }
 
 void Square::draw() {
@@ -32,22 +36,31 @@ void Square::draw() {
 }
 
 void Square::update(float ms) {
-}
+  if (this->hasPawn()) {
+    this->pawn_->update(ms);
+  }
 
-unsigned short int Square::getRow() const { return this->row; }
-unsigned short int Square::getColumn() const { return this->column; }
+  if (this->drawingArea.clicked()) {
+    static_cast<App*>(graphics::getUserData())->getGame()->getCheckboard()->notify(this);
+  }
+
+  this->drawingArea.update(ms);
+}
+unsigned short int Square::getRow() const { return this->row_; }
+unsigned short int Square::getColumn() const { return this->column_; }
+
 char Square::getColumnAsChar() const {
   const char A = 'A';
-  return static_cast<char>(A + static_cast<char>(this->column));
+  return static_cast<char>(A + static_cast<char>(this->column_));
 }
 
 void Square::registerPawn(std::shared_ptr<Pawn> pawn) {
-  this->pawn_ = std::move(pawn);
+  this->pawn_ = { std::move(pawn) };
   this->pawn_->setSquare(this);
 }
 
 void Square::unregisterPawn() {
-  this->pawn_ = nullptr;
+  this->pawn_ = { nullptr };
 }
 
 std::shared_ptr<Pawn> Square::getPawn() const {
@@ -60,4 +73,16 @@ bool Square::hasPawn() const {
 
 Rectangle Square::getDrawingArea() const {
   return this->drawingArea;
+}
+
+bool operator==(const Square &lhs, const Square &rhs) {
+  return lhs.row_ == rhs.row_ && lhs.column_ == rhs.column_;
+}
+
+void Square::setRow(unsigned short row) {
+  this->row_ = row;
+}
+
+void Square::setColumn(unsigned short column) {
+  this->column_ = column;
 }

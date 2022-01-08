@@ -11,14 +11,14 @@
 class Game : public Drawable, public Updateable{
 private:
   std::optional<std::pair<Player, Player>> players;
-  Checkboard checkboard { Checkboard() };
+  std::shared_ptr<Checkboard> checkboard { std::make_shared<Checkboard>() };
 
 public:
   Game();
   bool start();
   void registerPlayers(const std::pair<Player, Player> &pair);
   const Player &getPlayer(PawnColor side);
-  [[nodiscard]] const Checkboard &getCheckboard() const;
+  [[nodiscard]] std::shared_ptr<Checkboard> getCheckboard() const;
   void draw() override;
   void update(float ms) override;
 };

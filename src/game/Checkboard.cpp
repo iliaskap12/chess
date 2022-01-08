@@ -8,6 +8,7 @@
 #include <game/Queen.h>
 #include <game/King.h>
 #include <sgg/graphics.h>
+#include <algorithm>
 
 using Squares = std::array<std::array<std::shared_ptr<Square>, Checkboard::sideSize>, Checkboard::sideSize>;
 
@@ -54,21 +55,14 @@ std::shared_ptr<Squares> Checkboard::getSquares() const {
 }
 
 void Checkboard::draw() {
-  graphics::Brush checkboard { graphics::Brush() };
-  checkboard.fill_color[0] = { 1.0f };
-  checkboard.fill_color[1] = { 1.0f };
-  checkboard.fill_color[2] = { 1.0f };
-  checkboard.fill_opacity = { 1.0f };
-  checkboard.outline_width = { 10 };
-  checkboard.outline_opacity = { 1.0f };
-  checkboard.outline_color[0] = { 0.4588f };
-  checkboard.outline_color[1] = { 0.2901f };
-  checkboard.outline_color[2] = { 0.0f };
-  graphics::drawRect(600, 500, 800, 800, checkboard);
+  this->drawingArea.draw();
   for (const auto& row : *this->squares) {
     for (auto& square : row) {
       square->draw();
     }
+  }
+  if (this->movingSquare_ != nullptr) {
+    this->movingSquare_->draw();
   }
 }
 
@@ -78,4 +72,114 @@ void Checkboard::update(float ms) {
       square->update(ms);
     }
   }
+  if (this->movingSquare_ != nullptr) {
+    this->movingSquare_->update(ms);
+  }
+
+  graphics::MouseState mouse { graphics::MouseState() };
+  graphics::getMouseState(mouse);
+  if (mouse.button_left_pressed && !this->drawingArea.clicked()) {
+    this->markedSquares.clear();
+    this->markedPawn = { nullptr };
+    this->selectedPawn = { nullptr };
+  }
+}
+
+void Checkboard::notify(Square *square) {
+  if (this->movingSquare_ != nullptr && *this->movingSquare_ == *square) {
+    return;
+  }
+
+  if (this->markedSquares.empty()) {
+    if (square->hasPawn()) {
+      if (this->selectedPawn != nullptr) {
+        this->selectedPawn = { nullptr };
+        return;
+      }
+      this->markedPawn = { square->getPawn() };
+      for (const auto &[rowIndex, columnIndex] : this->markedPawn->getAdvanceableSquares()) {
+        this->markedSquares.push_back((*this->squares)[rowIndex][columnIndex]);
+      }
+    } else {
+      this->markedPawn = { nullptr };
+      this->selectedPawn = { nullptr };
+    }
+  } else {
+    if (std::input_iterator auto result { std::ranges::find_if(
+            this->markedSquares.begin(),
+            this->markedSquares.end(),
+            [&square](const std::shared_ptr<Square> &markedSquare) {
+              return *markedSquare == *square;
+            })
+        };
+        result != this->markedSquares.end()) {
+      this->markedPawn->moveTo(square, this->markedPawn);
+    }
+    this->markedPawn = { nullptr };
+    this->markedSquares.clear();
+  }
+
+  if (this->selectedPawn == nullptr) {
+    this->selectedPawn = { std::make_shared<Rectangle>(square->getDrawingArea()) };
+  } else {
+    this->selectedPawn = { nullptr };
+  }
+}
+
+std::pair<bool, std::optional<PawnColor>> Checkboard::getSquareInfo(std::pair<int, int> indexes) const {
+  std::shared_ptr<Square> square { (*this->squares)[indexes.first][indexes.second] };
+  bool hasPawn { square->hasPawn() };
+  std::optional<PawnColor> pawnColor;
+  if (hasPawn) {
+    pawnColor = { square->getPawn()->getColor() };
+  }
+
+  return std::make_pair(hasPawn, pawnColor);
+}
+
+bool Checkboard::shouldMark(const Rectangle* rect) {
+  if (std::input_iterator auto result { std::ranges::find_if(
+          this->markedSquares.begin(),
+          this->markedSquares.end(),
+          [&rect](const std::shared_ptr<Square> &markedSquare) {
+            return markedSquare->getDrawingArea() == *rect;
+          })
+      };
+      result != this->markedSquares.end()) {
+    return true;
+  }
+  return false;
+}
+
+const std::shared_ptr<Square> &Checkboard::getMovingSquare() const {
+  return this->movingSquare_;
+}
+
+void Checkboard::setMovingSquare(Point leftBottom, const graphics::Brush &brush, Brush type) const {
+  this->movingSquare_->initialize(leftBottom, brush, type);
+}
+
+void Checkboard::resetMovingSquare() {
+  this->movingSquare_ = { nullptr };
+  this->movingSquare_ = { std::make_shared<Square>(10, 10) };
+}
+
+bool Checkboard::amISelected(const Rectangle *rect) const {
+  if (this->selectedPawn == nullptr) {
+    return false;
+  }
+
+  if (*this->selectedPawn != *rect) {
+    return false;
+  }
+
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      if (square->getDrawingArea() == *rect && square->hasPawn()) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }

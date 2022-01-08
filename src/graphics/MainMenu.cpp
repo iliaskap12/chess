@@ -16,12 +16,13 @@ void MainMenu::draw() {
 }
 
 void MainMenu::update(float ms) {
-  graphics::MouseState mouse { graphics::MouseState() };
-  graphics::getMouseState(mouse);
-  const float mouseHorizontalPoint { graphics::windowToCanvasX(static_cast<float>(mouse.cur_pos_x)) };
-  const float mouseVerticalPoint { graphics::windowToCanvasY(static_cast<float>(mouse.cur_pos_y)) };
-  if (mouse.button_left_pressed && Menu::getMenuOption(ButtonType::PLAY).clicked(mouseHorizontalPoint, mouseVerticalPoint)) {
+  if (Menu::getMenuOption(ButtonType::PLAY).getButton().clicked()) {
     this->pressButton(ButtonType::PLAY);
+  }
+
+  for (const auto& [type, option] : Menu::getMenuOptions()) {
+    option.getMessage().update(ms);
+    option.getButton().update(ms);
   }
 }
 

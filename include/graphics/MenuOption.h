@@ -11,7 +11,6 @@ class MenuOption {
 public:
   explicit MenuOption(HUD hud);
   [[nodiscard]] HUD getMessage() const;
-  [[nodiscard]] bool clicked(const float &mouseHorizontalPoint, const float &mouseVerticalPoint) const;
   [[nodiscard]] Rectangle getButton() const;
 };
 

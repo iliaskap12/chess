@@ -13,6 +13,17 @@ void HUD::draw() {
   graphics::drawText(this->coordinates.first, this->coordinates.second, static_cast<float>(this->size), this->message, this->textBrush);
 }
 
+void HUD::update(float ms) {
+  if (this->newMessage.first) {
+    this->message = { *(this->newMessage.second) };
+    this->newMessage = { std::make_pair(false, std::optional<std::string>()) };
+  }
+}
+
+void HUD::updateText(std::string text) {
+  this->newMessage = { std::make_pair(true, std::move(text)) };
+}
+
 const std::pair<float, float> &HUD::getCoordinates() const {
   return this->coordinates;
 }

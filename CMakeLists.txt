@@ -69,7 +69,7 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}")
 # Emergency override MODERN_CMAKE_BUILD_TESTING provided as well
 if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING)
         AND BUILD_TESTING)
-    add_subdirectory(tests)
+#    add_subdirectory(tests)
     enable_testing()
 endif()
 
