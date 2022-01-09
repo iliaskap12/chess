@@ -12,7 +12,7 @@ set(
         TimeIncrement.cpp
         Timer.cpp
         TurnIndicator.cpp
-)
+        PawnCount.cpp)
 
 add_library(HUD ${HUD_SRC})
 

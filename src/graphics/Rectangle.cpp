@@ -9,7 +9,7 @@ Rectangle::Rectangle(Point leftBottom, float height, float width) : leftBottom_(
   this->leftTop = { Point(this->leftBottom_.getX(), this->leftBottom_.getY() - height) };
   this->rightBottom = { Point(this->leftBottom_.getX() + width, this->leftBottom_.getY()) };
   this->rightTop = { Point(this->rightBottom.getX(), this->leftTop.getY()) };
-  this->center = { Point((this->leftTop.getX() + this->rightTop.getX()) / 2, (this->leftBottom_.getY() + this->leftTop.getY()) / 2) };
+  this->center_ = { Point((this->leftTop.getX() + this->rightTop.getX()) / 2, (this->leftBottom_.getY() + this->leftTop.getY()) / 2) };
   Rectangle::populateBrushes();
   this->brush_ = { Rectangle::colors.at(Brush::DARK_BROWN) };
   this->markBrush = { Rectangle::colors.at(Brush::DARK_GREEN) };
@@ -31,6 +31,21 @@ void Rectangle::setBrush(Brush type, graphics::Brush brush) {
   this->brush_ = { std::move(brush) };
 }
 
+void Rectangle::setMarkBrush(Brush brush) {
+  this->markBrush = { Rectangle::colors.at(brush) };
+  this->markBrushType = { brush };
+}
+
+Brush Rectangle::getBrushType() const {
+  return this->brushType;
+}
+
+void Rectangle::swapBrushes() {
+  std::swap(this->brush_, this->markBrush);
+  std::swap(this->brushType, this->markBrushType);
+  this->swapped = { !this->swapped };
+}
+
 const Point &Rectangle::getLeftTop() const {
   return this->leftTop;
 }
@@ -48,7 +63,7 @@ const Point &Rectangle::getRightBottom() const {
 }
 
 const Point &Rectangle::getCenter() const {
-  return this->center;
+  return this->center_;
 }
 
 float Rectangle::getHeight() const {
@@ -59,6 +74,34 @@ float Rectangle::getWidth() const {
   return this->width_;
 }
 
+void Rectangle::setHeight(float height) {
+  this->height_ = { height };
+}
+
+void Rectangle::setWidth(float width) {
+  this->width_ = { width };
+}
+
+void Rectangle::setLeftBottom(const Point &leftBottom) {
+  this->leftBottom_ = { leftBottom };
+  this->leftTop = { Point(this->leftBottom_.getX(), this->leftBottom_.getY() - this->height_) };
+  this->rightBottom = { Point(this->leftBottom_.getX() + this->width_, this->leftBottom_.getY()) };
+  this->rightTop = { Point(this->rightBottom.getX(), this->leftTop.getY()) };
+  this->center_ = { Point((this->leftTop.getX() + this->rightTop.getX()) / 2, (this->leftBottom_.getY() + this->leftTop.getY()) / 2) };
+}
+
+void Rectangle::setCenter(const Point &center) {
+  this->center_ = { center };
+  this->leftTop = { Point((this->center_.getX() * 2) - this->width_, this->center_.getY() * 2) };
+  this->rightTop = { Point(this->leftTop.getX() + this->width_, this->leftTop.getY()) };
+  this->rightBottom = { Point(this->rightTop.getX(), this->rightTop.getY() - this->height_) };
+  this->leftBottom_ = { Point(this->leftTop.getX(), this->rightBottom.getY()) };
+}
+
+void Rectangle::selectRectangle(bool select) {
+  this->selected = { select };
+}
+
 void Rectangle::draw() {
   if (const auto &game { static_cast<App*>(graphics::getUserData())->getGame() }; game != nullptr && game->getCheckboard()->amISelected(this)) {
     this->selected = { true };
@@ -67,8 +110,8 @@ void Rectangle::draw() {
   }
   graphics::Brush brush { this->selected ? Rectangle::colors.at(Brush::RED) : this->brush_ };
   graphics::drawRect(
-      this->center.getX(),
-      this->center.getY(),
+      this->center_.getX(),
+      this->center_.getY(),
       this->width_,
       this->height_,
       brush
@@ -109,12 +152,8 @@ bool Rectangle::clicked() const {
   return mouse.button_left_pressed && inVerticalSpace && inHorizontalSpace;
 }
 
-void Rectangle::setLeftBottom(const Point &leftBottom) {
-  this->leftBottom_ = leftBottom;
-  this->leftTop = { Point(this->leftBottom_.getX(), this->leftBottom_.getY() - this->height_) };
-  this->rightBottom = { Point(this->leftBottom_.getX() + this->width_, this->leftBottom_.getY()) };
-  this->rightTop = { Point(this->rightBottom.getX(), this->leftTop.getY()) };
-  this->center = { Point((this->leftTop.getX() + this->rightTop.getX()) / 2, (this->leftBottom_.getY() + this->leftTop.getY()) / 2) };
+bool operator==(const Rectangle &lhs, const Rectangle &rhs) {
+  return lhs.id == rhs.id;
 }
 
 void Rectangle::populateBrushes() {
@@ -184,35 +223,4 @@ void Rectangle::populateBrushes() {
   Rectangle::colors.try_emplace(Brush::RED, red);
   Rectangle::colors.try_emplace(Brush::TEXTURE, texture);
   Rectangle::colors.try_emplace(Brush::CHECKBOARD, checkboard);
-}
-
-Brush Rectangle::getBrushType() const {
-  return this->brushType;
-}
-
-void Rectangle::setHeight(float height) {
-  this->height_ = { height };
-}
-
-void Rectangle::setWidth(float width) {
-  this->width_ = { width };
-}
-
-void Rectangle::setMarkBrush(Brush brush) {
-  this->markBrush = { Rectangle::colors.at(brush) };
-  this->markBrushType = { brush };
-}
-
-void Rectangle::swapBrushes() {
-  std::swap(this->brush_, this->markBrush);
-  std::swap(this->brushType, this->markBrushType);
-  this->swapped = { !this->swapped };
-}
-
-void Rectangle::selectRectangle(bool select) {
-  this->selected = { select };
-}
-
-bool operator==(const Rectangle &lhs, const Rectangle &rhs) {
-  return lhs.id == rhs.id;
 }

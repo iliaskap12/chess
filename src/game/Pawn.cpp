@@ -13,7 +13,7 @@ void Pawn::setSquare(Square* square) {
   this->drawingArea.setWidth(this->square_->getDrawingArea().getWidth());
   this->drawingArea.setLeftBottom(this->square_->getDrawingArea().getLeftBottom());
   graphics::Brush pawn { Rectangle::colors.at(Brush::TEXTURE) };
-  pawn.texture = { getImagesPath() + this->texture_ + "-" + this->getColor() + this->png };
+  pawn.texture = { paths::getImagesPath() + this->texture_ + "-" + this->getColor() + this->png };
   this->drawingArea.setBrush(Brush::TEXTURE, pawn);
 }
 
@@ -45,12 +45,12 @@ void Pawn::move(float ms) {
     checkboard->setMovingSquare(this->drawingArea.getLeftBottom(), this->drawingArea.getBrush(), this->drawingArea.getBrushType());
 
     if (this->square_->getDrawingArea().getLeftBottom() == this->destination_->getDrawingArea().getLeftBottom()) {
+      if (this->destination_->hasPawn()) {
+        Pawn::capture(this->destination_->getPawn());
+      }
       this->movingSquare->unregisterPawn();
       this->movingSquare = { nullptr };
       this->square_->unregisterPawn();
-      if (this->destination_->hasPawn()) {
-        this->capture(this->destination_->getPawn());
-      }
       this->square_ = { this->destination_ };
       this->square_->registerPawn(self_);
       this->destination_ = { nullptr };
@@ -61,15 +61,20 @@ void Pawn::move(float ms) {
   }
 }
 
-void Pawn::capture(std::shared_ptr<Pawn>) {
-  // capture pawn
+void Pawn::capture(const std::shared_ptr<Pawn>& pawn) {
+  std::shared_ptr<PlayingScreen> playingScreen { static_pointer_cast<PlayingScreen>(static_cast<App *>(graphics::getUserData())->getScreen()) };
+  std::shared_ptr<Square> square { playingScreen->getSquare(pawn) };
+  if (square != nullptr) {
+    square->registerPawn(pawn);
+    pawn->getSquare()->unregisterPawn();
+  }
 }
 
 std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(std::vector<std::pair<int, int>> const& steps, unsigned short int maxSteps) const {
   std::vector<std::pair<int, int>> advanceableSquares { std::vector<std::pair<int, int>>() };
   const unsigned short int currentRow { this->getSquare()->getRow() };
   const unsigned short int currentColumn { this->getSquare()->getColumn() };
-  auto checkboard { static_pointer_cast<PlayingScreen>(static_cast<App*>(graphics::getUserData())->getScreen())->getGame()->getCheckboard() };
+  auto checkboard { static_cast<App*>(graphics::getUserData())->getGame()->getCheckboard() };
 
   unsigned short int nextRow { currentRow };
   unsigned short int nextColumn { currentColumn };
@@ -86,7 +91,7 @@ std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(std::vector<std::pa
     while (!shouldTerminate) {
       nextRow += rowStep;
       nextColumn += columnStep;
-      if ((nextRow > 7 || nextColumn > 7) || numberOfSteps == maxSteps) {
+      if ((nextRow >= Checkboard::sideSize || nextColumn >= Checkboard::sideSize) || numberOfSteps == maxSteps) {
         shouldTerminate = { true };
         continue;
       }
@@ -133,4 +138,8 @@ void Pawn::moveTo(Square *squarePtr, const std::shared_ptr<Pawn>& self) {
   this->square_->setRow(this->destination_->getRow());
   this->square_->setColumn(this->destination_->getColumn());
   this->square_->registerPawn(self_);
+}
+
+const std::string &Pawn::getTexture() const {
+  return this->texture_;
 }

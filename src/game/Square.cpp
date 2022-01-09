@@ -5,12 +5,12 @@
 Square::Square() = default;
 
 Square::Square(unsigned short int row, unsigned short int column) : row_(row), column_(column) {
-  constexpr float offset { 200.0f };
+  constexpr float offset { 400.0f };
   constexpr float squareWidth { 100.0f };
-  const float reverseRowIndex { static_cast<float>(7 - this->row_) }; // coordinates start top left (0, 0) but checkboard row index start from bottom.
+  const float reverseRowIndex { static_cast<float>(Checkboard::sideSize - 1 - this->row_) }; // coordinates start top left (0, 0) but checkboard row index start from bottom.
   this->drawingArea.setWidth(squareWidth);
   this->drawingArea.setHeight(squareWidth);
-  this->drawingArea.setLeftBottom(Point(offset + squareWidth * static_cast<float>(this->column_), offset + squareWidth * reverseRowIndex));
+  this->drawingArea.setLeftBottom(Point(offset + squareWidth * static_cast<float>(this->column_), offset / 2 + squareWidth * reverseRowIndex));
   if ((this->column_ + this->row_) % 2 == 0) {
     this->drawingArea.setBrush(Brush::DARK_BROWN, Rectangle::colors.at(Brush::DARK_BROWN));
     this->drawingArea.setMarkBrush(Brush::DARK_GREEN);
@@ -20,8 +20,7 @@ Square::Square(unsigned short int row, unsigned short int column) : row_(row), c
   }
 }
 
-void Square::initialize(Point leftBottom, const graphics::Brush &brush, Brush type) {
-  constexpr float squareWidth { 100.0f };
+void Square::initialize(Point leftBottom, const graphics::Brush &brush, Brush type, float squareWidth) {
   this->drawingArea.setWidth(squareWidth);
   this->drawingArea.setHeight(squareWidth);
   this->drawingArea.setLeftBottom(leftBottom);

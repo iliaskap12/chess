@@ -28,14 +28,17 @@ Checkboard::Checkboard() {
     if (row == 0 || row == 7) {
       switch (column) {
         case 0:
+          [[fallthrough]];
         case 7:
           (*this->squares)[row][column]->registerPawn(std::make_shared<Rook>(color));
           break;
         case 1:
+          [[fallthrough]];
         case 6:
           (*this->squares)[row][column]->registerPawn(std::make_shared<Knight>(color));
           break;
         case 2:
+          [[fallthrough]];
         case 5:
           (*this->squares)[row][column]->registerPawn(std::make_shared<Bishop>(color));
           break;

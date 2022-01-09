@@ -8,7 +8,7 @@
 
 class OpeningScreen : public Screen {
   std::unique_ptr<Menu> mainMenu = std::make_unique<MainMenu>();
-  std::optional<HUD> welcomeMessage;
+  std::unique_ptr<HUD> welcomeMessage { std::make_unique<HUD>() };
 
 public:
   OpeningScreen();

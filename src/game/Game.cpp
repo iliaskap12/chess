@@ -2,7 +2,7 @@
 #include <App.h>
 
 Game::Game() {
-    this->start();
+  this->start();
 }
 
 void Game::registerPlayers(const std::pair<Player, Player> &pair) {

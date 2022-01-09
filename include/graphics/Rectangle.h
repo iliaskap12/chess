@@ -17,7 +17,7 @@ private:
   Point rightTop;
   Point leftBottom_;
   Point rightBottom;
-  Point center;
+  Point center_;
   float height_{};
   float width_{};
   graphics::Brush brush_ { graphics::Brush() };
@@ -41,6 +41,7 @@ public:
   void setLeftBottom(const Point &leftBottom);
   [[nodiscard]] const Point &getRightBottom() const;
   [[nodiscard]] const Point &getCenter() const;
+  void setCenter(const Point &center);
   [[nodiscard]] float getHeight() const;
   [[nodiscard]] float getWidth() const;
   void setHeight(float height);

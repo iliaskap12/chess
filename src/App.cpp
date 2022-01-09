@@ -9,15 +9,16 @@ std::shared_ptr<Screen> App::getScreen() const {
 
 void App::run() {
   graphics::createWindow(1024, 768, "Chess");
-  graphics::preloadBitmaps(getImagesPath());
+  graphics::preloadBitmaps(paths::getImagesPath());
 
   graphics::setUserData(this);
   graphics::setDrawFunction(std::bind_front(&App::draw, this));
   graphics::setUpdateFunction(std::bind_front(&App::update, this));
-  graphics::setCanvasSize(1200, 1020);
+  graphics::setCanvasSize(1600, 1020);
   graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
-  graphics::setFont(getFontsPath() + "typography-times.ttf");
+  graphics::setFont(paths::getFontsPath() + "typography-times.ttf");
   Rectangle::populateBrushes();
+  this->activeScreen = { std::make_shared<OpeningScreen>() };
 
   graphics::startMessageLoop();
   graphics::destroyWindow();

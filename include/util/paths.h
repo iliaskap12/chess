@@ -5,9 +5,11 @@
 #include <filesystem>
 #include <iostream>
 
-std::string getProjectRootPath();
-std::string getImagesPath();
-std::string getSoundsPath();
-std::string getFontsPath();
+namespace paths {
+  std::string getProjectRootPath();
+  std::string getImagesPath();
+  std::string getSoundsPath();
+  std::string getFontsPath();
+}
 
 #endif//CHESS_PATHS_H

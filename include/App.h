@@ -12,7 +12,7 @@
 #include <sgg/graphics.h>
 
 class App : public Drawable, public Updateable {
-  std::shared_ptr<Screen> activeScreen = std::make_shared<OpeningScreen>();
+  std::shared_ptr<Screen> activeScreen { nullptr };
   Game* game_ { nullptr };
 
 public:

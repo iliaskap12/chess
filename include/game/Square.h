@@ -12,9 +12,9 @@ class Pawn; // break cyclic dependency
 class Movable;
 
 class Square : public Drawable, public Updateable {
-  unsigned short int row_{};
-  unsigned short int column_{};
-  std::shared_ptr<Pawn> pawn_{ nullptr };
+  unsigned short int row_ { 0 };
+  unsigned short int column_ { 0 };
+  std::shared_ptr<Pawn> pawn_ { nullptr };
   Rectangle drawingArea { Rectangle() };
 
 public:
@@ -25,7 +25,7 @@ public:
   void setRow(unsigned short row);
   void setColumn(unsigned short column);
   [[nodiscard]] char getColumnAsChar() const;
-  void initialize(Point leftBottom, const graphics::Brush &brush, Brush type);
+  void initialize(Point leftBottom, const graphics::Brush &brush, Brush type, float squareWidth = 100.0f);
   void registerPawn(std::shared_ptr<Pawn> pawn);
   void unregisterPawn();
   [[nodiscard]] std::shared_ptr<Pawn> getPawn() const;

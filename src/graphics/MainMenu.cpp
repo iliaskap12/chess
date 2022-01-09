@@ -28,9 +28,11 @@ void MainMenu::update(float ms) {
 
 MenuOption MainMenu::createMenuOption(std::string message, float verticalPoint) {
   const std::size_t size { 80 };
-  const float horizontalPoint { 825 - static_cast<float>(message.length()) * size / 2 };
+  const float horizontalPoint { 1025 - static_cast<float>(message.length()) * size / 2 };
   const auto coordinates { std::make_pair(horizontalPoint, verticalPoint) };
-  return MenuOption(HUD(std::move(message), coordinates, size));
+  HUD menuHud { HUD(std::move(message), coordinates, size) };
+  menuHud.setTextBrush(Brush::LIGHT_BROWN);
+  return MenuOption(menuHud);
 }
 
 void MainMenu::pressButton(const ButtonType &type) const {

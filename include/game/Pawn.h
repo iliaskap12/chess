@@ -31,12 +31,13 @@ public:
   [[nodiscard]] Square *getSquare() const;
   [[nodiscard]] PawnColor getColor() const;
   void setTexture(std::string texture);
+  [[nodiscard]] const std::string &getTexture() const;
   void draw() override;
   void update(float ms) override;
   void move(float ms) override;
   [[nodiscard]] virtual std::vector<std::pair<int, int>> getAdvanceableSquares(const std::vector<std::pair<int, int>> &steps, unsigned short int maxSteps) const;
   virtual std::vector<std::pair<int, int>> getAdvanceableSquares() = 0;
-  void capture(std::shared_ptr<Pawn> pawn);
+  static void capture(const std::shared_ptr<Pawn>& pawn);
   [[nodiscard]] const Rectangle &getDrawingArea() const;
   void moveTo(Square *squarePtr, const std::shared_ptr<Pawn>& self);
 };

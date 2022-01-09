@@ -7,7 +7,8 @@ MenuOption::MenuOption(HUD hud) : optionHUD(std::move(hud)) {
   const float length { this->optionHUD.getLength() * 1.25f * static_cast<float>(size) / 2};
   this->button.setHeight(static_cast<float>(size) * 1.25f);
   this->button.setWidth(length);
-  this->button.setLeftBottom(Point(buttonX * 0.875f, buttonY * 1.075f));
+  this->button.setLeftBottom(Point(buttonX * 0.925f, buttonY * 1.075f));
+  this->button.setBrush(Brush::DARK_BROWN, Rectangle::colors.at(Brush::DARK_BROWN));
 }
 
 HUD MenuOption::getMessage() const {
