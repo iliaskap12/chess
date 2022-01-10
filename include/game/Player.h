@@ -7,11 +7,10 @@
 
 class Player {
 private:
-  std::string name;
   PawnColor side;
 
 public:
-  Player(std::string name, PawnColor side);
+  explicit Player(PawnColor side);
   [[nodiscard]] const PawnColor &getSide() const;
 };
 

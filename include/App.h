@@ -14,6 +14,7 @@
 class App : public Drawable, public Updateable {
   std::shared_ptr<Screen> activeScreen { nullptr };
   Game* game_ { nullptr };
+  std::string input {};
 
 public:
   App();

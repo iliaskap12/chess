@@ -98,13 +98,13 @@ void Rectangle::setCenter(const Point &center) {
   this->leftBottom_ = { Point(this->leftTop.getX(), this->rightBottom.getY()) };
 }
 
-void Rectangle::selectRectangle(bool select) {
-  this->selected = { select };
-}
-
 void Rectangle::draw() {
-  if (const auto &game { static_cast<App*>(graphics::getUserData())->getGame() }; game != nullptr && game->getCheckboard()->amISelected(this)) {
-    this->selected = { true };
+  if (const auto &game { static_cast<App*>(graphics::getUserData())->getGame() }; game != nullptr) {
+    if (game->getCheckboard()->amISelected(this) || game->getCheckboard()->amIinDanger(this)) {
+      this->selected = { true };
+    } else {
+      this->selected = { false };
+    }
   } else {
     this->selected = { false };
   }
@@ -223,4 +223,8 @@ void Rectangle::populateBrushes() {
   Rectangle::colors.try_emplace(Brush::RED, red);
   Rectangle::colors.try_emplace(Brush::TEXTURE, texture);
   Rectangle::colors.try_emplace(Brush::CHECKBOARD, checkboard);
+}
+
+long Rectangle::getId() const {
+  return this->id;
 }

@@ -1,11 +1,6 @@
 #ifndef MOVABLE_H
 #define MOVABLE_H
 
-#include "Square.h"
-
-class Square; // break cyclic dependency
-class Pawn;
-
 class Movable {
 
 public:

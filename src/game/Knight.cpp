@@ -5,7 +5,7 @@ Knight::Knight(PawnColor color) : Pawn(color) {
 }
 
 std::vector<std::pair<int, int>> Knight::getAdvanceableSquares() {
-  std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
+  std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>(static_cast<std::size_t>(8)) };
   steps.push_back(std::make_pair<int, int>(2, 1));
   steps.push_back(std::make_pair<int, int>(-2, 1));
   steps.push_back(std::make_pair<int, int>(2, -1));

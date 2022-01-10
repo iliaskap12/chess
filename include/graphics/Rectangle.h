@@ -32,9 +32,16 @@ public:
   Rectangle();
   explicit Rectangle(Point leftBottom, float height, float width);
   explicit Rectangle(Point leftBottom, float height, float width, const graphics::Brush& brush, const Brush &type);
+
+  // brushes
+  static void populateBrushes();
   [[nodiscard]] const graphics::Brush &getBrush() const;
+  [[nodiscard]] Brush getBrushType() const;
   void setBrush(Brush type, graphics::Brush brush);
   void setMarkBrush(Brush brush);
+  void swapBrushes();
+
+  // points
   [[nodiscard]] const Point &getLeftTop() const;
   [[nodiscard]] const Point &getRightTop() const;
   [[nodiscard]] const Point &getLeftBottom() const;
@@ -46,14 +53,14 @@ public:
   [[nodiscard]] float getWidth() const;
   void setHeight(float height);
   void setWidth(float width);
+
+  // rendering
   void draw() override;
   void update(float ms) override;
   [[nodiscard]] bool clicked() const;
-  static void populateBrushes();
-  [[nodiscard]] Brush getBrushType() const;
-  void swapBrushes();
-  void selectRectangle(bool select);
+
   friend bool operator==(const Rectangle& lhs, const Rectangle& rhs);
+  [[nodiscard]] long getId() const;
 };
 
 #endif//CHESS_RECTANGLE_H
