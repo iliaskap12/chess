@@ -7,11 +7,9 @@
 #include "PawnColor.h"
 #include "util/paths.h"
 #include "Square.h"
-#include "Checkboard.h"
 #include "graphics/Rectangle.h"
 
 class Square; // break cyclic dependency
-class Checkboard;
 
 class Pawn : public Drawable, public Updateable, public Movable {
 
@@ -28,24 +26,31 @@ class Pawn : public Drawable, public Updateable, public Movable {
   Square* destination_ { nullptr };
   std::shared_ptr<Pawn> self_{ nullptr };
 
-protected:
-  std::shared_ptr<Checkboard> checkboard { nullptr };
-
 public:
   explicit Pawn(PawnColor color);
+
+  // square
   void setSquare(Square* square);
+  static void capture(const std::shared_ptr<Pawn>& pawn);
   [[nodiscard]] Square *getSquare() const;
+
+  // Rectangle
   [[nodiscard]] PawnColor getColor() const;
   void setTexture(std::string texture);
   [[nodiscard]] const std::string &getTexture() const;
+  [[nodiscard]] std::shared_ptr<Rectangle> getDrawingArea() const;
+
+  // Interfaces
   void draw() override;
   void update(float ms) override;
+
+  // Moving
   void move(float ms) override;
-  [[nodiscard]] virtual std::vector<std::pair<int, int>> getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps);
-  virtual std::vector<std::pair<int, int>> getAdvanceableSquares() = 0;
-  static void capture(const std::shared_ptr<Pawn>& pawn);
-  [[nodiscard]] std::shared_ptr<Rectangle> getDrawingArea() const;
   void moveTo(Square *squarePtr, const std::shared_ptr<Pawn>& self);
+  virtual std::vector<std::pair<int, int>> getAdvanceableSquares() = 0;
+  virtual std::vector<std::pair<int, int>> getHoldingSquares() = 0;
+  [[nodiscard]] virtual std::vector<std::pair<int, int>>
+  getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps, bool holding) const;
 };
 
 #endif // PAWN_H

@@ -34,6 +34,11 @@ public:
   [[nodiscard]] std::shared_ptr<Squares> getSquares() const;
   [[nodiscard]] std::shared_ptr<Square> getSquare(const std::pair<int, int> &coordinates) const;
   [[nodiscard]] std::pair<bool, std::optional<PawnColor>> getSquareInfo(std::pair<int, int> indexes) const;
+  bool markSquares(const Square* square);
+  void moveKing(const Square* square);
+  void movePawn(Square* square);
+  void resetReferenceCounts() const;
+  void setReferenceCounts() const;
 
   [[nodiscard]] bool shouldMark(const Rectangle* rect);
   [[nodiscard]] bool amISelected(const Rectangle *rect) const;

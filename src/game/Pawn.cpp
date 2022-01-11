@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <App.h>
 #include <graphics/PlayingScreen.h>
+#include <game/Checkboard.h>
 
 Pawn::Pawn(PawnColor color) : color(color) {}
 
@@ -26,18 +27,11 @@ PawnColor Pawn::getColor() const {
 }
 
 void Pawn::draw() {
-  if (this->checkboard != nullptr) {
-    this->drawingArea.draw();
-  }
+  this->drawingArea.draw();
 }
 
 void Pawn::update(float ms) {
-  if (static_cast<App *>(graphics::getUserData())->getGame() != nullptr && static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() != nullptr) {
-    if (this->checkboard == nullptr) {
-      this->checkboard = { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
-    }
-    this->move(ms);
-  }
+  this->move(ms);
 }
 
 void Pawn::setTexture(std::string texture) {
@@ -46,8 +40,9 @@ void Pawn::setTexture(std::string texture) {
 
 void Pawn::move(float ms) {
   if (this->shouldMove && this->square_ != nullptr) {
+    auto checkboard { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
     this->drawingArea.setLeftBottom(this->drawingArea.getLeftBottom() + Point(this->moveSteps.second, this->moveSteps.first));
-    this->checkboard->setMovingSquare(this->drawingArea.getLeftBottom(), this->drawingArea.getBrush(), this->drawingArea.getBrushType());
+    checkboard->setMovingSquare(this->drawingArea.getLeftBottom(), this->drawingArea.getBrush(), this->drawingArea.getBrushType());
 
     if (this->square_->getDrawingArea().getLeftBottom() == this->destination_->getDrawingArea().getLeftBottom()) {
       if (this->destination_->hasPawn()) {
@@ -61,7 +56,7 @@ void Pawn::move(float ms) {
       this->destination_ = { nullptr };
       this->moveSteps = {  };
       this->shouldMove = { false };
-      this->checkboard->resetMovingSquare();
+      checkboard->resetMovingSquare();
     }
   }
 }
@@ -75,16 +70,8 @@ void Pawn::capture(const std::shared_ptr<Pawn>& pawn) {
   }
 }
 
-std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps) {
+std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps, bool holding) const {
   std::vector<std::pair<int, int>> advanceableSquares { std::vector<std::pair<int, int>>() };
-
-  if (static_cast<App *>(graphics::getUserData())->getGame() != nullptr && static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() != nullptr) {
-    if (this->checkboard == nullptr) {
-      this->checkboard = { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
-    }
-  } else {
-    return advanceableSquares;
-  }
 
   const unsigned short int currentRow { this->getSquare()->getRow() };
   const unsigned short int currentColumn { this->getSquare()->getColumn() };
@@ -110,14 +97,15 @@ std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(const std::vector<p
       }
       ++numberOfSteps;
 
+      auto checkboard { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
       std::pair<int, int> squareCoordinates { std::make_pair<int, int>(nextRow, nextColumn) };
-      auto [hasPawn, pawnColor] { this->checkboard->getSquareInfo(squareCoordinates) };
+      auto [hasPawn, pawnColor] { checkboard->getSquareInfo(squareCoordinates) };
 
       if (hasPawn) {
         shouldTerminate = { true };
       }
 
-      if ((hasPawn && *pawnColor != this->getColor()) || !hasPawn) {
+      if (const bool advanceOnPawn { hasPawn && (holding || pawnColor.value() != this->getColor()) }; advanceOnPawn || !hasPawn) {
         advanceableSquares.push_back(squareCoordinates);
       }
     }
@@ -145,8 +133,9 @@ void Pawn::moveTo(Square *squarePtr, const std::shared_ptr<Pawn>& self) {
     this->self_ = { self };
   }
 
-  this->checkboard->setMovingSquare(this->drawingArea.getLeftBottom(), this->drawingArea.getBrush(), this->drawingArea.getBrushType());
-  this->square_ = { &(*this->checkboard->getMovingSquare()) };
+  auto checkboard { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
+  checkboard->setMovingSquare(this->drawingArea.getLeftBottom(), this->drawingArea.getBrush(), this->drawingArea.getBrushType());
+  this->square_ = { &(*checkboard->getMovingSquare()) };
   this->square_->setRow(this->destination_->getRow());
   this->square_->setColumn(this->destination_->getColumn());
   this->square_->registerPawn(self_);

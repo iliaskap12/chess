@@ -8,13 +8,7 @@ Soldier::Soldier(PawnColor color) : Pawn(color) {
 
 std::vector<std::pair<int, int>> Soldier::getAdvanceableSquares() {
   std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
-  if (static_cast<App *>(graphics::getUserData())->getGame() != nullptr && static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() != nullptr) {
-    if (Pawn::checkboard == nullptr) {
-      Pawn::checkboard = { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
-    }
-  } else {
-    return steps;
-  }
+  auto checkboard { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
 
   steps.push_back(std::make_pair<int, int>(1, 0));
   steps.push_back(std::make_pair<int, int>(1, 1));
@@ -22,7 +16,7 @@ std::vector<std::pair<int, int>> Soldier::getAdvanceableSquares() {
 
   if (const int nextRowWhite { this->getSquare()->getRow() + 1 }; nextRowWhite <= 7) {
     const bool startingPositionWhite { this->getSquare()->getRow() == 1 };
-    const bool pawnAheadWhite { Pawn::checkboard->getSquareInfo(std::make_pair(nextRowWhite, this->getSquare()->getColumn())).first };
+    const bool pawnAheadWhite { checkboard->getSquareInfo(std::make_pair(nextRowWhite, this->getSquare()->getColumn())).first };
     if (startingPositionWhite && Pawn::getColor() == PawnColor::WHITE && !pawnAheadWhite) {
       steps.push_back(std::make_pair<int, int>(2, 0));
     }
@@ -30,7 +24,7 @@ std::vector<std::pair<int, int>> Soldier::getAdvanceableSquares() {
 
   if (const int nextRowBlack { this->getSquare()->getRow() - 1 }; nextRowBlack >= 0) {
     const bool startingPositionBlack { this->getSquare()->getRow() == 6 };
-    const bool pawnAheadBlack { Pawn::checkboard->getSquareInfo(std::make_pair(nextRowBlack, this->getSquare()->getColumn())).first };
+    const bool pawnAheadBlack { checkboard->getSquareInfo(std::make_pair(nextRowBlack, this->getSquare()->getColumn())).first };
     if (startingPositionBlack && Pawn::getColor() == PawnColor::BLACK && !pawnAheadBlack) {
       steps.push_back(std::make_pair<int, int>(2, 0));
     }
@@ -38,16 +32,16 @@ std::vector<std::pair<int, int>> Soldier::getAdvanceableSquares() {
 
   constexpr unsigned short int maxSteps { 1 };
 
-  auto advanceableSquares {Pawn::getAdvanceableSquares(steps, maxSteps)};
+  auto advanceableSquares { Pawn::getAdvanceableSquares(steps, maxSteps, false) };
 
-  std::erase_if(advanceableSquares, [this](const auto& pair) {
+  std::erase_if(advanceableSquares, [&checkboard, this](const auto& pair) {
     if (pair.second != this->getSquare()->getColumn()) {
-      const auto& [hasPawn, pawnColor] { Pawn::checkboard->getSquareInfo(pair) };
+      const auto& [hasPawn, pawnColor] { checkboard->getSquareInfo(pair) };
       return !hasPawn;
     }
 
     if (pair.second == this->getSquare()->getColumn()) {
-      const auto& [hasPawn, pawnColor] { Pawn::checkboard->getSquareInfo(pair) };
+      const auto& [hasPawn, pawnColor] { checkboard->getSquareInfo(pair) };
       return hasPawn;
     }
 
@@ -57,26 +51,20 @@ std::vector<std::pair<int, int>> Soldier::getAdvanceableSquares() {
   return advanceableSquares;
 }
 
-std::vector<std::pair<int, int>> Soldier::getCapturableSquares() {
+std::vector<std::pair<int, int>> Soldier::getHoldingSquares() {
   std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
-  if (static_cast<App *>(graphics::getUserData())->getGame() != nullptr && static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() != nullptr) {
-    if (Pawn::checkboard == nullptr) {
-      Pawn::checkboard = { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
-    }
-  } else {
-    return steps;
-  }
 
   steps.push_back(std::make_pair<int, int>(1, 1));
   steps.push_back(std::make_pair<int, int>(1, -1));
 
   constexpr unsigned short int maxSteps { 1 };
 
-  auto advanceableSquares {Pawn::getAdvanceableSquares(steps, maxSteps)};
+  auto advanceableSquares { Pawn::getAdvanceableSquares(steps, maxSteps, true) };
 
   std::erase_if(advanceableSquares, [this](const auto& pair) {
     if (pair.second == this->getSquare()->getColumn()) {
-      const auto& [hasPawn, pawnColor] { Pawn::checkboard->getSquareInfo(pair) };
+      auto checkboard { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
+      const auto& [hasPawn, pawnColor] { checkboard->getSquareInfo(pair) };
       return hasPawn;
     }
 

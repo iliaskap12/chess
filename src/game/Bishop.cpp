@@ -1,18 +1,17 @@
 #include <game/Bishop.h>
-#include "App.h"
 
 Bishop::Bishop(PawnColor color) : Pawn(color) {
   Pawn::setTexture("bishop");
+  this->steps.push_back(std::make_pair<int, int>(1, 1));
+  this->steps.push_back(std::make_pair<int, int>(-1, 1));
+  this->steps.push_back(std::make_pair<int, int>(1, -1));
+  this->steps.push_back(std::make_pair<int, int>(-1, -1));
 }
 
 std::vector<std::pair<int, int>> Bishop::getAdvanceableSquares() {
-  std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
-  steps.push_back(std::make_pair<int, int>(1, 1));
-  steps.push_back(std::make_pair<int, int>(-1, 1));
-  steps.push_back(std::make_pair<int, int>(1, -1));
-  steps.push_back(std::make_pair<int, int>(-1, -1));
+  return Pawn::getAdvanceableSquares(this->steps, Bishop::maxSteps, false);
+}
 
-  constexpr unsigned short int maxSteps { 8 };
-
-  return Pawn::getAdvanceableSquares(steps, maxSteps);
+std::vector<std::pair<int, int>> Bishop::getHoldingSquares() {
+  return Pawn::getAdvanceableSquares(this->steps, Bishop::maxSteps, true);
 }

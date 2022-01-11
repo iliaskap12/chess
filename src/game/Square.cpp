@@ -79,9 +79,30 @@ bool operator==(const Square &lhs, const Square &rhs) {
 }
 
 void Square::setRow(unsigned short row) {
-  this->row_ = row;
+  this->row_ = { row };
 }
 
 void Square::setColumn(unsigned short column) {
-  this->column_ = column;
+  this->column_ = { column };
+}
+
+void Square::increaseDangerReferenceCount(PawnColor color) {
+  if (color == PawnColor::WHITE) {
+    ++this->whiteDangerReferenceCount_;
+  } else {
+    ++this->blackDangerReferenceCount_;
+  }
+}
+
+void Square::resetDangerReferenceCount() {
+  this->whiteDangerReferenceCount_ = { 0 };
+  this->blackDangerReferenceCount_ = { 0 };
+}
+
+unsigned short int Square::getDangerReferenceCount(PawnColor color) const {
+  if (color == PawnColor::WHITE) {
+    return this->whiteDangerReferenceCount_;
+  } else {
+    return this->blackDangerReferenceCount_;
+  }
 }

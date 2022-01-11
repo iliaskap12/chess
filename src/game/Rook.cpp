@@ -2,16 +2,16 @@
 
 Rook::Rook(PawnColor color) : Pawn(color) {
   Pawn::setTexture("rook");
+  this->steps.push_back(std::make_pair<int, int>(1, 0));
+  this->steps.push_back(std::make_pair<int, int>(-1, 0));
+  this->steps.push_back(std::make_pair<int, int>(0, 1));
+  this->steps.push_back(std::make_pair<int, int>(0, -1));
 }
 
 std::vector<std::pair<int, int>> Rook::getAdvanceableSquares() {
-  std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
-  steps.push_back(std::make_pair<int, int>(1, 0));
-  steps.push_back(std::make_pair<int, int>(-1, 0));
-  steps.push_back(std::make_pair<int, int>(0, 1));
-  steps.push_back(std::make_pair<int, int>(0, -1));
+  return Pawn::getAdvanceableSquares(this->steps, Rook::maxSteps, false);
+}
 
-  constexpr unsigned short int maxSteps { 8 };
-
-  return Pawn::getAdvanceableSquares(steps, maxSteps);
+std::vector<std::pair<int, int>> Rook::getHoldingSquares() {
+  return Pawn::getAdvanceableSquares(this->steps, Rook::maxSteps, true);
 }

@@ -63,6 +63,10 @@ std::shared_ptr<Squares> Checkboard::getSquares() const {
 }
 
 void Checkboard::draw() {
+  if (auto game { static_cast<App *>(graphics::getUserData())->getGame() }; game == nullptr || game->getCheckboard() == nullptr) {
+    return;
+  }
+
   this->drawingArea.draw();
   for (const auto& row : *this->squares) {
     for (auto& square : row) {
@@ -74,7 +78,33 @@ void Checkboard::draw() {
   }
 }
 
+void Checkboard::resetReferenceCounts() const {
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      square->resetDangerReferenceCount();
+    }
+  }
+}
+
+void Checkboard::setReferenceCounts() const {
+  this->resetReferenceCounts();
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      if (!square->hasPawn()) continue;
+      auto holdingSquares { square->getPawn()->getHoldingSquares() };
+      std::ranges::for_each(holdingSquares.begin(), holdingSquares.end(), [&](const auto& item){
+        this->getSquare(item)->increaseDangerReferenceCount(square->getPawn()->getColor());
+      });
+    }
+  }
+}
+
 void Checkboard::update(float ms) {
+  if (auto game { static_cast<App *>(graphics::getUserData())->getGame() }; game == nullptr || game->getCheckboard() == nullptr) {
+    return;
+  }
+
+  this->setReferenceCounts();
   for (const auto& row : *this->squares) {
     for (auto& square : row) {
       square->update(ms);
@@ -98,51 +128,12 @@ void Checkboard::notify(Square *square) {
     return;
   }
 
-  Game* game { static_cast<App*>(graphics::getUserData())->getGame() };
-
   if (this->markedSquares.empty()) {
-    if (square->hasPawn()) {
-      if (this->selectedPawn != nullptr) {
-        this->selectedPawn = { nullptr };
-        return;
-      }
-
-      if (!(game->isWhiteTurn() && square->getPawn()->getColor() == PawnColor::WHITE || !game->isWhiteTurn() && square->getPawn()->getColor() == PawnColor::BLACK)) {
-        this->markedPawn = { nullptr };
-        return;
-      }
-
-      this->markedPawn = { square->getPawn() };
-      for (const auto &[rowIndex, columnIndex] : this->markedPawn->getAdvanceableSquares()) {
-        this->markedSquares.push_back((*this->squares)[rowIndex][columnIndex]);
-      }
-    } else {
-      this->markedPawn = { nullptr };
-      this->selectedPawn = { nullptr };
+    if (const bool shouldExit { this->markSquares(square) }; shouldExit) {
       return;
     }
   } else {
-    if (std::input_iterator auto result { std::ranges::find_if(
-            this->markedSquares.begin(),
-            this->markedSquares.end(),
-            [&square](const std::shared_ptr<Square> &markedSquare) {
-              return *markedSquare == *square;
-            })
-        };
-        result != this->markedSquares.end()) {
-      if (this->whiteKingId.has_value() && this->whiteKingId == this->markedPawn->getSquare()->getDrawingArea().getId()) {
-        this->whiteKingId.reset();
-        this->whiteKingId = { std::make_optional(square->getDrawingArea().getId()) };
-      }
-      if (this->blackKingId.has_value() && this->blackKingId == this->markedPawn->getSquare()->getDrawingArea().getId()) {
-        this->blackKingId.reset();
-        this->blackKingId = { std::make_optional(square->getDrawingArea().getId()) };
-      }
-      this->markedPawn->moveTo(square, this->markedPawn);
-      game->setWhiteTurn(!game->isWhiteTurn());
-    }
-    this->markedPawn = { nullptr };
-    this->markedSquares.clear();
+    this->movePawn(square);
   }
 
   this->selectedPawn == nullptr ? this->selectedPawn = { std::make_shared<Rectangle>(square->getDrawingArea()) } : this->selectedPawn = { nullptr };
@@ -171,6 +162,59 @@ bool Checkboard::shouldMark(const Rectangle* rect) {
     return true;
   }
   return false;
+}
+
+bool Checkboard::markSquares(const Square *square) {
+  if (const Game* game { static_cast<App*>(graphics::getUserData())->getGame() }; square->hasPawn()) {
+    if (this->selectedPawn != nullptr) {
+      this->selectedPawn = { nullptr };
+      return true;
+    }
+
+    if (!(game->isWhiteTurn() && square->getPawn()->getColor() == PawnColor::WHITE || !game->isWhiteTurn() && square->getPawn()->getColor() == PawnColor::BLACK)) {
+      this->markedPawn = { nullptr };
+      return true;
+    }
+
+    this->markedPawn = { square->getPawn() };
+    for (const auto &[rowIndex, columnIndex] : this->markedPawn->getAdvanceableSquares()) {
+      this->markedSquares.push_back((*this->squares)[rowIndex][columnIndex]);
+    }
+  } else {
+    this->markedPawn = { nullptr };
+    this->selectedPawn = { nullptr };
+    return true;
+  }
+  return false;
+}
+
+void Checkboard::moveKing(const Square* square) {
+  if (this->whiteKingId.has_value() && this->whiteKingId == this->markedPawn->getSquare()->getDrawingArea().getId()) {
+    this->whiteKingId.reset();
+    this->whiteKingId = { std::make_optional(square->getDrawingArea().getId()) };
+  }
+  if (this->blackKingId.has_value() && this->blackKingId == this->markedPawn->getSquare()->getDrawingArea().getId()) {
+    this->blackKingId.reset();
+    this->blackKingId = { std::make_optional(square->getDrawingArea().getId()) };
+  }
+}
+
+void Checkboard::movePawn(Square* square) {
+  if (std::input_iterator auto result { std::ranges::find_if(
+          this->markedSquares.begin(),
+          this->markedSquares.end(),
+          [&square](const std::shared_ptr<Square> &markedSquare) {
+            return *markedSquare == *square;
+          })
+      };
+      result != this->markedSquares.end()) {
+    this->moveKing(square);
+    this->markedPawn->moveTo(square, this->markedPawn);
+    Game* game { static_cast<App*>(graphics::getUserData())->getGame() };
+    game->setWhiteTurn(!game->isWhiteTurn());
+  }
+  this->markedPawn = { nullptr };
+  this->markedSquares.clear();
 }
 
 const std::shared_ptr<Square> &Checkboard::getMovingSquare() const {

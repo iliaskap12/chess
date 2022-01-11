@@ -1,20 +1,20 @@
 #include <game/Queen.h>
 Queen::Queen(PawnColor color) : Pawn(color) {
   Pawn::setTexture("queen");
+  this->steps.push_back(std::make_pair<int, int>(1, 1));
+  this->steps.push_back(std::make_pair<int, int>(-1, 1));
+  this->steps.push_back(std::make_pair<int, int>(1, -1));
+  this->steps.push_back(std::make_pair<int, int>(-1, -1));
+  this->steps.push_back(std::make_pair<int, int>(1, 0));
+  this->steps.push_back(std::make_pair<int, int>(-1, 0));
+  this->steps.push_back(std::make_pair<int, int>(0, 1));
+  this->steps.push_back(std::make_pair<int, int>(0, -1));
 }
 
 std::vector<std::pair<int, int>> Queen::getAdvanceableSquares() {
-  std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
-  steps.push_back(std::make_pair<int, int>(1, 1));
-  steps.push_back(std::make_pair<int, int>(-1, 1));
-  steps.push_back(std::make_pair<int, int>(1, -1));
-  steps.push_back(std::make_pair<int, int>(-1, -1));
-  steps.push_back(std::make_pair<int, int>(1, 0));
-  steps.push_back(std::make_pair<int, int>(-1, 0));
-  steps.push_back(std::make_pair<int, int>(0, 1));
-  steps.push_back(std::make_pair<int, int>(0, -1));
+  return Pawn::getAdvanceableSquares(this->steps, Queen::maxSteps, false);
+}
 
-  constexpr unsigned short int maxSteps { 8 };
-
-  return Pawn::getAdvanceableSquares(steps, maxSteps);
+std::vector<std::pair<int, int>> Queen::getHoldingSquares() {
+  return Pawn::getAdvanceableSquares(this->steps, Queen::maxSteps, true);
 }

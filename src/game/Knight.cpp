@@ -2,20 +2,20 @@
 
 Knight::Knight(PawnColor color) : Pawn(color) {
   Pawn::setTexture("knight");
+  this->steps.push_back(std::make_pair<int, int>(2, 1));
+  this->steps.push_back(std::make_pair<int, int>(-2, 1));
+  this->steps.push_back(std::make_pair<int, int>(2, -1));
+  this->steps.push_back(std::make_pair<int, int>(-2, -1));
+  this->steps.push_back(std::make_pair<int, int>(1, 2));
+  this->steps.push_back(std::make_pair<int, int>(1, -2));
+  this->steps.push_back(std::make_pair<int, int>(-1, 2));
+  this->steps.push_back(std::make_pair<int, int>(-1, -2));
 }
 
 std::vector<std::pair<int, int>> Knight::getAdvanceableSquares() {
-  std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>(static_cast<std::size_t>(8)) };
-  steps.push_back(std::make_pair<int, int>(2, 1));
-  steps.push_back(std::make_pair<int, int>(-2, 1));
-  steps.push_back(std::make_pair<int, int>(2, -1));
-  steps.push_back(std::make_pair<int, int>(-2, -1));
-  steps.push_back(std::make_pair<int, int>(1, 2));
-  steps.push_back(std::make_pair<int, int>(1, -2));
-  steps.push_back(std::make_pair<int, int>(-1, 2));
-  steps.push_back(std::make_pair<int, int>(-1, -2));
+  return Pawn::getAdvanceableSquares(this->steps, Knight::maxSteps, false);
+}
 
-  constexpr unsigned short int maxSteps { 1 };
-
-  return Pawn::getAdvanceableSquares(steps, maxSteps);
+std::vector<std::pair<int, int>> Knight::getHoldingSquares() {
+  return Pawn::getAdvanceableSquares(this->steps, Knight::maxSteps, true);
 }

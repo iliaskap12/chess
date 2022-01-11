@@ -1,5 +1,4 @@
 #include <game/King.h>
-#include <game/Soldier.h>
 #include <algorithm>
 #include <App.h>
 
@@ -16,75 +15,32 @@ King::King(PawnColor color) : Pawn(color) {
 }
 
 std::vector<std::pair<int, int>> King::getAdvanceableSquares() {
-  return this->squares_;
-}
-void King::update(float ms) {
-  if (static_cast<App *>(graphics::getUserData())->getGame() != nullptr && static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() != nullptr) {
-    if (Pawn::checkboard == nullptr) {
-      Pawn::checkboard = { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
-    }
-    this->getSafeAdvanceableSquares();
-    Pawn::update(ms);
-  }
+  auto squares {Pawn::getAdvanceableSquares(this->steps, King::maxSteps, false)};
+
+  return this->getKingSquares(squares);
 }
 
-void King::getSafeAdvanceableSquares() {
-  auto squares { Pawn::getAdvanceableSquares(this->steps, King::maxSteps) };
-  std::vector<std::pair<int, int>> unsafeSquares { this->getUnsafeSquares() };
+std::vector<std::pair<int, int>> King::getHoldingSquares() {
+  auto squares { Pawn::getAdvanceableSquares(this->steps, King::maxSteps, true) };
 
-  std::erase_if(squares, [&unsafeSquares](const std::pair<int, int> &pair) {
-    return std::ranges::find(unsafeSquares, pair) != unsafeSquares.end();
+  return this->getKingSquares(squares);
+}
+
+std::vector<std::pair<int, int>> King::getKingSquares(std::vector<std::pair<int, int>> &pairs) const {
+  std::erase_if(pairs, [this](const std::pair<int, int> &pair) {
+    return static_cast<App *>(graphics::getUserData())
+               ->getGame()
+               ->getCheckboard()
+               ->getSquare(pair)
+               ->getDangerReferenceCount(Pawn::getColor() == PawnColor::WHITE ? PawnColor::BLACK : PawnColor::WHITE) > 0;
   });
 
-  this->squares_ = { squares };
+  return pairs;
 }
 
-bool King::isChecked() {
+bool King::isChecked() const {
   auto kingSquare { Pawn::getSquare() };
-  std::pair<int, int> kingSquareCoordinates { std::make_pair(static_cast<int>(kingSquare->getRow()), static_cast<int>(kingSquare->getColumn())) };
-  std::vector<std::pair<int, int>> unsafeSquares {this->getUnsafeSquares()};
+  PawnColor color { Pawn::getColor() == PawnColor::WHITE ? PawnColor::BLACK : PawnColor::WHITE };
 
-  if (std::input_iterator auto result { std::ranges::find_if(
-          unsafeSquares.begin(),
-          unsafeSquares.end(),
-          [&kingSquareCoordinates](const std::pair<int, int> &coordinates) {
-            return kingSquareCoordinates == coordinates;
-          })
-      };
-      result != unsafeSquares.end()) {
-    return true;
-  }
-
-  return false;
-}
-
-std::vector<std::pair<int, int>> King::getUnsafeSquares() {
-  auto squares { Pawn::getAdvanceableSquares(this->steps, King::maxSteps) };
-  auto kingSquare { Pawn::getSquare() };
-  std::pair<int, int> kingSquareCoordinates { std::make_pair(static_cast<int>(kingSquare->getRow()), static_cast<int>(kingSquare->getColumn())) };
-  std::vector<std::pair<int, int>> unsafeSquares{ std::vector<std::pair<int, int>>() };
-
-  for (auto const& row : *Pawn::checkboard->getSquares()) {
-    for (auto const& square : row) {
-      if (square->hasPawn() && square->getPawn()->getColor() != Pawn::getColor() && dynamic_pointer_cast<Soldier>(square->getPawn()) != nullptr) {
-        auto squareCoordinates {dynamic_pointer_cast<Soldier>(square->getPawn())->getCapturableSquares()};
-        unsafeSquares.resize(unsafeSquares.size() + squareCoordinates.size());
-        std::ranges::copy_if(squareCoordinates.begin(), squareCoordinates.end(), std::back_inserter(unsafeSquares),
-                             [&squares, &kingSquareCoordinates](const std::pair<int, int>& dest) {
-                               return std::ranges::find(squares, dest) != squares.end() || dest == kingSquareCoordinates;
-                             });
-        continue;
-      }
-      if (square->hasPawn() && square->getPawn()->getColor() != Pawn::getColor()) {
-        auto squareCoordinates {square->getPawn()->getAdvanceableSquares()};
-        unsafeSquares.resize(unsafeSquares.size() + squareCoordinates.size());
-        std::ranges::copy_if(squareCoordinates.begin(), squareCoordinates.end(), std::back_inserter(unsafeSquares),
-         [&squares, &kingSquareCoordinates](const std::pair<int, int>& dest) {
-           return std::ranges::find(squares, dest) != squares.end() || dest == kingSquareCoordinates;
-         });
-      }
-    }
-  }
-
-  return unsafeSquares;
+  return kingSquare->getDangerReferenceCount(color) > 0;
 }
