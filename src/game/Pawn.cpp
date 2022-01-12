@@ -70,6 +70,16 @@ void Pawn::capture(const std::shared_ptr<Pawn>& pawn) {
   }
 }
 
+std::vector<std::pair<int, int>> Pawn::correctDirection(std::vector<std::pair<int, int>> steps) const {
+  std::vector<std::pair<int, int>> reverseSteps { std::vector<std::pair<int, int>>(steps) };
+  if (this->color == PawnColor::BLACK) {
+    std::ranges::transform(steps.begin(), steps.end(), reverseSteps.begin(), [](const std::pair<int, int> &pair){
+      return std::make_pair(-pair.first, -pair.second);
+    });
+  }
+  return reverseSteps;
+}
+
 std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps, bool holding) const {
   std::vector<std::pair<int, int>> advanceableSquares { std::vector<std::pair<int, int>>() };
 
@@ -78,13 +88,7 @@ std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(const std::vector<p
 
   unsigned short int nextRow { currentRow };
   unsigned short int nextColumn { currentColumn };
-  std::vector<std::pair<int, int>> reverseSteps { std::vector<std::pair<int, int>>(steps.size()) };
-  if (this->color == PawnColor::BLACK) {
-    std::ranges::transform(steps.begin(), steps.end(), reverseSteps.begin(), [](const std::pair<int, int> &pair){
-      return std::make_pair(-pair.first, -pair.second);
-    });
-  }
-  for (const auto& [rowStep, columnStep] : (this->color == PawnColor::WHITE ? steps : reverseSteps)) {
+  for (const auto& [rowStep, columnStep] : this->correctDirection(steps)) {
     bool shouldTerminate { false };
 
     unsigned short int numberOfSteps { 0 };
@@ -143,4 +147,29 @@ void Pawn::moveTo(Square *squarePtr, const std::shared_ptr<Pawn>& self) {
 
 const std::string &Pawn::getTexture() const {
   return this->texture_;
+}
+
+std::shared_ptr<Pawn> Pawn::getBlockedPawn() {
+  return nullptr;
+}
+
+bool Pawn::isBlocked() const {
+  return this->blocked;
+}
+
+void Pawn::block() {
+  this->blocked = { true };
+}
+
+void Pawn::unblock() {
+  this->blocked = { false };
+  this->blockingPawn = { nullptr };
+}
+
+void Pawn::blockedBy(const std::shared_ptr<Pawn> &blocking) {
+  this->blockingPawn = { blocking };
+}
+
+std::shared_ptr<Pawn> Pawn::getBlockingPawn() {
+  return this->blockingPawn;
 }

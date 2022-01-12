@@ -39,10 +39,14 @@ public:
   void movePawn(Square* square);
   void resetReferenceCounts() const;
   void setReferenceCounts() const;
+  void setBlockedPawns() const;
+  void resetBlockedPawns() const;
+  void tryMoveBlockedPawn(const Square *square);
 
   [[nodiscard]] bool shouldMark(const Rectangle* rect);
   [[nodiscard]] bool amISelected(const Rectangle *rect) const;
   [[nodiscard]] bool amIinDanger(const Rectangle *rect) const;
+  [[nodiscard]] bool isKing(PawnColor color, const std::pair<int, int> &coordinates) const;
   void draw() override;
   void update(float ms) override;
   void notify(Square *square);

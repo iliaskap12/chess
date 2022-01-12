@@ -25,6 +25,8 @@ class Pawn : public Drawable, public Updateable, public Movable {
   std::pair<float, float> moveSteps {  };
   Square* destination_ { nullptr };
   std::shared_ptr<Pawn> self_{ nullptr };
+  bool blocked { false };
+  std::shared_ptr<Pawn> blockingPawn { nullptr };
 
 public:
   explicit Pawn(PawnColor color);
@@ -51,6 +53,14 @@ public:
   virtual std::vector<std::pair<int, int>> getHoldingSquares() = 0;
   [[nodiscard]] virtual std::vector<std::pair<int, int>>
   getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps, bool holding) const;
+  [[nodiscard]] std::vector<std::pair<int, int>> correctDirection(std::vector<std::pair<int, int>> steps) const;
+
+  virtual std::shared_ptr<Pawn> getBlockedPawn();
+  std::shared_ptr<Pawn> getBlockingPawn();
+  [[nodiscard]] bool isBlocked() const;
+  void block();
+  void unblock();
+  void blockedBy(const std::shared_ptr<Pawn> &blocking);
 };
 
 #endif // PAWN_H

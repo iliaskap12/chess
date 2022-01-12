@@ -12,6 +12,7 @@ public:
   explicit Queen(PawnColor color);
   std::vector<std::pair<int, int>> getAdvanceableSquares() override;
   std::vector<std::pair<int, int>> getHoldingSquares() override;
+  std::shared_ptr<Pawn> getBlockedPawn() override;
 };
 
 #endif // QUEEN_H

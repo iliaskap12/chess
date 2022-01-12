@@ -99,12 +99,36 @@ void Checkboard::setReferenceCounts() const {
   }
 }
 
+void Checkboard::resetBlockedPawns() const {
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      if (square->hasPawn()) {
+        square->getPawn()->unblock();
+      }
+    }
+  }
+}
+
+void Checkboard::setBlockedPawns() const {
+  this->resetBlockedPawns();
+  for (const auto& row : *this->squares) {
+    for (auto& square : row) {
+      if (!square->hasPawn()) continue;
+      if (auto pawn { square->getPawn()->getBlockedPawn() }; pawn != nullptr) {
+        pawn->block();
+        pawn->blockedBy(square->getPawn());
+      }
+    }
+  }
+}
+
 void Checkboard::update(float ms) {
   if (auto game { static_cast<App *>(graphics::getUserData())->getGame() }; game == nullptr || game->getCheckboard() == nullptr) {
     return;
   }
 
   this->setReferenceCounts();
+  this->setBlockedPawns();
   for (const auto& row : *this->squares) {
     for (auto& square : row) {
       square->update(ms);
@@ -177,8 +201,20 @@ bool Checkboard::markSquares(const Square *square) {
     }
 
     this->markedPawn = { square->getPawn() };
-    for (const auto &[rowIndex, columnIndex] : this->markedPawn->getAdvanceableSquares()) {
-      this->markedSquares.push_back((*this->squares)[rowIndex][columnIndex]);
+
+    if (square->getPawn()->isBlocked()) {
+      this->tryMoveBlockedPawn(square);
+      if (this->markedSquares.empty()) {
+        this->markedPawn = { nullptr };
+        this->selectedPawn = { nullptr };
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    for (const auto &pair : this->markedPawn->getAdvanceableSquares()) {
+      this->markedSquares.push_back(this->getSquare(pair));
     }
   } else {
     this->markedPawn = { nullptr };
@@ -271,4 +307,34 @@ bool Checkboard::amIinDanger(const Rectangle *rect) const {
   }
 
   return false;
+}
+
+bool Checkboard::isKing(PawnColor color, const std::pair<int, int> &coordinates) const {
+  if (color == PawnColor::WHITE) {
+    return *this->whiteKing->getSquare() == *this->getSquare(coordinates);
+  }
+  return *this->blackKing->getSquare() == *this->getSquare(coordinates);
+}
+
+void Checkboard::tryMoveBlockedPawn(const Square *square) {
+  auto advanceableSquares { this->markedPawn->getAdvanceableSquares() };
+  auto king { this->markedPawn->getColor() == PawnColor::WHITE ? this->whiteKing : this->blackKing };
+  std::ranges::for_each(advanceableSquares, [&square, this, &king](const std::pair<int, int> &pair) {
+    const int kingsRow { king->getSquare()->getRow() };
+    const int kingsColumn { king->getSquare()->getColumn() };
+    const int blockingPawnRow { square->getPawn()->getBlockingPawn()->getSquare()->getRow() };
+    const int blockingPawnColumn { square->getPawn()->getBlockingPawn()->getSquare()->getColumn() };
+    const int blockingPawnUpdwardsDiagonal { blockingPawnRow - blockingPawnColumn };
+    const int blockingPawnDowndwardsDiagonal { blockingPawnRow + blockingPawnColumn };
+    const bool sameRow { blockingPawnRow == pair.first && kingsRow == pair.first };
+    const bool sameColumn { blockingPawnColumn == pair.second && kingsColumn == pair.second};
+    const bool sameUpwardsDiagonal { (blockingPawnUpdwardsDiagonal == pair.first - pair.second) && (kingsRow - kingsColumn == pair.first - pair.second) };
+    const bool sameDownwardsDiagonal { (blockingPawnDowndwardsDiagonal == pair.first + pair.second) && (kingsRow + kingsColumn == pair.first + pair.second) };
+    const bool canCapture { *square->getPawn()->getBlockingPawn()->getSquare() == *this->getSquare(pair) };
+    if (canCapture) {
+      this->markedSquares.push_back(std::make_shared<Square>(*this->markedPawn->getBlockingPawn()->getSquare()));
+    } else if (sameRow || sameColumn || sameUpwardsDiagonal || sameDownwardsDiagonal) {
+      this->markedSquares.push_back(this->getSquare(pair));
+    }
+  });
 }
