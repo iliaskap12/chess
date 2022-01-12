@@ -123,9 +123,6 @@ gen
 # Web P
 *.webp
 
-# Portable Network Graphics
-*.png
-
 # Animated Portable Network Graphics
 *.apng
 
@@ -156,9 +153,6 @@ gen
 # 3D Images
 *.3dm
 *.max
-
-# mp3
-*.mp3
 
 #builds
 cmake-build*
