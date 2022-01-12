@@ -158,3 +158,12 @@ gen
 cmake-build*
 build*
 out*
+
+.vscode/
+.DS_Store
+build/
+_build/
+_static/
+_templates/
+
+venv

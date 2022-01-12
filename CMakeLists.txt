@@ -28,10 +28,15 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
     # main CMakeLists.
     include(CTest)
 
+    set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+    set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+    include(CPack)
+
     # Docs only available if this is the main app
     find_package(Doxygen)
     if(Doxygen_FOUND)
-#        add_subdirectory(docs)
+        set(DOCS_DIR docs-doxygen)
+        add_subdirectory(${DOCS_DIR})
     else()
         message(STATUS "Doxygen not found, not building docs")
     endif()
@@ -46,6 +51,7 @@ endif()
 
 find_package(sgg REQUIRED)
 set(CMAKE_CURRENT_SOURCE_DIR src)
+set(SRC_DIR src)
 set(HEADER_DIR include)
 set(
         SGG_LIBS
