@@ -1,0 +1,19 @@
+digraph "Checkboard::update"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Checkboard::update",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Checkboard::setBlockedPawns",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#ae6492b0cb2ee2dc21051c32803033ee7",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Checkboard::resetBlocked\lPawns",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#a9925dab5f1a892b7231c9407c8d1288b",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Checkboard::setReference\lCounts",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Checkboard::getSquare",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Checkboard::resetReference\lCounts",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#ac6518f96d2609df334c7a39dc337c79c",tooltip=" "];
+}

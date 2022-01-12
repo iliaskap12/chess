@@ -1,0 +1,12 @@
+digraph "/Users/runner/work/chess/chess/include/util"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  compound=true
+  subgraph clusterdir_d44c64559bbebec7f509842c48db8b23 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", style="filled,dashed,", label="include", fontname="Helvetica", fontsize="10", URL="dir_d44c64559bbebec7f509842c48db8b23.html"]
+  dir_586ad3c2f85d776b984733890d824e3e [shape=box, label="util", style="filled,bold,", fillcolor="#edf0f7", color="grey25", URL="dir_586ad3c2f85d776b984733890d824e3e.html"];
+  }
+}

@@ -1,0 +1,22 @@
+digraph "Square::getDrawingArea"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Square::getDrawingArea",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Pawn::move",height=0.2,width=0.4,color="black",URL="$de/dff/classPawn.html#a96f71005c77711d47025e0d517d09520",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Pawn::update",height=0.2,width=0.4,color="black",URL="$de/dff/classPawn.html#ac89566858a41eb4d7ca2f1dee55faac6",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Checkboard::moveKing",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#a7203ce315bcf059fe127acd6ea627e1d",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Checkboard::movePawn",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#a7a7a553f063ff2de8e402acab07c9e99",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Checkboard::notify",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#ab188b54b544caa7ae0d36278b11d572c",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Pawn::setSquare",height=0.2,width=0.4,color="black",URL="$de/dff/classPawn.html#afbe7ac4d2314ac79a62bc576b39016e7",tooltip=" "];
+}

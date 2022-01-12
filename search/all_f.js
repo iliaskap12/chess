@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['rectangle_0',['Rectangle',['../de/d00/classRectangle.html',1,'Rectangle'],['../de/d00/classRectangle.html#a8a933e0ebd9e80ce91e61ffe87fd577e',1,'Rectangle::Rectangle()'],['../de/d00/classRectangle.html#a3dbdc43f4f0afd63efa52140392c2ccf',1,'Rectangle::Rectangle(Point leftBottom, float height, float width)'],['../de/d00/classRectangle.html#ac6e2b3f4f9bc6214c8a1f0a034f0bc2e',1,'Rectangle::Rectangle(Point leftBottom, float height, float width, const graphics::Brush &amp;brush, const Brush &amp;type)']]],
+  ['rectangle_2ecpp_1',['Rectangle.cpp',['../d5/dfd/Rectangle_8cpp.html',1,'']]],
+  ['rectangle_2eh_2',['Rectangle.h',['../dc/d04/Rectangle_8h.html',1,'']]],
+  ['red_3',['RED',['../dc/d90/Brush_8h.html#a62c1007e36a924771f8294ff9f0ac5d0aa2d9547b5d3dd9f05984475f7c926da0',1,'Brush.h']]],
+  ['registergame_4',['registerGame',['../dd/d64/classApp.html#a2155097882b9b682f9c5ce9345a0f230',1,'App']]],
+  ['registerpawn_5',['registerPawn',['../d3/d72/classSquare.html#a2db5e4c2cece65ed55829d7953367b46',1,'Square']]],
+  ['registerplayers_6',['registerPlayers',['../d9/d68/classGame.html#a8249d8c379b65f4e4e58c3977c9a7f88',1,'Game']]],
+  ['resetblockedpawns_7',['resetBlockedPawns',['../d7/d22/classCheckboard.html#a9925dab5f1a892b7231c9407c8d1288b',1,'Checkboard']]],
+  ['resetdangerreferencecount_8',['resetDangerReferenceCount',['../d3/d72/classSquare.html#ad1877dc4c858e7684a2d7847d4407952',1,'Square']]],
+  ['resetmovingsquare_9',['resetMovingSquare',['../d7/d22/classCheckboard.html#a4bf8f77ba26b65906b30ecec56f5a89b',1,'Checkboard']]],
+  ['resetreferencecounts_10',['resetReferenceCounts',['../d7/d22/classCheckboard.html#ac6518f96d2609df334c7a39dc337c79c',1,'Checkboard']]],
+  ['resignment_2ecpp_11',['Resignment.cpp',['../d8/d09/Resignment_8cpp.html',1,'']]],
+  ['resignment_2eh_12',['Resignment.h',['../da/dd7/Resignment_8h.html',1,'']]],
+  ['resignsound_2ecpp_13',['ResignSound.cpp',['../d7/d6c/ResignSound_8cpp.html',1,'']]],
+  ['resignsound_2eh_14',['ResignSound.h',['../de/d40/ResignSound_8h.html',1,'']]],
+  ['rightbottom_15',['rightBottom',['../de/d00/classRectangle.html#a3927e594dd832e199dfc25c162413d68',1,'Rectangle']]],
+  ['righttop_16',['rightTop',['../de/d00/classRectangle.html#a7c2d9d16764b685fb50193d0b7209302',1,'Rectangle']]],
+  ['rook_17',['Rook',['../db/d7e/classRook.html',1,'Rook'],['../db/d7e/classRook.html#a4bebceacb3a729c274964b00285d186d',1,'Rook::Rook()']]],
+  ['rook_2ecpp_18',['Rook.cpp',['../d5/d25/Rook_8cpp.html',1,'']]],
+  ['rook_2eh_19',['Rook.h',['../d0/d64/Rook_8h.html',1,'']]],
+  ['row_5f_20',['row_',['../d3/d72/classSquare.html#a3faa071aa56a3ce35f74becd45bdbe68',1,'Square']]],
+  ['run_21',['run',['../dd/d64/classApp.html#ae09dc71078b64c56c673b1ad1d25b5d1',1,'App']]]
+];

@@ -1,0 +1,17 @@
+digraph "PlayingScreen::getSquare"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="PlayingScreen::getSquare",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="paths::getImagesPath",height=0.2,width=0.4,color="black",URL="$d5/dc0/namespacepaths.html#a9e16d92de127863188beeb15a2d197bb",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="paths::getProjectRootPath",height=0.2,width=0.4,color="black",URL="$d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="custom_string::split",height=0.2,width=0.4,color="black",URL="$df/d3c/namespacecustom__string.html#a4933df9cc5668a8279f567117ae5b35f",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="stringHash",height=0.2,width=0.4,color="black",URL="$dd/dca/custom-string_8h.html#aafdf7789eff0323ce529bc7c62dccf86",tooltip=" "];
+}

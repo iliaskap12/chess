@@ -1,0 +1,15 @@
+digraph "Checkboard::tryBlockCheck"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Checkboard::tryBlockCheck",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Checkboard::secureTheKing",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#a21a011e2390772722da4815b73e34287",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Checkboard::markSquares",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Checkboard::notify",height=0.2,width=0.4,color="black",URL="$d7/d22/classCheckboard.html#ab188b54b544caa7ae0d36278b11d572c",tooltip=" "];
+}
