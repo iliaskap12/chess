@@ -45,3 +45,6 @@ bool Game::isWhiteTurn() const {
 void Game::setWhiteTurn(bool whiteTurn) {
   this->whiteTurn_ = { whiteTurn };
 }
+
+void Game::end(PawnColor color) {
+}

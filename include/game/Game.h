@@ -24,6 +24,7 @@ public:
   void update(float ms) override;
   [[nodiscard]] bool isWhiteTurn() const;
   void setWhiteTurn(bool white_turn);
+  void end(PawnColor color);
 };
 
 #endif // GAME_H

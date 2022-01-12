@@ -109,6 +109,10 @@ std::vector<std::pair<int, int>> Pawn::getAdvanceableSquares(const std::vector<p
         shouldTerminate = { true };
       }
 
+      if (holding && hasPawn && pawnColor.value() != this->getColor() && checkboard->isKing(pawnColor.value(), squareCoordinates)) {
+        shouldTerminate = { false };
+      }
+
       if (const bool advanceOnPawn { hasPawn && (holding || pawnColor.value() != this->getColor()) }; advanceOnPawn || !hasPawn) {
         advanceableSquares.push_back(squareCoordinates);
       }

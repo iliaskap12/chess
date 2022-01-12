@@ -26,6 +26,8 @@ private:
   std::optional<long> blackKingId { std::optional<long>() };
   std::shared_ptr<Pawn> whiteKing { nullptr };
   std::shared_ptr<Pawn> blackKing { nullptr };
+  std::shared_ptr<Pawn> whiteKingThreat { nullptr };
+  std::shared_ptr<Pawn> blackKingThreat { nullptr };
 
 public:
   Checkboard();
@@ -37,11 +39,13 @@ public:
   bool markSquares(const Square* square);
   void moveKing(const Square* square);
   void movePawn(Square* square);
-  void resetReferenceCounts() const;
-  void setReferenceCounts() const;
+  void resetReferenceCounts();
+  void setReferenceCounts();
   void setBlockedPawns() const;
   void resetBlockedPawns() const;
   void tryMoveBlockedPawn(const Square *square);
+  void secureTheKing(const Square* square);
+  void tryBlockCheck(const std::pair<int, int> &pair, const Square* square, const std::shared_ptr<Pawn>& king);
 
   [[nodiscard]] bool shouldMark(const Rectangle* rect);
   [[nodiscard]] bool amISelected(const Rectangle *rect) const;
@@ -55,6 +59,7 @@ public:
   [[nodiscard]] const std::shared_ptr<Square> &getMovingSquare() const;
   void setMovingSquare(Point leftBottom, const graphics::Brush &brush, Brush type) const;
   void resetMovingSquare();
+  static void checkmate(PawnColor winner);
 };
 
 #endif // CHECKBOARD_H

@@ -78,7 +78,9 @@ void Checkboard::draw() {
   }
 }
 
-void Checkboard::resetReferenceCounts() const {
+void Checkboard::resetReferenceCounts() {
+  this->whiteKingThreat = { nullptr };
+  this->blackKingThreat = { nullptr };
   for (const auto& row : *this->squares) {
     for (auto& square : row) {
       square->resetDangerReferenceCount();
@@ -86,7 +88,7 @@ void Checkboard::resetReferenceCounts() const {
   }
 }
 
-void Checkboard::setReferenceCounts() const {
+void Checkboard::setReferenceCounts() {
   this->resetReferenceCounts();
   for (const auto& row : *this->squares) {
     for (auto& square : row) {
@@ -94,6 +96,10 @@ void Checkboard::setReferenceCounts() const {
       auto holdingSquares { square->getPawn()->getHoldingSquares() };
       std::ranges::for_each(holdingSquares.begin(), holdingSquares.end(), [&](const auto& item){
         this->getSquare(item)->increaseDangerReferenceCount(square->getPawn()->getColor());
+        auto king { square->getPawn()->getColor() == PawnColor::WHITE ? this->blackKing : this->whiteKing };
+        if (*this->getSquare(item) == *king->getSquare()) {
+          (square->getPawn()->getColor() == PawnColor::WHITE ? (this->blackKingThreat = { square->getPawn() }) : (this->whiteKingThreat = { square->getPawn() }));
+        }
       });
     }
   }
@@ -195,12 +201,25 @@ bool Checkboard::markSquares(const Square *square) {
       return true;
     }
 
-    if (!(game->isWhiteTurn() && square->getPawn()->getColor() == PawnColor::WHITE || !game->isWhiteTurn() && square->getPawn()->getColor() == PawnColor::BLACK)) {
+    PawnColor squareColor { square->getPawn()->getColor() };
+    auto king { squareColor == PawnColor::WHITE ? this->whiteKing : this->blackKing };
+    if (!(game->isWhiteTurn() && squareColor == PawnColor::WHITE || !game->isWhiteTurn() && squareColor == PawnColor::BLACK)) {
       this->markedPawn = { nullptr };
       return true;
     }
 
     this->markedPawn = { square->getPawn() };
+
+    if (std::static_pointer_cast<King>(king)->isChecked()) {
+      this->secureTheKing(square);
+      if (this->markedSquares.empty()) {
+        this->markedPawn = { nullptr };
+        this->selectedPawn = { nullptr };
+        return true;
+      } else {
+        return false;
+      }
+    }
 
     if (square->getPawn()->isBlocked()) {
       this->tryMoveBlockedPawn(square);
@@ -319,22 +338,92 @@ bool Checkboard::isKing(PawnColor color, const std::pair<int, int> &coordinates)
 void Checkboard::tryMoveBlockedPawn(const Square *square) {
   auto advanceableSquares { this->markedPawn->getAdvanceableSquares() };
   auto king { this->markedPawn->getColor() == PawnColor::WHITE ? this->whiteKing : this->blackKing };
-  std::ranges::for_each(advanceableSquares, [&square, this, &king](const std::pair<int, int> &pair) {
-    const int kingsRow { king->getSquare()->getRow() };
-    const int kingsColumn { king->getSquare()->getColumn() };
-    const int blockingPawnRow { square->getPawn()->getBlockingPawn()->getSquare()->getRow() };
-    const int blockingPawnColumn { square->getPawn()->getBlockingPawn()->getSquare()->getColumn() };
-    const int blockingPawnUpdwardsDiagonal { blockingPawnRow - blockingPawnColumn };
-    const int blockingPawnDowndwardsDiagonal { blockingPawnRow + blockingPawnColumn };
+
+  const int kingsRow { king->getSquare()->getRow() };
+  const int kingsColumn { king->getSquare()->getColumn() };
+  const int blockingPawnRow { square->getPawn()->getBlockingPawn()->getSquare()->getRow() };
+  const int blockingPawnColumn { square->getPawn()->getBlockingPawn()->getSquare()->getColumn() };
+  const int blockingPawnUpwardsDiagonal { blockingPawnRow - blockingPawnColumn };
+  const int blockingPawnDownwardsDiagonal { blockingPawnRow + blockingPawnColumn };
+
+  std::ranges::for_each(advanceableSquares,
+                        [&square,
+                         this,
+                         &kingsRow,
+                         &kingsColumn,
+                         &blockingPawnRow,
+                         &blockingPawnColumn,
+                         &blockingPawnUpwardsDiagonal,
+                         &blockingPawnDownwardsDiagonal] (const std::pair<int, int> &pair) {
+
     const bool sameRow { blockingPawnRow == pair.first && kingsRow == pair.first };
     const bool sameColumn { blockingPawnColumn == pair.second && kingsColumn == pair.second};
-    const bool sameUpwardsDiagonal { (blockingPawnUpdwardsDiagonal == pair.first - pair.second) && (kingsRow - kingsColumn == pair.first - pair.second) };
-    const bool sameDownwardsDiagonal { (blockingPawnDowndwardsDiagonal == pair.first + pair.second) && (kingsRow + kingsColumn == pair.first + pair.second) };
+    const bool sameUpwardsDiagonal { (blockingPawnUpwardsDiagonal == pair.first - pair.second) && (kingsRow - kingsColumn == pair.first - pair.second) };
+    const bool sameDownwardsDiagonal { (blockingPawnDownwardsDiagonal == pair.first + pair.second) && (kingsRow + kingsColumn == pair.first + pair.second) };
     const bool canCapture { *square->getPawn()->getBlockingPawn()->getSquare() == *this->getSquare(pair) };
+
     if (canCapture) {
       this->markedSquares.push_back(std::make_shared<Square>(*this->markedPawn->getBlockingPawn()->getSquare()));
     } else if (sameRow || sameColumn || sameUpwardsDiagonal || sameDownwardsDiagonal) {
       this->markedSquares.push_back(this->getSquare(pair));
     }
   });
+}
+
+void Checkboard::secureTheKing(const Square *square) {
+  std::shared_ptr<Pawn> king { square->getPawn()->getColor() == PawnColor::WHITE ? this->whiteKing : this->blackKing };
+  PawnColor opponentColor { king->getColor() == PawnColor::WHITE ? PawnColor::BLACK : PawnColor::WHITE };
+  if (*king->getSquare() == *square)  {
+    auto advanceableSquares { king->getAdvanceableSquares() };
+    std::ranges::for_each(advanceableSquares, [this](const std::pair<int, int> &pair) {
+      this->markedSquares.push_back(this->getSquare(pair));
+    });
+  } else {
+    if (auto refCount { king->getSquare()->getDangerReferenceCount(opponentColor) }; refCount == 1) {
+      auto advanceableSquares { square->getPawn()->getAdvanceableSquares() };
+      std::ranges::for_each(advanceableSquares, [this, &square, &king](const std::pair<int, int> &pair) {
+        this->tryBlockCheck(pair, square, king);
+      });
+    } else {
+      if (king->getAdvanceableSquares().empty()) {
+        Checkboard::checkmate(opponentColor);
+      }
+    }
+  }
+}
+
+void Checkboard::tryBlockCheck(const std::pair<int, int> &pair, const Square* square, const std::shared_ptr<Pawn>& king) {
+  auto kingThreat { square->getPawn()->getColor() == PawnColor::WHITE ? this->whiteKingThreat : this->blackKingThreat };
+  const int kingsRow { king->getSquare()->getRow() };
+  const int kingsColumn { king->getSquare()->getColumn() };
+  const int kingsUpwardsDiagonal { kingsRow - kingsColumn };
+  const int kingsDownwardsDiagonal { kingsRow + kingsColumn };
+  const int kingsThreatRow { kingThreat->getSquare()->getRow() };
+  const int kingsThreatColumn { kingThreat->getSquare()->getColumn() };
+  const int kingsThreatUpwardsDiagonal { kingsThreatRow - kingsThreatColumn };
+  const int kingsThreatDownwardsDiagonal { kingsThreatRow + kingsThreatColumn };
+
+  const bool sameRow { kingsThreatRow == kingsRow && kingsRow == pair.first };
+  const bool sameColumn { kingsThreatColumn == kingsColumn && kingsColumn == pair.second};
+  const bool sameUpwardsDiagonal { (kingsThreatUpwardsDiagonal == kingsUpwardsDiagonal) && (kingsUpwardsDiagonal == pair.first - pair.second) };
+  const bool sameDownwardsDiagonal { (kingsThreatDownwardsDiagonal == kingsDownwardsDiagonal) && (kingsDownwardsDiagonal == pair.first + pair.second) };
+
+  const bool sameRowAndBetween { sameRow
+                               && ((pair.second > kingsColumn && pair.second <= kingsThreatColumn)
+                                   || (pair.second < kingsColumn && pair.second >= kingsThreatColumn)) };
+
+  const bool sameColumnAndBetween { sameColumn
+                                  && ((pair.first > kingsRow && pair.first <= kingsThreatRow)
+                                      || (pair.first < kingsRow && pair.first >= kingsThreatRow)) };
+
+  const bool sameDiagonalAndBetween { (sameUpwardsDiagonal || sameDownwardsDiagonal)
+                                    && ((pair.second > kingsColumn && pair.second <= kingsThreatColumn)
+                                        || (pair.second < kingsColumn && pair.second >= kingsThreatColumn)) };
+  if (sameRowAndBetween || sameColumnAndBetween || sameDiagonalAndBetween) {
+    this->markedSquares.push_back(this->getSquare(pair));
+  }
+}
+
+void Checkboard::checkmate(PawnColor winner) {
+  static_cast<App*>(graphics::getUserData())->getGame()->end(winner);
 }
