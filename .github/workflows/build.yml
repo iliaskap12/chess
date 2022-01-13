@@ -28,17 +28,20 @@ jobs:
           ./vcpkg/vcpkg install sdl2-mixer:x64-osx
           ./vcpkg/vcpkg install freetype:x64-osx
           ./vcpkg/vcpkg install glm:x64-osx
+      - name: Install SGG
+        run: |
+          cd $HOME
+          git clone https://github.com/cgaueb/sgg.git
       - name: Configure project with cmake and registry support
         run: |
+          cd ~/sgg
           cmake -B build -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-osx 
           cmake --build build --target install
-      - name: Install SGG
+      - name: Build sgg
         run: |
-          cd $HOME
-          git clone https://github.com/cgaueb/sgg.git 
           cd sgg
           cmake --build build --target install
   build:
