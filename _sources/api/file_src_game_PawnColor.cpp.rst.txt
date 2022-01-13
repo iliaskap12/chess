@@ -40,8 +40,6 @@ Functions
 ---------
 
 
-- :ref:`exhale_function__pawn_color_8cpp_1ac68571e49dee59a5e952e673dedabbbc`
-
 - :ref:`exhale_function__pawn_color_8cpp_1a6509b0dabc230e0e8174d7842e21d862`
 
 - :ref:`exhale_function__pawn_color_8cpp_1a1535c4ed0687663633c368c8bf026d2c`
@@ -49,6 +47,8 @@ Functions
 - :ref:`exhale_function__pawn_color_8cpp_1ac696b8bf8176fd87edbb08d0c68d11d4`
 
 - :ref:`exhale_function__pawn_color_8cpp_1a01afae9f3b15fcc149f38ff768b7b1f5`
+
+- :ref:`exhale_function__pawn_color_8cpp_1ac68571e49dee59a5e952e673dedabbbc`
 
 - :ref:`exhale_function__pawn_color_8cpp_1a7160b90052fec47bed434f8739145de2`
 
