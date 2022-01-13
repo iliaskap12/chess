@@ -32,20 +32,15 @@ jobs:
         run: |
           cd $HOME
           git clone https://github.com/cgaueb/sgg.git
-      - name: Install g++, xcode devtools, and make
-        run: |
-          brew install gcc
-          brew install make
-          sudo xcode-select --install
-          sudo xcodebuild -license
+      - name: Install ninja-build tool
+        uses: seanmiddleditch/gha-setup-ninja@v3
       - name: Configure project with cmake and registry support
         run: |
           cd ~/sgg
-          cmake -B build -DCMAKE_BUILD_TYPE=Release \
+          cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/scripts/buildsystems/vcpkg.cmake \
-                          -DVCPKG_TARGET_TRIPLET=x64-osx 
-          cmake --build build --target install
+                          -DVCPKG_TARGET_TRIPLET=x64-osx
       - name: Build sgg
         run: |
           cd sgg
@@ -90,7 +85,7 @@ jobs:
       - name: Run build-wrapper
         run: |
           mkdir build
-          cmake -S . -B build
+          cmake -S . -B build -G Ninja
           build-wrapper-macosx-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
       - name: Run sonar-scanner
         env:
