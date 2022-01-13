@@ -17,11 +17,11 @@ jobs:
     steps:
       - name: Requirements
         run: brew install doxygen
-          && curl 'https://bootstrap.pypa.io/get-pip.py' > get-pip.py && sudo python get-pip.py
           && brew install sphinx-doc
           && pip3 install sphinx-rtd-theme
           && pip3 install breathe
           && pip3 install sphinx-sitemap
+          && curl 'https://bootstrap.pypa.io/pip/2.7/get-pip.py' > get-pip.py && sudo python get-pip.py
           && pip install exhale
       - name: Checkout repo
         uses: actions/checkout@1.0.0
