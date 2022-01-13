@@ -168,3 +168,4 @@ _templates/
 
 venv
 /docs-sphinx/api/
+!/.github/workflows/build.yml
