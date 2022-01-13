@@ -20,6 +20,7 @@ jobs:
           && python3 -m ensurepip --default-pip
           && python3 -m pip install --upgrade pip setuptools wheel
           && brew install doxygen
+          && brew install graphviz
           && brew install sphinx-doc
           && pip3 install sphinx-rtd-theme
           && python3 -m pip install "breathe==4.31.0"
