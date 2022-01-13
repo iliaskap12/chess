@@ -22,6 +22,7 @@ jobs:
           sh ./vcpkg/bootstrap-vcpkg.sh
       - name: Install SGG dependencies
         run: |
+          cd $HOME
           ./vcpkg/vcpkg install glew:x64-osx
           ./vcpkg/vcpkg install sdl2:x64-osx
           ./vcpkg/vcpkg install sdl2-mixer:x64-osx
