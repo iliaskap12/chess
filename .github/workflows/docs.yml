@@ -25,6 +25,7 @@ jobs:
         uses: actions/checkout@1.0.0
       - name: Build docs
         run: cd docs-sphinx
+          && mkdir api
           && make html
           && cd _build/html
           && touch .nojekyll

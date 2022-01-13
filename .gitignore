@@ -167,3 +167,4 @@ _static/
 _templates/
 
 venv
+/docs-sphinx/api/
