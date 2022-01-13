@@ -8,6 +8,35 @@ on:
   schedule:                # This trigger is here only to make sure
     - cron: '17 0 * * SUN' # the example itself doesn't become stale
 jobs:
+  dependencies:
+    name: Install dependencies
+    runs-on: macos-latest
+    steps:
+      - name: Install vcpkg
+        run: |
+          cd 
+          && git clone https://github.com/microsoft/vcpkg
+          && ./vcpkg/bootstrap-vcpkg.sh
+      - name: Install SGG dependencies
+        run: |
+          ./vcpkg/vcpkg install glew:x64-osx
+          && ./vcpkg/vcpkg install sdl2:x64-osx
+          && ./vcpkg/vcpkg install sdl2-mixer:x64-osx
+          && ./vcpkg/vcpkg install freetype:x64-osx
+          && ./vcpkg/vcpkg install glm:x64-osx
+      - name: Configure project with cmake and registry support
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=Release \
+                          -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
+                          -DCMAKE_TOOLCHAIN_FILE=~/scripts/buildsystems/vcpkg.cmake \
+                          -DVCPKG_TARGET_TRIPLET=x64-osx 
+          && cmake --build build --target install
+      - name: Install SGG
+        run: |
+          cd
+          && git clone https://github.com/cgaueb/sgg.git 
+          && cd sgg
+          && cmake --build build --target install
   build:
     name: Build
     runs-on: macos-latest
