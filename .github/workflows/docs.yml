@@ -24,15 +24,14 @@ jobs:
           && pip3 install sphinx-rtd-theme
           && python3 -m pip install "breathe==4.31.0"
           && pip3 install sphinx-sitemap
-          && python3 -m pip install "exhale"
-      - name: Checkout repo
-        uses: actions/checkout@1.0.0
-      - name: Build docs
-        run: cd docs-sphinx
-          && touch .nojekyll       
+          && python3 -m pip install "exhale" 
+          && cd docs-sphinx
+          && touch .nojekyll
           && make html
           && cd _build/html
           && touch .nojekyll
+      - name: Checkout repo
+        uses: actions/checkout@1.0.0
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
