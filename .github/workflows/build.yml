@@ -4,8 +4,8 @@ on:
     branches:
       - master
   pull_request:
-    types: [opened, synchronize, reopened]
-  schedule:                # This trigger is here only to make sure
+    types: [ opened, synchronize, reopened ]
+  schedule: # This trigger is here only to make sure
     - cron: '17 0 * * SUN' # the example itself doesn't become stale
 jobs:
   dependencies:
@@ -37,7 +37,7 @@ jobs:
       - name: Configure project with cmake and registry support
         run: |
           cd ~/sgg
-          cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+          cmake -B build -DCMAKE_MAKE_PROGRAM="/Applications/Binary Ninja.app" -G Ninja -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-osx
