@@ -32,6 +32,12 @@ jobs:
         run: |
           cd $HOME
           git clone https://github.com/cgaueb/sgg.git
+      - name: Install g++, xcode devtools, and make
+        run: |
+          brew install gcc
+          brew install make
+          sudo xcode-select --install
+          sudo xcodebuild -license
       - name: Configure project with cmake and registry support
         run: |
           cd ~/sgg
