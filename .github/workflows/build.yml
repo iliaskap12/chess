@@ -12,9 +12,12 @@ jobs:
     name: Install dependencies
     runs-on: macos-latest
     steps:
+      - name: Install git
+        run: |
+          brew install git
       - name: Install vcpkg
         run: |
-          cd ~/
+          cd $HOME
           && git clone https://github.com/microsoft/vcpkg
           && ./vcpkg/bootstrap-vcpkg.sh
       - name: Install SGG dependencies
@@ -33,7 +36,7 @@ jobs:
           && cmake --build build --target install
       - name: Install SGG
         run: |
-          cd ~/
+          cd $HOME
           && git clone https://github.com/cgaueb/sgg.git 
           && cd sgg
           && cmake --build build --target install
