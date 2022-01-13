@@ -17,12 +17,14 @@ jobs:
     steps:
       - name: Requirements
         run: brew install python3 
+          && python3 -m ensurepip --default-pip
+          && python3 -m pip install --upgrade pip setuptools wheel
           && brew install doxygen
           && brew install sphinx-doc
           && pip3 install sphinx-rtd-theme
-          && pip install breathe==4.31.0
+          && python3 -m pip install "breathe==4.31.0"
           && pip3 install sphinx-sitemap
-          && pip install exhale
+          && python3 -m pip install "exhale"
       - name: Checkout repo
         uses: actions/checkout@1.0.0
       - name: Build docs
