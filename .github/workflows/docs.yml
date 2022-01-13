@@ -29,12 +29,10 @@ jobs:
         uses: actions/checkout@1.0.0
       - name: Build docs
         run: cd docs-sphinx
-          && && rm .nojekyll
           && make html
-          && cd _build
-          && touch .nojekyll
-          && cd html
+          && cd _build 
           && rm .nojekyll
+          && cd html
           && touch .nojekyll
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.2
