@@ -4,7 +4,7 @@ PAWN POSITIONS
 	BISHOP: c1, f1, c8, f8
 	KNIGHT: b1, g1, b8, g8
 	QUEEN: d1, d8
-	KING: e1, e8
+	KING: e1, e
 
 PAWN MOVES
 	f = forward, b = backward, r = right, l = left, d = diagonal, a = any, g = ( 2( f || b ) + 1( l || r ) || ( 2( l || r ) + 1( f || b ) ) )
