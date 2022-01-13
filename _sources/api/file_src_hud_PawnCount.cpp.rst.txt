@@ -1,0 +1,37 @@
+
+.. _file_src_hud_PawnCount.cpp:
+
+File PawnCount.cpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_hud>` (``src/hud``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/hud/PawnCount.cpp``)
+--------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_hud_PawnCount.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``hud/PawnCount.h`` (:ref:`file_include_hud_PawnCount.h`)
+
+
+
+
+

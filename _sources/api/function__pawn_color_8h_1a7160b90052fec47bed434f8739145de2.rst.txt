@@ -1,0 +1,13 @@
+.. _exhale_function__pawn_color_8h_1a7160b90052fec47bed434f8739145de2:
+
+Function operator<<(std::ostream&, const PawnColor&)
+====================================================
+
+- Defined in :ref:`file_include_game_PawnColor.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator<<(std::ostream&, const PawnColor&)

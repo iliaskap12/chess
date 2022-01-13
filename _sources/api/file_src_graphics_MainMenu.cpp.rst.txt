@@ -1,0 +1,45 @@
+
+.. _file_src_graphics_MainMenu.cpp:
+
+File MainMenu.cpp
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_graphics>` (``src/graphics``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/graphics/MainMenu.cpp``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_graphics_MainMenu.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``App.h`` (:ref:`file_include_App.h`)
+
+- ``graphics/MainMenu.h`` (:ref:`file_include_graphics_MainMenu.h`)
+
+- ``graphics/PlayingScreen.h`` (:ref:`file_include_graphics_PlayingScreen.h`)
+
+- ``iostream``
+
+- ``utility``
+
+
+
+
+

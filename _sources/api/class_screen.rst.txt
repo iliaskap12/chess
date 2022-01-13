@@ -1,0 +1,33 @@
+.. _exhale_class_class_screen:
+
+Class Screen
+============
+
+- Defined in :ref:`file_include_graphics_Screen.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public Drawable`` (:ref:`exhale_class_class_drawable`)
+- ``public Updateable`` (:ref:`exhale_class_class_updateable`)
+
+
+Derived Types
+*************
+
+- ``public OpeningScreen`` (:ref:`exhale_class_class_opening_screen`)
+- ``public PlayingScreen`` (:ref:`exhale_class_class_playing_screen`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Screen
+   :members:
+   :protected-members:
+   :undoc-members:

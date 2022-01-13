@@ -1,0 +1,58 @@
+
+.. _file_include_graphics_PlayingScreen.h:
+
+File PlayingScreen.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_graphics>` (``include/graphics``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/graphics/PlayingScreen.h``)
+-------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_graphics_PlayingScreen.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Screen.h`` (:ref:`file_include_graphics_MenuScreen.h`)
+
+- ``game/Game.h`` (:ref:`file_include_game_Game.h`)
+
+- ``hud/PawnCount.h`` (:ref:`file_include_hud_PawnCount.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_game_Pawn.cpp`
+
+- :ref:`file_src_graphics_MainMenu.cpp`
+
+- :ref:`file_src_graphics_PlayingScreen.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_playing_screen`
+

@@ -1,0 +1,17 @@
+
+.. _program_listing_file_include_hud_Offer.h:
+
+Program Listing for File Offer.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_hud_Offer.h>` (``include/hud/Offer.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef OFFER_H
+   #define OFFER_H
+   
+   #endif // OFFER_H

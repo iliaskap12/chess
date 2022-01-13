@@ -1,0 +1,16 @@
+.. _exhale_class_class_point:
+
+Class Point
+===========
+
+- Defined in :ref:`file_include_graphics_Point.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Point
+   :members:
+   :protected-members:
+   :undoc-members:

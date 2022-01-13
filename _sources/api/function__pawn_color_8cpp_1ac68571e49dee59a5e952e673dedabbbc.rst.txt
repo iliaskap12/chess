@@ -1,0 +1,13 @@
+.. _exhale_function__pawn_color_8cpp_1ac68571e49dee59a5e952e673dedabbbc:
+
+Function operator+(const std::string&, const PawnColor&)
+========================================================
+
+- Defined in :ref:`file_src_game_PawnColor.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator+(const std::string&, const PawnColor&)

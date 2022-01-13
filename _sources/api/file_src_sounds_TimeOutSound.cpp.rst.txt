@@ -1,0 +1,37 @@
+
+.. _file_src_sounds_TimeOutSound.cpp:
+
+File TimeOutSound.cpp
+=====================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_sounds>` (``src/sounds``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/sounds/TimeOutSound.cpp``)
+--------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_sounds_TimeOutSound.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``sounds/TimeOutSound.h`` (:ref:`file_include_sounds_TimeOutSound.h`)
+
+
+
+
+

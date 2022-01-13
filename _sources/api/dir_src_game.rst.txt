@@ -1,0 +1,32 @@
+.. _dir_src_game:
+
+
+Directory game
+==============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_src>` (``src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``src/game``
+
+
+Files
+-----
+
+- :ref:`file_src_game_Bishop.cpp`
+- :ref:`file_src_game_Checkboard.cpp`
+- :ref:`file_src_game_Clock.cpp`
+- :ref:`file_src_game_Game.cpp`
+- :ref:`file_src_game_King.cpp`
+- :ref:`file_src_game_Knight.cpp`
+- :ref:`file_src_game_Pawn.cpp`
+- :ref:`file_src_game_PawnColor.cpp`
+- :ref:`file_src_game_Player.cpp`
+- :ref:`file_src_game_Queen.cpp`
+- :ref:`file_src_game_Rook.cpp`
+- :ref:`file_src_game_Soldier.cpp`
+- :ref:`file_src_game_Square.cpp`
+
+

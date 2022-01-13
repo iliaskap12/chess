@@ -1,0 +1,26 @@
+.. _dir_src:
+
+
+Directory src
+=============
+
+
+*Directory path:* ``src``
+
+Subdirectories
+--------------
+
+- :ref:`dir_src_game`
+- :ref:`dir_src_graphics`
+- :ref:`dir_src_hud`
+- :ref:`dir_src_sounds`
+- :ref:`dir_src_util`
+
+
+Files
+-----
+
+- :ref:`file_src_App.cpp`
+- :ref:`file_src_main.cpp`
+
+

@@ -1,0 +1,13 @@
+.. _exhale_function_paths_8h_1abd3ecea000517c4765a7e58bc86f0f58:
+
+Function paths::getFontsPath
+============================
+
+- Defined in :ref:`file_include_util_paths.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: paths::getFontsPath()

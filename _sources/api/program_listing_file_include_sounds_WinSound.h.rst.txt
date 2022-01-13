@@ -1,0 +1,19 @@
+
+.. _program_listing_file_include_sounds_WinSound.h:
+
+Program Listing for File WinSound.h
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_sounds_WinSound.h>` (``include/sounds/WinSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef WINSOUND_H
+   #define WINSOUND_H
+   
+   
+   
+   #endif // WINSOUND_H

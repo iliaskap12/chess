@@ -1,0 +1,54 @@
+
+.. _file_include_game_King.h:
+
+File King.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_include_game>` (``include/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/game/King.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_game_King.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Checkboard.h`` (:ref:`file_include_game_Checkboard.h`)
+
+- ``Pawn.h`` (:ref:`file_include_game_Pawn.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_game_Checkboard.cpp`
+
+- :ref:`file_src_game_King.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_king`
+

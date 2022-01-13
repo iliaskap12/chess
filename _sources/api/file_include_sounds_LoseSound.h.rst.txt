@@ -1,0 +1,37 @@
+
+.. _file_include_sounds_LoseSound.h:
+
+File LoseSound.h
+================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sounds>` (``include/sounds``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sounds/LoseSound.h``)
+-------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sounds_LoseSound.h.rst
+
+
+
+
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_sounds_LoseSound.cpp`
+
+
+

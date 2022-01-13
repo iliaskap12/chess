@@ -1,0 +1,56 @@
+
+.. _file_src_game_PawnColor.cpp:
+
+File PawnColor.cpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game>` (``src/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/PawnColor.cpp``)
+---------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_PawnColor.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``game/PawnColor.h`` (:ref:`file_include_game_PawnColor.h`)
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__pawn_color_8cpp_1a1535c4ed0687663633c368c8bf026d2c`
+
+- :ref:`exhale_function__pawn_color_8cpp_1ac696b8bf8176fd87edbb08d0c68d11d4`
+
+- :ref:`exhale_function__pawn_color_8cpp_1a01afae9f3b15fcc149f38ff768b7b1f5`
+
+- :ref:`exhale_function__pawn_color_8cpp_1ac68571e49dee59a5e952e673dedabbbc`
+
+- :ref:`exhale_function__pawn_color_8cpp_1a6509b0dabc230e0e8174d7842e21d862`
+
+- :ref:`exhale_function__pawn_color_8cpp_1a7160b90052fec47bed434f8739145de2`
+
+- :ref:`exhale_function__pawn_color_8cpp_1a60ef28efc0e8b9bf41b21c035cf81380`
+

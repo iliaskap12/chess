@@ -1,0 +1,25 @@
+.. _exhale_class_class_king:
+
+Class King
+==========
+
+- Defined in :ref:`file_include_game_King.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Pawn`` (:ref:`exhale_class_class_pawn`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: King
+   :members:
+   :protected-members:
+   :undoc-members:

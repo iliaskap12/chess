@@ -1,0 +1,25 @@
+.. _exhale_class_class_knight:
+
+Class Knight
+============
+
+- Defined in :ref:`file_include_game_Knight.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Pawn`` (:ref:`exhale_class_class_pawn`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Knight
+   :members:
+   :protected-members:
+   :undoc-members:

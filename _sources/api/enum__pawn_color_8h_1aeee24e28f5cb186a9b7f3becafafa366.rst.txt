@@ -1,0 +1,13 @@
+.. _exhale_enum__pawn_color_8h_1aeee24e28f5cb186a9b7f3becafafa366:
+
+Enum PawnColor
+==============
+
+- Defined in :ref:`file_include_game_PawnColor.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: PawnColor

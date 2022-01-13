@@ -1,0 +1,29 @@
+
+.. _program_listing_file_include_graphics_Screen.h:
+
+Program Listing for File Screen.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_graphics_Screen.h>` (``include/graphics/Screen.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef SCREEN_H
+   #define SCREEN_H
+   
+   #include "Drawable.h"
+   #include "Updateable.h"
+   #include "ButtonType.h"
+   
+   class Screen : public Drawable, public Updateable {
+   
+   public:
+     Screen();
+     void draw() override = 0;
+     void update(float ms) override = 0;
+   };
+   
+   #endif // SCREEN_H

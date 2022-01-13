@@ -1,0 +1,71 @@
+
+.. _file_include_util_paths.h:
+
+File paths.h
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_include_util>` (``include/util``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/util/paths.h``)
+-------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_util_paths.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``filesystem``
+
+- ``iostream``
+
+- ``string`` (:ref:`file_src_util_custom-string.cpp`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_game_Pawn.h`
+
+- :ref:`file_src_App.cpp`
+
+- :ref:`file_src_util_paths.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_paths`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_paths_8h_1abd3ecea000517c4765a7e58bc86f0f58`
+
+- :ref:`exhale_function_paths_8h_1a9e16d92de127863188beeb15a2d197bb`
+
+- :ref:`exhale_function_paths_8h_1a450800b2feff454aa4e85d20c6618250`
+
+- :ref:`exhale_function_paths_8h_1a35aed0b28fb410111221a3abd28644f3`
+

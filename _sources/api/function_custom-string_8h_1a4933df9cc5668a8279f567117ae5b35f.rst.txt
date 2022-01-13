@@ -1,0 +1,13 @@
+.. _exhale_function_custom-string_8h_1a4933df9cc5668a8279f567117ae5b35f:
+
+Function custom_string::split
+=============================
+
+- Defined in :ref:`file_include_util_custom-string.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: custom_string::split(const std::string&, const std::string&)

@@ -1,0 +1,32 @@
+.. _dir_include_hud:
+
+
+Directory hud
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_include>` (``include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``include/hud``
+
+
+Files
+-----
+
+- :ref:`file_include_hud_CheckIndicator.h`
+- :ref:`file_include_hud_Draw.h`
+- :ref:`file_include_hud_EndgameIndicator.h`
+- :ref:`file_include_hud_HUD.h`
+- :ref:`file_include_hud_Indicator.h`
+- :ref:`file_include_hud_Moveboard.h`
+- :ref:`file_include_hud_MoveTakeback.h`
+- :ref:`file_include_hud_Offer.h`
+- :ref:`file_include_hud_PawnCount.h`
+- :ref:`file_include_hud_Resignment.h`
+- :ref:`file_include_hud_TimeIncrement.h`
+- :ref:`file_include_hud_Timer.h`
+- :ref:`file_include_hud_TurnIndicator.h`
+
+

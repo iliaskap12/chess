@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full API &mdash; Chess  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Chess
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chess</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Full API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/unabridged_orphan.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this headline"></a></h1>
+<section id="directories">
+<h2>Directories<a class="headerlink" href="#directories" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include.html">Directory include</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_include.html#subdirectories">Subdirectories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_include.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include_game.html">Directory game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_include_game.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include_graphics.html">Directory graphics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_include_graphics.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include_hud.html">Directory hud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_include_hud.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include_sounds.html">Directory sounds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_include_sounds.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_include_util.html">Directory util</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_include_util.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src.html">Directory src</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html#subdirectories">Subdirectories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_src.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_game.html">Directory game</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_game.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_graphics.html">Directory graphics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_graphics.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_hud.html">Directory hud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_hud.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_sounds.html">Directory sounds</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_sounds.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_src_util.html">Directory util</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_src_util.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_App.cpp.html">File App.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_App.cpp.html#definition-src-app-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/App.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_App.cpp.html">Program Listing for File App.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_App.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_App.h.html">File App.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_App.h.html#definition-include-app-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/App.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_App.h.html">Program Listing for File App.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_App.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_App.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_App.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Bishop.cpp.html">File Bishop.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Bishop.cpp.html#definition-src-game-bishop-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Bishop.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Bishop.cpp.html">Program Listing for File Bishop.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Bishop.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Bishop.h.html">File Bishop.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Bishop.h.html#definition-include-game-bishop-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Bishop.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Bishop.h.html">Program Listing for File Bishop.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Bishop.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Bishop.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Bishop.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Brush.h.html">File Brush.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Brush.h.html#definition-include-graphics-brush-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Brush.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Brush.h.html">Program Listing for File Brush.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Brush.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Brush.h.html#enums">Enums</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_ButtonType.h.html">File ButtonType.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_ButtonType.h.html#definition-include-graphics-buttontype-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/ButtonType.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_ButtonType.h.html">Program Listing for File ButtonType.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_ButtonType.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_ButtonType.h.html#enums">Enums</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_CaptureSound.cpp.html">File CaptureSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_CaptureSound.cpp.html#definition-src-sounds-capturesound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/CaptureSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_CaptureSound.cpp.html">Program Listing for File CaptureSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_CaptureSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_CaptureSound.h.html">File CaptureSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_CaptureSound.h.html#definition-include-sounds-capturesound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/CaptureSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_CaptureSound.h.html">Program Listing for File CaptureSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_CaptureSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Checkboard.cpp.html">File Checkboard.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Checkboard.cpp.html#definition-src-game-checkboard-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Checkboard.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Checkboard.cpp.html">Program Listing for File Checkboard.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Checkboard.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Checkboard.cpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Checkboard.h.html">File Checkboard.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Checkboard.h.html#definition-include-game-checkboard-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Checkboard.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Checkboard.h.html">Program Listing for File Checkboard.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Checkboard.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Checkboard.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Checkboard.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_CheckIndicator.cpp.html">File CheckIndicator.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_CheckIndicator.cpp.html#definition-src-hud-checkindicator-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/CheckIndicator.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_CheckIndicator.cpp.html">Program Listing for File CheckIndicator.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_CheckIndicator.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_CheckIndicator.h.html">File CheckIndicator.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_CheckIndicator.h.html#definition-include-hud-checkindicator-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/CheckIndicator.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_CheckIndicator.h.html">Program Listing for File CheckIndicator.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_CheckIndicator.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_ClickSound.cpp.html">File ClickSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_ClickSound.cpp.html#definition-src-sounds-clicksound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/ClickSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_ClickSound.cpp.html">Program Listing for File ClickSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_ClickSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_ClickSound.h.html">File ClickSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_ClickSound.h.html#definition-include-sounds-clicksound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/ClickSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_ClickSound.h.html">Program Listing for File ClickSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_ClickSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Clock.cpp.html">File Clock.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Clock.cpp.html#definition-src-game-clock-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Clock.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Clock.cpp.html">Program Listing for File Clock.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Clock.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Clock.h.html">File Clock.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Clock.h.html#definition-include-game-clock-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Clock.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Clock.h.html">Program Listing for File Clock.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Clock.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_ClockSound.cpp.html">File ClockSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_ClockSound.cpp.html#definition-src-sounds-clocksound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/ClockSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_ClockSound.cpp.html">Program Listing for File ClockSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_ClockSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_ClockSound.h.html">File ClockSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_ClockSound.h.html#definition-include-sounds-clocksound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/ClockSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_ClockSound.h.html">Program Listing for File ClockSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_ClockSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_util_custom-string.cpp.html">File custom-string.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_util_custom-string.cpp.html#definition-src-util-custom-string-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/util/custom-string.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_util_custom-string.cpp.html">Program Listing for File custom-string.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_util_custom-string.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_util_custom-string.h.html">File custom-string.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_custom-string.h.html#definition-include-util-custom-string-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/util/custom-string.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_util_custom-string.h.html">Program Listing for File custom-string.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_custom-string.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_custom-string.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_custom-string.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_custom-string.h.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_Draw.cpp.html">File Draw.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Draw.cpp.html#definition-src-hud-draw-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/Draw.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_Draw.cpp.html">Program Listing for File Draw.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Draw.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_Draw.h.html">File Draw.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Draw.h.html#definition-include-hud-draw-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/Draw.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_Draw.h.html">Program Listing for File Draw.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Draw.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Drawable.h.html">File Drawable.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Drawable.h.html#definition-include-graphics-drawable-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Drawable.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Drawable.h.html">Program Listing for File Drawable.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Drawable.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Drawable.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_DrawSound.cpp.html">File DrawSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_DrawSound.cpp.html#definition-src-sounds-drawsound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/DrawSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_DrawSound.cpp.html">Program Listing for File DrawSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_DrawSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_DrawSound.h.html">File DrawSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_DrawSound.h.html#definition-include-sounds-drawsound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/DrawSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_DrawSound.h.html">Program Listing for File DrawSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_DrawSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_EndgameIndicator.cpp.html">File EndgameIndicator.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_EndgameIndicator.cpp.html#definition-src-hud-endgameindicator-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/EndgameIndicator.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_EndgameIndicator.cpp.html">Program Listing for File EndgameIndicator.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_EndgameIndicator.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_EndgameIndicator.h.html">File EndgameIndicator.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_EndgameIndicator.h.html#definition-include-hud-endgameindicator-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/EndgameIndicator.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_EndgameIndicator.h.html">Program Listing for File EndgameIndicator.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_EndgameIndicator.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_EndGameSound.cpp.html">File EndGameSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_EndGameSound.cpp.html#definition-src-sounds-endgamesound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/EndGameSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_EndGameSound.cpp.html">Program Listing for File EndGameSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_EndGameSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_EndGameSound.h.html">File EndGameSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_EndGameSound.h.html#definition-include-sounds-endgamesound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/EndGameSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_EndGameSound.h.html">Program Listing for File EndGameSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_EndGameSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Game.cpp.html">File Game.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Game.cpp.html#definition-src-game-game-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Game.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Game.cpp.html">Program Listing for File Game.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Game.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Game.h.html">File Game.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Game.h.html#definition-include-game-game-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Game.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Game.h.html">Program Listing for File Game.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Game.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Game.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Game.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_HUD.cpp.html">File HUD.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_HUD.cpp.html#definition-src-hud-hud-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/HUD.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_HUD.cpp.html">Program Listing for File HUD.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_HUD.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_HUD.h.html">File HUD.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_HUD.h.html#definition-include-hud-hud-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/HUD.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_HUD.h.html">Program Listing for File HUD.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_HUD.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_HUD.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_HUD.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_Indicator.cpp.html">File Indicator.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Indicator.cpp.html#definition-src-hud-indicator-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/Indicator.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_Indicator.cpp.html">Program Listing for File Indicator.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Indicator.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_Indicator.h.html">File Indicator.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Indicator.h.html#definition-include-hud-indicator-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/Indicator.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_Indicator.h.html">Program Listing for File Indicator.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Indicator.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_InGameMenu.cpp.html">File InGameMenu.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_InGameMenu.cpp.html#definition-src-graphics-ingamemenu-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/InGameMenu.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_InGameMenu.cpp.html">Program Listing for File InGameMenu.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_InGameMenu.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_InGameMenu.h.html">File InGameMenu.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_InGameMenu.h.html#definition-include-graphics-ingamemenu-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/InGameMenu.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_InGameMenu.h.html">Program Listing for File InGameMenu.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_InGameMenu.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_King.cpp.html">File King.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_King.cpp.html#definition-src-game-king-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/King.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_King.cpp.html">Program Listing for File King.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_King.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_King.h.html">File King.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_King.h.html#definition-include-game-king-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/King.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_King.h.html">Program Listing for File King.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_King.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_King.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_King.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Knight.cpp.html">File Knight.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Knight.cpp.html#definition-src-game-knight-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Knight.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Knight.cpp.html">Program Listing for File Knight.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Knight.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Knight.h.html">File Knight.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Knight.h.html#definition-include-game-knight-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Knight.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Knight.h.html">Program Listing for File Knight.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Knight.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Knight.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Knight.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_LoseSound.cpp.html">File LoseSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_LoseSound.cpp.html#definition-src-sounds-losesound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/LoseSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_LoseSound.cpp.html">Program Listing for File LoseSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_LoseSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_LoseSound.h.html">File LoseSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_LoseSound.h.html#definition-include-sounds-losesound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/LoseSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_LoseSound.h.html">Program Listing for File LoseSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_LoseSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_main.cpp.html">File main.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_main.cpp.html#definition-src-main-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/main.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_main.cpp.html">Program Listing for File main.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_main.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_main.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_MainMenu.cpp.html">File MainMenu.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_MainMenu.cpp.html#definition-src-graphics-mainmenu-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/MainMenu.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_MainMenu.cpp.html">Program Listing for File MainMenu.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_MainMenu.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_MainMenu.h.html">File MainMenu.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MainMenu.h.html#definition-include-graphics-mainmenu-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/MainMenu.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_MainMenu.h.html">Program Listing for File MainMenu.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MainMenu.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MainMenu.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MainMenu.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_Menu.cpp.html">File Menu.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Menu.cpp.html#definition-src-graphics-menu-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/Menu.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_Menu.cpp.html">Program Listing for File Menu.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Menu.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Menu.h.html">File Menu.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Menu.h.html#definition-include-graphics-menu-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Menu.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Menu.h.html">Program Listing for File Menu.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Menu.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Menu.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Menu.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_MenuOption.cpp.html">File MenuOption.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_MenuOption.cpp.html#definition-src-graphics-menuoption-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/MenuOption.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_MenuOption.cpp.html">Program Listing for File MenuOption.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_MenuOption.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_MenuOption.h.html">File MenuOption.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MenuOption.h.html#definition-include-graphics-menuoption-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/MenuOption.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_MenuOption.h.html">Program Listing for File MenuOption.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MenuOption.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MenuOption.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MenuOption.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_MenuScreen.cpp.html">File MenuScreen.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_MenuScreen.cpp.html#definition-src-graphics-menuscreen-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/MenuScreen.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_MenuScreen.cpp.html">Program Listing for File MenuScreen.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_MenuScreen.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_MenuScreen.h.html">File MenuScreen.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MenuScreen.h.html#definition-include-graphics-menuscreen-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/MenuScreen.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_MenuScreen.h.html">Program Listing for File MenuScreen.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_MenuScreen.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Movable.h.html">File Movable.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Movable.h.html#definition-include-game-movable-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Movable.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Movable.h.html">Program Listing for File Movable.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Movable.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Movable.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_Moveboard.cpp.html">File Moveboard.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Moveboard.cpp.html#definition-src-hud-moveboard-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/Moveboard.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_Moveboard.cpp.html">Program Listing for File Moveboard.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Moveboard.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_Moveboard.h.html">File Moveboard.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Moveboard.h.html#definition-include-hud-moveboard-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/Moveboard.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_Moveboard.h.html">Program Listing for File Moveboard.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Moveboard.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_MoveSound.cpp.html">File MoveSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_MoveSound.cpp.html#definition-src-sounds-movesound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/MoveSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_MoveSound.cpp.html">Program Listing for File MoveSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_MoveSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_MoveSound.h.html">File MoveSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_MoveSound.h.html#definition-include-sounds-movesound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/MoveSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_MoveSound.h.html">Program Listing for File MoveSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_MoveSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_MoveTakeback.cpp.html">File MoveTakeback.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_MoveTakeback.cpp.html#definition-src-hud-movetakeback-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/MoveTakeback.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_MoveTakeback.cpp.html">Program Listing for File MoveTakeback.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_MoveTakeback.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_MoveTakeback.h.html">File MoveTakeback.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_MoveTakeback.h.html#definition-include-hud-movetakeback-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/MoveTakeback.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_MoveTakeback.h.html">Program Listing for File MoveTakeback.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_MoveTakeback.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_Offer.cpp.html">File Offer.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Offer.cpp.html#definition-src-hud-offer-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/Offer.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_Offer.cpp.html">Program Listing for File Offer.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Offer.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_Offer.h.html">File Offer.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Offer.h.html#definition-include-hud-offer-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/Offer.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_Offer.h.html">Program Listing for File Offer.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Offer.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_OpeningScreen.cpp.html">File OpeningScreen.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_OpeningScreen.cpp.html#definition-src-graphics-openingscreen-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/OpeningScreen.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_OpeningScreen.cpp.html">Program Listing for File OpeningScreen.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_OpeningScreen.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_OpeningScreen.h.html">File OpeningScreen.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_OpeningScreen.h.html#definition-include-graphics-openingscreen-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/OpeningScreen.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_OpeningScreen.h.html">Program Listing for File OpeningScreen.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_OpeningScreen.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_OpeningScreen.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_OpeningScreen.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_util_paths.cpp.html">File paths.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_util_paths.cpp.html#definition-src-util-paths-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/util/paths.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_util_paths.cpp.html">Program Listing for File paths.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_util_paths.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_util_paths.h.html">File paths.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_paths.h.html#definition-include-util-paths-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/util/paths.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_util_paths.h.html">Program Listing for File paths.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_paths.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_paths.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_paths.h.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_util_paths.h.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Pawn.cpp.html">File Pawn.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Pawn.cpp.html#definition-src-game-pawn-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Pawn.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Pawn.cpp.html">Program Listing for File Pawn.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Pawn.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Pawn.h.html">File Pawn.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Pawn.h.html#definition-include-game-pawn-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Pawn.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Pawn.h.html">Program Listing for File Pawn.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Pawn.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Pawn.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Pawn.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_PawnColor.cpp.html">File PawnColor.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_PawnColor.cpp.html#definition-src-game-pawncolor-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/PawnColor.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_PawnColor.cpp.html">Program Listing for File PawnColor.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_PawnColor.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_PawnColor.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_PawnColor.h.html">File PawnColor.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_PawnColor.h.html#definition-include-game-pawncolor-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/PawnColor.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_PawnColor.h.html">Program Listing for File PawnColor.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_PawnColor.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_PawnColor.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_PawnColor.h.html#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_PawnColor.h.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_PawnCount.cpp.html">File PawnCount.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_PawnCount.cpp.html#definition-src-hud-pawncount-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/PawnCount.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_PawnCount.cpp.html">Program Listing for File PawnCount.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_PawnCount.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_PawnCount.h.html">File PawnCount.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_PawnCount.h.html#definition-include-hud-pawncount-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/PawnCount.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_PawnCount.h.html">Program Listing for File PawnCount.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_PawnCount.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_PawnCount.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_PawnCount.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Player.cpp.html">File Player.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Player.cpp.html#definition-src-game-player-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Player.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Player.cpp.html">Program Listing for File Player.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Player.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Player.h.html">File Player.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Player.h.html#definition-include-game-player-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Player.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Player.h.html">Program Listing for File Player.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Player.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Player.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Player.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_PlayingScreen.cpp.html">File PlayingScreen.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_PlayingScreen.cpp.html#definition-src-graphics-playingscreen-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/PlayingScreen.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_PlayingScreen.cpp.html">Program Listing for File PlayingScreen.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_PlayingScreen.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_PlayingScreen.h.html">File PlayingScreen.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_PlayingScreen.h.html#definition-include-graphics-playingscreen-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/PlayingScreen.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_PlayingScreen.h.html">Program Listing for File PlayingScreen.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_PlayingScreen.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_PlayingScreen.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_PlayingScreen.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_Point.cpp.html">File Point.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Point.cpp.html#definition-src-graphics-point-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/Point.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_Point.cpp.html">Program Listing for File Point.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Point.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Point.h.html">File Point.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Point.h.html#definition-include-graphics-point-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Point.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Point.h.html">Program Listing for File Point.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Point.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Point.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Promotable.h.html">File Promotable.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Promotable.h.html#definition-include-game-promotable-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Promotable.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Promotable.h.html">Program Listing for File Promotable.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Queen.cpp.html">File Queen.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Queen.cpp.html#definition-src-game-queen-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Queen.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Queen.cpp.html">Program Listing for File Queen.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Queen.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Queen.h.html">File Queen.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Queen.h.html#definition-include-game-queen-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Queen.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Queen.h.html">Program Listing for File Queen.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Queen.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Queen.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Queen.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_Rectangle.cpp.html">File Rectangle.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Rectangle.cpp.html#definition-src-graphics-rectangle-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/Rectangle.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_Rectangle.cpp.html">Program Listing for File Rectangle.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Rectangle.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Rectangle.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Rectangle.h.html">File Rectangle.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Rectangle.h.html#definition-include-graphics-rectangle-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Rectangle.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Rectangle.h.html">Program Listing for File Rectangle.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Rectangle.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Rectangle.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Rectangle.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_Resignment.cpp.html">File Resignment.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Resignment.cpp.html#definition-src-hud-resignment-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/Resignment.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_Resignment.cpp.html">Program Listing for File Resignment.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Resignment.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_Resignment.h.html">File Resignment.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Resignment.h.html#definition-include-hud-resignment-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/Resignment.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_Resignment.h.html">Program Listing for File Resignment.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Resignment.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_ResignSound.cpp.html">File ResignSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_ResignSound.cpp.html#definition-src-sounds-resignsound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/ResignSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_ResignSound.cpp.html">Program Listing for File ResignSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_ResignSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_ResignSound.h.html">File ResignSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_ResignSound.h.html#definition-include-sounds-resignsound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/ResignSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_ResignSound.h.html">Program Listing for File ResignSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_ResignSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Rook.cpp.html">File Rook.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Rook.cpp.html#definition-src-game-rook-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Rook.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Rook.cpp.html">Program Listing for File Rook.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Rook.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Rook.h.html">File Rook.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Rook.h.html#definition-include-game-rook-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Rook.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Rook.h.html">Program Listing for File Rook.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Rook.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Rook.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Rook.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_graphics_Screen.cpp.html">File Screen.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Screen.cpp.html#definition-src-graphics-screen-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/graphics/Screen.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_graphics_Screen.cpp.html">Program Listing for File Screen.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_graphics_Screen.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Screen.h.html">File Screen.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Screen.h.html#definition-include-graphics-screen-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Screen.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Screen.h.html">Program Listing for File Screen.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Screen.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Screen.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Screen.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Soldier.cpp.html">File Soldier.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Soldier.cpp.html#definition-src-game-soldier-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Soldier.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Soldier.cpp.html">Program Listing for File Soldier.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Soldier.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Soldier.h.html">File Soldier.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Soldier.h.html#definition-include-game-soldier-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Soldier.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Soldier.h.html">Program Listing for File Soldier.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Soldier.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Soldier.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Soldier.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_Sound.cpp.html">File Sound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_Sound.cpp.html#definition-src-sounds-sound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/Sound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_Sound.cpp.html">Program Listing for File Sound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_Sound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_Sound.h.html">File Sound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_Sound.h.html#definition-include-sounds-sound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/Sound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_Sound.h.html">Program Listing for File Sound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_Sound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_game_Square.cpp.html">File Square.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Square.cpp.html#definition-src-game-square-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/game/Square.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_game_Square.cpp.html">Program Listing for File Square.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Square.cpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_game_Square.cpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_game_Square.h.html">File Square.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Square.h.html#definition-include-game-square-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/game/Square.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_game_Square.h.html">Program Listing for File Square.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Square.h.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Square.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_game_Square.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_TimeIncrement.cpp.html">File TimeIncrement.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_TimeIncrement.cpp.html#definition-src-hud-timeincrement-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/TimeIncrement.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_TimeIncrement.cpp.html">Program Listing for File TimeIncrement.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_TimeIncrement.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_TimeIncrement.h.html">File TimeIncrement.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_TimeIncrement.h.html#definition-include-hud-timeincrement-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/TimeIncrement.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_TimeIncrement.h.html">Program Listing for File TimeIncrement.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_TimeIncrement.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_TimeOutSound.cpp.html">File TimeOutSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_TimeOutSound.cpp.html#definition-src-sounds-timeoutsound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/TimeOutSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_TimeOutSound.cpp.html">Program Listing for File TimeOutSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_TimeOutSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_TimeOutSound.h.html">File TimeOutSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_TimeOutSound.h.html#definition-include-sounds-timeoutsound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/TimeOutSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_TimeOutSound.h.html">Program Listing for File TimeOutSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_TimeOutSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_Timer.cpp.html">File Timer.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Timer.cpp.html#definition-src-hud-timer-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/Timer.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_Timer.cpp.html">Program Listing for File Timer.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_Timer.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_Timer.h.html">File Timer.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Timer.h.html#definition-include-hud-timer-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/Timer.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_Timer.h.html">Program Listing for File Timer.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_Timer.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_hud_TurnIndicator.cpp.html">File TurnIndicator.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_TurnIndicator.cpp.html#definition-src-hud-turnindicator-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/hud/TurnIndicator.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_hud_TurnIndicator.cpp.html">Program Listing for File TurnIndicator.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_hud_TurnIndicator.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_hud_TurnIndicator.h.html">File TurnIndicator.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_TurnIndicator.h.html#definition-include-hud-turnindicator-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/hud/TurnIndicator.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_hud_TurnIndicator.h.html">Program Listing for File TurnIndicator.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_hud_TurnIndicator.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_graphics_Updateable.h.html">File Updateable.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Updateable.h.html#definition-include-graphics-updateable-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/graphics/Updateable.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_graphics_Updateable.h.html">Program Listing for File Updateable.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Updateable.h.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_graphics_Updateable.h.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_src_sounds_WinSound.cpp.html">File WinSound.cpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_WinSound.cpp.html#definition-src-sounds-winsound-cpp">Definition (<code class="docutils literal notranslate"><span class="pre">src/sounds/WinSound.cpp</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_src_sounds_WinSound.cpp.html">Program Listing for File WinSound.cpp</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_src_sounds_WinSound.cpp.html#includes">Includes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_include_sounds_WinSound.h.html">File WinSound.h</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_WinSound.h.html#definition-include-sounds-winsound-h">Definition (<code class="docutils literal notranslate"><span class="pre">include/sounds/WinSound.h</span></code>)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="program_listing_file_include_sounds_WinSound.h.html">Program Listing for File WinSound.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="file_include_sounds_WinSound.h.html#included-by">Included By</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kapareliotis Elias, Papantonis Christos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

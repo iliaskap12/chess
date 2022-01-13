@@ -1,0 +1,13 @@
+.. _exhale_function_paths_8h_1a450800b2feff454aa4e85d20c6618250:
+
+Function paths::getProjectRootPath
+==================================
+
+- Defined in :ref:`file_include_util_paths.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: paths::getProjectRootPath()

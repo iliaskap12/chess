@@ -1,0 +1,26 @@
+.. _exhale_class_class_game:
+
+Class Game
+==========
+
+- Defined in :ref:`file_include_game_Game.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public Drawable`` (:ref:`exhale_class_class_drawable`)
+- ``public Updateable`` (:ref:`exhale_class_class_updateable`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Game
+   :members:
+   :protected-members:
+   :undoc-members:

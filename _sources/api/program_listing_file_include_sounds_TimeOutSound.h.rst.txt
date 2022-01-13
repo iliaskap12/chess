@@ -1,0 +1,19 @@
+
+.. _program_listing_file_include_sounds_TimeOutSound.h:
+
+Program Listing for File TimeOutSound.h
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_sounds_TimeOutSound.h>` (``include/sounds/TimeOutSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef TIMEOUTSOUND_H
+   #define TIMEOUTSOUND_H
+   
+   
+   
+   #endif // TIMEOUTSOUND_H

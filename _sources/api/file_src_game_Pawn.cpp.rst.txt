@@ -1,0 +1,49 @@
+
+.. _file_src_game_Pawn.cpp:
+
+File Pawn.cpp
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game>` (``src/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/Pawn.cpp``)
+----------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_Pawn.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``App.h`` (:ref:`file_include_App.h`)
+
+- ``algorithm``
+
+- ``game/Checkboard.h`` (:ref:`file_include_game_Checkboard.h`)
+
+- ``game/Pawn.h`` (:ref:`file_include_game_Pawn.h`)
+
+- ``graphics/PlayingScreen.h`` (:ref:`file_include_graphics_PlayingScreen.h`)
+
+- ``utility``
+
+- ``vector``
+
+
+
+
+

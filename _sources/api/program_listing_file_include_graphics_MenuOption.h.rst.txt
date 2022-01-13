@@ -1,0 +1,29 @@
+
+.. _program_listing_file_include_graphics_MenuOption.h:
+
+Program Listing for File MenuOption.h
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_graphics_MenuOption.h>` (``include/graphics/MenuOption.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef MENUOPTION_H
+   #define MENUOPTION_H
+   
+   #include "hud/HUD.h"
+   #include "Rectangle.h"
+   
+   class MenuOption {
+     HUD optionHUD;
+     Rectangle button;
+   
+   public:
+     explicit MenuOption(HUD hud);
+     [[nodiscard]] HUD getMessage() const;
+     [[nodiscard]] Rectangle getButton() const;
+   };
+   
+   #endif // MENUOPTION_H

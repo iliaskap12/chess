@@ -1,0 +1,62 @@
+
+.. _file_include_game_Game.h:
+
+File Game.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_include_game>` (``include/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/game/Game.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_game_Game.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Checkboard.h`` (:ref:`file_include_game_Checkboard.h`)
+
+- ``Player.h`` (:ref:`file_include_game_Player.h`)
+
+- ``graphics/Drawable.h`` (:ref:`file_include_graphics_Drawable.h`)
+
+- ``graphics/Updateable.h`` (:ref:`file_include_graphics_Updateable.h`)
+
+- ``optional``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_App.h`
+
+- :ref:`file_include_graphics_PlayingScreen.h`
+
+- :ref:`file_src_game_Game.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_game`
+

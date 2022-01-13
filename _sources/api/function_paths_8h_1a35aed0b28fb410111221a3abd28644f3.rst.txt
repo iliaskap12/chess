@@ -1,0 +1,13 @@
+.. _exhale_function_paths_8h_1a35aed0b28fb410111221a3abd28644f3:
+
+Function paths::getSoundsPath
+=============================
+
+- Defined in :ref:`file_include_util_paths.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: paths::getSoundsPath()

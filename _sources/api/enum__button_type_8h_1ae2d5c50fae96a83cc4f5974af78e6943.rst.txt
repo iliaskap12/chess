@@ -1,0 +1,13 @@
+.. _exhale_enum__button_type_8h_1ae2d5c50fae96a83cc4f5974af78e6943:
+
+Enum ButtonType
+===============
+
+- Defined in :ref:`file_include_graphics_ButtonType.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: ButtonType

@@ -1,0 +1,29 @@
+.. _dir_src_graphics:
+
+
+Directory graphics
+==================
+
+
+|exhale_lsh| :ref:`Parent directory <dir_src>` (``src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``src/graphics``
+
+
+Files
+-----
+
+- :ref:`file_src_graphics_InGameMenu.cpp`
+- :ref:`file_src_graphics_MainMenu.cpp`
+- :ref:`file_src_graphics_Menu.cpp`
+- :ref:`file_src_graphics_MenuOption.cpp`
+- :ref:`file_src_graphics_MenuScreen.cpp`
+- :ref:`file_src_graphics_OpeningScreen.cpp`
+- :ref:`file_src_graphics_PlayingScreen.cpp`
+- :ref:`file_src_graphics_Point.cpp`
+- :ref:`file_src_graphics_Rectangle.cpp`
+- :ref:`file_src_graphics_Screen.cpp`
+
+

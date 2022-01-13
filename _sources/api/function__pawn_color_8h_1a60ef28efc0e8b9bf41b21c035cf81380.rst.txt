@@ -1,0 +1,13 @@
+.. _exhale_function__pawn_color_8h_1a60ef28efc0e8b9bf41b21c035cf81380:
+
+Function pawnColorToString(const PawnColor&)
+============================================
+
+- Defined in :ref:`file_include_game_PawnColor.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pawnColorToString(const PawnColor&)

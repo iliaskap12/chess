@@ -1,0 +1,13 @@
+.. _exhale_typedef__checkboard_8cpp_1a34528f331ff4d77c998f3794d4ab304f:
+
+Typedef Squares
+===============
+
+- Defined in :ref:`file_src_game_Checkboard.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: Squares

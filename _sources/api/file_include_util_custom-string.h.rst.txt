@@ -1,0 +1,65 @@
+
+.. _file_include_util_custom-string.h:
+
+File custom-string.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_util>` (``include/util``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/util/custom-string.h``)
+---------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_util_custom-string.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``cstddef``
+
+- ``string`` (:ref:`file_src_util_custom-string.cpp`)
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_graphics_PlayingScreen.cpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_custom_string`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_custom-string_8h_1a4933df9cc5668a8279f567117ae5b35f`
+
+- :ref:`exhale_function_custom-string_8h_1a2540af292cc3ecdfe6c0d389078b554a`
+
+- :ref:`exhale_function_custom-string_8h_1aafdf7789eff0323ce529bc7c62dccf86`
+

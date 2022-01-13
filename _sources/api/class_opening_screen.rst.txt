@@ -1,0 +1,25 @@
+.. _exhale_class_class_opening_screen:
+
+Class OpeningScreen
+===================
+
+- Defined in :ref:`file_include_graphics_OpeningScreen.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Screen`` (:ref:`exhale_class_class_screen`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: OpeningScreen
+   :members:
+   :protected-members:
+   :undoc-members:

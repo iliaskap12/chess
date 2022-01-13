@@ -1,0 +1,26 @@
+
+.. _namespace_paths:
+
+Namespace paths
+===============
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_paths_8h_1abd3ecea000517c4765a7e58bc86f0f58`
+
+- :ref:`exhale_function_paths_8h_1a9e16d92de127863188beeb15a2d197bb`
+
+- :ref:`exhale_function_paths_8h_1a450800b2feff454aa4e85d20c6618250`
+
+- :ref:`exhale_function_paths_8h_1a35aed0b28fb410111221a3abd28644f3`

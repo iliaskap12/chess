@@ -1,0 +1,13 @@
+.. _exhale_enum__brush_8h_1a62c1007e36a924771f8294ff9f0ac5d0:
+
+Enum Brush
+==========
+
+- Defined in :ref:`file_include_graphics_Brush.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: Brush

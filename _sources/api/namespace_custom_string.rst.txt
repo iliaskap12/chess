@@ -1,0 +1,20 @@
+
+.. _namespace_custom_string:
+
+Namespace custom_string
+=======================
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_custom-string_8h_1a4933df9cc5668a8279f567117ae5b35f`

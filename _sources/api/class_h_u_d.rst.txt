@@ -1,0 +1,32 @@
+.. _exhale_class_class_h_u_d:
+
+Class HUD
+=========
+
+- Defined in :ref:`file_include_hud_HUD.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public Drawable`` (:ref:`exhale_class_class_drawable`)
+- ``public Updateable`` (:ref:`exhale_class_class_updateable`)
+
+
+Derived Type
+************
+
+- ``public PawnCount`` (:ref:`exhale_class_class_pawn_count`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: HUD
+   :members:
+   :protected-members:
+   :undoc-members:

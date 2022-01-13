@@ -1,0 +1,13 @@
+.. _exhale_function_custom-string_8h_1a2540af292cc3ecdfe6c0d389078b554a:
+
+Function operator""_hash
+========================
+
+- Defined in :ref:`file_include_util_custom-string.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator""_hash(const char *, std::size_t)

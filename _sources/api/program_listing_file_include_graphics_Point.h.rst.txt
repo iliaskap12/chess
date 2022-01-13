@@ -1,0 +1,29 @@
+
+.. _program_listing_file_include_graphics_Point.h:
+
+Program Listing for File Point.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_graphics_Point.h>` (``include/graphics/Point.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CHESS_POINT_H
+   #define CHESS_POINT_H
+   
+   class Point {
+     float x {};
+     float y {};
+   
+   public:
+     Point();
+     Point(float x, float y);
+     [[nodiscard]] float getX() const;
+     [[nodiscard]] float getY() const;
+     Point operator+(const Point &other) const;
+     friend bool operator==(const Point& lhs, const Point& rhs) = default;
+   };
+   
+   #endif//CHESS_POINT_H

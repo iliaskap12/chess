@@ -1,0 +1,42 @@
+
+.. _program_listing_file_include_util_custom-string.h:
+
+Program Listing for File custom-string.h
+========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_util_custom-string.h>` (``include/util/custom-string.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CHESS_CUSTOM_STRING_H
+   #define CHESS_CUSTOM_STRING_H
+   
+   #include <string>
+   #include <vector>
+   #include <cstddef>
+   
+   namespace custom_string {
+     std::vector<std::string> split(const std::string &string, const std::string &delimiter);
+   }
+   
+   // credits for constexpr hash function
+   // https://learnmoderncpp.com/2020/06/01/strings-as-switch-case-labels/
+   
+   constexpr auto stringHash(const char *string) {
+     unsigned long long hash { 0 };
+     unsigned long long counter { 0 };
+   
+     for (auto pointer { string }; *pointer; ++pointer, ++counter) {
+       hash += *pointer << counter;
+     }
+   
+     return hash;
+   }
+   
+   constexpr auto operator"" _hash(const char *string, std::size_t) {
+     return stringHash(string);
+   }
+   
+   #endif//CHESS_CUSTOM_STRING_H

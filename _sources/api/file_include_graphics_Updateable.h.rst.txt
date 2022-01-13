@@ -1,0 +1,56 @@
+
+.. _file_include_graphics_Updateable.h:
+
+File Updateable.h
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_graphics>` (``include/graphics``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/graphics/Updateable.h``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_graphics_Updateable.h.rst
+
+
+
+
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_game_Game.h`
+
+- :ref:`file_include_game_Pawn.h`
+
+- :ref:`file_include_game_Square.h`
+
+- :ref:`file_include_graphics_Menu.h`
+
+- :ref:`file_include_graphics_Rectangle.h`
+
+- :ref:`file_include_graphics_Screen.h`
+
+- :ref:`file_include_hud_HUD.h`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_updateable`
+

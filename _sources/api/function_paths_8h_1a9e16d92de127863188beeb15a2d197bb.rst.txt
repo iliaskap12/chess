@@ -1,0 +1,13 @@
+.. _exhale_function_paths_8h_1a9e16d92de127863188beeb15a2d197bb:
+
+Function paths::getImagesPath
+=============================
+
+- Defined in :ref:`file_include_util_paths.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: paths::getImagesPath()

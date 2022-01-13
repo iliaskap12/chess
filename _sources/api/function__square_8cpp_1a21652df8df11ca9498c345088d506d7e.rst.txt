@@ -1,0 +1,13 @@
+.. _exhale_function__square_8cpp_1a21652df8df11ca9498c345088d506d7e:
+
+Function operator==(const Square&, const Square&)
+=================================================
+
+- Defined in :ref:`file_src_game_Square.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator==(const Square&, const Square&)

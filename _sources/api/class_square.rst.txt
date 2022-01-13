@@ -1,0 +1,26 @@
+.. _exhale_class_class_square:
+
+Class Square
+============
+
+- Defined in :ref:`file_include_game_Square.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public Drawable`` (:ref:`exhale_class_class_drawable`)
+- ``public Updateable`` (:ref:`exhale_class_class_updateable`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Square
+   :members:
+   :protected-members:
+   :undoc-members:

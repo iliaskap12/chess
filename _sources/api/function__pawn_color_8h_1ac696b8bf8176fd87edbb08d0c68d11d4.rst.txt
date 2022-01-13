@@ -1,0 +1,13 @@
+.. _exhale_function__pawn_color_8h_1ac696b8bf8176fd87edbb08d0c68d11d4:
+
+Template Function operator+(const PawnColor&, const T&)
+=======================================================
+
+- Defined in :ref:`file_include_game_PawnColor.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator+(const PawnColor&, const T&)

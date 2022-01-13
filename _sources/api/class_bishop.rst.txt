@@ -1,0 +1,25 @@
+.. _exhale_class_class_bishop:
+
+Class Bishop
+============
+
+- Defined in :ref:`file_include_game_Bishop.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Pawn`` (:ref:`exhale_class_class_pawn`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Bishop
+   :members:
+   :protected-members:
+   :undoc-members:

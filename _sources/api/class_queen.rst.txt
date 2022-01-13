@@ -1,0 +1,25 @@
+.. _exhale_class_class_queen:
+
+Class Queen
+===========
+
+- Defined in :ref:`file_include_game_Queen.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Pawn`` (:ref:`exhale_class_class_pawn`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Queen
+   :members:
+   :protected-members:
+   :undoc-members:

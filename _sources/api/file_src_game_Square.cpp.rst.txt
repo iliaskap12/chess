@@ -1,0 +1,48 @@
+
+.. _file_src_game_Square.cpp:
+
+File Square.cpp
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game>` (``src/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/Square.cpp``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_Square.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``App.h`` (:ref:`file_include_App.h`)
+
+- ``game/Square.h`` (:ref:`file_include_game_Square.h`)
+
+- ``sgg/graphics.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__square_8cpp_1a21652df8df11ca9498c345088d506d7e`
+

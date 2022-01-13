@@ -1,0 +1,59 @@
+
+.. _program_listing_file_include_game_Square.h:
+
+Program Listing for File Square.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_game_Square.h>` (``include/game/Square.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef SQUARE_H
+   #define SQUARE_H
+   
+   #include <memory>
+   #include "graphics/Drawable.h"
+   #include "graphics/Updateable.h"
+   #include "graphics/Rectangle.h"
+   #include "Pawn.h"
+   
+   class Pawn; // break cyclic dependency
+   
+   class Square : public Drawable, public Updateable {
+     unsigned short int row_ { 0 };
+     unsigned short int column_ { 0 };
+     std::shared_ptr<Pawn> pawn_ { nullptr };
+     Rectangle drawingArea { Rectangle() };
+     unsigned short int whiteDangerReferenceCount_ { 0 };
+     unsigned short int blackDangerReferenceCount_ { 0 };
+   
+   public:
+     Square();
+     Square(unsigned short int row, unsigned short int column);
+     void initialize(Point leftBottom, const graphics::Brush &brush, Brush type, float squareWidth = 100.0f);
+   
+     [[nodiscard]] unsigned short int getRow() const;
+     [[nodiscard]] unsigned short int getColumn() const;
+     void setRow(unsigned short row);
+     void setColumn(unsigned short column);
+     [[nodiscard]] char getColumnAsChar() const;
+   
+     void registerPawn(std::shared_ptr<Pawn> pawn);
+     void unregisterPawn();
+     [[nodiscard]] std::shared_ptr<Pawn> getPawn() const;
+     [[nodiscard]] bool hasPawn() const;
+   
+     Rectangle getDrawingArea() const;
+   
+     void draw() override;
+     void update(float ms) override;
+   
+     friend bool operator==(const Square& lhs, const Square& rhs);
+     void increaseDangerReferenceCount(PawnColor color);
+     void resetDangerReferenceCount();
+     unsigned short int getDangerReferenceCount(PawnColor color) const;
+   };
+   
+   #endif // SQUARE_H

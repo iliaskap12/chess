@@ -1,0 +1,26 @@
+
+.. _program_listing_file_include_graphics_Brush.h:
+
+Program Listing for File Brush.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_graphics_Brush.h>` (``include/graphics/Brush.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CHESS_BRUSH_H
+   #define CHESS_BRUSH_H
+   
+   enum class Brush {
+     LIGHT_BROWN,
+     DARK_BROWN,
+     LIGHT_GREEN,
+     DARK_GREEN,
+     RED,
+     TEXTURE,
+     CHECKBOARD
+   };
+   
+   #endif//CHESS_BRUSH_H

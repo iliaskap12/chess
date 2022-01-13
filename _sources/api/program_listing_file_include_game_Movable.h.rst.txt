@@ -1,0 +1,24 @@
+
+.. _program_listing_file_include_game_Movable.h:
+
+Program Listing for File Movable.h
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_game_Movable.h>` (``include/game/Movable.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef MOVABLE_H
+   #define MOVABLE_H
+   
+   class Movable {
+   
+   public:
+     Movable() = default;
+     virtual void move(float ms) = 0;
+     virtual ~Movable() = default;
+   };
+   
+   #endif // MOVABLE_H

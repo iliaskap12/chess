@@ -1,0 +1,37 @@
+
+.. _file_src_graphics_Point.cpp:
+
+File Point.cpp
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_src_graphics>` (``src/graphics``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/graphics/Point.cpp``)
+---------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_graphics_Point.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``graphics/Point.h`` (:ref:`file_include_graphics_Point.h`)
+
+
+
+
+

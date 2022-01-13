@@ -1,0 +1,29 @@
+
+.. _program_listing_file_include_game_Knight.h:
+
+Program Listing for File Knight.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_game_Knight.h>` (``include/game/Knight.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef KNIGHT_H
+   #define KNIGHT_H
+   
+   #include "Pawn.h"
+   
+   class Knight : public Pawn {
+     std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>(static_cast<std::size_t>(8)) };
+     static constexpr unsigned short int maxSteps { 1 };
+   
+   public:
+     explicit Knight(PawnColor color);
+     std::vector<std::pair<int, int>> getAdvanceableSquares() override;
+     std::vector<std::pair<int, int>> getHoldingSquares() override;
+   };
+   
+   #endif // KNIGHT_H

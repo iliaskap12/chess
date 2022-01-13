@@ -1,0 +1,25 @@
+.. _exhale_class_class_main_menu:
+
+Class MainMenu
+==============
+
+- Defined in :ref:`file_include_graphics_MainMenu.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Menu`` (:ref:`exhale_class_class_menu`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MainMenu
+   :members:
+   :protected-members:
+   :undoc-members:

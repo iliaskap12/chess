@@ -1,0 +1,42 @@
+
+.. _program_listing_file_src_game_PawnColor.cpp:
+
+Program Listing for File PawnColor.cpp
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_game_PawnColor.cpp>` (``src/game/PawnColor.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <game/PawnColor.h>
+   
+   std::string pawnColorToString(const PawnColor& color) {
+     if (color == PawnColor::WHITE) {
+       return "white";
+     } else {
+       return "black";
+     }
+   }
+   
+   template <typename T>
+   std::string operator+(const T& lhs, const PawnColor &color) {
+     return lhs + pawnColorToString(color);
+   }
+   
+   template <typename T>
+   std::string operator+(const PawnColor &color, const T& rhs) {
+     return pawnColorToString(color) + rhs;
+   }
+   
+   std::string operator+(const PawnColor &color1, const PawnColor &color2) {
+     return pawnColorToString(color1) + pawnColorToString(color2);
+   }
+   
+   std::ostream& operator<<(std::ostream& lhs, const PawnColor &color) {
+     return lhs << pawnColorToString(color);
+   }
+   
+   template std::string operator+(const std::string& lhs, const PawnColor &color);
+   template std::string operator+(const PawnColor &color, const std::string& rhs);

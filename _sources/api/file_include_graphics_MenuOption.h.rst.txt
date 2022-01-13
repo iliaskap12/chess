@@ -1,0 +1,54 @@
+
+.. _file_include_graphics_MenuOption.h:
+
+File MenuOption.h
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_graphics>` (``include/graphics``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/graphics/MenuOption.h``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_graphics_MenuOption.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Rectangle.h`` (:ref:`file_include_graphics_Rectangle.h`)
+
+- ``hud/HUD.h`` (:ref:`file_include_hud_HUD.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_graphics_Menu.h`
+
+- :ref:`file_src_graphics_MenuOption.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_menu_option`
+

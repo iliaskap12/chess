@@ -1,0 +1,31 @@
+
+.. _program_listing_file_include_game_Bishop.h:
+
+Program Listing for File Bishop.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_include_game_Bishop.h>` (``include/game/Bishop.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef BISHOP_H
+   #define BISHOP_H
+   
+   #include "Pawn.h"
+   
+   class Bishop : public Pawn {
+     std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
+     static constexpr unsigned short int maxSteps { 8 };
+   
+   public:
+     explicit Bishop(PawnColor color);
+     std::vector<std::pair<int, int>> getAdvanceableSquares() override;
+     std::vector<std::pair<int, int>> getHoldingSquares() override;
+     std::shared_ptr<Pawn> getBlockedPawn() override;
+   };
+   
+   
+   #endif // BISHOP_H

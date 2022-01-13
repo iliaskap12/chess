@@ -1,0 +1,13 @@
+.. _exhale_function__rectangle_8cpp_1a09abfed52b7865bf069edadf2905ad86:
+
+Function operator==(const Rectangle&, const Rectangle&)
+=======================================================
+
+- Defined in :ref:`file_src_graphics_Rectangle.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator==(const Rectangle&, const Rectangle&)

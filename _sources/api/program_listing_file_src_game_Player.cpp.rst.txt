@@ -1,0 +1,19 @@
+
+.. _program_listing_file_src_game_Player.cpp:
+
+Program Listing for File Player.cpp
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_game_Player.cpp>` (``src/game/Player.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <game/Player.h>
+   
+   Player::Player(PawnColor side) : side(side) {}
+   
+   const PawnColor &Player::getSide() const {
+     return this->side;
+   }

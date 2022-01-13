@@ -1,0 +1,66 @@
+
+.. _file_src_game_Checkboard.cpp:
+
+File Checkboard.cpp
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game>` (``src/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/Checkboard.cpp``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_Checkboard.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``App.h`` (:ref:`file_include_App.h`)
+
+- ``algorithm``
+
+- ``game/Bishop.h`` (:ref:`file_include_game_Bishop.h`)
+
+- ``game/Checkboard.h`` (:ref:`file_include_game_Checkboard.h`)
+
+- ``game/King.h`` (:ref:`file_include_game_King.h`)
+
+- ``game/Knight.h`` (:ref:`file_include_game_Knight.h`)
+
+- ``game/PawnColor.h`` (:ref:`file_include_game_PawnColor.h`)
+
+- ``game/Queen.h`` (:ref:`file_include_game_Queen.h`)
+
+- ``game/Rook.h`` (:ref:`file_include_game_Rook.h`)
+
+- ``game/Soldier.h`` (:ref:`file_include_game_Soldier.h`)
+
+- ``memory``
+
+- ``sgg/graphics.h``
+
+
+
+
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef__checkboard_8cpp_1a34528f331ff4d77c998f3794d4ab304f`
+

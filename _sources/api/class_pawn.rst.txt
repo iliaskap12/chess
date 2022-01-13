@@ -1,0 +1,38 @@
+.. _exhale_class_class_pawn:
+
+Class Pawn
+==========
+
+- Defined in :ref:`file_include_game_Pawn.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Types
+**********
+
+- ``public Drawable`` (:ref:`exhale_class_class_drawable`)
+- ``public Updateable`` (:ref:`exhale_class_class_updateable`)
+- ``public Movable`` (:ref:`exhale_class_class_movable`)
+
+
+Derived Types
+*************
+
+- ``public Bishop`` (:ref:`exhale_class_class_bishop`)
+- ``public King`` (:ref:`exhale_class_class_king`)
+- ``public Knight`` (:ref:`exhale_class_class_knight`)
+- ``public Queen`` (:ref:`exhale_class_class_queen`)
+- ``public Rook`` (:ref:`exhale_class_class_rook`)
+- ``public Soldier`` (:ref:`exhale_class_class_soldier`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Pawn
+   :members:
+   :protected-members:
+   :undoc-members:

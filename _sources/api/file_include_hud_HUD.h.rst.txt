@@ -1,0 +1,64 @@
+
+.. _file_include_hud_HUD.h:
+
+File HUD.h
+==========
+
+|exhale_lsh| :ref:`Parent directory <dir_include_hud>` (``include/hud``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/hud/HUD.h``)
+----------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_hud_HUD.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``graphics/Brush.h`` (:ref:`file_include_graphics_Brush.h`)
+
+- ``graphics/Drawable.h`` (:ref:`file_include_graphics_Drawable.h`)
+
+- ``graphics/Rectangle.h`` (:ref:`file_include_graphics_Rectangle.h`)
+
+- ``graphics/Updateable.h`` (:ref:`file_include_graphics_Updateable.h`)
+
+- ``sgg/graphics.h``
+
+- ``string`` (:ref:`file_src_util_custom-string.cpp`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_graphics_MenuOption.h`
+
+- :ref:`file_include_hud_PawnCount.h`
+
+- :ref:`file_src_hud_HUD.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_h_u_d`
+

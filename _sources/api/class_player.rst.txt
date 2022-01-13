@@ -1,0 +1,16 @@
+.. _exhale_class_class_player:
+
+Class Player
+============
+
+- Defined in :ref:`file_include_game_Player.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Player
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,16 @@
+.. _exhale_class_class_menu_option:
+
+Class MenuOption
+================
+
+- Defined in :ref:`file_include_graphics_MenuOption.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: MenuOption
+   :members:
+   :protected-members:
+   :undoc-members:

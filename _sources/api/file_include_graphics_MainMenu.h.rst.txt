@@ -1,0 +1,52 @@
+
+.. _file_include_graphics_MainMenu.h:
+
+File MainMenu.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_include_graphics>` (``include/graphics``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/graphics/MainMenu.h``)
+--------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_graphics_MainMenu.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Menu.h`` (:ref:`file_include_graphics_InGameMenu.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_graphics_OpeningScreen.h`
+
+- :ref:`file_src_graphics_MainMenu.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_main_menu`
+
