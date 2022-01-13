@@ -20,7 +20,7 @@ jobs:
           && brew install doxygen
           && brew install sphinx-doc
           && pip3 install sphinx-rtd-theme
-          && pip install breathe
+          && pip install breathe==4.31.0
           && pip3 install sphinx-sitemap
           && pip install exhale
       - name: Checkout repo
