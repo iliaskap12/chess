@@ -6,5 +6,5 @@ digraph "Point"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="{Point\n||+  Point()\l+  Point(float x, float y)\l+ float getX() const\l+ float getY() const\l+ Point operator+(const\l Point &other) const\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -x\n-y" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{float\n||}",height=0.2,width=0.4,color="black",tooltip=" "];
+  Node2 [label="{float\n||}",height=0.2,width=0.4,color="grey75",tooltip=" "];
 }

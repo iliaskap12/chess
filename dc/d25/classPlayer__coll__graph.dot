@@ -6,5 +6,5 @@ digraph "Player"
   node [fontname="Helvetica",fontsize="10",shape=record];
   Node1 [label="{Player\n||+  Player(PawnColor side)\l+ const PawnColor & getSide\l() const\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -side" ,arrowhead="odiamond",fontname="Helvetica"];
-  Node2 [label="{PawnColor\n||}",height=0.2,width=0.4,color="black",tooltip=" "];
+  Node2 [label="{PawnColor\n||}",height=0.2,width=0.4,color="grey75",tooltip=" "];
 }
