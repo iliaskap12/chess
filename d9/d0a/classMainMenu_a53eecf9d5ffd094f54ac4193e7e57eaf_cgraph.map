@@ -1,0 +1,7 @@
+<map id="MainMenu::MainMenu" name="MainMenu::MainMenu">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,156,57"/>
+<area shape="rect" id="node2" href="$d8/ddb/classMenu.html#ab13d4c4ecac9afc2dbb175c22fd3c7e5" title=" " alt="" coords="241,5,363,32"/>
+<area shape="rect" id="node3" href="$d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302" title=" " alt="" coords="204,56,400,83"/>
+<area shape="rect" id="node4" href="$d0/df0/classHUD.html#aff6854c25f96fa4062996d9a8fb9d848" title=" " alt="" coords="448,56,585,83"/>
+<area shape="rect" id="node5" href="$de/d00/classRectangle.html#a53cffcd82f9e11f78939dda79c1e18ad" title=" " alt="" coords="633,56,775,83"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="HUD::setTextBrush" name="HUD::setTextBrush">
+<area shape="rect" id="node1" title=" " alt="" coords="448,31,585,57"/>
+<area shape="rect" id="node2" href="$d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302" title=" " alt="" coords="204,5,400,32"/>
+<area shape="rect" id="node4" href="$d5/d4d/classPawnCount.html#a9e233480c807cf6eb2955aee7d84c24c" title=" " alt="" coords="219,56,385,83"/>
+<area shape="rect" id="node3" href="$d9/d0a/classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf" title=" " alt="" coords="5,5,156,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Screen" name="Screen">
+<area shape="rect" id="node1" title=" " alt="" coords="113,175,276,296"/>
+<area shape="rect" id="node4" href="$d1/d9f/classOpeningScreen.html" title=" " alt="" coords="5,395,165,561"/>
+<area shape="rect" id="node5" href="$d7/df6/classPlayingScreen.html" title=" " alt="" coords="189,344,421,612"/>
+<area shape="rect" id="node2" href="$de/db8/classDrawable.html" title=" " alt="" coords="32,13,184,119"/>
+<area shape="rect" id="node3" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="208,5,355,127"/>
+</map>
