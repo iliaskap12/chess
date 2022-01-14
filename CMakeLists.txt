@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.7...3.22)
 
-if(${CMAKE_VERSION} VERSION_LESS 3.12)
+if (${CMAKE_VERSION} VERSION_LESS 3.12)
     cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION})
-endif()
+endif ()
 
 project(
         chess
@@ -11,7 +11,7 @@ project(
         LANGUAGES CXX)
 
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
     # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
 
@@ -34,34 +34,30 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
     # Docs only available if this is the main app
     find_package(Doxygen)
-    if(Doxygen_FOUND)
+    if (Doxygen_FOUND)
         set(DOCS_DIR docs-doxygen)
         add_subdirectory(${DOCS_DIR})
-    else()
+    else ()
         message(STATUS "Doxygen not found, not building docs")
-    endif()
-endif()
+    endif ()
+endif ()
 
 # FetchContent added in CMake 3.11, downloads during the configure step
 include(FetchContent)
 # FetchContent_MakeAvailable was not added until CMake 3.14; use our shim
-if(${CMAKE_VERSION} VERSION_LESS 3.14)
+if (${CMAKE_VERSION} VERSION_LESS 3.14)
     include(cmake/add_FetchContent_MakeAvailable.cmake)
-endif()
+endif ()
 
-find_package(sgg REQUIRED)
+FetchContent_Declare(
+        sgg
+        GIT_REPOSITORY https://github.com/cgaueb/sgg.git
+        GIT_TAG main)
+FetchContent_MakeAvailable(sgg)
+
 set(CMAKE_CURRENT_SOURCE_DIR src)
 set(SRC_DIR src)
 set(HEADER_DIR include)
-set(
-        SGG_LIBS
-        OpenGL
-        glm::glm
-        GLEW::GLEW
-        SDL2::SDL2
-        SDL2::SDL2_mixer
-        Freetype::Freetype
-)
 set(
         GAME_LIBS
         GAME
@@ -73,9 +69,9 @@ add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}")
 
 # Testing only available if this is the main app
 # Emergency override MODERN_CMAKE_BUILD_TESTING provided as well
-if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING)
+if ((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME OR MODERN_CMAKE_BUILD_TESTING)
         AND BUILD_TESTING)
-#    add_subdirectory(tests)
+    #    add_subdirectory(tests)
     enable_testing()
-endif()
+endif ()
 
