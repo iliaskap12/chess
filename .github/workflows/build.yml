@@ -130,7 +130,7 @@ jobs:
           cmake --version
           cd $HOME
           Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
-          Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+          Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
           winget install --id Git.Git -e --source winget
           winget install -e --id Microsoft.VisualStudio.2022.Community
           git clone https://github.com/microsoft/vcpkg
@@ -144,7 +144,7 @@ jobs:
           git clone https://github.com/cgaueb/sgg.git
           cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
-                          -DCMAKE_TOOLCHAIN_FILE=/path/to/vcpkg/directory/scripts/buildsystems/vcpkg.cmake \
+                          -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-windows-static
           cmake --build build --target install
         # cmd "${{ matrix.config.environment_script }}"
@@ -170,7 +170,7 @@ jobs:
           cd sgg
           cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
-                          -DCMAKE_TOOLCHAIN_FILE=~/scripts/buildsystems/vcpkg.cmake \
+                          -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-linux
           cmake --build build --target install
       - name: Install dependencies on ubuntu9
@@ -208,6 +208,21 @@ jobs:
           sudo update-alternatives --install /usr/bin/cmake cmake /opt/cmake/bin/cmake 1 --force
           echo cmake version after
           cmake --version
+          cd $HOME
+          git clone https://github.com/microsoft/vcpkg
+          sh ./vcpkg/bootstrap-vcpkg.sh
+          ./vcpkg/vcpkg install glew:x64-linux
+          ./vcpkg/vcpkg install sdl2:x64-linux
+          ./vcpkg/vcpkg install sdl2-mixer:x64-linux
+          ./vcpkg/vcpkg install freetype:x64-linux
+          ./vcpkg/vcpkg install glm:x64-linux
+          cd $HOME
+          git clone https://github.com/cgaueb/sgg.git
+          cd sgg
+          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_BUILD_TYPE=Release \
+                          -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
+                          -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
+                          -DVCPKG_TARGET_TRIPLET=x64-linux
       - name: Install dependencies on macos
         if: startsWith(matrix.config.os, 'macos')
         run: |
@@ -227,7 +242,7 @@ jobs:
           cd sgg
           cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
-                          -DCMAKE_TOOLCHAIN_FILE=~/scripts/buildsystems/vcpkg.cmake \
+                          -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-osx
           cmake --build build --target install
       - name: Run build-wrapper linux/macosx
