@@ -130,19 +130,21 @@ jobs:
           cmake --version
           cd $HOME
           Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+          Import-Module Appx
           Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
           winget install --id Git.Git -e --source winget
           winget install -e --id Microsoft.VisualStudio.2022.Community
           git clone https://github.com/microsoft/vcpkg
           .\vcpkg\bootstrap-vcpkg.bat
           cd vcpkg
+          update
           vcpkg install glew:x64-windows-static
           vcpkg install sdl2:x64-windows-static
           vcpkg install sdl2-mixer:x64-windows-static
           vcpkg install freetype:x64-windows-static
           vcpkg install glm:x64-windows-static
           git clone https://github.com/cgaueb/sgg.git
-          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -DCMAKE_BUILD_TYPE=Release \
+          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -DCMAKE_CXX_STANDARD=20 -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-windows-static
@@ -160,6 +162,7 @@ jobs:
           cd $HOME
           git clone https://github.com/microsoft/vcpkg
           sh ./vcpkg/bootstrap-vcpkg.sh
+          ./vcpkg update
           ./vcpkg/vcpkg install glew:x64-linux
           ./vcpkg/vcpkg install sdl2:x64-linux
           ./vcpkg/vcpkg install sdl2-mixer:x64-linux
@@ -168,7 +171,8 @@ jobs:
           cd $HOME
           git clone https://github.com/cgaueb/sgg.git
           cd sgg
-          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_BUILD_TYPE=Release \
+          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_CXX_STANDARD=20 
+                          -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-linux
@@ -211,6 +215,7 @@ jobs:
           cd $HOME
           git clone https://github.com/microsoft/vcpkg
           sh ./vcpkg/bootstrap-vcpkg.sh
+          ./vcpkg update
           ./vcpkg/vcpkg install glew:x64-linux
           ./vcpkg/vcpkg install sdl2:x64-linux
           ./vcpkg/vcpkg install sdl2-mixer:x64-linux
@@ -219,7 +224,8 @@ jobs:
           cd $HOME
           git clone https://github.com/cgaueb/sgg.git
           cd sgg
-          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_BUILD_TYPE=Release \
+          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_CXX_STANDARD=20 
+                          -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-linux
@@ -232,6 +238,7 @@ jobs:
           cd $HOME
           git clone https://github.com/microsoft/vcpkg
           sh ./vcpkg/bootstrap-vcpkg.sh
+          ./vcpkg update
           ./vcpkg/vcpkg install glew:x64-osx
           ./vcpkg/vcpkg install sdl2:x64-osx
           ./vcpkg/vcpkg install sdl2-mixer:x64-osx
@@ -240,7 +247,7 @@ jobs:
           cd $HOME
           git clone https://github.com/cgaueb/sgg.git
           cd sgg
-          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_BUILD_TYPE=Release \
+          cmake -B build -G Ninja -DCMAKE_MAKE_PROGRAM=Ninja -G Ninja -DCMAKE_CXX_STANDARD=20 -DCMAKE_BUILD_TYPE=Release \
                           -DCMAKE_EXPORT_PACKAGE_REGISTRY=ON \
                           -DCMAKE_TOOLCHAIN_FILE=~/vcpkg/scripts/buildsystems/vcpkg.cmake \
                           -DVCPKG_TARGET_TRIPLET=x64-osx
