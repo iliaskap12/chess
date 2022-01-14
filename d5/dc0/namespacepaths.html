@@ -95,10 +95,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   17</span>                              {</div>
-<div class="line"><span class="lineno">   18</span>  std::string root { <a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a>() };</div>
-<div class="line"><span class="lineno">   19</span>  <span class="keywordflow">return</span> std::filesystem::path(root + <span class="stringliteral">&quot;/assets/fonts/&quot;</span>, std::filesystem::path::native_format);</div>
-<div class="line"><span class="lineno">   20</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>                              {</div>
+<div class="line"><span class="lineno">   20</span>  std::string root{<a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a>()};</div>
+<div class="line"><span class="lineno">   21</span>  std::cout &lt;&lt; root &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   22</span>  <span class="keywordflow">return</span> std::filesystem::path(root + <span class="stringliteral">&quot;/assets/fonts/&quot;</span>, std::filesystem::path::native_format);</div>
+<div class="line"><span class="lineno">   23</span>}</div>
 <div class="ttc" id="anamespacepaths_html_a450800b2feff454aa4e85d20c6618250"><div class="ttname"><a href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a></div><div class="ttdeci">std::string getProjectRootPath()</div><div class="ttdef"><b>Definition:</b> paths.cpp:3</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">getProjectRootPath()</a>.</p>
@@ -140,9 +141,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">    7</span>                               {</div>
-<div class="line"><span class="lineno">    8</span>  std::string root { <a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a>() };</div>
-<div class="line"><span class="lineno">    9</span>  <span class="keywordflow">return</span> std::filesystem::path(root + <span class="stringliteral">&quot;/assets/images/&quot;</span>, std::filesystem::path::native_format);</div>
-<div class="line"><span class="lineno">   10</span>}</div>
+<div class="line"><span class="lineno">    8</span>  std::string root{<a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a>()};</div>
+<div class="line"><span class="lineno">    9</span>  std::cout &lt;&lt; root &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   10</span>  <span class="keywordflow">return</span> std::filesystem::path(root + <span class="stringliteral">&quot;/assets/images/&quot;</span>, std::filesystem::path::native_format);</div>
+<div class="line"><span class="lineno">   11</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">getProjectRootPath()</a>.</p>
 
@@ -185,7 +187,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">    3</span>                                    {</div>
-<div class="line"><span class="lineno">    4</span>  <span class="keywordflow">return</span> std::filesystem::current_path().make_preferred().parent_path().parent_path();</div>
+<div class="line"><span class="lineno">    4</span>  <span class="keywordflow">return</span> std::filesystem::current_path().make_preferred().parent_path().parent_path().parent_path().parent_path();</div>
 <div class="line"><span class="lineno">    5</span>}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="../../d5/dc0/namespacepaths.html#abd3ecea000517c4765a7e58bc86f0f58">getFontsPath()</a>, <a class="el" href="../../d5/dc0/namespacepaths.html#a9e16d92de127863188beeb15a2d197bb">getImagesPath()</a>, and <a class="el" href="../../d5/dc0/namespacepaths.html#a35aed0b28fb410111221a3abd28644f3">getSoundsPath()</a>.</p>
@@ -220,10 +222,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">   12</span>                               {</div>
-<div class="line"><span class="lineno">   13</span>  std::string root { <a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a>() };</div>
-<div class="line"><span class="lineno">   14</span>  <span class="keywordflow">return</span> std::filesystem::path(root + <span class="stringliteral">&quot;/assets/sounds/&quot;</span>, std::filesystem::path::native_format);</div>
-<div class="line"><span class="lineno">   15</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">   13</span>                               {</div>
+<div class="line"><span class="lineno">   14</span>  std::string root{<a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">paths::getProjectRootPath</a>()};</div>
+<div class="line"><span class="lineno">   15</span>  std::cout &lt;&lt; root &lt;&lt; std::endl;</div>
+<div class="line"><span class="lineno">   16</span>  <span class="keywordflow">return</span> std::filesystem::path(root + <span class="stringliteral">&quot;/assets/sounds/&quot;</span>, std::filesystem::path::native_format);</div>
+<div class="line"><span class="lineno">   17</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d5/dc0/namespacepaths.html#a450800b2feff454aa4e85d20c6618250">getProjectRootPath()</a>.</p>
 <div class="dynheader">
