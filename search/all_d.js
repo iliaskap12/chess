@@ -11,7 +11,7 @@ var searchData=
   ['pawncolor_8',['PawnColor',['../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366',1,'PawnColor.h']]],
   ['pawncolor_2ecpp_9',['PawnColor.cpp',['../d3/d43/PawnColor_8cpp.html',1,'']]],
   ['pawncolor_2eh_10',['PawnColor.h',['../d3/d03/PawnColor_8h.html',1,'']]],
-  ['pawncolortostring_11',['pawnColorToString',['../d3/d43/PawnColor_8cpp.html#a60ef28efc0e8b9bf41b21c035cf81380',1,'pawnColorToString(const PawnColor &amp;color):&#160;PawnColor.cpp'],['../d3/d03/PawnColor_8h.html#a60ef28efc0e8b9bf41b21c035cf81380',1,'pawnColorToString(const PawnColor &amp;color):&#160;PawnColor.cpp']]],
+  ['pawncolortostring_11',['pawnColorToString',['../d3/d03/PawnColor_8h.html#a60ef28efc0e8b9bf41b21c035cf81380',1,'pawnColorToString(const PawnColor &amp;color):&#160;PawnColor.cpp'],['../d3/d43/PawnColor_8cpp.html#a60ef28efc0e8b9bf41b21c035cf81380',1,'pawnColorToString(const PawnColor &amp;color):&#160;PawnColor.cpp']]],
   ['pawncount_12',['PawnCount',['../d5/d4d/classPawnCount.html',1,'PawnCount'],['../d5/d4d/classPawnCount.html#a9e233480c807cf6eb2955aee7d84c24c',1,'PawnCount::PawnCount()']]],
   ['pawncount_2ecpp_13',['PawnCount.cpp',['../d4/dc2/PawnCount_8cpp.html',1,'']]],
   ['pawncount_2eh_14',['PawnCount.h',['../d2/df8/PawnCount_8h.html',1,'']]],
