@@ -11,6 +11,7 @@ Program Listing for File App.cpp
 .. code-block:: cpp
 
    #include <App.h>
+   #include <functional>
    #include <util/paths.h>
    
    App::App() = default;
@@ -30,7 +31,7 @@ Program Listing for File App.cpp
      graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
      graphics::setFont(paths::getFontsPath() + "typography-times.ttf");
      Rectangle::populateBrushes();
-     this->activeScreen = { std::make_shared<OpeningScreen>() };
+     this->activeScreen = {std::make_shared<OpeningScreen>()};
    
      graphics::startMessageLoop();
      graphics::destroyWindow();
@@ -45,11 +46,11 @@ Program Listing for File App.cpp
    }
    
    void App::changeScreen(std::shared_ptr<Screen> screen) {
-     this->activeScreen = { std::move(screen) };
+     this->activeScreen = {std::move(screen)};
    }
    
    void App::registerGame(Game *game) {
-     this->game_ = { game };
+     this->game_ = {game};
    }
    
    Game *App::getGame() const {

@@ -31,6 +31,8 @@ Includes
 
 - ``App.h`` (:ref:`file_include_App.h`)
 
+- ``functional``
+
 - ``util/paths.h`` (:ref:`file_include_util_paths.h`)
 
 

@@ -1,11 +1,12 @@
 <map id="/Users/runner/work/chess/chess/include/hud/HUD.h" name="/Users/runner/work/chess/chess/include/hud/HUD.h">
-<area shape="rect" id="node1" title=" " alt="" coords="223,5,369,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="127,109,182,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,184,112,211"/>
-<area shape="rect" id="node4" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="136,184,277,211"/>
-<area shape="rect" id="node5" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="301,184,453,211"/>
-<area shape="rect" id="node6" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="651,184,771,211"/>
-<area shape="rect" id="node7" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="359,109,505,136"/>
-<area shape="rect" id="node8" href="$d4/de5/Point_8h.html" title=" " alt="" coords="478,184,541,211"/>
-<area shape="rect" id="node9" title=" " alt="" coords="565,184,627,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="425,5,570,61"/>
+<area shape="rect" id="node2" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="5,184,125,211"/>
+<area shape="rect" id="node3" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="149,184,291,211"/>
+<area shape="rect" id="node4" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="314,109,459,136"/>
+<area shape="rect" id="node6" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="488,184,587,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="611,184,717,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="585,109,652,136"/>
+<area shape="rect" id="node10" title=" " alt="" coords="677,109,731,136"/>
+<area shape="rect" id="node5" href="$d4/de5/Point_8h.html" title=" " alt="" coords="315,184,378,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="403,184,464,211"/>
 </map>

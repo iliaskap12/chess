@@ -37,6 +37,8 @@ Includes
 
 - ``graphics/Updateable.h`` (:ref:`file_include_graphics_Updateable.h`)
 
+- ``optional``
+
 - ``sgg/graphics.h``
 
 - ``string`` (:ref:`file_src_util_custom-string.cpp`)
