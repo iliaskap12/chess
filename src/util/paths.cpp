@@ -1,7 +1,7 @@
 #include <util/paths.h>
 
 std::string paths::getProjectRootPath() {
-  return std::filesystem::current_path().make_preferred().parent_path().parent_path().parent_path().parent_path();
+  return std::filesystem::current_path().make_preferred();
 }
 
 std::string paths::getImagesPath() {

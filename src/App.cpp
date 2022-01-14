@@ -1,4 +1,5 @@
 #include <App.h>
+#include <functional>
 #include <util/paths.h>
 
 App::App() = default;
@@ -18,7 +19,7 @@ void App::run() {
   graphics::setCanvasScaleMode(graphics::CANVAS_SCALE_FIT);
   graphics::setFont(paths::getFontsPath() + "typography-times.ttf");
   Rectangle::populateBrushes();
-  this->activeScreen = { std::make_shared<OpeningScreen>() };
+  this->activeScreen = {std::make_shared<OpeningScreen>()};
 
   graphics::startMessageLoop();
   graphics::destroyWindow();
@@ -33,11 +34,11 @@ void App::update(float ms) {
 }
 
 void App::changeScreen(std::shared_ptr<Screen> screen) {
-  this->activeScreen = { std::move(screen) };
+  this->activeScreen = {std::move(screen)};
 }
 
 void App::registerGame(Game *game) {
-  this->game_ = { game };
+  this->game_ = {game};
 }
 
 Game *App::getGame() const {

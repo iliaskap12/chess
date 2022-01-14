@@ -4,8 +4,6 @@ if (${CMAKE_VERSION} VERSION_LESS 3.12)
     cmake_policy(VERSION ${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION})
 endif ()
 
-#add_subdirectory(vcpkg)
-
 project(
         chess
         VERSION 1.0
@@ -17,7 +15,7 @@ if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
     # Optionally set things like CMAKE_CXX_STANDARD, CMAKE_POSITION_INDEPENDENT_CODE here
 
-    set(CMAKE_CXX_STANDARD 23)
+    set(CMAKE_CXX_STANDARD 20)
     # Let's ensure -std=c++xx instead of -std=g++xx
     set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -51,14 +49,14 @@ if (${CMAKE_VERSION} VERSION_LESS 3.14)
     include(cmake/add_FetchContent_MakeAvailable.cmake)
 endif ()
 
-#FetchContent_Declare(
-#        sgg
-#        GIT_REPOSITORY https://github.com/cgaueb/sgg.git
-#        GIT_TAG main)
-#FetchContent_MakeAvailable(sgg)
+FetchContent_Declare(
+        sgg
+        GIT_REPOSITORY https://github.com/cgaueb/sgg.git
+        GIT_TAG main)
+FetchContent_MakeAvailable(sgg)
 
 #find_package(sgg REQUIRED)
-add_subdirectory(sgg)
+#add_subdirectory(sgg)
 set(CMAKE_CURRENT_SOURCE_DIR src)
 set(SRC_DIR src)
 set(HEADER_DIR include)
