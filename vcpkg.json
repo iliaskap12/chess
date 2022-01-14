@@ -4,9 +4,19 @@
   "dependencies": [
     "opengl",
     "glew",
-    "sdl2",
-    "sdl2-mixer",
     "freetype",
-    "glm"
+    "glm",
+    {
+      "name": "sdl2",
+      "features": [
+        "x11"
+      ],
+      "platform": "linux"
+    },
+    {
+      "name": "sdl2",
+      "platform": "!linux"
+    },
+    "sdl2-mixer"
   ]
 }

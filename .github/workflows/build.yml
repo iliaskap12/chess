@@ -142,15 +142,11 @@ jobs:
       - name: Run build-wrapper linux/macosx
         if: false == startsWith(matrix.config.system, 'win')
         run: |
-          mkdir build
-          cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ env.VCPKG_ROOT }}${{ matrix.config.vcpkg_toolchain }}
-          build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
+          build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} --preset ninja-multi-vcpkg
       - name: Run build-wrapper windows
         if: startsWith(matrix.config.system, 'win')
         run: |
-          New-Item -ItemType directory -Path build
-          cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ env.VCPKG_ROOT }}${{ matrix.config.vcpkg_toolchain }}
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
+          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} --preset ninja-multi-vcpkg
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
