@@ -6,18 +6,15 @@ std::string paths::getProjectRootPath() {
 
 std::string paths::getImagesPath() {
   std::string root{paths::getProjectRootPath()};
-  std::cout << root << std::endl;
   return std::filesystem::path(root + "/assets/images/", std::filesystem::path::native_format);
 }
 
 std::string paths::getSoundsPath() {
   std::string root{paths::getProjectRootPath()};
-  std::cout << root << std::endl;
   return std::filesystem::path(root + "/assets/sounds/", std::filesystem::path::native_format);
 }
 
 std::string paths::getFontsPath() {
   std::string root{paths::getProjectRootPath()};
-  std::cout << root << std::endl;
   return std::filesystem::path(root + "/assets/fonts/", std::filesystem::path::native_format);
 }
