@@ -50,15 +50,6 @@ if (${CMAKE_VERSION} VERSION_LESS 3.14)
 endif ()
 
 FetchContent_Declare(
-        glew
-        GIT_REPOSITORY https://github.com/nigels-com/glew.git)
-FetchContent_MakeAvailable(glew)
-if (NOT glew_POPULATED)
-    FetchContent_Populate(glew)
-    add_subdirectory(${glew_SOURCE_DIR} ${glew_BINARY_DIR})
-endif ()
-
-FetchContent_Declare(
         sgg
         GIT_REPOSITORY https://github.com/cgaueb/sgg.git
         GIT_TAG main)

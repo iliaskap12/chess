@@ -1,0 +1,11 @@
+{
+  "name": "sgg-dependencies",
+  "version-string": "latest",
+  "dependencies": [
+    "glew",
+    "sdl2",
+    "sdl2-mixer",
+    "freetype",
+    "glm"
+  ]
+}
