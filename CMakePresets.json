@@ -18,6 +18,32 @@
           "value": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
         }
       }
+    },
+    {
+      "name": "windows-default",
+      "displayName": "Windows x64 Debug",
+      "description": "Sets Ninja generator, compilers, x64 architecture, build and install directory, debug build type",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+        "CMAKE_TOOLCHAIN_FILE": {
+          "type": "FILEPATH",
+          "value": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        }
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "hostOS": [
+            "Windows"
+          ]
+        }
+      }
     }
   ],
   "buildPresets": [
@@ -34,6 +60,13 @@
       "displayName": "Build ninja-multi-vcpkg-release",
       "description": "Build ninja-multi-vcpkg Release configuration",
       "configuration": "RelWithDebInfo"
+    },
+    {
+      "name": "windows-default-debug",
+      "configurePreset": "windows-default",
+      "displayName": "Build windows-default-debug",
+      "description": "Build windows-default Debug configuration",
+      "configuration": "Debug"
     }
   ]
 }
