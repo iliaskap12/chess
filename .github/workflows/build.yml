@@ -134,14 +134,13 @@ jobs:
         run: |
           echo github.event.action: ${{ github.event.action }}
           echo github.event_name: ${{ github.event_name }}
-      - name: Force install glew
+      - name: Install sgg dependencies
         run: |
           cd ${{ env.VCPKG_ROOT }}
-          vcpkg install glew-${{ env.VCPKG_DEFAULT_TRIPLET }}
+          vcpkg install --triplet ${{ env.VCPKG_DEFAULT_TRIPLET }}
       - name: Run build-wrapper linux/macosx
         if: false == startsWith(matrix.config.system, 'win')
         run: |
-          vcpkg install 
           mkdir build
           cmake -S . -B build -G Ninja
           build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
