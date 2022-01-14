@@ -26,7 +26,8 @@ jobs:
             cxx: "cl",
             environment_script: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Enterprise/VC/Auxiliary/Build/vcvars64.bat",
             archiver: "7z a",
-            generators: "Visual Studio 16 2019"
+            generators: "Visual Studio 16 2019",
+            vcpkg_toolchain: "\\scripts\\buildsystems\\vcpkg.cmake"
           }
           - {
             name: "Windows Latest MinGW",
@@ -37,7 +38,8 @@ jobs:
             cc: "gcc",
             cxx: "g++",
             archiver: "7z a",
-            generators: "Ninja"
+            generators: "Ninja",
+            vcpkg_toolchain: "\\scripts\\buildsystems\\vcpkg.cmake"
           }
           - {
             name: "Ubuntu_Latest_GCC",
@@ -48,7 +50,8 @@ jobs:
             cc: "gcc",
             cxx: "g++",
             archiver: "7z a",
-            generators: "Ninja"
+            generators: "Ninja",
+            vcpkg_toolchain: "/scripts/buildsystems/vcpkg.cmake"
           }
           - {
             name: "Ubuntu_GCC_9",
@@ -59,7 +62,8 @@ jobs:
             cc: "gcc",
             cxx: "g++",
             archiver: "7z a",
-            generators: "Ninja"
+            generators: "Ninja",
+            vcpkg_toolchain: "/scripts/buildsystems/vcpkg.cmake"
           }
           - {
             name: "macOS Latest Clang",
@@ -70,7 +74,8 @@ jobs:
             cc: "clang",
             cxx: "clang++",
             archiver: "7za a",
-            generators: "Ninja"
+            generators: "Ninja",
+            vcpkg_toolchain: "/scripts/buildsystems/vcpkg.cmake"
           }
     env:
       SONAR_SCANNER_VERSION: 4.6.2.2472 # Find the latest version on this page:
@@ -134,15 +139,11 @@ jobs:
         run: |
           echo github.event.action: ${{ github.event.action }}
           echo github.event_name: ${{ github.event_name }}
-      - name: Install sgg dependencies
-        run: |
-          cd ${{ env.VCPKG_ROOT }}
-          vcpkg install --triplet ${{ env.VCPKG_DEFAULT_TRIPLET }}
       - name: Run build-wrapper linux/macosx
         if: false == startsWith(matrix.config.system, 'win')
         run: |
           mkdir build
-          cmake -S . -B build -G Ninja
+          cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ env.VCPKG_ROOT }}${{ matrix.config.vcpkg_toolchain }}
           build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
       - name: Run build-wrapper windows
         if: startsWith(matrix.config.system, 'win')
