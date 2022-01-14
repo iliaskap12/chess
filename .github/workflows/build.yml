@@ -149,7 +149,7 @@ jobs:
         if: startsWith(matrix.config.system, 'win')
         run: |
           New-Item -ItemType directory -Path build
-          cmake -S . -B build -G Ninja
+          cmake -S . -B build -G Ninja -DCMAKE_TOOLCHAIN_FILE=${{ env.VCPKG_ROOT }}${{ matrix.config.vcpkg_toolchain }}
           build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
       - name: Run sonar-scanner
         env:
