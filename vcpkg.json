@@ -2,6 +2,7 @@
   "name": "sgg-dependencies",
   "version-string": "latest",
   "dependencies": [
+    "opengl",
     "glew",
     "sdl2",
     "sdl2-mixer",
