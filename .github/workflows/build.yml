@@ -162,7 +162,6 @@ jobs:
           cd $HOME
           git clone https://github.com/microsoft/vcpkg
           sh ./vcpkg/bootstrap-vcpkg.sh
-          ./vcpkg update
           ./vcpkg/vcpkg install glew:x64-linux
           ./vcpkg/vcpkg install sdl2:x64-linux
           ./vcpkg/vcpkg install sdl2-mixer:x64-linux
@@ -215,7 +214,6 @@ jobs:
           cd $HOME
           git clone https://github.com/microsoft/vcpkg
           sh ./vcpkg/bootstrap-vcpkg.sh
-          ./vcpkg update
           ./vcpkg/vcpkg install glew:x64-linux
           ./vcpkg/vcpkg install sdl2:x64-linux
           ./vcpkg/vcpkg install sdl2-mixer:x64-linux
@@ -238,7 +236,6 @@ jobs:
           cd $HOME
           git clone https://github.com/microsoft/vcpkg
           sh ./vcpkg/bootstrap-vcpkg.sh
-          ./vcpkg update
           ./vcpkg/vcpkg install glew:x64-osx
           ./vcpkg/vcpkg install sdl2:x64-osx
           ./vcpkg/vcpkg install sdl2-mixer:x64-osx
