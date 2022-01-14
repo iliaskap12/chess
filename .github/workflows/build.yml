@@ -134,18 +134,22 @@ jobs:
         run: |
           echo github.event.action: ${{ github.event.action }}
           echo github.event_name: ${{ github.event_name }}
-
-
-
       - name: Run build-wrapper linux/macosx
         if: false == startsWith(matrix.config.system, 'win')
         run: |
+          cd $HOME
+          cd vcpkg glew:x64-${{ matrix.config.system }}
+          cd $HOME
+          vcpkg install 
           mkdir build
           cmake -S . -B build -G Ninja
           build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
       - name: Run build-wrapper windows
         if: startsWith(matrix.config.system, 'win')
         run: |
+          cd $HOME
+          cd vcpkg glew:x64-windows-static
+          cd $HOME
           New-Item -ItemType directory -Path build
           cmake -S . -B build -G Ninja
           build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build build/ --config Release
