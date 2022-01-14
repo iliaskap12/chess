@@ -139,14 +139,18 @@ jobs:
         run: |
           echo github.event.action: ${{ github.event.action }}
           echo github.event_name: ${{ github.event_name }}
+      - name: Get windows developing environment setup right
+      - uses: ilammy/msvc-dev-cmd@v1
       - name: Run build-wrapper linux/macosx
         if: false == startsWith(matrix.config.system, 'win')
         run: |
-          build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} --preset ninja-multi-vcpkg
+          cmake --preset ninja-multi-vcpkg
+          build-wrapper-${{ matrix.config.system }}-x86 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build --preset ninja-multi-vcpkg-debug
       - name: Run build-wrapper windows
         if: startsWith(matrix.config.system, 'win')
         run: |
-          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} --preset ninja-multi-vcpkg
+          cmake --preset ninja-multi-vcpkg
+          build-wrapper-win-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build --preset ninja-multi-vcpkg-debug
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
