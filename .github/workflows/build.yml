@@ -118,6 +118,10 @@ jobs:
           curl -sSLo $HOME/.sonar/build-wrapper-${{ matrix.config.system }}-x86.zip ${{ env.BUILD_WRAPPER_DOWNLOAD_URL }}
           unzip -o $HOME/.sonar/build-wrapper-${{ matrix.config.system }}-x86.zip -d $HOME/.sonar/
           echo "$HOME/.sonar/build-wrapper-${{ matrix.config.system }}-x86" >> $GITHUB_PATH
+      - name: Install linux dependencies
+        if: startsWith(matrix.config.system, 'linux')
+        run: |
+          sudo apt install mesa-common-dev libgl1-mesa-dev libgles2-mesa-dev
       - name: Get latest CMake and ninja
         # Using 'latest' branch, the most recent CMake and ninja are installed.
         uses: lukka/get-cmake@latest
