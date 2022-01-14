@@ -44,6 +44,32 @@
           ]
         }
       }
+    },
+    {
+      "name": "visual-studio-vcpkg",
+      "generator": "Visual Studio 16 2019",
+      "architecture": {
+        "strategy": "set",
+        "value": "Win32"
+      },
+      "displayName": "Windows x64 Debug",
+      "description": "Sets Visual Studio 16 2019 generator, compilers, Win32 x64 architecture, build and install directory, debug build type",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}",
+        "CMAKE_TOOLCHAIN_FILE": {
+          "type": "FILEPATH",
+          "value": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake"
+        }
+      },
+      "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+          "hostOS": [
+            "Windows"
+          ]
+        }
+      }
     }
   ],
   "buildPresets": [
@@ -66,6 +92,13 @@
       "configurePreset": "windows-default",
       "displayName": "Build windows-default-debug",
       "description": "Build windows-default Debug configuration",
+      "configuration": "Debug"
+    },
+    {
+      "name": "visual-studio-vcpkg-debug",
+      "configurePreset": "visual-studio-vcpkg",
+      "displayName": "Build visual-studio-vcpkg-debug",
+      "description": "Build visual-studio-vcpkg Debug configuration",
       "configuration": "Debug"
     }
   ]
