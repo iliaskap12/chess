@@ -231,7 +231,7 @@ jobs:
                           -DVCPKG_TARGET_TRIPLET=x64-osx
           cmake --build build --target install
       - name: Run build-wrapper linux/macosx
-        if: false == startsWith(matrix.config.system, "win")
+        if: false == startsWith(matrix.config.system, 'win')
         run: |
           mkdir build
           cmake -S . -B build -G Ninja
