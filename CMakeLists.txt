@@ -50,8 +50,20 @@ if (${CMAKE_VERSION} VERSION_LESS 3.14)
 endif ()
 
 FetchContent_Declare(
+        glew
+        GIT_REPOSITORY https://github.com/Perlmint/glew-cmake.git
+        GIT_TAG origin/master
+)
+FetchContent_GetProperties(glew)
+if (NOT glew_POPULATED)
+    FetchContent_Populate(glew)
+
+    add_subdirectory(${glew_SOURCE_DIR} ${glew_BINARY_DIR} EXCLUDE_FROM_ALL)
+endif ()
+
+FetchContent_Declare(
         sgg
-        GIT_REPOSITORY https://github.com/iliaskap12/sgg.git
+        GIT_REPOSITORY https://github.com/cgaueb/sgg.git
         GIT_TAG main)
 FetchContent_MakeAvailable(sgg)
 
