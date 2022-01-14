@@ -51,7 +51,7 @@ endif ()
 
 FetchContent_Declare(
         sgg
-        GIT_REPOSITORY https://github.com/cgaueb/sgg.git
+        GIT_REPOSITORY https://github.com/iliaskap12/sgg.git
         GIT_TAG main)
 FetchContent_MakeAvailable(sgg)
 
