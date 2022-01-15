@@ -161,8 +161,8 @@ jobs:
           mkdir cmake-build-release
           cmake -S . \
           -B cmake-build-release \
-          -DCMAKE_CXX_COMPILER=${{ env.gpp11 }} \
-          -DCMAKE_MAKE_PROGRAM=${{ env.ninja }} \
+          -DCMAKE_CXX_COMPILER=${{ which g++-11 }} \
+          -DCMAKE_MAKE_PROGRAM=${{ which ninja }} \
           -DCMAKE_CXX_STANDARD=20 \
           -DCMAKE_CXX_STANDARD_REQUIRED=ON \
           -DCMAKE_BUILD_TYPE=Release \
