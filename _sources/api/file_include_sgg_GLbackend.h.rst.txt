@@ -1,0 +1,98 @@
+
+.. _file_include_sgg_GLbackend.h:
+
+File GLbackend.h
+================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg>` (``include/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/GLbackend.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_GLbackend.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``GL/glew.h``
+
+- ``SDL2/SDL.h``
+
+- ``algorithm``
+
+- ``functional``
+
+- ``glm/vec3.hpp``
+
+- ``sgg/AudioManager.h`` (:ref:`file_include_sgg_AudioManager.h`)
+
+- ``sgg/fonts.h`` (:ref:`file_include_sgg_fonts.h`)
+
+- ``sgg/scancodes.h`` (:ref:`file_include_sgg_scancodes.h`)
+
+- ``sgg/shader.h`` (:ref:`file_include_sgg_shader.h`)
+
+- ``sgg/texture.h`` (:ref:`file_include_sgg_texture.h`)
+
+- ``string`` (:ref:`file_src_util_custom-string.cpp`)
+
+- ``thread``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_graphics`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classgraphics_1_1_g_l_backend`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacegraphics_1a3f9e1cf7a5fcbf78f8a3634a82500e9d`
+
+- :ref:`exhale_function_namespacegraphics_1ad5e9f06e1b40b44582efe54b365f2deb`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define__g_lbackend_8h_1a513ae87770898727d346eced6be03bdd`
+
+- :ref:`exhale_define__g_lbackend_8h_1a607f85a7210cd213f32b2f6cc29f6135`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable__g_lbackend_8h_1aeb55d34ad37faac65e42b28c085da829`
+

@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1ac5a9e38fc392fc26897610a6d824cc21:
+
+Function lodepng_chunk_append
+=============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_chunk_append(unsigned char **, size_t *, const unsigned char *)

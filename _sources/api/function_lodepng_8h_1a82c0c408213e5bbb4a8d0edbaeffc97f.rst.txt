@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1a82c0c408213e5bbb4a8d0edbaeffc97f:
+
+Function lodepng_huffman_code_lengths
+=====================================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_huffman_code_lengths(unsigned *, const unsigned *, size_t, unsigned)

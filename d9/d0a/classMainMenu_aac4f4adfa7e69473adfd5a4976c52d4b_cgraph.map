@@ -1,4 +1,5 @@
 <map id="MainMenu::pressButton" name="MainMenu::pressButton">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,165,32"/>
-<area shape="rect" id="node2" href="$dd/d64/classApp.html#abbebd57c4158ab7f68e6e8621a9ef933" title=" " alt="" coords="213,5,349,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" id="node2" href="$dd/d64/classApp.html#abbebd57c4158ab7f68e6e8621a9ef933" title=" " alt="" coords="222,5,358,32"/>
+<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="213,56,367,83"/>
 </map>

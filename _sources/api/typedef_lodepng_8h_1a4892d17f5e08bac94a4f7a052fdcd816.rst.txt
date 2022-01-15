@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8h_1a4892d17f5e08bac94a4f7a052fdcd816:
+
+Typedef LodePNGTime
+===================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: LodePNGTime

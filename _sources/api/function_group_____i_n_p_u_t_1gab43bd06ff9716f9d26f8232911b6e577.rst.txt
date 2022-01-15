@@ -1,0 +1,13 @@
+.. _exhale_function_group_____i_n_p_u_t_1gab43bd06ff9716f9d26f8232911b6e577:
+
+Function graphics::getMouseState
+================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::getMouseState(MouseState&)

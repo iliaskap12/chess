@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8h_1a32282377bca2e3e43bcf16aa9daa8554:
+
+Define LODEPNG_COMPILE_ANCILLARY_CHUNKS
+=======================================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_COMPILE_ANCILLARY_CHUNKS

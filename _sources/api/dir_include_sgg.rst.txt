@@ -1,0 +1,29 @@
+.. _dir_include_sgg:
+
+
+Directory sgg
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_include>` (``include``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``include/sgg``
+
+
+Files
+-----
+
+- :ref:`file_include_sgg_audio.h`
+- :ref:`file_include_sgg_AudioManager.h`
+- :ref:`file_include_sgg_commonshaders.h`
+- :ref:`file_include_sgg_fonts.h`
+- :ref:`file_include_sgg_GLbackend.h`
+- :ref:`file_include_sgg_graphics.h`
+- :ref:`file_include_sgg_lodepng.h`
+- :ref:`file_include_sgg_scancodes.h`
+- :ref:`file_include_sgg_shader.h`
+- :ref:`file_include_sgg_texture.h`
+
+

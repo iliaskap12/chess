@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1a6eec335315ecb6182292ebd37ef02b4a:
+
+Function lodepng_decode_file
+============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_decode_file(unsigned char **, unsigned *, unsigned *, const char *, LodePNGColorType, unsigned)

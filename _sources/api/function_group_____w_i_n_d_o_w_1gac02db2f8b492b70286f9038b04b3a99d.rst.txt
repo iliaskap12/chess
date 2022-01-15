@@ -1,0 +1,13 @@
+.. _exhale_function_group_____w_i_n_d_o_w_1gac02db2f8b492b70286f9038b04b3a99d:
+
+Function graphics::windowToCanvasX
+==================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::windowToCanvasX(float, bool)

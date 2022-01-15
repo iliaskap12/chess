@@ -1,14 +1,15 @@
 <map id="Pawn::move" name="Pawn::move">
-<area shape="rect" id="node1" title=" " alt="" coords="5,233,100,260"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,259,100,285"/>
 <area shape="rect" id="node2" href="$de/dff/classPawn.html#aa6d3af47cb55665fef01abd776b70ebb" title=" " alt="" coords="180,5,287,32"/>
-<area shape="rect" id="node3" href="$de/d00/classRectangle.html#aab6cf212cb0d8bd05a197420ca1a87ee" title=" " alt="" coords="163,56,304,83"/>
-<area shape="rect" id="node4" href="$de/d00/classRectangle.html#a5a33b93672044b12c1e9ce4db8c627ee" title=" " alt="" coords="149,107,318,133"/>
-<area shape="rect" id="node5" href="$d3/d72/classSquare.html#adea8c65d350ed45f6684a06d308b9dcd" title=" " alt="" coords="151,157,315,184"/>
-<area shape="rect" id="node6" href="$de/d00/classRectangle.html#a997d4a12ab8bf467752d892a4c141a26" title=" " alt="" coords="148,208,319,235"/>
-<area shape="rect" id="node7" href="$d3/d72/classSquare.html#aaac1678853db13ff16f25a8fc4096294" title=" " alt="" coords="172,259,295,285"/>
-<area shape="rect" id="node8" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="171,309,296,336"/>
-<area shape="rect" id="node9" href="$d3/d72/classSquare.html#a2db5e4c2cece65ed55829d7953367b46" title=" " alt="" coords="160,360,307,387"/>
-<area shape="rect" id="node10" href="$de/d00/classRectangle.html#a7ac21b881b056fb32578c76df8fcb160" title=" " alt="" coords="148,411,319,437"/>
-<area shape="rect" id="node12" href="$d3/d72/classSquare.html#a80c98a1d8453e739e802a283c7eaf022" title=" " alt="" coords="153,461,314,488"/>
-<area shape="rect" id="node11" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="367,411,453,437"/>
+<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="367,31,520,57"/>
+<area shape="rect" id="node4" href="$de/d00/classRectangle.html#aab6cf212cb0d8bd05a197420ca1a87ee" title=" " alt="" coords="163,107,304,133"/>
+<area shape="rect" id="node5" href="$de/d00/classRectangle.html#a5a33b93672044b12c1e9ce4db8c627ee" title=" " alt="" coords="149,157,318,184"/>
+<area shape="rect" id="node6" href="$d3/d72/classSquare.html#adea8c65d350ed45f6684a06d308b9dcd" title=" " alt="" coords="151,208,315,235"/>
+<area shape="rect" id="node7" href="$de/d00/classRectangle.html#a997d4a12ab8bf467752d892a4c141a26" title=" " alt="" coords="148,259,319,285"/>
+<area shape="rect" id="node8" href="$d3/d72/classSquare.html#aaac1678853db13ff16f25a8fc4096294" title=" " alt="" coords="172,309,295,336"/>
+<area shape="rect" id="node9" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="171,360,296,387"/>
+<area shape="rect" id="node10" href="$d3/d72/classSquare.html#a2db5e4c2cece65ed55829d7953367b46" title=" " alt="" coords="160,411,307,437"/>
+<area shape="rect" id="node11" href="$de/d00/classRectangle.html#a7ac21b881b056fb32578c76df8fcb160" title=" " alt="" coords="148,461,319,488"/>
+<area shape="rect" id="node13" href="$d3/d72/classSquare.html#a80c98a1d8453e739e802a283c7eaf022" title=" " alt="" coords="153,512,314,539"/>
+<area shape="rect" id="node12" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="400,461,487,488"/>
 </map>

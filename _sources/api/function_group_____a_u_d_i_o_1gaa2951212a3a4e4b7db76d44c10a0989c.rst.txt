@@ -1,0 +1,13 @@
+.. _exhale_function_group_____a_u_d_i_o_1gaa2951212a3a4e4b7db76d44c10a0989c:
+
+Function graphics::playMusic
+============================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::playMusic(std::string, float, bool, int)

@@ -31,7 +31,7 @@ Includes
 
 - ``graphics/OpeningScreen.h`` (:ref:`file_include_graphics_OpeningScreen.h`)
 
-- ``sgg/graphics.h``
+- ``sgg/graphics.h`` (:ref:`file_include_sgg_graphics.h`)
 
 
 

@@ -1,8 +1,23 @@
 var searchData=
 [
-  ['end_0',['end',['../d9/d68/classGame.html#ad6061c3b012b323b6d2d5119168f6673',1,'Game']]],
-  ['endgameindicator_2ecpp_1',['EndgameIndicator.cpp',['../df/d78/EndgameIndicator_8cpp.html',1,'']]],
-  ['endgameindicator_2eh_2',['EndgameIndicator.h',['../de/d58/EndgameIndicator_8h.html',1,'']]],
-  ['endgamesound_2ecpp_3',['EndGameSound.cpp',['../d9/dd9/EndGameSound_8cpp.html',1,'']]],
-  ['endgamesound_2eh_4',['EndGameSound.h',['../d6/d6f/EndGameSound_8h.html',1,'']]]
+  ['dark_5fbrown_0',['DARK_BROWN',['../dc/d90/Brush_8h.html#a62c1007e36a924771f8294ff9f0ac5d0a520a0d223032fa6b4f35404dab4e5899',1,'Brush.h']]],
+  ['dark_5fgreen_1',['DARK_GREEN',['../dc/d90/Brush_8h.html#a62c1007e36a924771f8294ff9f0ac5d0abd7f5eff3a3b29f2bdf9ed126316517e',1,'Brush.h']]],
+  ['day_2',['day',['../d9/da9/structLodePNGTime.html#aa3dee3b7b3a1e730fbded7a7b8cf355e',1,'LodePNGTime']]],
+  ['decoder_3',['decoder',['../d1/d02/structLodePNGState.html#abd2c38ffc68f04b0e4159e1f97ba1f76',1,'LodePNGState']]],
+  ['destination_5f_4',['destination_',['../de/dff/classPawn.html#a4fcf2d1124f02755c7e76cf3337a8d4c',1,'Pawn']]],
+  ['destroywindow_5',['destroyWindow',['../db/dbd/group____WINDOW.html#ga844805150f7fe3dad03bc85f7429341e',1,'graphics']]],
+  ['dragging_6',['dragging',['../df/d6b/structgraphics_1_1MouseState.html#a3f92169aa1b532054b488f4056747a49',1,'graphics::MouseState']]],
+  ['draw_7',['draw',['../de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d',1,'Rectangle::draw()'],['../dd/d64/classApp.html#a770538afacd562865f294a89742d61f7',1,'App::draw()'],['../d7/d22/classCheckboard.html#aa051af06151ef320f81f6e748d0c5697',1,'Checkboard::draw()'],['../d9/d68/classGame.html#a9dbbb6429980a91196ed07d299404304',1,'Game::draw()'],['../de/dff/classPawn.html#acb0eaf180f4397c3d1f29864dece75ea',1,'Pawn::draw()'],['../d3/d72/classSquare.html#a4edbdf9ae0519cc1823f4dbbaa6bbf4c',1,'Square::draw()'],['../de/db8/classDrawable.html#aa37d7b328240d343134adcfe5e4dcd38',1,'Drawable::draw()'],['../d9/d0a/classMainMenu.html#a54ec1eed16b49cac99d640feab93e119',1,'MainMenu::draw()'],['../d8/ddb/classMenu.html#a860d2b8bbbd0e795b15e10648514cee7',1,'Menu::draw()'],['../d1/d9f/classOpeningScreen.html#ab8f0285d86479eb38859db510d42f589',1,'OpeningScreen::draw()'],['../d7/df6/classPlayingScreen.html#a4528c6b302bc65b046be497a7cc020e2',1,'PlayingScreen::draw()'],['../d6/df2/classgraphics_1_1GLBackend.html#a3fa8e46cb4b9ec5b04d26ee4c16f41d8',1,'graphics::GLBackend::draw()'],['../df/dc5/classScreen.html#afe824214ee865cc05753b3fd1aa9b444',1,'Screen::draw()'],['../d0/df0/classHUD.html#abaacc0341448fd09f086bab196ff8b97',1,'HUD::draw()']]],
+  ['draw_2ecpp_8',['Draw.cpp',['../d9/dc3/Draw_8cpp.html',1,'']]],
+  ['draw_2eh_9',['Draw.h',['../d9/dc2/Draw_8h.html',1,'']]],
+  ['drawable_10',['Drawable',['../de/db8/classDrawable.html',1,'']]],
+  ['drawable_2eh_11',['Drawable.h',['../d7/d2f/Drawable_8h.html',1,'']]],
+  ['drawdisk_12',['drawDisk',['../d9/d15/group____GRAPHICS.html#ga187670802ddd3fe58da52e4596f0a82b',1,'graphics']]],
+  ['drawingarea_13',['drawingArea',['../d7/d22/classCheckboard.html#aa6087719ed52f6afcb2816d6858429c6',1,'Checkboard::drawingArea()'],['../de/dff/classPawn.html#a95f4daadd227ce16bb093a2bb5d26b5c',1,'Pawn::drawingArea()'],['../d3/d72/classSquare.html#aa716ab3e78f7887de4eeff6c7d58db1e',1,'Square::drawingArea()'],['../d0/df0/classHUD.html#a844fe3d057b8546c50c14a6878f72efc',1,'HUD::drawingArea()']]],
+  ['drawline_14',['drawLine',['../d6/df2/classgraphics_1_1GLBackend.html#a9a605a3e9dc2693bd441fe610f6c86d1',1,'graphics::GLBackend::drawLine()'],['../d9/d15/group____GRAPHICS.html#ga488f9f55470509c58c1775d5ae899fa7',1,'graphics::drawLine()']]],
+  ['drawrect_15',['drawRect',['../d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f',1,'graphics::GLBackend::drawRect()'],['../d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241',1,'graphics::drawRect()']]],
+  ['drawsector_16',['drawSector',['../d6/df2/classgraphics_1_1GLBackend.html#a1bad60b0da94d939620eaf250c36cd69',1,'graphics::GLBackend::drawSector()'],['../d9/d15/group____GRAPHICS.html#ga1e0bec23c43e2b4b7410b1348332d799',1,'graphics::drawSector()']]],
+  ['drawsound_2ecpp_17',['DrawSound.cpp',['../dd/de9/DrawSound_8cpp.html',1,'']]],
+  ['drawsound_2eh_18',['DrawSound.h',['../d0/d21/DrawSound_8h.html',1,'']]],
+  ['drawtext_19',['drawText',['../d0/d57/classFontLib.html#aefde9bd0c476d7f3ab0da7393346dda1',1,'FontLib::drawText()'],['../d6/df2/classgraphics_1_1GLBackend.html#aa2044e205bf2528728629cd09c1b6442',1,'graphics::GLBackend::drawText()'],['../d9/d15/group____GRAPHICS.html#ga985dab358228480a4b59b9b096b51863',1,'graphics::drawText()']]]
 ];

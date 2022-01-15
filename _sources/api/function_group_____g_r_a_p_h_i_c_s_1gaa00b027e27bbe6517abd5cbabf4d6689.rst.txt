@@ -1,0 +1,13 @@
+.. _exhale_function_group_____g_r_a_p_h_i_c_s_1gaa00b027e27bbe6517abd5cbabf4d6689:
+
+Function graphics::setScale
+===========================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::setScale(float, float)

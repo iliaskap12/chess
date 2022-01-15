@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8h_1a5df7f8b69fad1f5fcd7ad6937f0c30cc:
+
+Function playSoundFromMemory
+============================
+
+- Defined in :ref:`file_include_sgg_audio.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: playSoundFromMemory(Audio *, int)

@@ -1,0 +1,16 @@
+.. _exhale_class_class_font_lib:
+
+Class FontLib
+=============
+
+- Defined in :ref:`file_include_sgg_fonts.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: FontLib
+   :members:
+   :protected-members:
+   :undoc-members:

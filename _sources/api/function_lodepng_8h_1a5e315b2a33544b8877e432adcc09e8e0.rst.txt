@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1a5e315b2a33544b8877e432adcc09e8e0:
+
+Function lodepng_chunk_data_const
+=================================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_chunk_data_const(const unsigned char *)

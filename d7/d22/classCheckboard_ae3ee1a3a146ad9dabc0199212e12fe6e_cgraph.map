@@ -1,8 +1,10 @@
 <map id="Checkboard::update" name="Checkboard::update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,42,144,69"/>
-<area shape="rect" id="node2" href="$d7/d22/classCheckboard.html#ae6492b0cb2ee2dc21051c32803033ee7" title=" " alt="" coords="192,13,397,39"/>
-<area shape="rect" id="node4" href="$d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="205,64,384,105"/>
-<area shape="rect" id="node3" href="$d7/d22/classCheckboard.html#a9925dab5f1a892b7231c9407c8d1288b" title=" " alt="" coords="452,5,628,47"/>
-<area shape="rect" id="node5" href="$d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa" title=" " alt="" coords="461,71,619,98"/>
-<area shape="rect" id="node6" href="$d7/d22/classCheckboard.html#ac6518f96d2609df334c7a39dc337c79c" title=" " alt="" coords="445,123,635,164"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,144,108"/>
+<area shape="rect" id="node2" href="$de/d51/group____INPUT.html#gab43bd06ff9716f9d26f8232911b6e577" title=" " alt="" coords="211,5,378,32"/>
+<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="218,56,371,83"/>
+<area shape="rect" id="node4" href="$d7/d22/classCheckboard.html#ae6492b0cb2ee2dc21051c32803033ee7" title=" " alt="" coords="192,107,397,133"/>
+<area shape="rect" id="node6" href="$d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="205,158,384,199"/>
+<area shape="rect" id="node5" href="$d7/d22/classCheckboard.html#a9925dab5f1a892b7231c9407c8d1288b" title=" " alt="" coords="452,99,628,141"/>
+<area shape="rect" id="node7" href="$d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa" title=" " alt="" coords="461,165,619,192"/>
+<area shape="rect" id="node8" href="$d7/d22/classCheckboard.html#ac6518f96d2609df334c7a39dc337c79c" title=" " alt="" coords="445,217,635,258"/>
 </map>

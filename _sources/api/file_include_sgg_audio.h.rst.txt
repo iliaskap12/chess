@@ -1,0 +1,76 @@
+
+.. _file_include_sgg_audio.h:
+
+File audio.h
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg>` (``include/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/audio.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_audio.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``SDL2/SDL.h``
+
+
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structsound`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_audio_8h_1aeba78d51e790304f3a18f6daca4b31b4`
+
+- :ref:`exhale_function_audio_8h_1a3fae9ccf354612f523af6a8078ae11d9`
+
+- :ref:`exhale_function_audio_8h_1aa3730ab77fa3498af628a47bbe29fac0`
+
+- :ref:`exhale_function_audio_8h_1aa497dc0e932d8008a092680b6078ba0c`
+
+- :ref:`exhale_function_audio_8h_1a80e7cce4d19baad74c85d0433e5920da`
+
+- :ref:`exhale_function_audio_8h_1a8fb0f93c63af671ba8a536f875f66f1d`
+
+- :ref:`exhale_function_audio_8h_1a95ded0954a20cfc7f3fb6ff68bb2452c`
+
+- :ref:`exhale_function_audio_8h_1aa2a1c236a8c22740fd92902a1929f36d`
+
+- :ref:`exhale_function_audio_8h_1a5df7f8b69fad1f5fcd7ad6937f0c30cc`
+
+- :ref:`exhale_function_audio_8h_1a59ae60979e26937b6934ebc4606307c9`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_audio_8h_1a2304b8f58e4b4583b6c86327acc877d7`
+

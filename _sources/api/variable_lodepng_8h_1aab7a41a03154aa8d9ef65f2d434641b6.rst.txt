@@ -1,0 +1,13 @@
+.. _exhale_variable_lodepng_8h_1aab7a41a03154aa8d9ef65f2d434641b6:
+
+Variable lodepng_default_decompress_settings
+============================================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: lodepng_default_decompress_settings

@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8h_1af8e782a2a5642d12dba9aa38a7a00133:
+
+Define LODEPNG_COMPILE_DISK
+===========================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_COMPILE_DISK

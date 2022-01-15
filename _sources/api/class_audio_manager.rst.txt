@@ -1,0 +1,16 @@
+.. _exhale_class_class_audio_manager:
+
+Class AudioManager
+==================
+
+- Defined in :ref:`file_include_sgg_AudioManager.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: AudioManager
+   :members:
+   :protected-members:
+   :undoc-members:

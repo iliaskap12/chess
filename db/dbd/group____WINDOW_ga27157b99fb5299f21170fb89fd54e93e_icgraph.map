@@ -1,0 +1,31 @@
+<map id="graphics::getUserData" name="graphics::getUserData">
+<area shape="rect" id="node1" title=" " alt="" coords="915,487,1068,513"/>
+<area shape="rect" id="node2" href="$de/dff/classPawn.html#aa6d3af47cb55665fef01abd776b70ebb" title=" " alt="" coords="708,5,815,32"/>
+<area shape="rect" id="node3" href="$de/dff/classPawn.html#a96f71005c77711d47025e0d517d09520" title=" " alt="" coords="462,31,557,57"/>
+<area shape="rect" id="node5" href="$d7/d22/classCheckboard.html#adf754bb50f74220b4af2fd7e4ba29311" title=" " alt="" coords="679,107,843,133"/>
+<area shape="rect" id="node7" href="$d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c" title=" " alt="" coords="185,157,363,184"/>
+<area shape="rect" id="node9" href="$d7/d22/classCheckboard.html#aa051af06151ef320f81f6e748d0c5697" title=" " alt="" coords="445,208,573,235"/>
+<area shape="rect" id="node10" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="703,259,820,285"/>
+<area shape="rect" id="node13" href="$d9/dbe/classSoldier.html#ac24f5d7c8f0f5078c40c213c57df90e3" title=" " alt="" coords="656,309,867,336"/>
+<area shape="rect" id="node14" href="$de/dff/classPawn.html#a962b686adfeb638d802ea5756173d138" title=" " alt="" coords="659,360,863,387"/>
+<area shape="rect" id="node15" href="$de/dfb/classBishop.html#a653135611d9742ed6210ca4e129aa269" title=" " alt="" coords="677,411,845,437"/>
+<area shape="rect" id="node16" href="$d5/d3f/classQueen.html#ac581874885155768bee2550f5bc61949" title=" " alt="" coords="678,461,845,488"/>
+<area shape="rect" id="node17" href="$db/d7e/classRook.html#ad1d4441ffc4ed5cfe4c9b8c321712a76" title=" " alt="" coords="682,512,841,539"/>
+<area shape="rect" id="node18" href="$d1/db5/classKing.html#a59dc08cd9d88fe15998f59e255fd8fd8" title=" " alt="" coords="687,563,835,589"/>
+<area shape="rect" id="node21" href="$d7/d22/classCheckboard.html#a7a7a553f063ff2de8e402acab07c9e99" title=" " alt="" coords="191,500,357,527"/>
+<area shape="rect" id="node22" href="$de/dff/classPawn.html#a09d721be0b6bc891dd4453018b1252e1" title=" " alt="" coords="707,664,816,691"/>
+<area shape="rect" id="node23" href="$d9/d0a/classMainMenu.html#aac4f4adfa7e69473adfd5a4976c52d4b" title=" " alt="" coords="681,715,841,741"/>
+<area shape="rect" id="node25" href="$d9/d68/classGame.html#a3142e6fdebebb49ffbadd11ee1ace4e3" title=" " alt="" coords="716,765,807,792"/>
+<area shape="rect" id="node26" href="$d9/d68/classGame.html#a7c9852b6a5e3b19f6fb51500205231a3" title=" " alt="" coords="457,791,561,817"/>
+<area shape="rect" id="node27" href="$d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="692,867,831,893"/>
+<area shape="rect" id="node28" href="$d3/d72/classSquare.html#a17f107957f3d5f6a74eff26d46280dcb" title=" " alt="" coords="454,943,565,969"/>
+<area shape="rect" id="node29" href="$de/d00/classRectangle.html#a330c91f51bf2e98ae3d5964ea9dc1550" title=" " alt="" coords="697,968,825,995"/>
+<area shape="rect" id="node4" href="$de/dff/classPawn.html#ac89566858a41eb4d7ca2f1dee55faac6" title=" " alt="" coords="223,31,325,57"/>
+<area shape="rect" id="node6" href="$d7/d22/classCheckboard.html#a21a011e2390772722da4815b73e34287" title=" " alt="" coords="416,107,603,133"/>
+<area shape="rect" id="node8" href="$d7/d22/classCheckboard.html#ab188b54b544caa7ae0d36278b11d572c" title=" " alt="" coords="5,272,137,299"/>
+<area shape="rect" id="node11" href="$de/dff/classPawn.html#acb0eaf180f4397c3d1f29864dece75ea" title=" " alt="" coords="464,259,555,285"/>
+<area shape="rect" id="node12" href="$d3/d72/classSquare.html#a4edbdf9ae0519cc1823f4dbbaa6bbf4c" title=" " alt="" coords="460,309,559,336"/>
+<area shape="rect" id="node19" href="$d1/db5/classKing.html#ad1b4127f0cf0f27c8dd285c2a2a44198" title=" " alt="" coords="411,512,608,539"/>
+<area shape="rect" id="node20" href="$d1/db5/classKing.html#ac87d4c206214d1f7a3cc11983417674c" title=" " alt="" coords="426,563,593,589"/>
+<area shape="rect" id="node24" href="$d9/d0a/classMainMenu.html#ac262fa9d82962d065076cc5a0bff96c9" title=" " alt="" coords="445,715,574,741"/>
+</map>

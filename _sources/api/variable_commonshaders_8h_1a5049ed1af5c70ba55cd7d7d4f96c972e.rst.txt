@@ -1,0 +1,13 @@
+.. _exhale_variable_commonshaders_8h_1a5049ed1af5c70ba55cd7d7d4f96c972e:
+
+Variable __SolidFragmentShader
+==============================
+
+- Defined in :ref:`file_include_sgg_commonshaders.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: __SolidFragmentShader

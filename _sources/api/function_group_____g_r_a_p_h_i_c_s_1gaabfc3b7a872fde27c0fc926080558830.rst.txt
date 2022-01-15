@@ -1,0 +1,13 @@
+.. _exhale_function_group_____g_r_a_p_h_i_c_s_1gaabfc3b7a872fde27c0fc926080558830:
+
+Function graphics::preloadBitmaps
+=================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::preloadBitmaps(std::string)

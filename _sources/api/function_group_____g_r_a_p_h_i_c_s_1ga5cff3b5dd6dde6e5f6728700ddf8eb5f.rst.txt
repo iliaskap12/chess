@@ -1,0 +1,13 @@
+.. _exhale_function_group_____g_r_a_p_h_i_c_s_1ga5cff3b5dd6dde6e5f6728700ddf8eb5f:
+
+Function graphics::resetPose
+============================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::resetPose()

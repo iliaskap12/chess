@@ -1,0 +1,16 @@
+.. _exhale_struct_structsound:
+
+Struct sound
+============
+
+- Defined in :ref:`file_include_sgg_audio.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: sound
+   :members:
+   :protected-members:
+   :undoc-members:

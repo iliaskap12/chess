@@ -1,0 +1,66 @@
+
+.. _file_include_sgg_fonts.h:
+
+File fonts.h
+============
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg>` (``include/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/fonts.h``)
+------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_fonts.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``FT_FREETYPE_H``
+
+- ``GL/glew.h``
+
+- ``ft2build.h``
+
+- ``sgg/shader.h`` (:ref:`file_include_sgg_shader.h`)
+
+- ``string`` (:ref:`file_src_util_custom-string.cpp`)
+
+- ``unordered_map``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_sgg_GLbackend.h`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_struct_font`
+
+- :ref:`exhale_struct_struct_text_record`
+
+- :ref:`exhale_class_class_font_lib`
+

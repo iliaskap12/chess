@@ -1,0 +1,16 @@
+.. _exhale_struct_struct_font:
+
+Struct Font
+===========
+
+- Defined in :ref:`file_include_sgg_fonts.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: Font
+   :members:
+   :protected-members:
+   :undoc-members:

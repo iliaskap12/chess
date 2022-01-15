@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8h_1aa2a1c236a8c22740fd92902a1929f36d:
+
+Function playSound
+==================
+
+- Defined in :ref:`file_include_sgg_audio.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: playSound(const char *, int)

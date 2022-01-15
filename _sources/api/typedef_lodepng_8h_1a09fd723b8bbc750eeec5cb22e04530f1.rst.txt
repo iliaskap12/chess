@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8h_1a09fd723b8bbc750eeec5cb22e04530f1:
+
+Typedef LodePNGDecoderSettings
+==============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: LodePNGDecoderSettings

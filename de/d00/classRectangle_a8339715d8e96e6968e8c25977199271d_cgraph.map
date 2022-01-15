@@ -1,4 +1,6 @@
 <map id="Rectangle::draw" name="Rectangle::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,123,32"/>
-<area shape="rect" id="node2" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="171,5,257,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,123,83"/>
+<area shape="rect" id="node2" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="180,5,315,32"/>
+<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="171,56,324,83"/>
+<area shape="rect" id="node4" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="204,107,291,133"/>
 </map>

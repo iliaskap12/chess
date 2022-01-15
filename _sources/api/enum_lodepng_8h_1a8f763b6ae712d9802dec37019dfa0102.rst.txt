@@ -1,0 +1,13 @@
+.. _exhale_enum_lodepng_8h_1a8f763b6ae712d9802dec37019dfa0102:
+
+Enum LodePNGColorType
+=====================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: LodePNGColorType

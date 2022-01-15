@@ -1,0 +1,13 @@
+.. _exhale_function_group_____w_i_n_d_o_w_1ga275bdd8ca6cfb757ee0be4324a2c9b14:
+
+Function graphics::setCanvasSize
+================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::setCanvasSize(float, float)

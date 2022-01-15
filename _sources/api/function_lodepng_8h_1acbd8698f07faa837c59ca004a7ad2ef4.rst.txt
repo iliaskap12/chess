@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1acbd8698f07faa837c59ca004a7ad2ef4:
+
+Function lodepng_error_text
+===========================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_error_text(unsigned)

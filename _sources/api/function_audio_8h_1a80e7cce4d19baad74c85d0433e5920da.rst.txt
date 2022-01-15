@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8h_1a80e7cce4d19baad74c85d0433e5920da:
+
+Function pauseAudio
+===================
+
+- Defined in :ref:`file_include_sgg_audio.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: pauseAudio(void)

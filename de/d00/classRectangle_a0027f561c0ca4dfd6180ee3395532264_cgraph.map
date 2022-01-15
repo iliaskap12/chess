@@ -1,5 +1,8 @@
 <map id="Rectangle::clicked" name="Rectangle::clicked">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,136,57"/>
-<area shape="rect" id="node2" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="184,5,271,32"/>
-<area shape="rect" id="node3" href="$dc/d4f/classPoint.html#a2371ffadbe245d12a8f556d0a976521b" title=" " alt="" coords="184,56,271,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,107,136,133"/>
+<area shape="rect" id="node2" href="$de/d51/group____INPUT.html#gab43bd06ff9716f9d26f8232911b6e577" title=" " alt="" coords="196,5,363,32"/>
+<area shape="rect" id="node3" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="236,56,323,83"/>
+<area shape="rect" id="node4" href="$dc/d4f/classPoint.html#a2371ffadbe245d12a8f556d0a976521b" title=" " alt="" coords="236,107,323,133"/>
+<area shape="rect" id="node5" href="$db/dbd/group____WINDOW.html#gac02db2f8b492b70286f9038b04b3a99d" title=" " alt="" coords="184,157,375,184"/>
+<area shape="rect" id="node6" href="$db/dbd/group____WINDOW.html#ga440019f4bf4bed28bef3af61d9bae00d" title=" " alt="" coords="184,208,375,235"/>
 </map>

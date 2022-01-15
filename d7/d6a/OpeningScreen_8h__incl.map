@@ -1,20 +1,23 @@
 <map id="/Users/runner/work/chess/chess/include/graphics/OpeningScreen.h" name="/Users/runner/work/chess/chess/include/graphics/OpeningScreen.h">
-<area shape="rect" id="node1" title=" " alt="" coords="142,5,321,61"/>
-<area shape="rect" id="node2" href="$d1/d25/Screen_8h.html" title=" " alt="" coords="102,184,177,211"/>
-<area shape="rect" id="node6" href="$da/d16/MainMenu_8h.html" title=" " alt="" coords="185,109,278,136"/>
-<area shape="rect" id="node18" title=" " alt="" coords="302,109,371,136"/>
-<area shape="rect" id="node3" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="27,483,115,509"/>
-<area shape="rect" id="node4" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="601,483,699,509"/>
-<area shape="rect" id="node5" href="$db/d6d/ButtonType_8h.html" title=" " alt="" coords="45,259,143,285"/>
-<area shape="rect" id="node7" href="$df/dde/Menu_8h.html" title=" " alt="" coords="224,184,289,211"/>
-<area shape="rect" id="node8" title=" " alt="" coords="587,259,697,285"/>
-<area shape="rect" id="node9" href="$d4/d6c/MenuOption_8h.html" title=" " alt="" coords="229,259,332,285"/>
-<area shape="rect" id="node10" href="$d0/d0b/HUD_8h.html" title=" " alt="" coords="237,333,325,360"/>
-<area shape="rect" id="node12" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="417,408,563,435"/>
-<area shape="rect" id="node11" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="281,483,401,509"/>
-<area shape="rect" id="node14" title=" " alt="" coords="146,483,253,509"/>
-<area shape="rect" id="node16" title=" " alt="" coords="247,408,314,435"/>
-<area shape="rect" id="node17" title=" " alt="" coords="339,408,393,435"/>
-<area shape="rect" id="node13" href="$d4/de5/Point_8h.html" title=" " alt="" coords="427,483,489,509"/>
-<area shape="rect" id="node15" title=" " alt="" coords="514,483,575,509"/>
+<area shape="rect" id="node1" title=" " alt="" coords="126,5,305,61"/>
+<area shape="rect" id="node2" href="$d1/d25/Screen_8h.html" title=" " alt="" coords="86,184,161,211"/>
+<area shape="rect" id="node6" href="$da/d16/MainMenu_8h.html" title=" " alt="" coords="169,109,262,136"/>
+<area shape="rect" id="node21" title=" " alt="" coords="286,109,355,136"/>
+<area shape="rect" id="node3" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="17,483,105,509"/>
+<area shape="rect" id="node4" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="633,483,731,509"/>
+<area shape="rect" id="node5" href="$db/d6d/ButtonType_8h.html" title=" " alt="" coords="34,259,133,285"/>
+<area shape="rect" id="node7" href="$df/dde/Menu_8h.html" title=" " alt="" coords="205,184,271,211"/>
+<area shape="rect" id="node8" title=" " alt="" coords="560,259,671,285"/>
+<area shape="rect" id="node9" href="$d4/d6c/MenuOption_8h.html" title=" " alt="" coords="208,259,311,285"/>
+<area shape="rect" id="node10" href="$d0/d0b/HUD_8h.html" title=" " alt="" coords="213,333,301,360"/>
+<area shape="rect" id="node12" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="383,408,528,435"/>
+<area shape="rect" id="node11" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="315,483,435,509"/>
+<area shape="rect" id="node14" href="$d7/d04/graphics_8h.html" title=" " alt="" coords="185,483,291,509"/>
+<area shape="rect" id="node15" title=" " alt="" coords="99,557,153,584"/>
+<area shape="rect" id="node20" title=" " alt="" coords="291,408,358,435"/>
+<area shape="rect" id="node13" href="$d4/de5/Point_8h.html" title=" " alt="" coords="545,483,608,509"/>
+<area shape="rect" id="node19" title=" " alt="" coords="459,483,521,509"/>
+<area shape="rect" id="node16" title=" " alt="" coords="407,557,485,584"/>
+<area shape="rect" id="node17" href="$d3/d93/scancodes_8h.html" title=" " alt="" coords="177,557,299,584"/>
+<area shape="rect" id="node18" title=" " alt="" coords="323,557,382,584"/>
 </map>

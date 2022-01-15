@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['updateable_0',['Updateable',['../d2/d7d/classUpdateable.html',1,'']]]
+  ['rectangle_0',['Rectangle',['../de/d00/classRectangle.html',1,'']]],
+  ['rook_1',['Rook',['../db/d7e/classRook.html',1,'']]]
 ];

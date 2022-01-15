@@ -1,0 +1,13 @@
+.. _exhale_function_group_____w_i_n_d_o_w_1ga1eabb73d5ee1dc075308e841b710870e:
+
+Function graphics::setCanvasScaleMode
+=====================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::setCanvasScaleMode(scale_mode_t)

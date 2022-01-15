@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8h_1a23316369c1c2a1e76f0205fd4b482117:
+
+Typedef LodePNGState
+====================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: LodePNGState

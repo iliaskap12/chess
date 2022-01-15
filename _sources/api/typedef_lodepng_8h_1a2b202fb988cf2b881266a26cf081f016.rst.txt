@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8h_1a2b202fb988cf2b881266a26cf081f016:
+
+Typedef LodePNGInfo
+===================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: LodePNGInfo

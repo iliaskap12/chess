@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8h_1aeb20f58ed9dbcb534bae30f05a79f0a5:
+
+Typedef LodePNGColorType
+========================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: LodePNGColorType

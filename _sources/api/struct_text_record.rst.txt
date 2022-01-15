@@ -1,0 +1,16 @@
+.. _exhale_struct_struct_text_record:
+
+Struct TextRecord
+=================
+
+- Defined in :ref:`file_include_sgg_fonts.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: TextRecord
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1aa255d9a2e4054fc2888bf7670dac4107:
+
+Function lodepng_is_alpha_type
+==============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_is_alpha_type(const LodePNGColorMode *)

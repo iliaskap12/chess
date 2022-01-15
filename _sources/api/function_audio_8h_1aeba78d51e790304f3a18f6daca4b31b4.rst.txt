@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8h_1aeba78d51e790304f3a18f6daca4b31b4:
+
+Function createAudio
+====================
+
+- Defined in :ref:`file_include_sgg_audio.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: createAudio(const char *, uint8_t, int)

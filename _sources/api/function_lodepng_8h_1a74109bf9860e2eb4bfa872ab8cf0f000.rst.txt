@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1a74109bf9860e2eb4bfa872ab8cf0f000:
+
+Function lodepng_state_cleanup
+==============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_state_cleanup(LodePNGState *)

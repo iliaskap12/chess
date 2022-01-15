@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File audio.h &mdash; Chess  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Chess
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chess</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File audio.h</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_include_sgg_audio.h.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-audio-h">
+<span id="program-listing-file-include-sgg-audio-h"></span><h1>Program Listing for File audio.h<a class="headerlink" href="#program-listing-for-file-audio-h" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_include_sgg_audio.h.html#file-include-sgg-audio-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">include/sgg/audio.h</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm"> * Simple-SDL2-Audio</span>
+<span class="cm"> *</span>
+<span class="cm"> * Copyright 2016 Jake Besworth</span>
+<span class="cm"> *</span>
+<span class="cm"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span>
+<span class="cm"> * you may not use this file except in compliance with the License.</span>
+<span class="cm"> * You may obtain a copy of the License at</span>
+<span class="cm"> *</span>
+<span class="cm"> *     http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="cm"> *</span>
+<span class="cm"> * Unless required by applicable law or agreed to in writing, software</span>
+<span class="cm"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="cm"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="cm"> * See the License for the specific language governing permissions and</span>
+<span class="cm"> * limitations under the License.</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * audio.h</span>
+<span class="cm"> *</span>
+<span class="cm"> * All audio related functions go here</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="cp">#ifndef SIMPLE_AUDIO_</span>
+<span class="cp">#define SIMPLE_AUDIO_</span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="cp">#endif</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;SDL2/SDL.h&gt;</span><span class="cp"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Queue structure for all loaded sounds</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">sound</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">length</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">lengthTrue</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">bufferTrue</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">buffer</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">loop</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">fade</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">free</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">volume</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">SDL_AudioSpec</span><span class="w"> </span><span class="n">audio</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sound</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">next</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">Audio</span><span class="p">;</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Create a Audio object</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param filename      Filename for the WAVE file to load</span>
+<span class="cm"> * @param loop          0 ends after playing once (sound), 1 repeats and fades when other music added (music)</span>
+<span class="cm"> * @param volume        Volume, read playSound()</span>
+<span class="cm"> *</span>
+<span class="cm"> * @return returns a new Audio or NULL on failure, you must call freeAudio() on return Audio</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="n">Audio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nf">createAudio</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">loop</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">volume</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Frees as many chained Audios as given</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param audio     Chain of sounds to free</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">freeAudio</span><span class="p">(</span><span class="n">Audio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">audio</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Play a wave file currently must be S16LE format 2 channel stereo</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param filename      Filename to open, use getAbsolutePath</span>
+<span class="cm"> * @param volume        Volume 0 - 128. SDL_MIX_MAXVOLUME constant for max volume</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">playSound</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">volume</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Plays a new music, only 1 at a time plays</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param filename      Filename of the WAVE file to load</span>
+<span class="cm"> * @param volume        Volume read playSound for moree</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">playMusic</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">filename</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">volume</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Plays a sound from a createAudio object (clones), only 1 at a time plays</span>
+<span class="cm"> * Advantage to this method is no more disk reads, only once, data is stored and constantly reused</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param audio         Audio object to clone and use</span>
+<span class="cm"> * @param volume        Volume read playSound for moree</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">playSoundFromMemory</span><span class="p">(</span><span class="n">Audio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">audio</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">volume</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Plays a music from a createAudio object (clones), only 1 at a time plays</span>
+<span class="cm"> * Advantage to this method is no more disk reads, only once, data is stored and constantly reused</span>
+<span class="cm"> *</span>
+<span class="cm"> * @param audio         Audio object to clone and use</span>
+<span class="cm"> * @param volume        Volume read playSound for moree</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">playMusicFromMemory</span><span class="p">(</span><span class="n">Audio</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">audio</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">volume</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Free all audio related variables</span>
+<span class="cm"> * Note, this needs to be run even if initAudio fails, because it frees the global audio device</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">endAudio</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Initialize Audio Variable</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">initAudio</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Pause audio from playing</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">pauseAudio</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm"> * Unpause audio from playing</span>
+<span class="cm"> *</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">unpauseAudio</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span><span class="w"></span>
+
+<span class="cp">#ifdef __cplusplus</span>
+<span class="p">}</span><span class="w"></span>
+<span class="cp">#endif</span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kapareliotis Elias, Papantonis Christos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

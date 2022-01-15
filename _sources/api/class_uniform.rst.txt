@@ -1,0 +1,16 @@
+.. _exhale_class_class_uniform:
+
+Class Uniform
+=============
+
+- Defined in :ref:`file_include_sgg_shader.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Uniform
+   :members:
+   :protected-members:
+   :undoc-members:

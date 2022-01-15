@@ -1,0 +1,16 @@
+.. _exhale_class_classgraphics_1_1_texture:
+
+Class Texture
+=============
+
+- Defined in :ref:`file_include_sgg_texture.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: graphics::Texture
+   :members:
+   :protected-members:
+   :undoc-members:

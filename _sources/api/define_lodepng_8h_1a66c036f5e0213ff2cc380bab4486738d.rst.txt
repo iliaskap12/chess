@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8h_1a66c036f5e0213ff2cc380bab4486738d:
+
+Define LODEPNG_COMPILE_ZLIB
+===========================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_COMPILE_ZLIB

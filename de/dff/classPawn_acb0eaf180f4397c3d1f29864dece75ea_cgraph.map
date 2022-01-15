@@ -1,5 +1,7 @@
 <map id="Pawn::draw" name="Pawn::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,96,32"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="144,5,261,32"/>
-<area shape="rect" id="node3" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="309,5,396,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,96,83"/>
+<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="144,56,261,83"/>
+<area shape="rect" id="node3" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="319,5,453,32"/>
+<area shape="rect" id="node4" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="309,56,463,83"/>
+<area shape="rect" id="node5" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="343,107,429,133"/>
 </map>

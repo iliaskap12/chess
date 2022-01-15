@@ -1,8 +1,15 @@
 var searchData=
 [
-  ['openingscreen_0',['OpeningScreen',['../d1/d9f/classOpeningScreen.html#a1298e84b7d818cc2c8ae01457ad2ff03',1,'OpeningScreen']]],
-  ['operator_22_22_5fhash_1',['operator&quot;&quot;_hash',['../dd/dca/custom-string_8h.html#a2540af292cc3ecdfe6c0d389078b554a',1,'custom-string.h']]],
-  ['operator_2b_2',['operator+',['../dc/d4f/classPoint.html#a8bc39ec95c27d83d84e1df3fd8124fa2',1,'Point::operator+()'],['../d3/d43/PawnColor_8cpp.html#a1535c4ed0687663633c368c8bf026d2c',1,'operator+(const T &amp;lhs, const PawnColor &amp;color):&#160;PawnColor.cpp'],['../d3/d43/PawnColor_8cpp.html#ac696b8bf8176fd87edbb08d0c68d11d4',1,'operator+(const PawnColor &amp;color, const T &amp;rhs):&#160;PawnColor.cpp'],['../d3/d43/PawnColor_8cpp.html#a01afae9f3b15fcc149f38ff768b7b1f5',1,'operator+(const PawnColor &amp;color1, const PawnColor &amp;color2):&#160;PawnColor.cpp'],['../d3/d43/PawnColor_8cpp.html#ac68571e49dee59a5e952e673dedabbbc',1,'operator+(const std::string &amp;lhs, const PawnColor &amp;color):&#160;PawnColor.cpp'],['../d3/d43/PawnColor_8cpp.html#a6509b0dabc230e0e8174d7842e21d862',1,'operator+(const PawnColor &amp;color, const std::string &amp;rhs):&#160;PawnColor.cpp'],['../d3/d03/PawnColor_8h.html#a1535c4ed0687663633c368c8bf026d2c',1,'operator+(const T &amp;lhs, const PawnColor &amp;color):&#160;PawnColor.cpp'],['../d3/d03/PawnColor_8h.html#ac696b8bf8176fd87edbb08d0c68d11d4',1,'operator+(const PawnColor &amp;color, const T &amp;rhs):&#160;PawnColor.cpp'],['../d3/d03/PawnColor_8h.html#a01afae9f3b15fcc149f38ff768b7b1f5',1,'operator+(const PawnColor &amp;color1, const PawnColor &amp;color2):&#160;PawnColor.cpp']]],
-  ['operator_3c_3c_3',['operator&lt;&lt;',['../d3/d43/PawnColor_8cpp.html#a7160b90052fec47bed434f8739145de2',1,'operator&lt;&lt;(std::ostream &amp;lhs, const PawnColor &amp;color):&#160;PawnColor.cpp'],['../d3/d03/PawnColor_8h.html#a7160b90052fec47bed434f8739145de2',1,'operator&lt;&lt;(std::ostream &amp;lhs, const PawnColor &amp;color):&#160;PawnColor.cpp']]],
-  ['operator_3d_3d_4',['operator==',['../d1/d8e/Square_8cpp.html#a21652df8df11ca9498c345088d506d7e',1,'operator==(const Square &amp;lhs, const Square &amp;rhs):&#160;Square.cpp'],['../d5/dfd/Rectangle_8cpp.html#a09abfed52b7865bf069edadf2905ad86',1,'operator==(const Rectangle &amp;lhs, const Rectangle &amp;rhs):&#160;Rectangle.cpp']]]
+  ['main_0',['main',['../df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['mainmenu_1',['MainMenu',['../d9/d0a/classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf',1,'MainMenu']]],
+  ['makecurrent_2',['makeCurrent',['../d6/df2/classgraphics_1_1GLBackend.html#a1d2e2428d24fadfa031781a33517f231',1,'graphics::GLBackend']]],
+  ['makepoweroftwo_3',['makePowerOfTwo',['../d1/dea/classgraphics_1_1Texture.html#a5be51508cf5f59525ddbec814dae0f54',1,'graphics::Texture']]],
+  ['marksquares_4',['markSquares',['../d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c',1,'Checkboard']]],
+  ['menu_5',['Menu',['../d8/ddb/classMenu.html#ad466dd83355124a6ed958430450bfe94',1,'Menu']]],
+  ['menuoption_6',['MenuOption',['../dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93',1,'MenuOption']]],
+  ['movable_7',['Movable',['../da/dfc/classMovable.html#aa65f262e952f08ff64fbec0ffc1be63c',1,'Movable']]],
+  ['move_8',['move',['../da/dfc/classMovable.html#ae80958a5e661e47a98cb83163b45878a',1,'Movable::move()'],['../de/dff/classPawn.html#a96f71005c77711d47025e0d517d09520',1,'Pawn::move()']]],
+  ['moveking_9',['moveKing',['../d7/d22/classCheckboard.html#a7203ce315bcf059fe127acd6ea627e1d',1,'Checkboard']]],
+  ['movepawn_10',['movePawn',['../d7/d22/classCheckboard.html#a7a7a553f063ff2de8e402acab07c9e99',1,'Checkboard']]],
+  ['moveto_11',['moveTo',['../de/dff/classPawn.html#a09d721be0b6bc891dd4453018b1252e1',1,'Pawn']]]
 ];

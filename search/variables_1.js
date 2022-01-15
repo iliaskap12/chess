@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['blackdangerreferencecount_5f_0',['blackDangerReferenceCount_',['../d3/d72/classSquare.html#a2bd6cda99348c0def34fdb6133085db8',1,'Square']]],
-  ['blackking_1',['blackKing',['../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208',1,'Checkboard']]],
-  ['blackkingid_2',['blackKingId',['../d7/d22/classCheckboard.html#ae16881b48fca2f5598640cb273d66b2c',1,'Checkboard']]],
-  ['blackkingthreat_3',['blackKingThreat',['../d7/d22/classCheckboard.html#aae9f3f74897a9bf728f62f043df48636',1,'Checkboard']]],
-  ['blocked_4',['blocked',['../de/dff/classPawn.html#a10a904cc5cfdcb600830ab128c417a19',1,'Pawn']]],
-  ['blockingpawn_5',['blockingPawn',['../de/dff/classPawn.html#ab3a9ab2d6cc3a1290188242b138b27f1',1,'Pawn']]],
-  ['brush_5f_6',['brush_',['../de/d00/classRectangle.html#a97679fabd0f231f6e21679b21f1ea9e6',1,'Rectangle']]],
-  ['brushtype_7',['brushType',['../de/d00/classRectangle.html#a7bc8e6e8c2cc66616e0895881749c12b',1,'Rectangle']]],
-  ['button_8',['button',['../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b',1,'MenuOption']]]
+  ['activescreen_0',['activeScreen',['../dd/d64/classApp.html#ac2c3c876019c5b13d11ebb8a168e809f',1,'App']]],
+  ['add_5fid_1',['add_id',['../dc/d15/structLodePNGEncoderSettings.html#a893aa542aa7c122c32ee36dd716fbcb2',1,'LodePNGEncoderSettings']]],
+  ['allow_5fgreyscale_2',['allow_greyscale',['../df/dab/structLodePNGColorStats.html#a97c2e4db5de999cd92c1eabcdf80d431',1,'LodePNGColorStats']]],
+  ['allow_5fpalette_3',['allow_palette',['../df/dab/structLodePNGColorStats.html#ad6de0a38622538aace50a99ff5f63854',1,'LodePNGColorStats']]],
+  ['alpha_4',['alpha',['../df/dab/structLodePNGColorStats.html#af81e4a84aa3d94849736b6689643c101',1,'LodePNGColorStats']]],
+  ['audio_5',['audio',['../d3/dad/structsound.html#a560dc18ec81be9a0649d76abe3558bb3',1,'sound']]],
+  ['auto_5fconvert_6',['auto_convert',['../dc/d15/structLodePNGEncoderSettings.html#a1203b8db6532c9ff4a5c8ee692cd327a',1,'LodePNGEncoderSettings']]]
 ];

@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1a16318170d8eae1b4ca0f970fe2c34e48:
+
+Function lodepng_clear_icc
+==========================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_clear_icc(LodePNGInfo *)

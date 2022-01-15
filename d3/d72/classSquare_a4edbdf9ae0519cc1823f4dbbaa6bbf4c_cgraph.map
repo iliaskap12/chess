@@ -1,6 +1,8 @@
 <map id="Square::draw" name="Square::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,104,57"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="156,5,273,32"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="152,56,277,83"/>
-<area shape="rect" id="node3" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="325,5,412,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,104,108"/>
+<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="156,56,273,83"/>
+<area shape="rect" id="node6" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="152,107,277,133"/>
+<area shape="rect" id="node3" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="335,5,469,32"/>
+<area shape="rect" id="node4" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="325,56,479,83"/>
+<area shape="rect" id="node5" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="359,107,445,133"/>
 </map>

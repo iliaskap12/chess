@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8h_1a823441da1dd5ddf7282d1f3bca124938:
+
+Define LODEPNG_COMPILE_DECODER
+==============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_COMPILE_DECODER

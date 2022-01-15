@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['y_0',['y',['../dc/d4f/classPoint.html#a6101960c8d2d4e8ea1d32c9234bbeb8d',1,'Point']]]
+  ['scores_0',['scores',['../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109',1,'AudioManager']]],
+  ['second_1',['second',['../d9/da9/structLodePNGTime.html#a6c691c5821e828488a8bb8a90751a2f0',1,'LodePNGTime']]],
+  ['selected_2',['selected',['../de/d00/classRectangle.html#af45bb803db2f38e228b1ae6446b2fcaf',1,'Rectangle']]],
+  ['selectedpawn_3',['selectedPawn',['../d7/d22/classCheckboard.html#a3c4293c0e08d4b60bd31bd9ace28690d',1,'Checkboard']]],
+  ['self_5f_4',['self_',['../de/dff/classPawn.html#afc0fe9cbeface0b268f421215f99c3d9',1,'Pawn']]],
+  ['shouldmove_5',['shouldMove',['../de/dff/classPawn.html#a22a47e0e211aee521502b130d0ca75c2',1,'Pawn']]],
+  ['side_6',['side',['../d2/d4b/classPlayer.html#acffed02071df30c5c73482abbd32de4d',1,'Player']]],
+  ['sidesize_7',['sideSize',['../d7/d22/classCheckboard.html#a827dda3faa4d37821f0c7d6aebcf9498',1,'Checkboard']]],
+  ['size_8',['size',['../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a',1,'HUD::size()'],['../dc/d48/structTextRecord.html#ab93512d6a6a9ede4b78940d0d40fb395',1,'TextRecord::size()']]],
+  ['sounds_9',['sounds',['../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7',1,'AudioManager']]],
+  ['square_5f_10',['square_',['../de/dff/classPawn.html#a5837bbc8751df1638468acb214f6d4b6',1,'Pawn']]],
+  ['squares_11',['squares',['../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497',1,'Checkboard']]],
+  ['srgb_5fdefined_12',['srgb_defined',['../d0/dd6/structLodePNGInfo.html#a3a0795a8ec1ddcaac245ba3337054e46',1,'LodePNGInfo']]],
+  ['srgb_5fintent_13',['srgb_intent',['../d0/dd6/structLodePNGInfo.html#a35a37c55a3b6c5ff3d064dd26531c72b',1,'LodePNGInfo']]],
+  ['steps_14',['steps',['../de/dfb/classBishop.html#a8f940cdd80d23d276455ee5eb3c8e1ea',1,'Bishop::steps()'],['../d1/db5/classKing.html#aff8276ee25d837a859b447ddb7b77085',1,'King::steps()'],['../d5/d23/classKnight.html#a0dba378f388d1d4c7fb8f8ed237c6b7a',1,'Knight::steps()'],['../d5/d3f/classQueen.html#a25e5b9ce5bac73f322a8695645c87250',1,'Queen::steps()'],['../db/d7e/classRook.html#a8974a0b81797782e4837bfde8a1b5775',1,'Rook::steps()']]],
+  ['swapped_15',['swapped',['../de/d00/classRectangle.html#a6541d0c693bee6ecb071fa209eee5702',1,'Rectangle']]]
 ];

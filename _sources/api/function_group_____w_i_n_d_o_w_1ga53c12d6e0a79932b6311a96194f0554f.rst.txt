@@ -1,0 +1,13 @@
+.. _exhale_function_group_____w_i_n_d_o_w_1ga53c12d6e0a79932b6311a96194f0554f:
+
+Function graphics::setFullScreen
+================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::setFullScreen(bool)

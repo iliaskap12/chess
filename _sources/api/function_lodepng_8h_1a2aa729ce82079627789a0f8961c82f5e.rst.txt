@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8h_1a2aa729ce82079627789a0f8961c82f5e:
+
+Function lodepng_palette_clear
+==============================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_palette_clear(LodePNGColorMode *)

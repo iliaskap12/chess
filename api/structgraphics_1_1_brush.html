@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct Brush &mdash; Chess  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct MouseState" href="structgraphics_1_1_mouse_state.html" />
+    <link rel="prev" title="Struct Font" href="struct_font.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Chess
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chess</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="library_root.html">Library API</a> &raquo;</li>
+      <li>Struct Brush</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/structgraphics_1_1_brush.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-brush">
+<span id="exhale-struct-structgraphics-1-1-brush"></span><h1>Struct Brush<a class="headerlink" href="#struct-brush" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_include_sgg_graphics.h.html#file-include-sgg-graphics-h"><span class="std std-ref">File graphics.h</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5BrushE">
+<span id="_CPPv3N8graphics5BrushE"></span><span id="_CPPv2N8graphics5BrushE"></span><span id="graphics::Brush"></span><span class="target" id="structgraphics_1_1_brush"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">graphics</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">Brush</span></span></span><a class="headerlink" href="#_CPPv4N8graphics5BrushE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Encapsulates the superset of drawing attributes for all supported primitives and draw calls. These sgg the primary fill color, the use of gradient fill or not, the secondary fill color and fill direction used by the gradient, a texture image to be blended with the underlying color, the outline color and width and the opacity for the fill and outline colors. The use of these attributes is demonstrated in the example image below:</p>
+<p><img alt="_build/xml/brush1.jpg" src="_build/xml/brush1.jpg" /></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush10fill_colorE">
+<span id="_CPPv3N8graphics5Brush10fill_colorE"></span><span id="_CPPv2N8graphics5Brush10fill_colorE"></span><span id="graphics::Brush::fill_color__floatA"></span><span class="target" id="structgraphics_1_1_brush_1ad832785db83d6b692c962747997295c1"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fill_color</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush10fill_colorE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The primary fill color for shapes. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush20fill_secondary_colorE">
+<span id="_CPPv3N8graphics5Brush20fill_secondary_colorE"></span><span id="_CPPv2N8graphics5Brush20fill_secondary_colorE"></span><span id="graphics::Brush::fill_secondary_color__floatA"></span><span class="target" id="structgraphics_1_1_brush_1a98a290b6e9cd23526fca78ea91f92269"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fill_secondary_color</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush20fill_secondary_colorE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The fill color used as a secondary one when using a color gradient. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush12fill_opacityE">
+<span id="_CPPv3N8graphics5Brush12fill_opacityE"></span><span id="_CPPv2N8graphics5Brush12fill_opacityE"></span><span id="graphics::Brush::fill_opacity__float"></span><span class="target" id="structgraphics_1_1_brush_1a80c1e33fb4275b144055d5ec5eef0bac"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fill_opacity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush12fill_opacityE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The opacity (1-transparency) of the primary fill color. A (maximum) value of 1.0f means “fully opaque”, while a value of 0.0f means fully transparent (invisible). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush22fill_secondary_opacityE">
+<span id="_CPPv3N8graphics5Brush22fill_secondary_opacityE"></span><span id="_CPPv2N8graphics5Brush22fill_secondary_opacityE"></span><span id="graphics::Brush::fill_secondary_opacity__float"></span><span class="target" id="structgraphics_1_1_brush_1af61fb0762ff5b5269816f7598ceae96c"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fill_secondary_opacity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush22fill_secondary_opacityE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The opacity of the second fill color, used for the gradient. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush13outline_colorE">
+<span id="_CPPv3N8graphics5Brush13outline_colorE"></span><span id="_CPPv2N8graphics5Brush13outline_colorE"></span><span id="graphics::Brush::outline_color__floatA"></span><span class="target" id="structgraphics_1_1_brush_1ac61286d85bc25b05778ceec210e4be14"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">outline_color</span></span></span><span class="p"><span class="pre">[</span></span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush13outline_colorE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The color of the shape outline (where applicable). Most drawn shapes, like disks, line segments and rectangles use this property to set the outline stroke color. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush15outline_opacityE">
+<span id="_CPPv3N8graphics5Brush15outline_opacityE"></span><span id="_CPPv2N8graphics5Brush15outline_opacityE"></span><span id="graphics::Brush::outline_opacity__float"></span><span class="target" id="structgraphics_1_1_brush_1aba706520f2363a243dd458fbb9dc5c58"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">outline_opacity</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.f</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush15outline_opacityE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The opacity of the outline. Maximum value is 1.0f (fully opaque), and the minimum value is 0.0f (fully transparent). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush13outline_widthE">
+<span id="_CPPv3N8graphics5Brush13outline_widthE"></span><span id="_CPPv2N8graphics5Brush13outline_widthE"></span><span id="graphics::Brush::outline_width__float"></span><span class="target" id="structgraphics_1_1_brush_1a3d3ec8d78db0e5452f4cda2044853709"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">outline_width</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush13outline_widthE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The stroke width in pixel units. Can accept fractional values. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush7textureE">
+<span id="_CPPv3N8graphics5Brush7textureE"></span><span id="_CPPv2N8graphics5Brush7textureE"></span><span id="graphics::Brush::texture__ss"></span><span class="target" id="structgraphics_1_1_brush_1af6e5f653ea423e33c9ecd698b15c07aa"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">texture</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush7textureE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The filename of a bitmap to project over and blend with the underlying color of the fill. The image is multiplicatively combined with the entire fill motif, respecting also the opacity. Currently, only PNG images are supported, with transparency. Images of arbitrary size are supported but are internally upscaled to the nearest power of two in each dimension, using linear interpolation. The bitmap, regardless of its aspect ratio, covers the entire shape end to end, according to its own parameterization. This means that a square image drawn on a non-square rectangle will stretch the image. To avoid this, the drawn rectangle should follow the aspect ratio of the image. By default, no image is used. When an image filename is provided, it is loaded once and internally cached for repeated use.</p>
+<p>Keep in mind that when using a bitmap on a drawable shape, the image parametric space (expressed as u,v coordinates in the image below) is mapped to corresponding parameters of the underlying shape. For example, for the disk shape, the horizontal axis of the image is mapped to the circumferance of the disk, while the height is mapped to the disk radius. <img alt="_build/xml/uv.jpg" src="_build/xml/uv.jpg" /></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush8gradientE">
+<span id="_CPPv3N8graphics5Brush8gradientE"></span><span id="_CPPv2N8graphics5Brush8gradientE"></span><span id="graphics::Brush::gradient__b"></span><span class="target" id="structgraphics_1_1_brush_1a3eea4b5e9a9709560f5ab19a53965573"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradient</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush8gradientE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enables or disables the gradient fill of a shape. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush14gradient_dir_uE">
+<span id="_CPPv3N8graphics5Brush14gradient_dir_uE"></span><span id="_CPPv2N8graphics5Brush14gradient_dir_uE"></span><span id="graphics::Brush::gradient_dir_u__float"></span><span class="target" id="structgraphics_1_1_brush_1aefbd3e26375397a6aabdd089fb0b60e5"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradient_dir_u</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0f</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush14gradient_dir_uE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The gradient by default uses the v dimension of the parametric shape. In practice though, the calculation is as follows: s = u*gradient_dir_u + v*gradient_dir_v, where s is the color mixing parameter, clamped to [0.0,1.0]. This means that we can change the linear parameters gradient_dir_u/v to bias the between the two parametric space axes. For example: <img alt="_build/xml/gradient.jpg" src="_build/xml/gradient.jpg" /></p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N8graphics5Brush14gradient_dir_vE">
+<span id="_CPPv3N8graphics5Brush14gradient_dir_vE"></span><span id="_CPPv2N8graphics5Brush14gradient_dir_vE"></span><span id="graphics::Brush::gradient_dir_v__float"></span><span class="target" id="structgraphics_1_1_brush_1a0095a1bb86e4609ad85b7911b39b3260"></span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradient_dir_v</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0f</span></span><a class="headerlink" href="#_CPPv4N8graphics5Brush14gradient_dir_vE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><dl class="simple">
+<dt><strong>See</strong></dt><dd><p><a class="reference internal" href="#structgraphics_1_1_brush_1aefbd3e26375397a6aabdd089fb0b60e5"><span class="std std-ref">gradient_dir_u</span></a> </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="struct_font.html" class="btn btn-neutral float-left" title="Struct Font" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structgraphics_1_1_mouse_state.html" class="btn btn-neutral float-right" title="Struct MouseState" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kapareliotis Elias, Papantonis Christos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

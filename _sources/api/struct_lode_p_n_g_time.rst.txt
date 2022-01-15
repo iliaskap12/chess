@@ -1,0 +1,16 @@
+.. _exhale_struct_struct_lode_p_n_g_time:
+
+Struct LodePNGTime
+==================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: LodePNGTime
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,13 @@
+.. _exhale_variable_commonshaders_8h_1afb24b47d7bdaf3b54e7ad01208a7495f:
+
+Variable __PrimitivesVertexShader
+=================================
+
+- Defined in :ref:`file_include_sgg_commonshaders.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: __PrimitivesVertexShader

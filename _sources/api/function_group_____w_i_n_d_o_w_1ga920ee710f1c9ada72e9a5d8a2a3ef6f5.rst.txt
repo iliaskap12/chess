@@ -1,0 +1,13 @@
+.. _exhale_function_group_____w_i_n_d_o_w_1ga920ee710f1c9ada72e9a5d8a2a3ef6f5:
+
+Function graphics::stopMessageLoop
+==================================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::stopMessageLoop()

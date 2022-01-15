@@ -1,0 +1,13 @@
+.. _exhale_function_group_____g_r_a_p_h_i_c_s_1ga488f9f55470509c58c1775d5ae899fa7:
+
+Function graphics::drawLine
+===========================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::drawLine(float, float, float, float, const Brush&)

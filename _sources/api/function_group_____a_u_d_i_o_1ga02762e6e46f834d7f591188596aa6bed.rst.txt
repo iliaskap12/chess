@@ -1,0 +1,13 @@
+.. _exhale_function_group_____a_u_d_i_o_1ga02762e6e46f834d7f591188596aa6bed:
+
+Function graphics::stopMusic
+============================
+
+- Defined in :ref:`file_include_sgg_graphics.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::stopMusic(int)

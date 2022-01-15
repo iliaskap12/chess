@@ -1,0 +1,13 @@
+.. _exhale_enum_lodepng_8h_1ad5215c95d5bedc9103d8e6490398254f:
+
+Enum LodePNGFilterStrategy
+==========================
+
+- Defined in :ref:`file_include_sgg_lodepng.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: LodePNGFilterStrategy

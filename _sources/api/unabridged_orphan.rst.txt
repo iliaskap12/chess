@@ -31,6 +31,11 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_include_sgg.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_include_sounds.rst
 
 .. toctree::
@@ -81,6 +86,16 @@ Files
    :maxdepth: 5
 
    file_include_App.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_audio.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_AudioManager.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -165,6 +180,11 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_include_sgg_commonshaders.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_src_util_custom-string.cpp.rst
 
 .. toctree::
@@ -220,12 +240,27 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_include_sgg_fonts.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_src_game_Game.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
    file_include_game_Game.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_GLbackend.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_graphics.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -276,6 +311,11 @@ Files
    :maxdepth: 5
 
    file_include_game_Knight.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_lodepng.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -515,12 +555,22 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_include_sgg_scancodes.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_src_graphics_Screen.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
    file_include_graphics_Screen.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_shader.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -551,6 +601,11 @@ Files
    :maxdepth: 5
 
    file_include_game_Square.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_texture.h.rst
 
 .. toctree::
    :maxdepth: 5

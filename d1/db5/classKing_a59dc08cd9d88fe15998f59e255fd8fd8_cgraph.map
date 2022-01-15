@@ -1,4 +1,5 @@
 <map id="King::getKingSquares" name="King::getKingSquares">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,153,32"/>
-<area shape="rect" id="node2" href="$de/dff/classPawn.html#a1d20441a964b5c43ec27a0bafcda56dd" title=" " alt="" coords="201,5,313,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,153,57"/>
+<area shape="rect" id="node2" href="$de/dff/classPawn.html#a1d20441a964b5c43ec27a0bafcda56dd" title=" " alt="" coords="222,5,334,32"/>
+<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="201,56,355,83"/>
 </map>
