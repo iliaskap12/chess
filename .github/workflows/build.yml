@@ -155,8 +155,8 @@ jobs:
           sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
           sudo apt install -y g++-11
           sudo apt-get install -y ninja-build
-          echo "ninja=${{ which ninja }}" >> $ninja
-          echo "gpp11=${{ which g++-11 }}" >> $gpp11
+          echo "ninja=$( which ninja )" >> $ninja
+          echo "gpp11=$( which g++-11 )" >> $gpp11
           mkdir cmake-build-release
           cmake -S . \
           -B cmake-build-release \
