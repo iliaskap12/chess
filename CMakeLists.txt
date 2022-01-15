@@ -7,7 +7,7 @@ endif ()
 project(
         chess
         VERSION 1.0
-        DESCRIPTION "Very nice project"
+        DESCRIPTION "2 player desktop C++ chess application as a school project using Simple Game Graphics library."
         LANGUAGES CXX)
 
 
@@ -49,14 +49,6 @@ if (${CMAKE_VERSION} VERSION_LESS 3.14)
     include(cmake/add_FetchContent_MakeAvailable.cmake)
 endif ()
 
-FetchContent_Declare(
-        sgg
-        GIT_REPOSITORY https://github.com/cgaueb/sgg.git
-        GIT_TAG main)
-FetchContent_MakeAvailable(sgg)
-
-#find_package(sgg REQUIRED)
-#add_subdirectory(sgg)
 set(CMAKE_CURRENT_SOURCE_DIR src)
 set(SRC_DIR src)
 set(HEADER_DIR include)

@@ -1,8 +1,6 @@
 # first we can indicate the documentation build as an option and set it to ON by default
 option(BUILD_DOC "Build documentation" ON)
 
-#doxygen_add_docs(docs-doxygen ${PROJECT_NAME} mainpage.md
-#        WORKING_DIRECTORY "../include")
 set(DOXYGEN_IN "${CMAKE_SOURCE_DIR}/${DOCS_DIR}/Doxyfile.in")
 set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile.out)
 
