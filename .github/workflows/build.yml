@@ -96,13 +96,14 @@ jobs:
           cached: ${{ steps.cache-llvm.outputs.cache-hit }}
       - name: Symlink libclang.so (Linux)
         if: contains(matrix.os, 'ubuntu')
+        id: path-setup
         run: |
           sudo ln -s libclang-11.so.1 /lib/x86_64-linux-gnu/libclang.so
           sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
           sudo apt install -y g++-11
           sudo apt-get install -y ninja-build
-          echo ::set-env name=ninja::$(echo which ninja)
-          echo ::set-env name=gpp11::$(echo which g++-11)
+          echo "::set-output name=ninja::$(which ninja)"
+          echo "::set-output name=gpp11::$(which g++-11)"
         working-directory: ${{ env.LLVM_PATH }}/lib
       - name: Set up JDK 11
         uses: actions/setup-java@v1
@@ -160,8 +161,8 @@ jobs:
           mkdir cmake-build-release
           cmake -S . \
           -B cmake-build-release \
-          -DCMAKE_CXX_COMPILER=${{ env.gpp11 }} \
-          -DCMAKE_MAKE_PROGRAM=${{ env.ninja }} \
+          -DCMAKE_CXX_COMPILER=${{ steps.path-setup.outputs.gpp11 }} \
+          -DCMAKE_MAKE_PROGRAM=${{ steps.path-setup.outputs.ninja }} \
           -DCMAKE_CXX_STANDARD=20 \
           -DCMAKE_CXX_STANDARD_REQUIRED=ON \
           -DCMAKE_BUILD_TYPE=Release \
