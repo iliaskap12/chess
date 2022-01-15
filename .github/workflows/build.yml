@@ -160,7 +160,7 @@ jobs:
           mkdir cmake-build-release
           cmake -S . \
           -B cmake-build-release \
-          -DCMAKE_CXX_COMPILER=${{ env.g++ }} \
+          -DCMAKE_CXX_COMPILER=${{ env.g++-11 }} \
           -DCMAKE_MAKE_PROGRAM=${{ env.ninja }} \
           -DCMAKE_CXX_STANDARD=20 \
           -DCMAKE_CXX_STANDARD_REQUIRED=ON \
