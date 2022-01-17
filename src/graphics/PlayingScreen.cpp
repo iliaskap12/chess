@@ -8,8 +8,8 @@ PlayingScreen::PlayingScreen() {
     const Point leftBottom { Point(325.0f, 150.0f + static_cast<float>(white) * 75.0f) };
     (*this->capturedWhiteSquares)[white].first = { std::make_shared<Square>() };
     (*this->capturedWhiteSquares)[white].first->initialize(leftBottom, Rectangle::colors.at(Brush::TEXTURE), Brush::TEXTURE, squareWidth);
-    const std::pair<float, float> coordinates { (*this->capturedWhiteSquares)[white].first->getDrawingArea().getCenter().getX() - 75.0f,
-                                              (*this->capturedWhiteSquares)[white].first->getDrawingArea().getCenter().getY() + 25.0f };
+    const std::pair<float, float> coordinates { (*this->capturedWhiteSquares)[white].first->getDrawingArea()->getCenter().getX() - 75.0f,
+                                              (*this->capturedWhiteSquares)[white].first->getDrawingArea()->getCenter().getY() + 25.0f };
     (*this->capturedWhiteSquares)[white].second = { std::make_pair(0, std::make_shared<PawnCount>(coordinates, squareWidth - 10.0f)) };
   }
 
@@ -17,8 +17,8 @@ PlayingScreen::PlayingScreen() {
     const Point leftBottom { Point(325.0f, 900.0f - static_cast<float>(black) * 75.0f) };
     (*this->capturedBlackSquares)[black].first = { std::make_shared<Square>() };
     (*this->capturedBlackSquares)[black].first->initialize(leftBottom, Rectangle::colors.at(Brush::TEXTURE), Brush::TEXTURE, squareWidth);
-    const std::pair<float, float> coordinates { (*this->capturedBlackSquares)[black].first->getDrawingArea().getCenter().getX() - 75.0f,
-                                              (*this->capturedBlackSquares)[black].first->getDrawingArea().getCenter().getY() + 25.0f };
+    const std::pair<float, float> coordinates { (*this->capturedBlackSquares)[black].first->getDrawingArea()->getCenter().getX() - 75.0f,
+                                              (*this->capturedBlackSquares)[black].first->getDrawingArea()->getCenter().getY() + 25.0f };
     (*this->capturedBlackSquares)[black].second = { std::make_pair(0, std::make_shared<PawnCount>(coordinates, squareWidth - 10.0f)) };
   }
 }
@@ -104,7 +104,7 @@ std::shared_ptr<Square> PlayingScreen::getSquare(const std::shared_ptr<Pawn>& pa
   graphics::Brush textureBrush { Rectangle::colors.at(Brush::TEXTURE) };
   textureBrush.texture = { paths::getImagesPath() + texture + "-" + color + ".png" };
 
-  square->initialize(square->getDrawingArea().getLeftBottom(), textureBrush, Brush::TEXTURE, square->getDrawingArea().getWidth());
+  square->initialize(square->getDrawingArea()->getLeftBottom(), textureBrush, Brush::TEXTURE, square->getDrawingArea()->getWidth());
 
   return square;
 }

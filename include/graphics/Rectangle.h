@@ -5,7 +5,12 @@
 #include "Drawable.h"
 #include "Updateable.h"
 #include "Brush.h"
-#include <sgg/graphics.h>
+//#ifdef _WIN32
+//#include "sgg/sgg/graphics.h"
+//#else
+//#include <sgg/graphics.h>
+//#endif
+#include "sgg/sgg/graphics.h"
 #include <chrono>
 
 class Rectangle : public Drawable, public Updateable {
@@ -26,7 +31,7 @@ private:
   Brush markBrushType {};
   bool selected { false };
   bool swapped { false };
-  const long id { std::chrono::high_resolution_clock::now().time_since_epoch().count() };
+  const long long id { std::chrono::high_resolution_clock::now().time_since_epoch().count() };
 
 public:
   Rectangle();

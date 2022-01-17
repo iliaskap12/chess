@@ -7,7 +7,12 @@
 #include "graphics/Rectangle.h"
 #include "graphics/Updateable.h"
 #include <optional>
-#include <sgg/graphics.h>
+//#ifdef _WIN32
+//  #include "sgg/sgg/graphics.h"
+//#else
+//  #include <sgg/graphics.h>
+//#endif
+#include "sgg/sgg/graphics.h"
 #include <string>
 
 class HUD : public Drawable, public Updateable {

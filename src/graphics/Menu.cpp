@@ -3,7 +3,7 @@
 Menu::Menu() = default;
 
 void Menu::addOption(const MenuOption& option, ButtonType buttonType) {
-  this->options.try_emplace(buttonType, option);
+  this->options.insert(std::make_pair(buttonType, option));
 }
 
 const MenuOption &Menu::getMenuOption(ButtonType buttonType) {

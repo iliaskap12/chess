@@ -13,7 +13,7 @@ class Square : public Drawable, public Updateable {
   unsigned short int row_ { 0 };
   unsigned short int column_ { 0 };
   std::shared_ptr<Pawn> pawn_ { nullptr };
-  Rectangle drawingArea { Rectangle() };
+  std::shared_ptr<Rectangle> drawingArea { std::make_shared<Rectangle>() };
   unsigned short int whiteDangerReferenceCount_ { 0 };
   unsigned short int blackDangerReferenceCount_ { 0 };
 
@@ -33,7 +33,7 @@ public:
   [[nodiscard]] std::shared_ptr<Pawn> getPawn() const;
   [[nodiscard]] bool hasPawn() const;
 
-  Rectangle getDrawingArea() const;
+  [[nodiscard]] std::shared_ptr<Rectangle> getDrawingArea() const;
 
   void draw() override;
   void update(float ms) override;
@@ -41,7 +41,7 @@ public:
   friend bool operator==(const Square& lhs, const Square& rhs);
   void increaseDangerReferenceCount(PawnColor color);
   void resetDangerReferenceCount();
-  unsigned short int getDangerReferenceCount(PawnColor color) const;
+  [[nodiscard]] unsigned short int getDangerReferenceCount(PawnColor color) const;
 };
 
 #endif // SQUARE_H

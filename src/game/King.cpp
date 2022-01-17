@@ -1,6 +1,7 @@
 #include <game/King.h>
 #include <algorithm>
 #include <App.h>
+#include <vector>
 
 King::King(PawnColor color) : Pawn(color) {
   Pawn::setTexture("king");

@@ -1,8 +1,8 @@
+#include <App.h>
 #include <graphics/MainMenu.h>
+#include <graphics/PlayingScreen.h>
 #include <utility>
 #include <iostream>
-#include <App.h>
-#include <graphics/PlayingScreen.h>
 
 MainMenu::MainMenu() {
   Menu::addOption(MainMenu::createMenuOption("Start a game", 400.0f), ButtonType::PLAY);
@@ -20,10 +20,10 @@ void MainMenu::update(float ms) {
     this->pressButton(ButtonType::PLAY);
   }
 
-  for (const auto& [type, option] : Menu::getMenuOptions()) {
-    option.getMessage().update(ms);
-    option.getButton().update(ms);
-  }
+  std::for_each(this->getMenuOptions().begin(), this->getMenuOptions().end(), [&ms](const auto &pair) {
+    pair.second.getMessage().update(ms);
+    pair.second.getButton().update(ms);
+  });
 }
 
 MenuOption MainMenu::createMenuOption(std::string message, float verticalPoint) {

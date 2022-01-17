@@ -17,7 +17,7 @@ public:
   void update(float ms) override = 0;
   void addOption(const MenuOption& option, ButtonType buttonType);
   const MenuOption &getMenuOption(ButtonType buttonType);
-  const std::unordered_map<ButtonType, MenuOption> &getMenuOptions() const;
+  [[nodiscard]] const std::unordered_map<ButtonType, MenuOption> &getMenuOptions() const;
   virtual void pressButton(const ButtonType &type) const = 0;
 };
 

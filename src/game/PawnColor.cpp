@@ -1,4 +1,7 @@
 #include <game/PawnColor.h>
+#ifdef _WIN32
+  #include <sstream>
+#endif
 
 std::string pawnColorToString(const PawnColor& color) {
   if (color == PawnColor::WHITE) {

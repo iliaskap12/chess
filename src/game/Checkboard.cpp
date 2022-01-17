@@ -48,8 +48,8 @@ Checkboard::Checkboard() {
           break;
         default:
           (*this->squares)[row][column]->registerPawn(std::make_shared<King>(color));
-          row == 0 ? (this->whiteKingId = {std::make_optional((*this->squares)[row][column]->getDrawingArea().getId())})
-                   : (this->blackKingId = {std::make_optional((*this->squares)[row][column]->getDrawingArea().getId())});
+          row == 0 ? (this->whiteKingId = {std::make_optional((*this->squares)[row][column]->getDrawingArea()->getId())})
+                   : (this->blackKingId = {std::make_optional((*this->squares)[row][column]->getDrawingArea()->getId())});
           row == 0 ? (this->whiteKing = {(*this->squares)[row][column]->getPawn()})
                    : (this->blackKing = {(*this->squares)[row][column]->getPawn()});
           break;
@@ -166,7 +166,7 @@ void Checkboard::notify(Square *square) {
     this->movePawn(square);
   }
 
-  this->selectedPawn == nullptr ? this->selectedPawn = {std::make_shared<Rectangle>(square->getDrawingArea())} : this->selectedPawn = {nullptr};
+  this->selectedPawn == nullptr ? this->selectedPawn = {square->getDrawingArea()} : this->selectedPawn = {nullptr};
 }
 
 std::pair<bool, std::optional<PawnColor>> Checkboard::getSquareInfo(std::pair<int, int> indexes) const {
@@ -185,7 +185,7 @@ bool Checkboard::shouldMark(const Rectangle *rect) {
           this->markedSquares.begin(),
           this->markedSquares.end(),
           [&rect](const std::shared_ptr<Square> &markedSquare) {
-            return markedSquare->getDrawingArea() == *rect;
+            return *markedSquare->getDrawingArea() == *rect;
           })};
       result != this->markedSquares.end()) {
     return true;
@@ -243,13 +243,13 @@ bool Checkboard::markSquares(const Square *square) {
 }
 
 void Checkboard::moveKing(const Square *square) {
-  if (this->whiteKingId.has_value() && this->whiteKingId == this->markedPawn->getSquare()->getDrawingArea().getId()) {
+  if (this->whiteKingId.has_value() && this->whiteKingId == this->markedPawn->getSquare()->getDrawingArea()->getId()) {
     this->whiteKingId.reset();
-    this->whiteKingId = {std::make_optional(square->getDrawingArea().getId())};
+    this->whiteKingId = {std::make_optional(square->getDrawingArea()->getId())};
   }
-  if (this->blackKingId.has_value() && this->blackKingId == this->markedPawn->getSquare()->getDrawingArea().getId()) {
+  if (this->blackKingId.has_value() && this->blackKingId == this->markedPawn->getSquare()->getDrawingArea()->getId()) {
     this->blackKingId.reset();
-    this->blackKingId = {std::make_optional(square->getDrawingArea().getId())};
+    this->blackKingId = {std::make_optional(square->getDrawingArea()->getId())};
   }
 }
 
@@ -294,7 +294,7 @@ bool Checkboard::amISelected(const Rectangle *rect) const {
 
   for (const auto &row: *this->squares) {
     for (auto &square: row) {
-      if (square->getDrawingArea() == *rect && square->hasPawn()) {
+      if (*square->getDrawingArea() == *rect && square->hasPawn()) {
         return true;
       }
     }

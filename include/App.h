@@ -9,7 +9,12 @@
 #include "graphics/Screen.h"
 #include "graphics/OpeningScreen.h"
 #include "game/Game.h"
-#include <sgg/graphics.h>
+//#ifdef _WIN32
+//  #include "sgg/sgg/graphics.h"
+//#else
+//  #include <sgg/graphics.h>
+//#endif
+#include "sgg/sgg/graphics.h"
 
 class App : public Drawable, public Updateable {
   std::shared_ptr<Screen> activeScreen { nullptr };
