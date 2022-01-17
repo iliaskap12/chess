@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <functional>
-#include <sgg/scancodes.h>
+#include "scancodes.h"
 #include <vector>
 
 /** \file graphics.h This is the *only* library header file that is required to be included by your application.
@@ -21,7 +21,7 @@ namespace graphics
 	}
 	scale_mode_t;
 
-	/** Encapsulates the superset of drawing attributes for all supported primitives and draw calls. These sgg
+	/** Encapsulates the superset of drawing attributes for all supported primitives and draw calls. These include
 	    the primary fill color, the use of gradient fill or not, the secondary fill color and fill direction used
 		by the gradient, a texture image to be blended with the underlying color, the outline color and width and
 		the opacity for the fill and outline colors. The use of these attributes is demonstrated in the example
@@ -737,7 +737,7 @@ namespace graphics
 		called recursively for contained sub-directories.
 
 		\return a vector of the full path names to the individual bitmaps identified and successfully loaded. The
-		path names will sgg the directory name given.
+		path names will include the directory name given.
 	*/
 	std::vector<std::string> preloadBitmaps(std::string dir);
 

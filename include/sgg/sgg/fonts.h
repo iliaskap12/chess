@@ -2,7 +2,7 @@
 #include <ft2build.h>
 #include FT_FREETYPE_H
 #include "GL/glew.h"
-#include "sgg/shader.h"
+#include "shader.h"
 #include <string>
 #include <vector>
 #include <unordered_map>
@@ -39,17 +39,17 @@ class FontLib
 	GLuint				m_font_vao;
 	GLuint				m_font_res = 64;
 	std::vector<TextRecord> m_content;
-	
+
 	glm::vec2	  m_canvas;
 
 	void drawText(TextRecord entry);
-	
+
 public:
 	bool init();
 	void submitText(const TextRecord & text);
 	void commitText();
 	void setCanvas(glm::vec2 sz);
 	bool setCurrentFont(std::string fontname);
-	
+
 };
 

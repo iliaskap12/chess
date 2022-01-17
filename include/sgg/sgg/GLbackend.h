@@ -4,13 +4,13 @@
 #include <SDL2/SDL.h>
 #include <string>
 #include <thread>
-#include <sgg/shader.h>
-#include <sgg/fonts.h>
+#include "shader.h"
+#include "fonts.h"
 #include <functional>
 #include <glm/vec3.hpp>
-#include <sgg/scancodes.h>
-#include <sgg/texture.h>
-#include <sgg/AudioManager.h>
+#include "scancodes.h"
+#include "texture.h"
+#include "AudioManager.h"
 #include <algorithm>
 
 #define SGG_CHECK_GL() do {GLenum err;while((err = glGetError()) != GL_NO_ERROR){ printf("Error %s %d\n", (const char*)glewGetErrorString(err), err);exit(0);}printf("Pass\n");} while(0);
@@ -54,7 +54,7 @@ namespace graphics
 		float		  m_orientation = 0.0f;
 		glm::vec3	  m_scale = glm::vec3(1.0f);
 		Shader		  m_flat_shader;
-		
+
 		GLuint		m_rect_vbo;
 		GLuint		m_rect_vao;
 		GLuint		m_rect_outline_vbo;
@@ -95,7 +95,7 @@ namespace graphics
 		void drawLine(float x_1, float y_1, float x_2, float y_2, const struct Brush & brush);
 		void drawSector(float cx, float cy, float start_angle, float end_angle, float radius1, float radius2, const struct Brush & brush);
 		void drawText(float pos_x, float pos_y, float size, const std::string & text, const Brush & brush);
-		
+
 		void setUserData(const void* user_data);
 		void* getUserData();
 
