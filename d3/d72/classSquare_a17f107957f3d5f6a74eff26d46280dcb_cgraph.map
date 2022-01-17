@@ -1,13 +1,5 @@
 <map id="Square::update" name="Square::update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,208,116,235"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264" title=" " alt="" coords="164,120,295,147"/>
-<area shape="rect" id="node8" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="361,259,515,285"/>
-<area shape="rect" id="node9" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="167,233,292,260"/>
-<area shape="rect" id="node10" href="$de/d00/classRectangle.html#a330c91f51bf2e98ae3d5964ea9dc1550" title=" " alt="" coords="165,284,293,311"/>
-<area shape="rect" id="node3" href="$de/d51/group____INPUT.html#gab43bd06ff9716f9d26f8232911b6e577" title=" " alt="" coords="355,5,521,32"/>
-<area shape="rect" id="node4" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="395,56,481,83"/>
-<area shape="rect" id="node5" href="$dc/d4f/classPoint.html#a2371ffadbe245d12a8f556d0a976521b" title=" " alt="" coords="395,107,481,133"/>
-<area shape="rect" id="node6" href="$db/dbd/group____WINDOW.html#gac02db2f8b492b70286f9038b04b3a99d" title=" " alt="" coords="343,157,533,184"/>
-<area shape="rect" id="node7" href="$db/dbd/group____WINDOW.html#ga440019f4bf4bed28bef3af61d9bae00d" title=" " alt="" coords="343,208,533,235"/>
-<area shape="rect" id="node11" href="$de/d00/classRectangle.html#a611c84dab66326ea6c1ff7ac759e8601" title=" " alt="" coords="354,309,522,336"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,116,57"/>
+<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="164,5,317,32"/>
+<area shape="rect" id="node3" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="178,56,303,83"/>
 </map>

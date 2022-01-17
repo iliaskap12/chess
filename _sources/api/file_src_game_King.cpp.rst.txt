@@ -35,6 +35,8 @@ Includes
 
 - ``game/King.h`` (:ref:`file_include_game_King.h`)
 
+- ``vector``
+
 
 
 

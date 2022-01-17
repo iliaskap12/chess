@@ -71,6 +71,9 @@
 <span id="program-listing-file-src-game-pawncolor-cpp"></span><h1>Program Listing for File PawnColor.cpp<a class="headerlink" href="#program-listing-for-file-pawncolor-cpp" title="Permalink to this headline"></a></h1>
 <p>↰ <a class="reference internal" href="file_src_game_PawnColor.cpp.html#file-src-game-pawncolor-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/game/PawnColor.cpp</span></code>)</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;game/PawnColor.h&gt;</span><span class="cp"></span>
+<span class="cp">#ifdef _WIN32</span>
+<span class="w">  </span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
+<span class="cp">#endif</span>
 
 <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="nf">pawnColorToString</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">PawnColor</span><span class="o">&amp;</span><span class="w"> </span><span class="n">color</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">PawnColor</span><span class="o">::</span><span class="n">WHITE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

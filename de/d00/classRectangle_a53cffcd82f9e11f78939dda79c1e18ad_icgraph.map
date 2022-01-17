@@ -1,11 +1,9 @@
 <map id="Rectangle::setBrush" name="Rectangle::setBrush">
-<area shape="rect" id="node1" title=" " alt="" coords="667,107,808,133"/>
-<area shape="rect" id="node2" href="$d3/d72/classSquare.html#ae055a45904b986ac48dfa7c4e9bd66e7" title=" " alt="" coords="474,5,593,32"/>
-<area shape="rect" id="node3" href="$dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93" title=" " alt="" coords="448,56,619,83"/>
-<area shape="rect" id="node4" href="$de/dff/classPawn.html#afbe7ac4d2314ac79a62bc576b39016e7" title=" " alt="" coords="472,107,595,133"/>
-<area shape="rect" id="node5" href="$d0/df0/classHUD.html#aff6854c25f96fa4062996d9a8fb9d848" title=" " alt="" coords="465,157,602,184"/>
-<area shape="rect" id="node9" href="$d3/d72/classSquare.html#a28031bc8ad4acc0e6647b4a41316ac51" title=" " alt="" coords="477,208,589,235"/>
-<area shape="rect" id="node6" href="$d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302" title=" " alt="" coords="204,132,400,159"/>
-<area shape="rect" id="node8" href="$d5/d4d/classPawnCount.html#a9e233480c807cf6eb2955aee7d84c24c" title=" " alt="" coords="219,183,385,209"/>
-<area shape="rect" id="node7" href="$d9/d0a/classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf" title=" " alt="" coords="5,132,156,159"/>
+<area shape="rect" id="node1" title=" " alt="" coords="667,56,808,83"/>
+<area shape="rect" id="node2" href="$dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93" title=" " alt="" coords="448,5,619,32"/>
+<area shape="rect" id="node3" href="$de/dff/classPawn.html#afbe7ac4d2314ac79a62bc576b39016e7" title=" " alt="" coords="472,56,595,83"/>
+<area shape="rect" id="node4" href="$d0/df0/classHUD.html#aff6854c25f96fa4062996d9a8fb9d848" title=" " alt="" coords="465,107,602,133"/>
+<area shape="rect" id="node5" href="$d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302" title=" " alt="" coords="204,81,400,108"/>
+<area shape="rect" id="node7" href="$d5/d4d/classPawnCount.html#a9e233480c807cf6eb2955aee7d84c24c" title=" " alt="" coords="219,132,385,159"/>
+<area shape="rect" id="node6" href="$d9/d0a/classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf" title=" " alt="" coords="5,81,156,108"/>
 </map>

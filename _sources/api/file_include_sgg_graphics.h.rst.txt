@@ -49,12 +49,6 @@ Included By
 -----------
 
 
-- :ref:`file_include_App.h`
-
-- :ref:`file_include_graphics_Rectangle.h`
-
-- :ref:`file_include_hud_HUD.h`
-
 - :ref:`file_src_game_Checkboard.cpp`
 
 - :ref:`file_src_game_Square.cpp`

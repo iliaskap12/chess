@@ -17,14 +17,15 @@ Program Listing for File Pawn.cpp
    #include <App.h>
    #include <graphics/PlayingScreen.h>
    #include <game/Checkboard.h>
+   #include <ranges>
    
    Pawn::Pawn(PawnColor color) : color(color) {}
    
    void Pawn::setSquare(Square* square) {
      this->square_ = { square };
-     this->drawingArea.setHeight(this->square_->getDrawingArea().getHeight());
-     this->drawingArea.setWidth(this->square_->getDrawingArea().getWidth());
-     this->drawingArea.setLeftBottom(this->square_->getDrawingArea().getLeftBottom());
+     this->drawingArea.setHeight(this->square_->getDrawingArea()->getHeight());
+     this->drawingArea.setWidth(this->square_->getDrawingArea()->getWidth());
+     this->drawingArea.setLeftBottom(this->square_->getDrawingArea()->getLeftBottom());
      graphics::Brush pawn { Rectangle::colors.at(Brush::TEXTURE) };
      pawn.texture = { paths::getImagesPath() + this->texture_ + "-" + this->getColor() + this->png };
      this->drawingArea.setBrush(Brush::TEXTURE, pawn);
@@ -56,7 +57,7 @@ Program Listing for File Pawn.cpp
        this->drawingArea.setLeftBottom(this->drawingArea.getLeftBottom() + Point(this->moveSteps.second, this->moveSteps.first));
        checkboard->setMovingSquare(this->drawingArea.getLeftBottom(), this->drawingArea.getBrush(), this->drawingArea.getBrushType());
    
-       if (this->square_->getDrawingArea().getLeftBottom() == this->destination_->getDrawingArea().getLeftBottom()) {
+       if (this->square_->getDrawingArea()->getLeftBottom() == this->destination_->getDrawingArea()->getLeftBottom()) {
          if (this->destination_->hasPawn()) {
            Pawn::capture(this->destination_->getPawn());
          }

@@ -1,10 +1,8 @@
 <map id="/Users/runner/work/chess/chess/include/graphics" name="/Users/runner/work/chess/chess/include/graphics">
-<area shape="rect" id="node1" href="dir_be7d6e03fafc92d202efbc43eb0da6f7.html" title="sgg" alt="" coords="27,148,99,196"/>
+<area shape="rect" id="node1" href="dir_e94c18d52246dc2a84c458562d820761.html" title="hud" alt="" coords="27,148,99,196"/>
 <area shape="rect" id="node2" href="dir_f307a46daed1218fee22380d1eacedba.html" title="game" alt="" coords="123,148,195,196"/>
-<area shape="rect" id="node3" href="dir_e94c18d52246dc2a84c458562d820761.html" title="hud" alt="" coords="219,148,291,196"/>
-<area shape="rect" id="node4" href="dir_c17ed8a99c2aafc6034c524ffcf900dc.html" title="graphics" alt="" coords="123,52,195,100"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000002_000007.html" title="1" alt="" coords="101,134,109,149"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000002_000000.html" title="1" alt="" coords="163,122,171,137"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000002_000004.html" title="2" alt="" coords="220,122,228,136"/>
-<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="16,16,301,207"/>
+<area shape="rect" id="node3" href="dir_c17ed8a99c2aafc6034c524ffcf900dc.html" title="graphics" alt="" coords="75,52,147,100"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000002_000004.html" title="2" alt="" coords="86,128,94,143"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000002_000000.html" title="1" alt="" coords="142,121,150,135"/>
+<area shape="rect" id="clust1" href="dir_d44c64559bbebec7f509842c48db8b23.html" title="include" alt="" coords="16,16,205,207"/>
 </map>

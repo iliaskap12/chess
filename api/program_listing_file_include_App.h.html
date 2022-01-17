@@ -81,7 +81,12 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;graphics/Screen.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;graphics/OpeningScreen.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;game/Game.h&quot;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sgg/graphics.h&gt;</span><span class="cp"></span>
+<span class="c1">//#ifdef _WIN32</span>
+<span class="c1">//  #include &quot;sgg/sgg/graphics.h&quot;</span>
+<span class="c1">//#else</span>
+<span class="c1">//  #include &lt;sgg/graphics.h&gt;</span>
+<span class="c1">//#endif</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sgg/sgg/graphics.h&quot;</span><span class="cp"></span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">App</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Drawable</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Updateable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Screen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">activeScreen</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">nullptr</span><span class="w"> </span><span class="p">};</span><span class="w"></span>

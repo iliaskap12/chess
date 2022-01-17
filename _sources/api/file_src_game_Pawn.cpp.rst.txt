@@ -39,6 +39,8 @@ Includes
 
 - ``graphics/PlayingScreen.h`` (:ref:`file_include_graphics_PlayingScreen.h`)
 
+- ``ranges``
+
 - ``utility``
 
 - ``vector``

@@ -37,7 +37,7 @@ Includes
 
 - ``memory``
 
-- ``sgg/graphics.h`` (:ref:`file_include_sgg_graphics.h`)
+- ``sgg/sgg/graphics.h``
 
 
 

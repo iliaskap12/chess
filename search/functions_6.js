@@ -16,7 +16,7 @@ var searchData=
   ['getcoordinates_13',['getCoordinates',['../d0/df0/classHUD.html#a3ddc5ef7dc4007969d2869de625a66a4',1,'HUD']]],
   ['getdangerreferencecount_14',['getDangerReferenceCount',['../d3/d72/classSquare.html#afdfb74a947f85a9edcea35393be984b1',1,'Square']]],
   ['getdeltatime_15',['getDeltaTime',['../d6/df2/classgraphics_1_1GLBackend.html#a5d5edd81bef63aa7d1c6191e9d7111a9',1,'graphics::GLBackend::getDeltaTime()'],['../d1/d6e/group____TIME.html#gad2f8c14d77d2b87e7f3c06fdac60403d',1,'graphics::getDeltaTime()']]],
-  ['getdrawingarea_16',['getDrawingArea',['../de/dff/classPawn.html#ae323a2102898077f9d444465ad6bb6dc',1,'Pawn::getDrawingArea()'],['../d3/d72/classSquare.html#adea8c65d350ed45f6684a06d308b9dcd',1,'Square::getDrawingArea()']]],
+  ['getdrawingarea_16',['getDrawingArea',['../de/dff/classPawn.html#ae323a2102898077f9d444465ad6bb6dc',1,'Pawn::getDrawingArea()'],['../d3/d72/classSquare.html#a4f6f59174f926a24175c35065b286b1e',1,'Square::getDrawingArea()']]],
   ['getfontspath_17',['getFontsPath',['../d5/dc0/namespacepaths.html#abd3ecea000517c4765a7e58bc86f0f58',1,'paths']]],
   ['getgame_18',['getGame',['../dd/d64/classApp.html#adccf2a400844cbf0a61c47d47092e178',1,'App']]],
   ['getglobaltime_19',['getGlobalTime',['../d6/df2/classgraphics_1_1GLBackend.html#aa7e1bc37a29300f7691e444bb947e076',1,'graphics::GLBackend::getGlobalTime()'],['../d1/d6e/group____TIME.html#ga58dc8ffbd159818a06867b030220933d',1,'graphics::getGlobalTime()']]],

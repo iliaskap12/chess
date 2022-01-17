@@ -1,8 +1,6 @@
 <map id="Rectangle::setHeight" name="Rectangle::setHeight">
-<area shape="rect" id="node1" title=" " alt="" coords="224,107,369,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="224,56,369,83"/>
 <area shape="rect" id="node2" href="$d0/df0/classHUD.html#ad71e31d39ce667f7a7b0d4e6f473150e" title=" " alt="" coords="45,5,136,32"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#ae055a45904b986ac48dfa7c4e9bd66e7" title=" " alt="" coords="31,56,150,83"/>
-<area shape="rect" id="node4" href="$dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93" title=" " alt="" coords="5,107,176,133"/>
-<area shape="rect" id="node5" href="$de/dff/classPawn.html#afbe7ac4d2314ac79a62bc576b39016e7" title=" " alt="" coords="29,157,152,184"/>
-<area shape="rect" id="node6" href="$d3/d72/classSquare.html#a28031bc8ad4acc0e6647b4a41316ac51" title=" " alt="" coords="35,208,147,235"/>
+<area shape="rect" id="node3" href="$dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93" title=" " alt="" coords="5,56,176,83"/>
+<area shape="rect" id="node4" href="$de/dff/classPawn.html#afbe7ac4d2314ac79a62bc576b39016e7" title=" " alt="" coords="29,107,152,133"/>
 </map>

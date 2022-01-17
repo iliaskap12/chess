@@ -1,6 +1,5 @@
 <map id="graphics::getMouseState" name="graphics::getMouseState">
-<area shape="rect" id="node1" title=" " alt="" coords="351,31,517,57"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264" title=" " alt="" coords="168,5,299,32"/>
-<area shape="rect" id="node4" href="$d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="164,56,303,83"/>
-<area shape="rect" id="node3" href="$d3/d72/classSquare.html#a17f107957f3d5f6a74eff26d46280dcb" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="192,31,359,57"/>
+<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264" title=" " alt="" coords="9,5,140,32"/>
+<area shape="rect" id="node3" href="$d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="5,56,144,83"/>
 </map>

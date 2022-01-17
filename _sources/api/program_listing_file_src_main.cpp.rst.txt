@@ -12,7 +12,6 @@ Program Listing for File main.cpp
 
    #include <App.h>
    
-   
    int main() {
    
      auto app = App();

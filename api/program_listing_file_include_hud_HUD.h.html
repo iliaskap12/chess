@@ -78,7 +78,12 @@
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;graphics/Rectangle.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;graphics/Updateable.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;optional&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sgg/graphics.h&gt;</span><span class="cp"></span>
+<span class="c1">//#ifdef _WIN32</span>
+<span class="c1">//  #include &quot;sgg/sgg/graphics.h&quot;</span>
+<span class="c1">//#else</span>
+<span class="c1">//  #include &lt;sgg/graphics.h&gt;</span>
+<span class="c1">//#endif</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;sgg/sgg/graphics.h&quot;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">HUD</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Drawable</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Updateable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

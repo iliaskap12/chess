@@ -1,24 +1,21 @@
 <map id="/Users/runner/work/chess/chess/include/game/Checkboard.h" name="/Users/runner/work/chess/chess/include/game/Checkboard.h">
-<area shape="rect" id="node1" title=" " alt="" coords="538,5,683,61"/>
-<area shape="rect" id="node2" href="$db/d0a/Pawn_8h.html" title=" " alt="" coords="411,109,477,136"/>
-<area shape="rect" id="node8" title=" " alt="" coords="845,259,896,285"/>
-<area shape="rect" id="node12" href="$df/d74/Square_8h.html" title=" " alt="" coords="155,184,229,211"/>
-<area shape="rect" id="node22" title=" " alt="" coords="887,109,953,136"/>
-<area shape="rect" id="node3" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="576,333,717,360"/>
-<area shape="rect" id="node4" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="5,333,157,360"/>
-<area shape="rect" id="node5" href="$d4/d96/Movable_8h.html" title=" " alt="" coords="324,184,407,211"/>
-<area shape="rect" id="node6" href="$d3/d03/PawnColor_8h.html" title=" " alt="" coords="716,184,812,211"/>
-<area shape="rect" id="node9" href="$dd/df2/paths_8h.html" title=" " alt="" coords="583,184,670,211"/>
-<area shape="rect" id="node14" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="270,259,415,285"/>
-<area shape="rect" id="node7" title=" " alt="" coords="730,408,785,435"/>
-<area shape="rect" id="node10" title=" " alt="" coords="541,259,624,285"/>
-<area shape="rect" id="node11" title=" " alt="" coords="648,259,720,285"/>
-<area shape="rect" id="node13" title=" " alt="" coords="75,259,144,285"/>
-<area shape="rect" id="node15" href="$d4/de5/Point_8h.html" title=" " alt="" coords="398,333,461,360"/>
-<area shape="rect" id="node16" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="485,333,552,360"/>
-<area shape="rect" id="node17" href="$d7/d04/graphics_8h.html" title=" " alt="" coords="181,333,288,360"/>
-<area shape="rect" id="node21" title=" " alt="" coords="312,333,373,360"/>
-<area shape="rect" id="node18" title=" " alt="" coords="71,408,150,435"/>
-<area shape="rect" id="node19" href="$d3/d93/scancodes_8h.html" title=" " alt="" coords="174,408,295,435"/>
-<area shape="rect" id="node20" title=" " alt="" coords="320,408,379,435"/>
+<area shape="rect" id="node1" title=" " alt="" coords="490,5,635,61"/>
+<area shape="rect" id="node2" href="$db/d0a/Pawn_8h.html" title=" " alt="" coords="335,109,401,136"/>
+<area shape="rect" id="node8" title=" " alt="" coords="787,259,837,285"/>
+<area shape="rect" id="node12" href="$df/d74/Square_8h.html" title=" " alt="" coords="185,184,260,211"/>
+<area shape="rect" id="node19" title=" " alt="" coords="832,109,899,136"/>
+<area shape="rect" id="node3" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="5,333,147,360"/>
+<area shape="rect" id="node4" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="171,333,323,360"/>
+<area shape="rect" id="node5" href="$d4/d96/Movable_8h.html" title=" " alt="" coords="405,184,488,211"/>
+<area shape="rect" id="node6" href="$d3/d03/PawnColor_8h.html" title=" " alt="" coords="661,184,757,211"/>
+<area shape="rect" id="node9" href="$dd/df2/paths_8h.html" title=" " alt="" coords="518,184,605,211"/>
+<area shape="rect" id="node14" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="334,259,479,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="707,259,762,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="504,259,587,285"/>
+<area shape="rect" id="node11" title=" " alt="" coords="611,259,683,285"/>
+<area shape="rect" id="node13" title=" " alt="" coords="189,259,259,285"/>
+<area shape="rect" id="node15" href="$d4/de5/Point_8h.html" title=" " alt="" coords="347,333,410,360"/>
+<area shape="rect" id="node16" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="435,333,501,360"/>
+<area shape="rect" id="node17" title=" " alt="" coords="526,333,658,360"/>
+<area shape="rect" id="node18" title=" " alt="" coords="683,333,744,360"/>
 </map>
