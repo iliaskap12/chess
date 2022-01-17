@@ -1,9 +1,9 @@
 .. _exhale_function_audio_8h_1a95ded0954a20cfc7f3fb6ff68bb2452c:
 
-Function playMusicFromMemory
-============================
+Function playMusicFromMemory(Audio \*, int)
+===========================================
 
-- Defined in :ref:`file_include_sgg_audio.h`
+- Defined in :ref:`file_include_sgg_sgg_audio.h`
 
 
 Function Documentation

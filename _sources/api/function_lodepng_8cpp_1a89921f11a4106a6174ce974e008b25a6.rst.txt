@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a89921f11a4106a6174ce974e008b25a6:
+
+Function unfilterScanline
+=========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: unfilterScanline(unsigned char *, const unsigned char *, const unsigned char *, size_t, unsigned char, size_t)

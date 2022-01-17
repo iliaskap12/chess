@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1a691b23954341613b96b6d98ce67d339c:
+
+Define ERROR_BREAK
+==================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: ERROR_BREAK

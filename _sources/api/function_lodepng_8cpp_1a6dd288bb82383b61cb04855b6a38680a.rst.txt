@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a6dd288bb82383b61cb04855b6a38680a:
+
+Function HuffmanTree_makeFromLengths2
+=====================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HuffmanTree_makeFromLengths2(HuffmanTree *)

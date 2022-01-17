@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a18aff167f1895955ac0f831555e9cff3:
+
+Function Adam7_getpassvalues
+============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: Adam7_getpassvalues(unsigned, unsigned, size_t, size_t, size_t, unsigned, unsigned, unsigned)

@@ -14,5 +14,6 @@ var searchData=
   ['fontname_11',['fontname',['../dd/dba/structFont.html#aa1dc29aff0542e3ce1e46b6343e905f1',1,'Font']]],
   ['force_5fpalette_12',['force_palette',['../dc/d15/structLodePNGEncoderSettings.html#a04dc9622ccd1d7c74c56291409aa512a',1,'LodePNGEncoderSettings']]],
   ['free_13',['free',['../d3/dad/structsound.html#aad91547cb39fa4cfc0085da56c88fa46',1,'sound']]],
-  ['fshader_14',['fshader',['../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91',1,'Shader']]]
+  ['freelist_14',['freelist',['../dc/d32/structBPMLists.html#a60b8d594291b80d962e9bfedbe90f372',1,'BPMLists']]],
+  ['fshader_15',['fshader',['../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91',1,'Shader']]]
 ];

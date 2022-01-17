@@ -3,7 +3,7 @@
 Variable LODEPNG_VERSION_STRING
 ===============================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Variable Documentation

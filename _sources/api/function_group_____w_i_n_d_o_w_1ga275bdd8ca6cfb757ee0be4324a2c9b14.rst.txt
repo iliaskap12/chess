@@ -3,7 +3,7 @@
 Function graphics::setCanvasSize
 ================================
 
-- Defined in :ref:`file_include_sgg_graphics.h`
+- Defined in :ref:`file_include_sgg_sgg_graphics.cpp`
 
 
 Function Documentation

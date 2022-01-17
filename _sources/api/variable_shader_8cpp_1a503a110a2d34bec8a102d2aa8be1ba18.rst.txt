@@ -1,0 +1,13 @@
+.. _exhale_variable_shader_8cpp_1a503a110a2d34bec8a102d2aa8be1ba18:
+
+Variable __DefaultFragmentShader
+================================
+
+- Defined in :ref:`file_include_sgg_sgg_shader.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: __DefaultFragmentShader

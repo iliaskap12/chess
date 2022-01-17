@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a3480b1501e21550d2410844b9f245351:
+
+Function addChunk_PLTE
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addChunk_PLTE(ucvector *, const LodePNGColorMode *)

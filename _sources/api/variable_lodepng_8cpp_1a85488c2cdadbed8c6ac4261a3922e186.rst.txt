@@ -1,0 +1,13 @@
+.. _exhale_variable_lodepng_8cpp_1a85488c2cdadbed8c6ac4261a3922e186:
+
+Variable ADAM7_IX
+=================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: ADAM7_IX

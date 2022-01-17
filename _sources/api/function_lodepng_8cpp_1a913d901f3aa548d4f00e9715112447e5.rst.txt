@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a913d901f3aa548d4f00e9715112447e5:
+
+Function readChunk_iTXt
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readChunk_iTXt(LodePNGInfo *, const LodePNGDecompressSettings *, const unsigned char *, size_t)

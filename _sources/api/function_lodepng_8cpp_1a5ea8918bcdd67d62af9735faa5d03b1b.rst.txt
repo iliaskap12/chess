@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a5ea8918bcdd67d62af9735faa5d03b1b:
+
+Function lodepng_chunk_generate_crc(unsigned char \*)
+=====================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_chunk_generate_crc(unsigned char *)

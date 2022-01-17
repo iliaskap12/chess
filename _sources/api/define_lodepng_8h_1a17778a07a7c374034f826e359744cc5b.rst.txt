@@ -3,7 +3,7 @@
 Define LODEPNG_COMPILE_ERROR_TEXT
 =================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Define Documentation

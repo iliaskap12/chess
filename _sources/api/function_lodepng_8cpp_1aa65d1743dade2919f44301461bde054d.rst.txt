@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aa65d1743dade2919f44301461bde054d:
+
+Function readBitFromReversedStream
+==================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readBitFromReversedStream(size_t *, const unsigned char *)

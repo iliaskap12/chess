@@ -147,7 +147,18 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   63</span>{</div>
+<div class="line"><span class="lineno">   64</span>  <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#aa20bd7813b2a4cac08f29f52c1ee11c5">m_filename</a> = filename;</div>
+<div class="line"><span class="lineno">   65</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="../../d1/dea/classgraphics_1_1Texture.html#a1d1c962eed47b5fae66833fdae713529">load</a>(filename))</div>
+<div class="line"><span class="lineno">   66</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   67</span>  <a class="code hl_function" href="../../d1/dea/classgraphics_1_1Texture.html#a5be51508cf5f59525ddbec814dae0f54">makePowerOfTwo</a>();</div>
+<div class="line"><span class="lineno">   68</span>  <a class="code hl_function" href="../../d1/dea/classgraphics_1_1Texture.html#a7e74e61e412186b206368aed574cfd8b">buildGLTexture</a>();</div>
+<div class="line"><span class="lineno">   69</span>}</div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_a1d1c962eed47b5fae66833fdae713529"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#a1d1c962eed47b5fae66833fdae713529">graphics::Texture::load</a></div><div class="ttdeci">bool load(const std::string &amp;file)</div><div class="ttdef"><b>Definition:</b> texture.cpp:42</div></div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_a5be51508cf5f59525ddbec814dae0f54"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#a5be51508cf5f59525ddbec814dae0f54">graphics::Texture::makePowerOfTwo</a></div><div class="ttdeci">void makePowerOfTwo()</div><div class="ttdef"><b>Definition:</b> texture.cpp:6</div></div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_a7e74e61e412186b206368aed574cfd8b"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#a7e74e61e412186b206368aed574cfd8b">graphics::Texture::buildGLTexture</a></div><div class="ttdeci">void buildGLTexture()</div><div class="ttdef"><b>Definition:</b> texture.cpp:48</div></div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_aa20bd7813b2a4cac08f29f52c1ee11c5"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#aa20bd7813b2a4cac08f29f52c1ee11c5">graphics::Texture::m_filename</a></div><div class="ttdeci">std::string m_filename</div><div class="ttdef"><b>Definition:</b> texture.h:13</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -173,7 +184,23 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   49</span>{</div>
+<div class="line"><span class="lineno">   50</span>  glEnable(GL_TEXTURE_2D);</div>
+<div class="line"><span class="lineno">   51</span>  glGenTextures(1, &amp;<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#a9f51fc4c0cf192ea6268aa4625c89ba4">m_id</a>);</div>
+<div class="line"><span class="lineno">   52</span>  glBindTexture(GL_TEXTURE_2D, <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#a9f51fc4c0cf192ea6268aa4625c89ba4">m_id</a>);</div>
+<div class="line"><span class="lineno">   53</span>  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_NEAREST);</div>
+<div class="line"><span class="lineno">   54</span>  glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);</div>
+<div class="line"><span class="lineno">   55</span>  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><span class="lineno">   56</span>  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);</div>
+<div class="line"><span class="lineno">   57</span>  glTexImage2D(GL_TEXTURE_2D, 0, 4, <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>, <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>, 0, GL_RGBA, GL_UNSIGNED_BYTE, &amp;<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>[0]);</div>
+<div class="line"><span class="lineno">   58</span>  glGenerateMipmap(GL_TEXTURE_2D);</div>
+<div class="line"><span class="lineno">   59</span>  glBindTexture(GL_TEXTURE_2D, 0);</div>
+<div class="line"><span class="lineno">   60</span>}</div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_a9f51fc4c0cf192ea6268aa4625c89ba4"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#a9f51fc4c0cf192ea6268aa4625c89ba4">graphics::Texture::m_id</a></div><div class="ttdeci">GLuint m_id</div><div class="ttdef"><b>Definition:</b> texture.h:12</div></div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_ab10e6f9d95bd6151574f07bd6fc92f98"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">graphics::Texture::m_buffer</a></div><div class="ttdeci">std::vector&lt; unsigned char &gt; m_buffer</div><div class="ttdef"><b>Definition:</b> texture.h:16</div></div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_ad3ef65c680c0ae7221ba35c93f1dd465"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">graphics::Texture::m_height</a></div><div class="ttdeci">unsigned int m_height</div><div class="ttdef"><b>Definition:</b> texture.h:14</div></div>
+<div class="ttc" id="aclassgraphics_1_1Texture_html_af0a56a0bc5fe0c95d8cc5b4100cbb501"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">graphics::Texture::m_width</a></div><div class="ttdeci">unsigned int m_width</div><div class="ttdef"><b>Definition:</b> texture.h:14</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab7b086a5c38e5b778bb778885075d9f3" name="ab7b086a5c38e5b778bb778885075d9f3"></a>
@@ -199,7 +226,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   25</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>; }</div>
-<div class="ttc" id="aclassgraphics_1_1Texture_html_ad3ef65c680c0ae7221ba35c93f1dd465"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">graphics::Texture::m_height</a></div><div class="ttdeci">unsigned int m_height</div><div class="ttdef"><b>Definition:</b> texture.h:14</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>.</p>
 
@@ -228,7 +254,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   23</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#a9f51fc4c0cf192ea6268aa4625c89ba4">m_id</a>; }</div>
-<div class="ttc" id="aclassgraphics_1_1Texture_html_a9f51fc4c0cf192ea6268aa4625c89ba4"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#a9f51fc4c0cf192ea6268aa4625c89ba4">graphics::Texture::m_id</a></div><div class="ttdeci">GLuint m_id</div><div class="ttdef"><b>Definition:</b> texture.h:12</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#a9f51fc4c0cf192ea6268aa4625c89ba4">m_id</a>.</p>
 
@@ -257,7 +282,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   24</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>; }</div>
-<div class="ttc" id="aclassgraphics_1_1Texture_html_af0a56a0bc5fe0c95d8cc5b4100cbb501"><div class="ttname"><a href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">graphics::Texture::m_width</a></div><div class="ttdeci">unsigned int m_width</div><div class="ttdef"><b>Definition:</b> texture.h:14</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>.</p>
 
@@ -286,7 +310,11 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">   43</span>{</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> error = lodepng::decode(<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>, <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>, <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>, file.c_str());</div>
+<div class="line"><span class="lineno">   45</span>  <span class="keywordflow">return</span> !error;</div>
+<div class="line"><span class="lineno">   46</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5be51508cf5f59525ddbec814dae0f54" name="a5be51508cf5f59525ddbec814dae0f54"></a>
@@ -311,6 +339,42 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    7</span>{</div>
+<div class="line"><span class="lineno">    8</span>  <span class="comment">// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.</span></div>
+<div class="line"><span class="lineno">    9</span>  <span class="keywordtype">int</span> u2 = 1; <span class="keywordflow">while</span> (u2 &lt; <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>) u2 *= 2;</div>
+<div class="line"><span class="lineno">   10</span>  <span class="keywordtype">int</span> v2 = 1; <span class="keywordflow">while</span> (v2 &lt; <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>) v2 *= 2;</div>
+<div class="line"><span class="lineno">   11</span>  <span class="keywordflow">if</span> (u2 == <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a> &amp;&amp; v2 == <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>)</div>
+<div class="line"><span class="lineno">   12</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   13</span> </div>
+<div class="line"><span class="lineno">   14</span>  <span class="comment">// Make power of two version of the image.</span></div>
+<div class="line"><span class="lineno">   15</span>  std::vector&lt;unsigned char&gt; image2(u2 * v2 * 4);</div>
+<div class="line"><span class="lineno">   16</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; v2; i++)</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; u2; j++)</div>
+<div class="line"><span class="lineno">   18</span>    {</div>
+<div class="line"><span class="lineno">   19</span>      <span class="keywordtype">float</span> x = (<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>-1) * j / (<span class="keywordtype">float</span>)u2;</div>
+<div class="line"><span class="lineno">   20</span>      <span class="keywordtype">float</span> y = (<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>-1) * i / (<span class="keywordtype">float</span>)v2;</div>
+<div class="line"><span class="lineno">   21</span>      <span class="keywordtype">int</span> x_L = (int)floorf(x);</div>
+<div class="line"><span class="lineno">   22</span>      <span class="keywordtype">int</span> x_U = (int)ceilf(x);</div>
+<div class="line"><span class="lineno">   23</span>      <span class="keywordtype">int</span> y_L = (int)floorf(y);</div>
+<div class="line"><span class="lineno">   24</span>      <span class="keywordtype">int</span> y_U = (int)ceilf(y);</div>
+<div class="line"><span class="lineno">   25</span>      <span class="keywordtype">float</span> sx = x - x_L;</div>
+<div class="line"><span class="lineno">   26</span>      <span class="keywordtype">float</span> sy = y - y_L;</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> c = 0; c &lt; 4; c++)</div>
+<div class="line"><span class="lineno">   29</span>      {</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keywordtype">float</span> valx1 = (1.0f - sx) * <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>[4 * (y_L*<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a> + x_L) + c] + sx * <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>[4 * (y_L*<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a> + x_U) + c];</div>
+<div class="line"><span class="lineno">   31</span>        <span class="keywordtype">float</span> valx2 = (1.0f - sx) * <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>[4 * (y_U*<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a> + x_L) + c] + sx * <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>[4 * (y_U*<a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a> + x_U) + c];</div>
+<div class="line"><span class="lineno">   32</span>        <span class="keywordtype">float</span> valy = (1.0f - sy) * valx1 + sy * valx2;</div>
+<div class="line"><span class="lineno">   33</span>        image2[4 * (i*u2 + j) + c] = (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)roundf(valy);</div>
+<div class="line"><span class="lineno">   34</span>      }</div>
+<div class="line"><span class="lineno">   35</span>    }</div>
+<div class="line"><span class="lineno">   36</span> </div>
+<div class="line"><span class="lineno">   37</span>  <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a> = std::move(image2);</div>
+<div class="line"><span class="lineno">   38</span>  <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a> = u2;</div>
+<div class="line"><span class="lineno">   39</span>  <a class="code hl_variable" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a> = v2;</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#ab10e6f9d95bd6151574f07bd6fc92f98">m_buffer</a>, <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#ad3ef65c680c0ae7221ba35c93f1dd465">m_height</a>, and <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#af0a56a0bc5fe0c95d8cc5b4100cbb501">m_width</a>.</p>
 
 </div>
 </div>
@@ -334,6 +398,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#a5be51508cf5f59525ddbec814dae0f54">makePowerOfTwo()</a>.</p>
 
 </div>
 </div>
@@ -401,7 +467,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#ab7b086a5c38e5b778bb778885075d9f3">getHeight()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#ab7b086a5c38e5b778bb778885075d9f3">getHeight()</a>, and <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#a5be51508cf5f59525ddbec814dae0f54">makePowerOfTwo()</a>.</p>
 
 </div>
 </div>
@@ -471,12 +537,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#a4f64654050eed4b92b06d240169681da">getWidth()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#a4f64654050eed4b92b06d240169681da">getWidth()</a>, and <a class="el" href="../../d1/dea/classgraphics_1_1Texture.html#a5be51508cf5f59525ddbec814dae0f54">makePowerOfTwo()</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/runner/work/chess/chess/include/sgg/<a class="el" href="../../df/dba/texture_8h_source.html">texture.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/Users/runner/work/chess/chess/include/sgg/sgg/<a class="el" href="../../df/dba/texture_8h_source.html">texture.h</a></li>
+<li>/Users/runner/work/chess/chess/include/sgg/sgg/<a class="el" href="../../d2/d20/texture_8cpp.html">texture.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

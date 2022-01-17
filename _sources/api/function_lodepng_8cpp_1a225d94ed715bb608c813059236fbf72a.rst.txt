@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a225d94ed715bb608c813059236fbf72a:
+
+Function readChunk_tRNS
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readChunk_tRNS(LodePNGColorMode *, const unsigned char *, size_t)

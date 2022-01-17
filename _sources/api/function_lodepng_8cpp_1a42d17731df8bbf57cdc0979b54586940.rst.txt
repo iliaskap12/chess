@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a42d17731df8bbf57cdc0979b54586940:
+
+Function getPixelColorRGBA8
+===========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getPixelColorRGBA8(unsigned char *, unsigned char *, unsigned char *, unsigned char *, const unsigned char *, size_t, const LodePNGColorMode *)

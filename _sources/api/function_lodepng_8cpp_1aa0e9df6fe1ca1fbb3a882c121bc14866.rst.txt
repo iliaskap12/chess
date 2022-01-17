@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aa0e9df6fe1ca1fbb3a882c121bc14866:
+
+Function addChunk_sRGB
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addChunk_sRGB(ucvector *, const LodePNGInfo *)

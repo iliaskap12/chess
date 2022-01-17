@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8cpp_1a3bcdfe56aa79c67e8f745020ecd3bbf8:
+
+Typedef HuffmanTree
+===================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: HuffmanTree

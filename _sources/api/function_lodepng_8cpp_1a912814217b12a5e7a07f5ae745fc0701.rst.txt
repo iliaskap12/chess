@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a912814217b12a5e7a07f5ae745fc0701:
+
+Function lodepng_crc32(const unsigned char \*, size_t)
+======================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_crc32(const unsigned char *, size_t)

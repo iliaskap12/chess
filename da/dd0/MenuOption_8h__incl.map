@@ -1,13 +1,16 @@
 <map id="/Users/runner/work/chess/chess/include/graphics/MenuOption.h" name="/Users/runner/work/chess/chess/include/graphics/MenuOption.h">
-<area shape="rect" id="node1" title=" " alt="" coords="267,5,427,61"/>
-<area shape="rect" id="node2" href="$d0/d0b/HUD_8h.html" title=" " alt="" coords="369,109,457,136"/>
-<area shape="rect" id="node5" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="167,184,312,211"/>
-<area shape="rect" id="node3" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="334,259,454,285"/>
-<area shape="rect" id="node4" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="478,259,619,285"/>
-<area shape="rect" id="node7" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="643,259,742,285"/>
-<area shape="rect" id="node8" title=" " alt="" coords="5,259,137,285"/>
-<area shape="rect" id="node10" title=" " alt="" coords="337,184,403,211"/>
-<area shape="rect" id="node11" title=" " alt="" coords="428,184,483,211"/>
-<area shape="rect" id="node6" href="$d4/de5/Point_8h.html" title=" " alt="" coords="161,259,224,285"/>
-<area shape="rect" id="node9" title=" " alt="" coords="249,259,310,285"/>
+<area shape="rect" id="node1" title=" " alt="" coords="305,5,465,61"/>
+<area shape="rect" id="node2" href="$d0/d0b/HUD_8h.html" title=" " alt="" coords="407,109,495,136"/>
+<area shape="rect" id="node5" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="213,184,358,211"/>
+<area shape="rect" id="node3" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="5,259,125,285"/>
+<area shape="rect" id="node4" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="323,259,464,285"/>
+<area shape="rect" id="node7" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="488,259,587,285"/>
+<area shape="rect" id="node8" href="$d7/d04/graphics_8h.html" title=" " alt="" coords="611,259,743,285"/>
+<area shape="rect" id="node9" title=" " alt="" coords="754,333,809,360"/>
+<area shape="rect" id="node14" title=" " alt="" coords="383,184,449,211"/>
+<area shape="rect" id="node6" href="$d4/de5/Point_8h.html" title=" " alt="" coords="235,259,298,285"/>
+<area shape="rect" id="node13" title=" " alt="" coords="149,259,211,285"/>
+<area shape="rect" id="node10" title=" " alt="" coords="447,333,526,360"/>
+<area shape="rect" id="node11" href="$d3/d93/scancodes_8h.html" title=" " alt="" coords="551,333,647,360"/>
+<area shape="rect" id="node12" title=" " alt="" coords="671,333,729,360"/>
 </map>

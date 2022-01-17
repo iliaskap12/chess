@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1a15ea25ced619cf22e6e188cc5e5bdfb1:
+
+Define LODEPNG_ABS
+==================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_ABS

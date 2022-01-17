@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a42a60458dc0338a8995e04eb17085291:
+
+Function hash_cleanup
+=====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: hash_cleanup(Hash *)

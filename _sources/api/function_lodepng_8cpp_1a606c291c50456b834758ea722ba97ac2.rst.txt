@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a606c291c50456b834758ea722ba97ac2:
+
+Function readBits
+=================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readBits(LodePNGBitReader *, size_t)

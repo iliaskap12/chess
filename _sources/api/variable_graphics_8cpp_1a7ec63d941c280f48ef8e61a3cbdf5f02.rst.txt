@@ -1,0 +1,13 @@
+.. _exhale_variable_graphics_8cpp_1a7ec63d941c280f48ef8e61a3cbdf5f02:
+
+Variable engine
+===============
+
+- Defined in :ref:`file_include_sgg_sgg_graphics.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: engine

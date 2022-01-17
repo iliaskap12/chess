@@ -3,7 +3,7 @@
 Define GL3_PROTOTYPES
 =====================
 
-- Defined in :ref:`file_include_sgg_GLbackend.h`
+- Defined in :ref:`file_include_sgg_sgg_GLbackend.h`
 
 
 Define Documentation

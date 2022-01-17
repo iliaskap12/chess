@@ -1,0 +1,289 @@
+
+.. _file_include_sgg_sgg_lodepng.h:
+
+File lodepng.h
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg_sgg>` (``include/sgg/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/sgg/lodepng.h``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_sgg_lodepng.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``string.h`` (:ref:`file_include_util_custom-string.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+- :ref:`file_include_sgg_sgg_texture.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_struct_lode_p_n_g_color_mode`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_color_stats`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_compress_settings`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_decoder_settings`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_decompress_settings`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_encoder_settings`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_info`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_state`
+
+- :ref:`exhale_struct_struct_lode_p_n_g_time`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_lodepng_8h_1a8f763b6ae712d9802dec37019dfa0102`
+
+- :ref:`exhale_enum_lodepng_8h_1ad5215c95d5bedc9103d8e6490398254f`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_lodepng_8h_1aad7cb0e06093d0111bd599a279360f98`
+
+- :ref:`exhale_function_lodepng_8h_1a10c9cfd9edf86fc8e21d5f69d81238d0`
+
+- :ref:`exhale_function_lodepng_8h_1a93f12a150968449f016fe93decc1e074`
+
+- :ref:`exhale_function_lodepng_8h_1aabe8616184aa2adaa2a74ad989e6fb41`
+
+- :ref:`exhale_function_lodepng_8h_1ac5a9e38fc392fc26897610a6d824cc21`
+
+- :ref:`exhale_function_lodepng_8h_1a02091d970921c7b94c4e63821785f97a`
+
+- :ref:`exhale_function_lodepng_8h_1aac9fb41d4e214c0561be436751ffcab0`
+
+- :ref:`exhale_function_lodepng_8h_1a5ff4c53cd6b48a87dd34ef69a5496904`
+
+- :ref:`exhale_function_lodepng_8h_1a5e315b2a33544b8877e432adcc09e8e0`
+
+- :ref:`exhale_function_lodepng_8h_1a21711ffefd0f5e0a664a9c722b9dac4f`
+
+- :ref:`exhale_function_lodepng_8h_1ae816cc281b06ab2ece341c2f57ee65e1`
+
+- :ref:`exhale_function_lodepng_8h_1a5ea8918bcdd67d62af9735faa5d03b1b`
+
+- :ref:`exhale_function_lodepng_8h_1ad52897a6aecee7dde053c468c6bedda2`
+
+- :ref:`exhale_function_lodepng_8h_1a1c4c98f2b3ab0e7f59f06b14e9207860`
+
+- :ref:`exhale_function_lodepng_8h_1a8b132cd1680aaa36dd93eb4200978f57`
+
+- :ref:`exhale_function_lodepng_8h_1a2695e1f9d3dee3f82a89f47a6dc7c517`
+
+- :ref:`exhale_function_lodepng_8h_1a2e09963fb4b4eb4ee7789d40b9080250`
+
+- :ref:`exhale_function_lodepng_8h_1a2ccd8bef4daad75002f72308a5cbd0dc`
+
+- :ref:`exhale_function_lodepng_8h_1a5153305d442f8332326ef332316b06be`
+
+- :ref:`exhale_function_lodepng_8h_1a16318170d8eae1b4ca0f970fe2c34e48`
+
+- :ref:`exhale_function_lodepng_8h_1aea7d8c2bb2adaf028ec143c08a53f815`
+
+- :ref:`exhale_function_lodepng_8h_1a533d58c161de45096b83c44bbaa95e93`
+
+- :ref:`exhale_function_lodepng_8h_1ab1c7709a984d5842ab314cf5d2dc2dcc`
+
+- :ref:`exhale_function_lodepng_8h_1a7801819a161b96f65259680126e270f1`
+
+- :ref:`exhale_function_lodepng_8h_1a66345d4cdab130c6cbd3166d7a0a5257`
+
+- :ref:`exhale_function_lodepng_8h_1a411f09f0c642dae12c92f3af9d37a4c8`
+
+- :ref:`exhale_function_lodepng_8h_1a8262a8a17b785f72034b585ae13aafcf`
+
+- :ref:`exhale_function_lodepng_8h_1a6fbd123f5a5f3abbf7149ad3ffba9e57`
+
+- :ref:`exhale_function_lodepng_8h_1ae9121db6bfaefbdc00c9963934511e74`
+
+- :ref:`exhale_function_lodepng_8h_1abd20ba96aa7a2e3d782204c604baab09`
+
+- :ref:`exhale_function_lodepng_8h_1a1608496525479b21a6faeaa69285156f`
+
+- :ref:`exhale_function_lodepng_8h_1a70adabd588a9a27dcc9eb4322f6c3b3f`
+
+- :ref:`exhale_function_lodepng_8h_1ad7df6a47afc81f1854cf5a23471cf96b`
+
+- :ref:`exhale_function_lodepng_8h_1aadc99e713f6408d391dfa140d8e95b96`
+
+- :ref:`exhale_function_lodepng_8h_1a67c3a7ee81836f6e5c9ba6487a1b38f5`
+
+- :ref:`exhale_function_lodepng_8h_1a3eca27e18f0e71cf1c21e1c1f5ff4aab`
+
+- :ref:`exhale_function_lodepng_8h_1a6eec335315ecb6182292ebd37ef02b4a`
+
+- :ref:`exhale_function_lodepng_8h_1a623138ad43ce7eae0346e4324ba1f14e`
+
+- :ref:`exhale_function_lodepng_8h_1a9220280c647e2a90a9b05d20038f1c6d`
+
+- :ref:`exhale_function_lodepng_8h_1ab752d2ce31fb7e6fe1a27b559d3097ad`
+
+- :ref:`exhale_function_lodepng_8h_1a6f5f070e236aaf9b1809e34b467f3225`
+
+- :ref:`exhale_function_lodepng_8h_1a90e82b0ccc75cfb27ccc9756c8d96f07`
+
+- :ref:`exhale_function_lodepng_8h_1a4100642d70071029967c16afd72193ff`
+
+- :ref:`exhale_function_lodepng_8h_1a4f8f383c22ceb7c22b1cc7e774f0bad2`
+
+- :ref:`exhale_function_lodepng_8h_1a75d7f3e4e388b74b7b5214c76c66382f`
+
+- :ref:`exhale_function_lodepng_8h_1a018a3bd975fb886cdf1f6f544f2882e4`
+
+- :ref:`exhale_function_lodepng_8h_1a009ac38098765fcae32c9d91770b94df`
+
+- :ref:`exhale_function_lodepng_8h_1ada7bc92db6e9f8906a1fc85caa0b17aa`
+
+- :ref:`exhale_function_lodepng_8h_1a874763ad14a0c84d41d0819212407a5a`
+
+- :ref:`exhale_function_lodepng_8h_1acbd8698f07faa837c59ca004a7ad2ef4`
+
+- :ref:`exhale_function_lodepng_8h_1a83344b5c8c5839ca42858dd3578220ef`
+
+- :ref:`exhale_function_lodepng_8h_1abca559f31bf69eabc23c09a8a4c80b93`
+
+- :ref:`exhale_function_lodepng_8h_1a5861bf2c5a7c8976ea2dd6d21e8d58bd`
+
+- :ref:`exhale_function_lodepng_8h_1a4e89e0d7e13e0f3c098c4cf326cc5014`
+
+- :ref:`exhale_function_lodepng_8h_1a82c0c408213e5bbb4a8d0edbaeffc97f`
+
+- :ref:`exhale_function_lodepng_8h_1a9c2f61923ad2ce3d47354923ba6df62d`
+
+- :ref:`exhale_function_lodepng_8h_1ad4b9dc33569e24062e077f5a69ead178`
+
+- :ref:`exhale_function_lodepng_8h_1a14a4dc4c26e03acb5ab36880aacbd85a`
+
+- :ref:`exhale_function_lodepng_8h_1ae50c1ddde2fa8004b46da433f3e20974`
+
+- :ref:`exhale_function_lodepng_8h_1a0bee70fa0a93ca4463b35a3ceb9910e3`
+
+- :ref:`exhale_function_lodepng_8h_1a0285afa60b6263b9c6854424fffbf010`
+
+- :ref:`exhale_function_lodepng_8h_1aa255d9a2e4054fc2888bf7670dac4107`
+
+- :ref:`exhale_function_lodepng_8h_1ae0e6996e4aa9ac225f228b2253269127`
+
+- :ref:`exhale_function_lodepng_8h_1ad9b8eca971e9d01d55ced928b26a53c5`
+
+- :ref:`exhale_function_lodepng_8h_1af0b16abca7a6a20ff4980e9f04374c90`
+
+- :ref:`exhale_function_lodepng_8h_1a05bf6fac7afc9025bbcb9f5f9f1b0027`
+
+- :ref:`exhale_function_lodepng_8h_1a2aa729ce82079627789a0f8961c82f5e`
+
+- :ref:`exhale_function_lodepng_8h_1a837bf136ff32ee3efed5df4105ccedf7`
+
+- :ref:`exhale_function_lodepng_8h_1aeaa684595223a1a737d80f30a00dacca`
+
+- :ref:`exhale_function_lodepng_8h_1a74109bf9860e2eb4bfa872ab8cf0f000`
+
+- :ref:`exhale_function_lodepng_8h_1a87514bea6f324553184e48794a0ec3fc`
+
+- :ref:`exhale_function_lodepng_8h_1ae3ee1eb944467fbbc1cf939328dd6a57`
+
+- :ref:`exhale_function_lodepng_8h_1a72d4240c44c9ba1814dae814c7d80eb1`
+
+- :ref:`exhale_function_lodepng_8h_1ae66b9c1eeb9c44572bd381a94485e157`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_lodepng_8h_1ad66391e2a2f41b1628c6926d401bd6ce`
+
+- :ref:`exhale_define_lodepng_8h_1a32282377bca2e3e43bcf16aa9daa8554`
+
+- :ref:`exhale_define_lodepng_8h_1a823441da1dd5ddf7282d1f3bca124938`
+
+- :ref:`exhale_define_lodepng_8h_1af8e782a2a5642d12dba9aa38a7a00133`
+
+- :ref:`exhale_define_lodepng_8h_1a2285c1e239bc24607901ad98e8ebb7eb`
+
+- :ref:`exhale_define_lodepng_8h_1a17778a07a7c374034f826e359744cc5b`
+
+- :ref:`exhale_define_lodepng_8h_1af557b37dd9fcaed5be60c0b143e54b38`
+
+- :ref:`exhale_define_lodepng_8h_1a66c036f5e0213ff2cc380bab4486738d`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_lodepng_8h_1a8311042f05584567db96143811fe706d`
+
+- :ref:`exhale_typedef_lodepng_8h_1acfea24109b86e348320636a5df7fa0d6`
+
+- :ref:`exhale_typedef_lodepng_8h_1aeb20f58ed9dbcb534bae30f05a79f0a5`
+
+- :ref:`exhale_typedef_lodepng_8h_1a0f335a24ea8c0500860d582fbfeb1c38`
+
+- :ref:`exhale_typedef_lodepng_8h_1a09fd723b8bbc750eeec5cb22e04530f1`
+
+- :ref:`exhale_typedef_lodepng_8h_1a7d5d22aab76370293dd43cb348630f33`
+
+- :ref:`exhale_typedef_lodepng_8h_1ac388ae9b29b361e55c967009b65a6369`
+
+- :ref:`exhale_typedef_lodepng_8h_1af06a75c0d744d7f99814dd607a3b798d`
+
+- :ref:`exhale_typedef_lodepng_8h_1a2b202fb988cf2b881266a26cf081f016`
+
+- :ref:`exhale_typedef_lodepng_8h_1a23316369c1c2a1e76f0205fd4b482117`
+
+- :ref:`exhale_typedef_lodepng_8h_1a4892d17f5e08bac94a4f7a052fdcd816`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_lodepng_8h_1a0b5cf190f94f8f11ed5c0abb3504ad86`
+
+- :ref:`exhale_variable_lodepng_8h_1aab7a41a03154aa8d9ef65f2d434641b6`
+
+- :ref:`exhale_variable_lodepng_8h_1a8b5b5e358236bf8112bd6e58ae8da1b2`
+

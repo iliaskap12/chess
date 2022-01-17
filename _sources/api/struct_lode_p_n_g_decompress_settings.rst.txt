@@ -3,7 +3,7 @@
 Struct LodePNGDecompressSettings
 ================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Struct Documentation

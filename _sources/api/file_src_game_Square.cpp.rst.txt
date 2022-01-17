@@ -33,7 +33,7 @@ Includes
 
 - ``game/Square.h`` (:ref:`file_include_game_Square.h`)
 
-- ``sgg/graphics.h`` (:ref:`file_include_sgg_graphics.h`)
+- ``sgg/graphics.h`` (:ref:`file_include_sgg_sgg_graphics.h`)
 
 
 

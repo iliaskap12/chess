@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a7801c23424f9b228da7a5c8de3538eb3:
+
+Function getValueRequiredBits
+=============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getValueRequiredBits(unsigned char)

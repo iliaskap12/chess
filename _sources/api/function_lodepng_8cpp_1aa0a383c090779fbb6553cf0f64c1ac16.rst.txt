@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aa0a383c090779fbb6553cf0f64c1ac16:
+
+Function rgba8ToPixel
+=====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: rgba8ToPixel(unsigned char *, size_t, const LodePNGColorMode *, ColorTree *, unsigned char, unsigned char, unsigned char, unsigned char)

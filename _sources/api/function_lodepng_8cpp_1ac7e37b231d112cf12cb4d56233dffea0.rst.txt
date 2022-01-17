@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ac7e37b231d112cf12cb4d56233dffea0:
+
+Function LodePNGText_copy
+=========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: LodePNGText_copy(LodePNGInfo *, const LodePNGInfo *)

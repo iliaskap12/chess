@@ -1,0 +1,46 @@
+
+.. _file_include_sgg_sgg_commonshaders.h:
+
+File commonshaders.h
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg_sgg>` (``include/sgg/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/sgg/commonshaders.h``)
+------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_sgg_commonshaders.h.rst
+
+
+
+
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_include_sgg_sgg_GLbackend.cpp`
+
+
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_commonshaders_8h_1afb24b47d7bdaf3b54e7ad01208a7495f`
+
+- :ref:`exhale_variable_commonshaders_8h_1a5049ed1af5c70ba55cd7d7d4f96c972e`
+

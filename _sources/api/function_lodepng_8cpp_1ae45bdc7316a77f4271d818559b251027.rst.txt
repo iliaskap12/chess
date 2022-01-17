@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ae45bdc7316a77f4271d818559b251027:
+
+Function paethPredictor
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: paethPredictor(short, short, short)

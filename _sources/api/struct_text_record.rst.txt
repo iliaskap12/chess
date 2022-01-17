@@ -3,7 +3,7 @@
 Struct TextRecord
 =================
 
-- Defined in :ref:`file_include_sgg_fonts.h`
+- Defined in :ref:`file_include_sgg_sgg_fonts.h`
 
 
 Struct Documentation

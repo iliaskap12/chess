@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aac9fb41d4e214c0561be436751ffcab0:
+
+Function lodepng_chunk_create(unsigned char \*\*, size_t \*, unsigned, const char \*, const unsigned char \*)
+=============================================================================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_chunk_create(unsigned char **, size_t *, unsigned, const char *, const unsigned char *)

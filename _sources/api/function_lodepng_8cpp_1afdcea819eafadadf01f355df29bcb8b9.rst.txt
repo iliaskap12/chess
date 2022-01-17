@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1afdcea819eafadadf01f355df29bcb8b9:
+
+Function reverseBits
+====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: reverseBits(unsigned, unsigned)

@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ae88e1a3f2626aba4940af8753d4b9811:
+
+Function huffmanDecodeSymbol
+============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: huffmanDecodeSymbol(LodePNGBitReader *, const HuffmanTree *)

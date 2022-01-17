@@ -1,0 +1,16 @@
+.. _exhale_struct_struct_b_p_m_node:
+
+Struct BPMNode
+==============
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: BPMNode
+   :members:
+   :protected-members:
+   :undoc-members:

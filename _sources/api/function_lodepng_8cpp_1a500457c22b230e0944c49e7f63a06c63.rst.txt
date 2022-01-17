@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a500457c22b230e0944c49e7f63a06c63:
+
+Function addChunk_pHYs
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addChunk_pHYs(ucvector *, const LodePNGInfo *)

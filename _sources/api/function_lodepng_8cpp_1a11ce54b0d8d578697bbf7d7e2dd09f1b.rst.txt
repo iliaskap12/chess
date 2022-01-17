@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a11ce54b0d8d578697bbf7d7e2dd09f1b:
+
+Function addChunk_IHDR
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addChunk_IHDR(ucvector *, unsigned, unsigned, LodePNGColorType, unsigned, unsigned)

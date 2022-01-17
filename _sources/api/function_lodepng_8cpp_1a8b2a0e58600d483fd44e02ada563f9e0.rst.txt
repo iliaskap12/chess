@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a8b2a0e58600d483fd44e02ada563f9e0:
+
+Function getPixelColorsRGB8
+===========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: getPixelColorsRGB8(unsigned char *, size_t, const unsigned char *, const LodePNGColorMode *)

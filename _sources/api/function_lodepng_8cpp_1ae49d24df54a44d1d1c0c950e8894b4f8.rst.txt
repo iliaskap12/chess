@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ae49d24df54a44d1d1c0c950e8894b4f8:
+
+Function inflateNoCompression
+=============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: inflateNoCompression(ucvector *, LodePNGBitReader *, const LodePNGDecompressSettings *)

@@ -1,0 +1,13 @@
+.. _exhale_variable_lodepng_8cpp_1af28303e3493bf54c3bccf14b11039ed9:
+
+Variable CLCL_ORDER
+===================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: CLCL_ORDER

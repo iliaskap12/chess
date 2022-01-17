@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a0285afa60b6263b9c6854424fffbf010:
 
-Function lodepng_inspect_chunk
-==============================
+Function lodepng_inspect_chunk(LodePNGState \*, size_t, const unsigned char \*, size_t)
+=======================================================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

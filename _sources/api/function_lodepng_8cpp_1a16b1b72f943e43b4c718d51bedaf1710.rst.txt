@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a16b1b72f943e43b4c718d51bedaf1710:
+
+Function isGrayICCProfile
+=========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: isGrayICCProfile(const unsigned char *, unsigned)

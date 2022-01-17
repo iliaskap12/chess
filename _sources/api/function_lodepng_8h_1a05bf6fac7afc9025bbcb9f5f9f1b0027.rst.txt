@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a05bf6fac7afc9025bbcb9f5f9f1b0027:
 
-Function lodepng_palette_add
-============================
+Function lodepng_palette_add(LodePNGColorMode \*, unsigned char, unsigned char, unsigned char, unsigned char)
+=============================================================================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

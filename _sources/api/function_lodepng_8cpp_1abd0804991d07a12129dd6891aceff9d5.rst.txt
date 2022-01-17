@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1abd0804991d07a12129dd6891aceff9d5:
+
+Function readChunk_cHRM
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readChunk_cHRM(LodePNGInfo *, const unsigned char *, size_t)

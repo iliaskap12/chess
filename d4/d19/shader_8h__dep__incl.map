@@ -1,5 +1,9 @@
-<map id="/Users/runner/work/chess/chess/include/sgg/shader.h" name="/Users/runner/work/chess/chess/include/sgg/shader.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,151,61"/>
-<area shape="rect" id="node2" href="$d8/d2c/GLbackend_8h.html" title=" " alt="" coords="5,213,151,269"/>
-<area shape="rect" id="node3" href="$d3/d78/fonts_8h.html" title=" " alt="" coords="61,109,207,165"/>
+<map id="/Users/runner/work/chess/chess/include/sgg/sgg/shader.h" name="/Users/runner/work/chess/chess/include/sgg/sgg/shader.h">
+<area shape="rect" id="node1" title=" " alt="" coords="217,5,363,61"/>
+<area shape="rect" id="node2" href="$d8/d2c/GLbackend_8h.html" title=" " alt="" coords="103,213,256,269"/>
+<area shape="rect" id="node5" href="$d3/d78/fonts_8h.html" title=" " alt="" coords="217,109,363,165"/>
+<area shape="rect" id="node7" href="$dd/d1e/shader_8cpp.html" title=" " alt="" coords="387,109,532,165"/>
+<area shape="rect" id="node3" href="$d3/dc9/GLbackend_8cpp.html" title=" " alt="" coords="5,317,172,373"/>
+<area shape="rect" id="node4" href="$d6/d99/graphics_8cpp.html" title=" " alt="" coords="196,317,347,373"/>
+<area shape="rect" id="node6" href="$db/dde/fonts_8cpp.html" title=" " alt="" coords="280,213,425,269"/>
 </map>

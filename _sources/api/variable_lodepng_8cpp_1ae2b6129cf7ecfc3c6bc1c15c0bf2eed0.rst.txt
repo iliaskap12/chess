@@ -1,0 +1,13 @@
+.. _exhale_variable_lodepng_8cpp_1ae2b6129cf7ecfc3c6bc1c15c0bf2eed0:
+
+Variable DISTANCEEXTRA
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: DISTANCEEXTRA

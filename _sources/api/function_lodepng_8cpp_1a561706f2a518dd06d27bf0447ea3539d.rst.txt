@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a561706f2a518dd06d27bf0447ea3539d:
+
+Function color_tree_cleanup
+===========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: color_tree_cleanup(ColorTree *)

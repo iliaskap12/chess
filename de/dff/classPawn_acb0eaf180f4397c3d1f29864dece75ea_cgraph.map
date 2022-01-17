@@ -1,7 +1,12 @@
 <map id="Pawn::draw" name="Pawn::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,96,83"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="144,56,261,83"/>
-<area shape="rect" id="node3" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="319,5,453,32"/>
-<area shape="rect" id="node4" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="309,56,463,83"/>
-<area shape="rect" id="node5" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="343,107,429,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,125,96,152"/>
+<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="144,125,261,152"/>
+<area shape="rect" id="node3" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="319,68,453,95"/>
+<area shape="rect" id="node8" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="309,125,463,152"/>
+<area shape="rect" id="node10" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="343,176,429,203"/>
+<area shape="rect" id="node4" href="$d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f" title=" " alt="" coords="511,57,657,98"/>
+<area shape="rect" id="node5" href="$d9/d69/classShader.html#a91f6b1b90751bf9bf1b4afe6d8f221c1" title=" " alt="" coords="705,5,892,32"/>
+<area shape="rect" id="node6" href="$d0/d9c/classgraphics_1_1TextureManager.html#ad7d48b913ed7c8fedfec1349cb0de687" title=" " alt="" coords="713,57,885,98"/>
+<area shape="rect" id="node7" href="$d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100" title=" " alt="" coords="753,147,845,173"/>
+<area shape="rect" id="node9" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="511,122,657,163"/>
 </map>

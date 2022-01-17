@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a5cabd4078527ba33b78791fac7e8b15c:
+
+Function lodepng_free
+=====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_free(void *)

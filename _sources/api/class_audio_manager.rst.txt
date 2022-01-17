@@ -3,7 +3,7 @@
 Class AudioManager
 ==================
 
-- Defined in :ref:`file_include_sgg_AudioManager.h`
+- Defined in :ref:`file_include_sgg_sgg_AudioManager.h`
 
 
 Class Documentation

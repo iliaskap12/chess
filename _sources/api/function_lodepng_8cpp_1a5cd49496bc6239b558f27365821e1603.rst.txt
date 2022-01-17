@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a5cd49496bc6239b558f27365821e1603:
+
+Function lodepng_buffer_file
+============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_buffer_file(unsigned char *, size_t, const char *)

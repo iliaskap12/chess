@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1ae816cc281b06ab2ece341c2f57ee65e1:
 
-Function lodepng_chunk_find_const
-=================================
+Function lodepng_chunk_find_const(const unsigned char \*, const unsigned char \*, const char)
+=============================================================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

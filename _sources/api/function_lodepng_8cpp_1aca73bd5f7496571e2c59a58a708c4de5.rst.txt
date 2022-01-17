@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aca73bd5f7496571e2c59a58a708c4de5:
+
+Function lodepng_filesize
+=========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_filesize(const char *)

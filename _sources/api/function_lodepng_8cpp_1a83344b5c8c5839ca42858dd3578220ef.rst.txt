@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a83344b5c8c5839ca42858dd3578220ef:
+
+Function lodepng_get_bpp(const LodePNGColorMode \*)
+===================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_get_bpp(const LodePNGColorMode *)

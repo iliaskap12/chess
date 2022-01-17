@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1acfb12caea990f92b3aed7c199f615213:
+
+Define FIRST_LENGTH_CODE_INDEX
+==============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: FIRST_LENGTH_CODE_INDEX

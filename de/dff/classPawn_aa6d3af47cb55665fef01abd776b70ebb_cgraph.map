@@ -1,4 +1,5 @@
 <map id="Pawn::capture" name="Pawn::capture">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,112,32"/>
-<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="160,5,313,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,112,39"/>
+<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="160,13,313,39"/>
+<area shape="rect" id="node3" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="361,5,508,47"/>
 </map>

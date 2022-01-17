@@ -1,0 +1,13 @@
+.. _exhale_variable_lodepng_8cpp_1a36f7494abb7d8fa1ed4c00495ccc69b9:
+
+Variable LENGTHEXTRA
+====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: LENGTHEXTRA

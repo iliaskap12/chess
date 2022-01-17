@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1aad7cb0e06093d0111bd599a279360f98:
 
-Function lodepng_add_itext
-==========================
+Function lodepng_add_itext(LodePNGInfo \*, const char \*, const char \*, const char \*, const char \*)
+======================================================================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

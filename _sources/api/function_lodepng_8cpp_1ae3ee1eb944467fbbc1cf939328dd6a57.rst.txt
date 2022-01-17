@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ae3ee1eb944467fbbc1cf939328dd6a57:
+
+Function lodepng_state_init(LodePNGState \*)
+============================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_state_init(LodePNGState *)

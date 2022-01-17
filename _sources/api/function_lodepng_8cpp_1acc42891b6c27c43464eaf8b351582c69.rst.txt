@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1acc42891b6c27c43464eaf8b351582c69:
+
+Function readChunk_iCCP
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readChunk_iCCP(LodePNGInfo *, const LodePNGDecompressSettings *, const unsigned char *, size_t)

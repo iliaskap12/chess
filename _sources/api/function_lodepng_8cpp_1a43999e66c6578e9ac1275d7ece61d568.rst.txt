@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a43999e66c6578e9ac1275d7ece61d568:
+
+Function encodeLZ77
+===================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: encodeLZ77(uivector *, Hash *, const unsigned char *, size_t, size_t, unsigned, unsigned, unsigned, unsigned)

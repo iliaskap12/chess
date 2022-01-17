@@ -3,7 +3,7 @@
 Class Uniform
 =============
 
-- Defined in :ref:`file_include_sgg_shader.h`
+- Defined in :ref:`file_include_sgg_sgg_shader.h`
 
 
 Class Documentation

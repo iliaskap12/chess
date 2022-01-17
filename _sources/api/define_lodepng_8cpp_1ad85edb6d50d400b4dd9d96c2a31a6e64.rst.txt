@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1ad85edb6d50d400b4dd9d96c2a31a6e64:
+
+Define LODEPNG_MIN
+==================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_MIN

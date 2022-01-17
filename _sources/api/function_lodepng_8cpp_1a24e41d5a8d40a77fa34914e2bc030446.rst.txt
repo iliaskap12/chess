@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a24e41d5a8d40a77fa34914e2bc030446:
+
+Function HuffmanTree_makeFromFrequencies
+========================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: HuffmanTree_makeFromFrequencies(HuffmanTree *, const unsigned *, size_t, size_t, unsigned)

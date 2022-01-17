@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1acc18fbdfdc14c3406b5fe58cab1465be:
+
+Function advanceBits
+====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: advanceBits(LodePNGBitReader *, size_t)

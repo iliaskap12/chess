@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a2ccd8bef4daad75002f72308a5cbd0dc:
 
-Function lodepng_chunk_type
-===========================
+Function lodepng_chunk_type(char, const unsigned char \*)
+=========================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

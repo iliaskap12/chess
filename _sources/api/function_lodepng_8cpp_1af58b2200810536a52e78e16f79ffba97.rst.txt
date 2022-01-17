@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1af58b2200810536a52e78e16f79ffba97:
+
+Function LodePNGUnknownChunks_cleanup
+=====================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: LodePNGUnknownChunks_cleanup(LodePNGInfo *)

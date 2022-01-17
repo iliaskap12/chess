@@ -1,4 +1,7 @@
-<map id="/Users/runner/work/chess/chess/include/sgg/AudioManager.h" name="/Users/runner/work/chess/chess/include/sgg/AudioManager.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,151,61"/>
-<area shape="rect" id="node2" href="$d8/d2c/GLbackend_8h.html" title=" " alt="" coords="5,109,151,165"/>
+<map id="/Users/runner/work/chess/chess/include/sgg/sgg/AudioManager.h" name="/Users/runner/work/chess/chess/include/sgg/sgg/AudioManager.h">
+<area shape="rect" id="node1" title=" " alt="" coords="108,5,277,61"/>
+<area shape="rect" id="node2" href="$d2/d02/AudioManager_8cpp.html" title=" " alt="" coords="5,109,188,165"/>
+<area shape="rect" id="node3" href="$d8/d2c/GLbackend_8h.html" title=" " alt="" coords="212,109,365,165"/>
+<area shape="rect" id="node4" href="$d3/dc9/GLbackend_8cpp.html" title=" " alt="" coords="113,213,280,269"/>
+<area shape="rect" id="node5" href="$d6/d99/graphics_8cpp.html" title=" " alt="" coords="304,213,455,269"/>
 </map>

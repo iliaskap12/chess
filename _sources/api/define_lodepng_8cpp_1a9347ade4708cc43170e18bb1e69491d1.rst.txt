@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1a9347ade4708cc43170e18bb1e69491d1:
+
+Define LODEPNG_RESTRICT
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_RESTRICT

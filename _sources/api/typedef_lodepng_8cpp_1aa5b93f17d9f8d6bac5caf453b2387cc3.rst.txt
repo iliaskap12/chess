@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8cpp_1aa5b93f17d9f8d6bac5caf453b2387cc3:
+
+Typedef BPMNode
+===============
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: BPMNode

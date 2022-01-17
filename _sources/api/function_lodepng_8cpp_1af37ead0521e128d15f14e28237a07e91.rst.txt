@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1af37ead0521e128d15f14e28237a07e91:
+
+Function readChunk_pHYs
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readChunk_pHYs(LodePNGInfo *, const unsigned char *, size_t)

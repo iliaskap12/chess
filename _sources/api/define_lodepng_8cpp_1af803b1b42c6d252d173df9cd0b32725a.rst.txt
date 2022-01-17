@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1af803b1b42c6d252d173df9cd0b32725a:
+
+Define CERROR_BREAK
+===================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CERROR_BREAK

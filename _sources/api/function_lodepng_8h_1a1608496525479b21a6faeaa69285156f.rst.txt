@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a1608496525479b21a6faeaa69285156f:
 
-Function lodepng_crc32
-======================
+Function lodepng_crc32(const unsigned char \*, size_t)
+======================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

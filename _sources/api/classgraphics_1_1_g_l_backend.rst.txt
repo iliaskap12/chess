@@ -3,7 +3,7 @@
 Class GLBackend
 ===============
 
-- Defined in :ref:`file_include_sgg_GLbackend.h`
+- Defined in :ref:`file_include_sgg_sgg_GLbackend.h`
 
 
 Class Documentation

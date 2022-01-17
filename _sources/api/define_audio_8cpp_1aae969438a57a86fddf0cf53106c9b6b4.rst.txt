@@ -1,0 +1,13 @@
+.. _exhale_define_audio_8cpp_1aae969438a57a86fddf0cf53106c9b6b4:
+
+Define AUDIO_FREQUENCY
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AUDIO_FREQUENCY

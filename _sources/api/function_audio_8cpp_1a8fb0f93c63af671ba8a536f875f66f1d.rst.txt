@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8cpp_1a8fb0f93c63af671ba8a536f875f66f1d:
+
+Function playMusic(const char \*, int)
+======================================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: playMusic(const char *, int)

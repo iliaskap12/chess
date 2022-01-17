@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1acf2b71bdf180dc21705b20bf42fc1a58:
+
+Function lodepng_addofl
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_addofl(size_t, size_t, size_t *)

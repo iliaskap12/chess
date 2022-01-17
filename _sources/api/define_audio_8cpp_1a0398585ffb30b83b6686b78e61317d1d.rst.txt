@@ -1,0 +1,13 @@
+.. _exhale_define_audio_8cpp_1a0398585ffb30b83b6686b78e61317d1d:
+
+Define SDL_AUDIO_ALLOW_CHANGES
+==============================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: SDL_AUDIO_ALLOW_CHANGES

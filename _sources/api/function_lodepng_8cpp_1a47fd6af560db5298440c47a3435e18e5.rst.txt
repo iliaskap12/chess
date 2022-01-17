@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a47fd6af560db5298440c47a3435e18e5:
+
+Function ensureBits9
+====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ensureBits9(LodePNGBitReader *, size_t)

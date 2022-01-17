@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8cpp_1a71c23b68e73a0237e203960e974e096f:
+
+Function addMusic
+=================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addMusic(Audio *, Audio *)

@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8cpp_1a95ded0954a20cfc7f3fb6ff68bb2452c:
+
+Function playMusicFromMemory(Audio \*, int)
+===========================================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: playMusicFromMemory(Audio *, int)

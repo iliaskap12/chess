@@ -1,36 +1,39 @@
 <map id="/Users/runner/work/chess/chess/src/graphics/MainMenu.cpp" name="/Users/runner/work/chess/chess/src/graphics/MainMenu.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="430,5,605,61"/>
-<area shape="rect" id="node2" href="$de/d8b/App_8h.html" title=" " alt="" coords="196,109,252,136"/>
-<area shape="rect" id="node9" href="$da/d16/MainMenu_8h.html" title=" " alt="" coords="369,259,463,285"/>
-<area shape="rect" id="node30" title=" " alt="" coords="443,557,515,584"/>
-<area shape="rect" id="node32" href="$d9/d63/PlayingScreen_8h.html" title=" " alt="" coords="580,184,751,211"/>
-<area shape="rect" id="node34" title=" " alt="" coords="605,109,659,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="51,557,120,584"/>
-<area shape="rect" id="node4" href="$d1/d25/Screen_8h.html" title=" " alt="" coords="199,259,326,285"/>
-<area shape="rect" id="node8" href="$d5/d70/OpeningScreen_8h.html" title=" " alt="" coords="199,184,374,211"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1087,632,1219,659"/>
-<area shape="rect" id="node21" href="$d3/d5f/Game_8h.html" title=" " alt="" coords="671,259,775,285"/>
-<area shape="rect" id="node5" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="1388,632,1476,659"/>
-<area shape="rect" id="node6" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="791,632,889,659"/>
-<area shape="rect" id="node7" href="$db/d6d/ButtonType_8h.html" title=" " alt="" coords="195,408,293,435"/>
-<area shape="rect" id="node10" href="$df/dde/Menu_8h.html" title=" " alt="" coords="387,333,453,360"/>
-<area shape="rect" id="node11" title=" " alt="" coords="369,408,479,435"/>
-<area shape="rect" id="node12" href="$d4/d6c/MenuOption_8h.html" title=" " alt="" coords="1191,408,1294,435"/>
-<area shape="rect" id="node13" href="$d0/d0b/HUD_8h.html" title=" " alt="" coords="1280,483,1368,509"/>
-<area shape="rect" id="node15" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="1019,557,1165,584"/>
-<area shape="rect" id="node14" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="1244,632,1364,659"/>
-<area shape="rect" id="node19" title=" " alt="" coords="1493,557,1560,584"/>
-<area shape="rect" id="node20" title=" " alt="" coords="681,557,735,584"/>
-<area shape="rect" id="node16" href="$d4/de5/Point_8h.html" title=" " alt="" coords="914,632,977,659"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1001,632,1063,659"/>
-<area shape="rect" id="node22" href="$da/dbf/Player_8h.html" title=" " alt="" coords="688,408,757,435"/>
-<area shape="rect" id="node25" href="$da/d31/Checkboard_8h.html" title=" " alt="" coords="874,333,977,360"/>
-<area shape="rect" id="node23" href="$d3/d03/PawnColor_8h.html" title=" " alt="" coords="691,483,787,509"/>
-<area shape="rect" id="node24" title=" " alt="" coords="597,557,648,584"/>
-<area shape="rect" id="node26" href="$db/d0a/Pawn_8h.html" title=" " alt="" coords="963,408,1029,435"/>
-<area shape="rect" id="node31" href="$df/d74/Square_8h.html" title=" " alt="" coords="923,483,997,509"/>
-<area shape="rect" id="node27" href="$d4/d96/Movable_8h.html" title=" " alt="" coords="1123,483,1205,509"/>
-<area shape="rect" id="node28" href="$dd/df2/paths_8h.html" title=" " alt="" coords="811,483,898,509"/>
-<area shape="rect" id="node29" title=" " alt="" coords="760,557,843,584"/>
-<area shape="rect" id="node33" href="$d2/df8/PawnCount_8h.html" title=" " alt="" coords="1443,333,1570,360"/>
+<area shape="rect" id="node1" title=" " alt="" coords="1304,5,1478,61"/>
+<area shape="rect" id="node2" href="$de/d8b/App_8h.html" title=" " alt="" coords="1363,109,1419,136"/>
+<area shape="rect" id="node9" href="$da/d16/MainMenu_8h.html" title=" " alt="" coords="1344,259,1438,285"/>
+<area shape="rect" id="node33" title=" " alt="" coords="146,557,218,584"/>
+<area shape="rect" id="node35" href="$d9/d63/PlayingScreen_8h.html" title=" " alt="" coords="1007,184,1178,211"/>
+<area shape="rect" id="node37" title=" " alt="" coords="1667,109,1720,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1464,557,1534,584"/>
+<area shape="rect" id="node4" href="$d1/d25/Screen_8h.html" title=" " alt="" coords="1137,333,1264,360"/>
+<area shape="rect" id="node8" href="$d5/d70/OpeningScreen_8h.html" title=" " alt="" coords="1304,184,1478,211"/>
+<area shape="rect" id="node17" href="$d7/d04/graphics_8h.html" title=" " alt="" coords="1110,632,1242,659"/>
+<area shape="rect" id="node24" href="$d3/d5f/Game_8h.html" title=" " alt="" coords="675,259,779,285"/>
+<area shape="rect" id="node5" href="$d7/d2f/Drawable_8h.html" title=" " alt="" coords="630,632,718,659"/>
+<area shape="rect" id="node6" href="$d4/da2/Updateable_8h.html" title=" " alt="" coords="1267,632,1366,659"/>
+<area shape="rect" id="node7" href="$db/d6d/ButtonType_8h.html" title=" " alt="" coords="1155,408,1254,435"/>
+<area shape="rect" id="node10" href="$df/dde/Menu_8h.html" title=" " alt="" coords="1297,333,1362,360"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1278,408,1389,435"/>
+<area shape="rect" id="node12" href="$d4/d6c/MenuOption_8h.html" title=" " alt="" coords="876,408,978,435"/>
+<area shape="rect" id="node13" href="$d0/d0b/HUD_8h.html" title=" " alt="" coords="978,483,1066,509"/>
+<area shape="rect" id="node15" href="$dc/d04/Rectangle_8h.html" title=" " alt="" coords="838,557,984,584"/>
+<area shape="rect" id="node14" href="$dc/d90/Brush_8h.html" title=" " alt="" coords="915,632,1035,659"/>
+<area shape="rect" id="node18" title=" " alt="" coords="228,707,282,733"/>
+<area shape="rect" id="node23" title=" " alt="" coords="595,557,662,584"/>
+<area shape="rect" id="node16" href="$d4/de5/Point_8h.html" title=" " alt="" coords="828,632,890,659"/>
+<area shape="rect" id="node22" title=" " alt="" coords="742,632,803,659"/>
+<area shape="rect" id="node19" title=" " alt="" coords="1025,707,1104,733"/>
+<area shape="rect" id="node20" href="$d3/d93/scancodes_8h.html" title=" " alt="" coords="1128,707,1224,733"/>
+<area shape="rect" id="node21" title=" " alt="" coords="1248,707,1307,733"/>
+<area shape="rect" id="node25" href="$da/dbf/Player_8h.html" title=" " alt="" coords="34,408,103,435"/>
+<area shape="rect" id="node28" href="$da/d31/Checkboard_8h.html" title=" " alt="" coords="540,333,642,360"/>
+<area shape="rect" id="node26" href="$d3/d03/PawnColor_8h.html" title=" " alt="" coords="20,483,116,509"/>
+<area shape="rect" id="node27" title=" " alt="" coords="71,557,122,584"/>
+<area shape="rect" id="node29" href="$db/d0a/Pawn_8h.html" title=" " alt="" coords="558,408,624,435"/>
+<area shape="rect" id="node34" href="$df/d74/Square_8h.html" title=" " alt="" coords="815,483,890,509"/>
+<area shape="rect" id="node30" href="$d4/d96/Movable_8h.html" title=" " alt="" coords="455,483,538,509"/>
+<area shape="rect" id="node31" href="$dd/df2/paths_8h.html" title=" " alt="" coords="242,483,329,509"/>
+<area shape="rect" id="node32" title=" " alt="" coords="292,557,375,584"/>
+<area shape="rect" id="node36" href="$d2/df8/PawnCount_8h.html" title=" " alt="" coords="1013,259,1140,285"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="OpeningScreen::draw" name="OpeningScreen::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga4ddfc78a89c748f1bfeec584789a4b42" title=" " alt="" coords="200,5,413,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,152,39"/>
+<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga4ddfc78a89c748f1bfeec584789a4b42" title=" " alt="" coords="200,13,413,39"/>
+<area shape="rect" id="node3" href="$d6/df2/classgraphics_1_1GLBackend.html#aef6cf7940a7f5e6b37a9fae4bdf636cc" title=" " alt="" coords="461,5,609,47"/>
 </map>

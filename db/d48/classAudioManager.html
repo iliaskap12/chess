@@ -128,6 +128,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{</div>
+<div class="line"><span class="lineno">   51</span>  <span class="keywordflow">if</span> (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 4096) == -1)</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   53</span>  <a class="code hl_variable" href="../../db/d48/classAudioManager.html#a5e2550bbb784394e8936cb10bfcc5d1e">initialized</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   54</span>}</div>
+<div class="ttc" id="aclassAudioManager_html_a5e2550bbb784394e8936cb10bfcc5d1e"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a5e2550bbb784394e8936cb10bfcc5d1e">AudioManager::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> AudioManager.h:12</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d48/classAudioManager.html#a5e2550bbb784394e8936cb10bfcc5d1e">initialized</a>.</p>
 
 </div>
 </div>
@@ -145,6 +153,20 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_struct" href="../../d3/dad/structsound.html">sound</a> : <a class="code hl_variable" href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">sounds</a>)</div>
+<div class="line"><span class="lineno">   60</span>    Mix_FreeChunk(<a class="code hl_struct" href="../../d3/dad/structsound.html">sound</a>.second);</div>
+<div class="line"><span class="lineno">   61</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> score : <a class="code hl_variable" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>)</div>
+<div class="line"><span class="lineno">   62</span>    Mix_FreeMusic(score.second);</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>  Mix_CloseAudio();</div>
+<div class="line"><span class="lineno">   65</span>}</div>
+<div class="ttc" id="aclassAudioManager_html_a0683aa7cc29a61968bf4383b09aa29c7"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">AudioManager::sounds</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Mix_Chunk * &gt; sounds</div><div class="ttdef"><b>Definition:</b> AudioManager.h:10</div></div>
+<div class="ttc" id="aclassAudioManager_html_aacbc5a2a78b2da00019d8c3aefb9b109"><div class="ttname"><a href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">AudioManager::scores</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Mix_Music * &gt; scores</div><div class="ttdef"><b>Definition:</b> AudioManager.h:11</div></div>
+<div class="ttc" id="astructsound_html"><div class="ttname"><a href="../../d3/dad/structsound.html">sound</a></div><div class="ttdef"><b>Definition:</b> audio.h:41</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>, and <a class="el" href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">sounds</a>.</p>
 
 </div>
 </div>
@@ -186,6 +208,38 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   24</span>{</div>
+<div class="line"><span class="lineno">   25</span>  <span class="keyword">auto</span> siter = <a class="code hl_variable" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>.find(soundfile);</div>
+<div class="line"><span class="lineno">   26</span>  <span class="keywordflow">if</span> (siter == <a class="code hl_variable" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>.end())</div>
+<div class="line"><span class="lineno">   27</span>  {</div>
+<div class="line"><span class="lineno">   28</span>    Mix_Music * ms = Mix_LoadMUS(soundfile.c_str());</div>
+<div class="line"><span class="lineno">   29</span>    <span class="keywordflow">if</span> (ms)</div>
+<div class="line"><span class="lineno">   30</span>    {</div>
+<div class="line"><span class="lineno">   31</span>      <a class="code hl_variable" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>.insert(std::pair&lt;std::string, Mix_Music*&gt;(soundfile, ms));</div>
+<div class="line"><span class="lineno">   32</span>      Mix_VolumeMusic((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(MIX_MAX_VOLUME*volume));</div>
+<div class="line"><span class="lineno">   33</span>      Mix_FadeInMusic(ms, looping ? -1 : 1, fade_time);</div>
+<div class="line"><span class="lineno">   34</span>    }</div>
+<div class="line"><span class="lineno">   35</span>  }</div>
+<div class="line"><span class="lineno">   36</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   37</span>  {</div>
+<div class="line"><span class="lineno">   38</span>    Mix_VolumeMusic((<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(MIX_MAX_VOLUME*volume));</div>
+<div class="line"><span class="lineno">   39</span>    Mix_FadeInMusic(siter-&gt;second, looping ? -1 : 1, fade_time);</div>
+<div class="line"><span class="lineno">   40</span>  }</div>
+<div class="line"><span class="lineno">   41</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#abd31d3872e93638a9c75c380b90f79bb">graphics::GLBackend::playMusic()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d48/classAudioManager_a63cb0e6ac867b24d3b1d9f34749deedf_icgraph.png" border="0" usemap="#adb/d48/classAudioManager_a63cb0e6ac867b24d3b1d9f34749deedf_icgraph" alt=""/></div>
+<map name="adb/d48/classAudioManager_a63cb0e6ac867b24d3b1d9f34749deedf_icgraph" id="adb/d48/classAudioManager_a63cb0e6ac867b24d3b1d9f34749deedf_icgraph">
+<area shape="rect" title=" " alt="" coords="387,13,559,39"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#abd31d3872e93638a9c75c380b90f79bb" title=" " alt="" coords="192,5,339,47"/>
+<area shape="rect" href="../../db/d8d/group____AUDIO.html#ga2db5fda73bd9bf9ad70163e3e76c47e4" title=" " alt="" coords="5,13,144,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -220,6 +274,38 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">    4</span>{</div>
+<div class="line"><span class="lineno">    5</span>  <span class="keyword">auto</span> siter = <a class="code hl_variable" href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">sounds</a>.find(soundfile);</div>
+<div class="line"><span class="lineno">    6</span>  <span class="keywordflow">if</span> (siter == <a class="code hl_variable" href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">sounds</a>.end())</div>
+<div class="line"><span class="lineno">    7</span>  {</div>
+<div class="line"><span class="lineno">    8</span>    Mix_Chunk * as = Mix_LoadWAV(soundfile.c_str());</div>
+<div class="line"><span class="lineno">    9</span>    <span class="keywordflow">if</span> (as)</div>
+<div class="line"><span class="lineno">   10</span>    {</div>
+<div class="line"><span class="lineno">   11</span>      <a class="code hl_variable" href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">sounds</a>.insert(std::pair&lt;std::string, Mix_Chunk*&gt;(soundfile, as));</div>
+<div class="line"><span class="lineno">   12</span>      Mix_VolumeChunk(as, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(MIX_MAX_VOLUME*volume));</div>
+<div class="line"><span class="lineno">   13</span>      Mix_PlayChannel(-1, as, looping ? -1 : 0);</div>
+<div class="line"><span class="lineno">   14</span>    }</div>
+<div class="line"><span class="lineno">   15</span>  }</div>
+<div class="line"><span class="lineno">   16</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   17</span>  {</div>
+<div class="line"><span class="lineno">   18</span>    Mix_VolumeChunk(siter-&gt;second, (<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>)(MIX_MAX_VOLUME*volume));</div>
+<div class="line"><span class="lineno">   19</span>    Mix_PlayChannel(-1, siter-&gt;second, looping ? -1 : 0);</div>
+<div class="line"><span class="lineno">   20</span>  }</div>
+<div class="line"><span class="lineno">   21</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">sounds</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a0f4eae65d4297eb87400d28dbd970eaf">graphics::GLBackend::playSound()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d48/classAudioManager_a8e9a9512518b857e606f9645f1f721c5_icgraph.png" border="0" usemap="#adb/d48/classAudioManager_a8e9a9512518b857e606f9645f1f721c5_icgraph" alt=""/></div>
+<map name="adb/d48/classAudioManager_a8e9a9512518b857e606f9645f1f721c5_icgraph" id="adb/d48/classAudioManager_a8e9a9512518b857e606f9645f1f721c5_icgraph">
+<area shape="rect" title=" " alt="" coords="388,13,563,39"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a0f4eae65d4297eb87400d28dbd970eaf" title=" " alt="" coords="193,5,340,47"/>
+<area shape="rect" href="../../db/d8d/group____AUDIO.html#ga50c22843e4df153d9f2d75166801b67f" title=" " alt="" coords="5,13,145,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -238,6 +324,22 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   44</span>{</div>
+<div class="line"><span class="lineno">   45</span>  Mix_FadeOutMusic(fade_time);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a5b51f6686f2df1aa21d443edd8ef2f6c">graphics::GLBackend::stopMusic()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../db/d48/classAudioManager_ad0b3a6a5dd01cead7fcbf89da85ff47e_icgraph.png" border="0" usemap="#adb/d48/classAudioManager_ad0b3a6a5dd01cead7fcbf89da85ff47e_icgraph" alt=""/></div>
+<map name="adb/d48/classAudioManager_ad0b3a6a5dd01cead7fcbf89da85ff47e_icgraph" id="adb/d48/classAudioManager_ad0b3a6a5dd01cead7fcbf89da85ff47e_icgraph">
+<area shape="rect" title=" " alt="" coords="387,13,560,39"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a5b51f6686f2df1aa21d443edd8ef2f6c" title=" " alt="" coords="192,5,339,47"/>
+<area shape="rect" href="../../db/d8d/group____AUDIO.html#ga46a903b4857ad22b95152b2ad536a6f2" title=" " alt="" coords="5,13,144,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -262,6 +364,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="../../db/d48/classAudioManager.html#ae59d8605c1d706e7bab47d4e8f900d09">AudioManager()</a>.</p>
+
 </div>
 </div>
 <a id="aacbc5a2a78b2da00019d8c3aefb9b109" name="aacbc5a2a78b2da00019d8c3aefb9b109"></a>
@@ -283,6 +387,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../db/d48/classAudioManager.html#a63cb0e6ac867b24d3b1d9f34749deedf">playMusic()</a>, and <a class="el" href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">~AudioManager()</a>.</p>
 
 </div>
 </div>
@@ -306,10 +412,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="../../db/d48/classAudioManager.html#a8e9a9512518b857e606f9645f1f721c5">playSound()</a>, and <a class="el" href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">~AudioManager()</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/runner/work/chess/chess/include/sgg/<a class="el" href="../../dc/dd0/AudioManager_8h_source.html">AudioManager.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/Users/runner/work/chess/chess/include/sgg/sgg/<a class="el" href="../../dc/dd0/AudioManager_8h_source.html">AudioManager.h</a></li>
+<li>/Users/runner/work/chess/chess/include/sgg/sgg/<a class="el" href="../../d2/d02/AudioManager_8cpp.html">AudioManager.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

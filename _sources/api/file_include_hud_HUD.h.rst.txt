@@ -39,7 +39,7 @@ Includes
 
 - ``optional``
 
-- ``sgg/sgg/graphics.h``
+- ``sgg/sgg/graphics.h`` (:ref:`file_include_sgg_sgg_graphics.h`)
 
 - ``string`` (:ref:`file_src_util_custom-string.cpp`)
 

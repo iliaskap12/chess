@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aeaa684595223a1a737d80f30a00dacca:
+
+Function lodepng_set_icc(LodePNGInfo \*, const char \*, const unsigned char \*, unsigned)
+=========================================================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_set_icc(LodePNGInfo *, const char *, const unsigned char *, unsigned)

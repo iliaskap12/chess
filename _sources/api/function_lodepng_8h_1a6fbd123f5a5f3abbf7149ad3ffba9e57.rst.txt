@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a6fbd123f5a5f3abbf7149ad3ffba9e57:
 
-Function lodepng_compress_settings_init
-=======================================
+Function lodepng_compress_settings_init(LodePNGCompressSettings \*)
+===================================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

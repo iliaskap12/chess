@@ -1,6 +1,11 @@
 <map id="Rectangle::draw" name="Rectangle::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,123,83"/>
-<area shape="rect" id="node2" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="180,5,315,32"/>
-<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="171,56,324,83"/>
-<area shape="rect" id="node4" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="204,107,291,133"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,125,123,152"/>
+<area shape="rect" id="node2" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="180,68,315,95"/>
+<area shape="rect" id="node7" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="171,125,324,152"/>
+<area shape="rect" id="node9" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="204,176,291,203"/>
+<area shape="rect" id="node3" href="$d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f" title=" " alt="" coords="372,57,519,98"/>
+<area shape="rect" id="node4" href="$d9/d69/classShader.html#a91f6b1b90751bf9bf1b4afe6d8f221c1" title=" " alt="" coords="567,5,753,32"/>
+<area shape="rect" id="node5" href="$d0/d9c/classgraphics_1_1TextureManager.html#ad7d48b913ed7c8fedfec1349cb0de687" title=" " alt="" coords="574,57,746,98"/>
+<area shape="rect" id="node6" href="$d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100" title=" " alt="" coords="614,147,706,173"/>
+<area shape="rect" id="node8" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="372,122,519,163"/>
 </map>

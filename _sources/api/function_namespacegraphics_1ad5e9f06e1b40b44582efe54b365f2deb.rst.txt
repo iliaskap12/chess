@@ -3,7 +3,7 @@
 Function graphics::PrintSDL_GL_Attributes
 =========================================
 
-- Defined in :ref:`file_include_sgg_GLbackend.h`
+- Defined in :ref:`file_include_sgg_sgg_GLbackend.cpp`
 
 
 Function Documentation

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: /Users/runner/work/chess/chess/include/sgg/audio.h File Reference</title>
+<title>Chess: /Users/runner/work/chess/chess/include/sgg/sgg/audio.h File Reference</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_be7d6e03fafc92d202efbc43eb0da6f7.html">sgg</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_be7d6e03fafc92d202efbc43eb0da6f7.html">sgg</a></li><li class="navelem"><a class="el" href="../../dir_faf336227e98b69e0a6f7c47d802413c.html">sgg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,10 +78,19 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for audio.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="../../d8/d45/audio_8h__incl.png" border="0" usemap="#a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2audio_8h" alt=""/></div>
-<map name="a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2audio_8h" id="a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2audio_8h">
+<div class="center"><img src="../../d8/d45/audio_8h__incl.png" border="0" usemap="#a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2sgg_2audio_8h" alt=""/></div>
+<map name="a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2sgg_2audio_8h" id="a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2sgg_2audio_8h">
 <area shape="rect" title=" " alt="" coords="5,5,151,61"/>
 <area shape="rect" title=" " alt="" coords="30,109,126,136"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dc/d36/audio_8h__dep__incl.png" border="0" usemap="#a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2sgg_2audio_8hdep" alt=""/></div>
+<map name="a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2sgg_2audio_8hdep" id="a_2Users_2runner_2work_2chess_2chess_2include_2sgg_2sgg_2audio_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,151,61"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html" title=" " alt="" coords="5,109,151,165"/>
 </map>
 </div>
 </div>
@@ -167,6 +176,69 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  242</span>{</div>
+<div class="line"><span class="lineno">  243</span>    <a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a> * news = (<a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a>*)calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a>));</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>    <span class="keywordflow">if</span>(news == NULL)</div>
+<div class="line"><span class="lineno">  246</span>    {</div>
+<div class="line"><span class="lineno">  247</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Error: Memory allocation error\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  248</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  249</span>    }</div>
+<div class="line"><span class="lineno">  250</span> </div>
+<div class="line"><span class="lineno">  251</span>    <span class="keywordflow">if</span>(filename == NULL)</div>
+<div class="line"><span class="lineno">  252</span>    {</div>
+<div class="line"><span class="lineno">  253</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Warning: filename NULL: %s\n&quot;</span>, __FILE__, __LINE__, filename);</div>
+<div class="line"><span class="lineno">  254</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  255</span>    }</div>
+<div class="line"><span class="lineno">  256</span> </div>
+<div class="line"><span class="lineno">  257</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">next</a> = NULL;</div>
+<div class="line"><span class="lineno">  258</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a1a6341d200e9f8e86cd0bcef97b7c1b7">loop</a> = loop;</div>
+<div class="line"><span class="lineno">  259</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#aff330af24a942d785229cba654bf37a6">fade</a> = 0;</div>
+<div class="line"><span class="lineno">  260</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#aad91547cb39fa4cfc0085da56c88fa46">free</a> = 1;</div>
+<div class="line"><span class="lineno">  261</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#adf4600032771849128488f3c8b33da63">volume</a> = volume;</div>
+<div class="line"><span class="lineno">  262</span> </div>
+<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">if</span>(SDL_LoadWAV(filename, &amp;(news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a560dc18ec81be9a0649d76abe3558bb3">audio</a>), &amp;(news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a300a209126f64c43d9f7527ae9329bd7">bufferTrue</a>), &amp;(news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#afb2c8ec16bb783473636b01c7bdb59aa">lengthTrue</a>)) == NULL)</div>
+<div class="line"><span class="lineno">  264</span>    {</div>
+<div class="line"><span class="lineno">  265</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Warning: failed to open wave file: %s error: %s\n&quot;</span>, __FILE__, __LINE__, filename, SDL_GetError());</div>
+<div class="line"><span class="lineno">  266</span>        free(news);</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><span class="lineno">  268</span>    }</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#ab08beb2016609af60b8be2ee0dce6684">buffer</a> = news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a300a209126f64c43d9f7527ae9329bd7">bufferTrue</a>;</div>
+<div class="line"><span class="lineno">  271</span>    news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#ae53b068049017bd141049d7ee2cb1678">length</a> = news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#afb2c8ec16bb783473636b01c7bdb59aa">lengthTrue</a>;</div>
+<div class="line"><span class="lineno">  272</span>    (news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a560dc18ec81be9a0649d76abe3558bb3">audio</a>).callback = NULL;</div>
+<div class="line"><span class="lineno">  273</span>    (news-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a560dc18ec81be9a0649d76abe3558bb3">audio</a>).userdata = NULL;</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>    <span class="keywordflow">return</span> news;</div>
+<div class="line"><span class="lineno">  276</span>}</div>
+<div class="ttc" id="astructsound_html"><div class="ttname"><a href="../../d3/dad/structsound.html">sound</a></div><div class="ttdef"><b>Definition:</b> audio.h:41</div></div>
+<div class="ttc" id="astructsound_html_a1a6341d200e9f8e86cd0bcef97b7c1b7"><div class="ttname"><a href="../../d3/dad/structsound.html#a1a6341d200e9f8e86cd0bcef97b7c1b7">sound::loop</a></div><div class="ttdeci">uint8_t loop</div><div class="ttdef"><b>Definition:</b> audio.h:46</div></div>
+<div class="ttc" id="astructsound_html_a300a209126f64c43d9f7527ae9329bd7"><div class="ttname"><a href="../../d3/dad/structsound.html#a300a209126f64c43d9f7527ae9329bd7">sound::bufferTrue</a></div><div class="ttdeci">uint8_t * bufferTrue</div><div class="ttdef"><b>Definition:</b> audio.h:44</div></div>
+<div class="ttc" id="astructsound_html_a560dc18ec81be9a0649d76abe3558bb3"><div class="ttname"><a href="../../d3/dad/structsound.html#a560dc18ec81be9a0649d76abe3558bb3">sound::audio</a></div><div class="ttdeci">SDL_AudioSpec audio</div><div class="ttdef"><b>Definition:</b> audio.h:51</div></div>
+<div class="ttc" id="astructsound_html_aad91547cb39fa4cfc0085da56c88fa46"><div class="ttname"><a href="../../d3/dad/structsound.html#aad91547cb39fa4cfc0085da56c88fa46">sound::free</a></div><div class="ttdeci">uint8_t free</div><div class="ttdef"><b>Definition:</b> audio.h:48</div></div>
+<div class="ttc" id="astructsound_html_ab08beb2016609af60b8be2ee0dce6684"><div class="ttname"><a href="../../d3/dad/structsound.html#ab08beb2016609af60b8be2ee0dce6684">sound::buffer</a></div><div class="ttdeci">uint8_t * buffer</div><div class="ttdef"><b>Definition:</b> audio.h:45</div></div>
+<div class="ttc" id="astructsound_html_ad18c2f0a23299514a346fca7968ebbf2"><div class="ttname"><a href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">sound::next</a></div><div class="ttdeci">struct sound * next</div><div class="ttdef"><b>Definition:</b> audio.h:53</div></div>
+<div class="ttc" id="astructsound_html_adf4600032771849128488f3c8b33da63"><div class="ttname"><a href="../../d3/dad/structsound.html#adf4600032771849128488f3c8b33da63">sound::volume</a></div><div class="ttdeci">uint8_t volume</div><div class="ttdef"><b>Definition:</b> audio.h:49</div></div>
+<div class="ttc" id="astructsound_html_ae53b068049017bd141049d7ee2cb1678"><div class="ttname"><a href="../../d3/dad/structsound.html#ae53b068049017bd141049d7ee2cb1678">sound::length</a></div><div class="ttdeci">uint32_t length</div><div class="ttdef"><b>Definition:</b> audio.h:42</div></div>
+<div class="ttc" id="astructsound_html_afb2c8ec16bb783473636b01c7bdb59aa"><div class="ttname"><a href="../../d3/dad/structsound.html#afb2c8ec16bb783473636b01c7bdb59aa">sound::lengthTrue</a></div><div class="ttdeci">uint32_t lengthTrue</div><div class="ttdef"><b>Definition:</b> audio.h:43</div></div>
+<div class="ttc" id="astructsound_html_aff330af24a942d785229cba654bf37a6"><div class="ttname"><a href="../../d3/dad/structsound.html#aff330af24a942d785229cba654bf37a6">sound::fade</a></div><div class="ttdeci">uint8_t fade</div><div class="ttdef"><b>Definition:</b> audio.h:47</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/dad/structsound.html#a560dc18ec81be9a0649d76abe3558bb3">sound::audio</a>, <a class="el" href="../../d3/dad/structsound.html#ab08beb2016609af60b8be2ee0dce6684">sound::buffer</a>, <a class="el" href="../../d3/dad/structsound.html#a300a209126f64c43d9f7527ae9329bd7">sound::bufferTrue</a>, <a class="el" href="../../d3/dad/structsound.html#aff330af24a942d785229cba654bf37a6">sound::fade</a>, <a class="el" href="../../d3/dad/structsound.html#aad91547cb39fa4cfc0085da56c88fa46">sound::free</a>, <a class="el" href="../../d3/dad/structsound.html#ae53b068049017bd141049d7ee2cb1678">sound::length</a>, <a class="el" href="../../d3/dad/structsound.html#afb2c8ec16bb783473636b01c7bdb59aa">sound::lengthTrue</a>, <a class="el" href="../../d3/dad/structsound.html#a1a6341d200e9f8e86cd0bcef97b7c1b7">sound::loop</a>, <a class="el" href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">sound::next</a>, and <a class="el" href="../../d3/dad/structsound.html#adf4600032771849128488f3c8b33da63">sound::volume</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_aeba78d51e790304f3a18f6daca4b31b4_icgraph.png" border="0" usemap="#ada/d09/audio_8h_aeba78d51e790304f3a18f6daca4b31b4_icgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_aeba78d51e790304f3a18f6daca4b31b4_icgraph" id="ada/d09/audio_8h_aeba78d51e790304f3a18f6daca4b31b4_icgraph">
+<area shape="rect" title=" " alt="" coords="340,81,431,108"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199" title=" " alt="" coords="213,81,292,108"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a8fb0f93c63af671ba8a536f875f66f1d" title=" " alt="" coords="45,5,126,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a95ded0954a20cfc7f3fb6ff68bb2452c" title=" " alt="" coords="6,56,165,83"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aa2a1c236a8c22740fd92902a1929f36d" title=" " alt="" coords="44,107,127,133"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a5df7f8b69fad1f5fcd7ad6937f0c30cc" title=" " alt="" coords="5,157,165,184"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -185,6 +257,37 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  193</span>{</div>
+<div class="line"><span class="lineno">  194</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">audioEnabled</a>)</div>
+<div class="line"><span class="lineno">  195</span>    {</div>
+<div class="line"><span class="lineno">  196</span>        <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a80e7cce4d19baad74c85d0433e5920da">pauseAudio</a>();</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>        <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#aa3730ab77fa3498af628a47bbe29fac0">freeAudio</a>((<a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a> *) (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).userdata);</div>
+<div class="line"><span class="lineno">  199</span> </div>
+<div class="line"><span class="lineno">  200</span>        <span class="comment">/* Close down audio */</span></div>
+<div class="line"><span class="lineno">  201</span>        SDL_CloseAudioDevice(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">device</a>);</div>
+<div class="line"><span class="lineno">  202</span>    }</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    free(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>);</div>
+<div class="line"><span class="lineno">  205</span>}</div>
+<div class="ttc" id="aaudio_8cpp_html_a80e7cce4d19baad74c85d0433e5920da"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a80e7cce4d19baad74c85d0433e5920da">pauseAudio</a></div><div class="ttdeci">void pauseAudio(void)</div><div class="ttdef"><b>Definition:</b> audio.cpp:207</div></div>
+<div class="ttc" id="aaudio_8cpp_html_aa3730ab77fa3498af628a47bbe29fac0"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#aa3730ab77fa3498af628a47bbe29fac0">freeAudio</a></div><div class="ttdeci">void freeAudio(Audio *audio)</div><div class="ttdef"><b>Definition:</b> audio.cpp:223</div></div>
+<div class="ttc" id="aaudio_8cpp_html_af9ea75dd614f75c35ec73935e0fcf3e6"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a></div><div class="ttdeci">static PrivateAudioDevice * gDevice</div><div class="ttdef"><b>Definition:</b> audio.cpp:76</div></div>
+<div class="ttc" id="astructprivateAudioDevice_html_ae535238cb420721686872e55ec08ff02"><div class="ttname"><a href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">privateAudioDevice::audioEnabled</a></div><div class="ttdeci">uint8_t audioEnabled</div><div class="ttdef"><b>Definition:</b> audio.cpp:72</div></div>
+<div class="ttc" id="astructprivateAudioDevice_html_ae92381be77b55b09b866131df1454ae2"><div class="ttname"><a href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">privateAudioDevice::device</a></div><div class="ttdeci">SDL_AudioDeviceID device</div><div class="ttdef"><b>Definition:</b> audio.cpp:70</div></div>
+<div class="ttc" id="astructprivateAudioDevice_html_aecf060271fb9c072a506c1247a89e732"><div class="ttname"><a href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">privateAudioDevice::want</a></div><div class="ttdeci">SDL_AudioSpec want</div><div class="ttdef"><b>Definition:</b> audio.cpp:71</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">privateAudioDevice::audioEnabled</a>, <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">privateAudioDevice::device</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#aa3730ab77fa3498af628a47bbe29fac0">freeAudio()</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#a80e7cce4d19baad74c85d0433e5920da">pauseAudio()</a>, and <a class="el" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">privateAudioDevice::want</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_a3fae9ccf354612f523af6a8078ae11d9_cgraph.png" border="0" usemap="#ada/d09/audio_8h_a3fae9ccf354612f523af6a8078ae11d9_cgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_a3fae9ccf354612f523af6a8078ae11d9_cgraph" id="ada/d09/audio_8h_a3fae9ccf354612f523af6a8078ae11d9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,81,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aa3730ab77fa3498af628a47bbe29fac0" title=" " alt="" coords="136,5,213,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a80e7cce4d19baad74c85d0433e5920da" title=" " alt="" coords="129,56,220,83"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -203,6 +306,37 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  224</span>{</div>
+<div class="line"><span class="lineno">  225</span>    <a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a> * temp;</div>
+<div class="line"><span class="lineno">  226</span> </div>
+<div class="line"><span class="lineno">  227</span>    <span class="keywordflow">while</span>(audio != NULL)</div>
+<div class="line"><span class="lineno">  228</span>    {</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordflow">if</span>(audio-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#aad91547cb39fa4cfc0085da56c88fa46">free</a> == 1)</div>
+<div class="line"><span class="lineno">  230</span>        {</div>
+<div class="line"><span class="lineno">  231</span>            SDL_FreeWAV(audio-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#a300a209126f64c43d9f7527ae9329bd7">bufferTrue</a>);</div>
+<div class="line"><span class="lineno">  232</span>        }</div>
+<div class="line"><span class="lineno">  233</span> </div>
+<div class="line"><span class="lineno">  234</span>        temp = audio;</div>
+<div class="line"><span class="lineno">  235</span>        audio = audio-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">next</a>;</div>
+<div class="line"><span class="lineno">  236</span> </div>
+<div class="line"><span class="lineno">  237</span>        free(temp);</div>
+<div class="line"><span class="lineno">  238</span>    }</div>
+<div class="line"><span class="lineno">  239</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d3/dad/structsound.html#a300a209126f64c43d9f7527ae9329bd7">sound::bufferTrue</a>, <a class="el" href="../../d3/dad/structsound.html#aad91547cb39fa4cfc0085da56c88fa46">sound::free</a>, and <a class="el" href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">sound::next</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/ddc/audio_8cpp.html#a4d77eb648242c09f939373f6fc5aa1a3">audioCallback()</a>, and <a class="el" href="../../d1/ddc/audio_8cpp.html#a3fae9ccf354612f523af6a8078ae11d9">endAudio()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_aa3730ab77fa3498af628a47bbe29fac0_icgraph.png" border="0" usemap="#ada/d09/audio_8h_aa3730ab77fa3498af628a47bbe29fac0_icgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_aa3730ab77fa3498af628a47bbe29fac0_icgraph" id="ada/d09/audio_8h_aa3730ab77fa3498af628a47bbe29fac0_icgraph">
+<area shape="rect" title=" " alt="" coords="277,31,355,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a4d77eb648242c09f939373f6fc5aa1a3" title=" " alt="" coords="125,5,229,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a3fae9ccf354612f523af6a8078ae11d9" title=" " alt="" coords="139,56,215,83"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aa497dc0e932d8008a092680b6078ba0c" title=" " alt="" coords="5,5,77,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -221,6 +355,81 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{</div>
+<div class="line"><span class="lineno">  139</span>    <a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a> * global;</div>
+<div class="line"><span class="lineno">  140</span>    <a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a> = (<a class="code hl_struct" href="../../da/dcd/structprivateAudioDevice.html">PrivateAudioDevice</a>*)calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../da/dcd/structprivateAudioDevice.html">PrivateAudioDevice</a>));</div>
+<div class="line"><span class="lineno">  141</span>    <a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#aead5b624b88785e5df99ee5e9a552289">gSoundCount</a> = 0;</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a> == NULL)</div>
+<div class="line"><span class="lineno">  144</span>    {</div>
+<div class="line"><span class="lineno">  145</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Fatal Error: Memory c-allocation error\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="line"><span class="lineno">  148</span> </div>
+<div class="line"><span class="lineno">  149</span>    <a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">audioEnabled</a> = 0;</div>
+<div class="line"><span class="lineno">  150</span> </div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">if</span>(!(SDL_WasInit(SDL_INIT_AUDIO) &amp; SDL_INIT_AUDIO))</div>
+<div class="line"><span class="lineno">  152</span>    {</div>
+<div class="line"><span class="lineno">  153</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Error: SDL_INIT_AUDIO not initialized\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  154</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  155</span>    }</div>
+<div class="line"><span class="lineno">  156</span> </div>
+<div class="line"><span class="lineno">  157</span>    SDL_memset(&amp;(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>), 0, <span class="keyword">sizeof</span>(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>));</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).freq = <a class="code hl_define" href="../../d1/ddc/audio_8cpp.html#aae969438a57a86fddf0cf53106c9b6b4">AUDIO_FREQUENCY</a>;</div>
+<div class="line"><span class="lineno">  160</span>    (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).format = <a class="code hl_define" href="../../d1/ddc/audio_8cpp.html#a25ef1d957093181c04182f3c55f3f1ea">AUDIO_FORMAT</a>;</div>
+<div class="line"><span class="lineno">  161</span>    (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).channels = <a class="code hl_define" href="../../d1/ddc/audio_8cpp.html#a8fc745a0f6e356f4b79cb0ab059c40f0">AUDIO_CHANNELS</a>;</div>
+<div class="line"><span class="lineno">  162</span>    (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).samples = <a class="code hl_define" href="../../d1/ddc/audio_8cpp.html#a58e80361cf95d18afbe8f25713f4cdc6">AUDIO_SAMPLES</a>;</div>
+<div class="line"><span class="lineno">  163</span>    (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).callback = <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a4d77eb648242c09f939373f6fc5aa1a3">audioCallback</a>;</div>
+<div class="line"><span class="lineno">  164</span>    (<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).userdata = calloc(1, <span class="keyword">sizeof</span>(<a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a>));</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>    global = (<a class="code hl_struct" href="../../d3/dad/structsound.html">Audio</a>*)(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>).userdata;</div>
+<div class="line"><span class="lineno">  167</span> </div>
+<div class="line"><span class="lineno">  168</span>    <span class="keywordflow">if</span>(global == NULL)</div>
+<div class="line"><span class="lineno">  169</span>    {</div>
+<div class="line"><span class="lineno">  170</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Error: Memory allocation error\n&quot;</span>, __FILE__, __LINE__);</div>
+<div class="line"><span class="lineno">  171</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  172</span>    }</div>
+<div class="line"><span class="lineno">  173</span> </div>
+<div class="line"><span class="lineno">  174</span>    global-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#ab08beb2016609af60b8be2ee0dce6684">buffer</a> = NULL;</div>
+<div class="line"><span class="lineno">  175</span>    global-&gt;<a class="code hl_variable" href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">next</a> = NULL;</div>
+<div class="line"><span class="lineno">  176</span> </div>
+<div class="line"><span class="lineno">  177</span>    <span class="comment">/* want.userdata = new; */</span></div>
+<div class="line"><span class="lineno">  178</span>    <span class="keywordflow">if</span>((<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">device</a> = SDL_OpenAudioDevice(NULL, 0, &amp;(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">want</a>), NULL, <a class="code hl_define" href="../../d1/ddc/audio_8cpp.html#a0398585ffb30b83b6686b78e61317d1d">SDL_AUDIO_ALLOW_CHANGES</a>)) == 0)</div>
+<div class="line"><span class="lineno">  179</span>    {</div>
+<div class="line"><span class="lineno">  180</span>        fprintf(stderr, <span class="stringliteral">&quot;[%s: %d]Warning: failed to open audio device: %s\n&quot;</span>, __FILE__, __LINE__, SDL_GetError());</div>
+<div class="line"><span class="lineno">  181</span>    }</div>
+<div class="line"><span class="lineno">  182</span>    <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  183</span>    {</div>
+<div class="line"><span class="lineno">  184</span>        <span class="comment">/* Set audio device enabled global flag */</span></div>
+<div class="line"><span class="lineno">  185</span>        <a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">audioEnabled</a> = 1;</div>
+<div class="line"><span class="lineno">  186</span> </div>
+<div class="line"><span class="lineno">  187</span>        <span class="comment">/* Unpause active audio stream */</span></div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a59ae60979e26937b6934ebc4606307c9">unpauseAudio</a>();</div>
+<div class="line"><span class="lineno">  189</span>    }</div>
+<div class="line"><span class="lineno">  190</span>}</div>
+<div class="ttc" id="aaudio_8cpp_html_a0398585ffb30b83b6686b78e61317d1d"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a0398585ffb30b83b6686b78e61317d1d">SDL_AUDIO_ALLOW_CHANGES</a></div><div class="ttdeci">#define SDL_AUDIO_ALLOW_CHANGES</div><div class="ttdef"><b>Definition:</b> audio.cpp:62</div></div>
+<div class="ttc" id="aaudio_8cpp_html_a25ef1d957093181c04182f3c55f3f1ea"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a25ef1d957093181c04182f3c55f3f1ea">AUDIO_FORMAT</a></div><div class="ttdeci">#define AUDIO_FORMAT</div><div class="ttdef"><b>Definition:</b> audio.cpp:37</div></div>
+<div class="ttc" id="aaudio_8cpp_html_a4d77eb648242c09f939373f6fc5aa1a3"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a4d77eb648242c09f939373f6fc5aa1a3">audioCallback</a></div><div class="ttdeci">static void audioCallback(void *userdata, uint8_t *stream, int len)</div><div class="ttdef"><b>Definition:</b> audio.cpp:376</div></div>
+<div class="ttc" id="aaudio_8cpp_html_a58e80361cf95d18afbe8f25713f4cdc6"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a58e80361cf95d18afbe8f25713f4cdc6">AUDIO_SAMPLES</a></div><div class="ttdeci">#define AUDIO_SAMPLES</div><div class="ttdef"><b>Definition:</b> audio.cpp:46</div></div>
+<div class="ttc" id="aaudio_8cpp_html_a59ae60979e26937b6934ebc4606307c9"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a59ae60979e26937b6934ebc4606307c9">unpauseAudio</a></div><div class="ttdeci">void unpauseAudio(void)</div><div class="ttdef"><b>Definition:</b> audio.cpp:215</div></div>
+<div class="ttc" id="aaudio_8cpp_html_a8fc745a0f6e356f4b79cb0ab059c40f0"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a8fc745a0f6e356f4b79cb0ab059c40f0">AUDIO_CHANNELS</a></div><div class="ttdeci">#define AUDIO_CHANNELS</div><div class="ttdef"><b>Definition:</b> audio.cpp:43</div></div>
+<div class="ttc" id="aaudio_8cpp_html_aae969438a57a86fddf0cf53106c9b6b4"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#aae969438a57a86fddf0cf53106c9b6b4">AUDIO_FREQUENCY</a></div><div class="ttdeci">#define AUDIO_FREQUENCY</div><div class="ttdef"><b>Definition:</b> audio.cpp:40</div></div>
+<div class="ttc" id="aaudio_8cpp_html_aead5b624b88785e5df99ee5e9a552289"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#aead5b624b88785e5df99ee5e9a552289">gSoundCount</a></div><div class="ttdeci">static uint32_t gSoundCount</div><div class="ttdef"><b>Definition:</b> audio.cpp:77</div></div>
+<div class="ttc" id="astructprivateAudioDevice_html"><div class="ttname"><a href="../../da/dcd/structprivateAudioDevice.html">privateAudioDevice</a></div><div class="ttdef"><b>Definition:</b> audio.cpp:69</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/ddc/audio_8cpp.html#a8fc745a0f6e356f4b79cb0ab059c40f0">AUDIO_CHANNELS</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#a25ef1d957093181c04182f3c55f3f1ea">AUDIO_FORMAT</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#aae969438a57a86fddf0cf53106c9b6b4">AUDIO_FREQUENCY</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#a58e80361cf95d18afbe8f25713f4cdc6">AUDIO_SAMPLES</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#a4d77eb648242c09f939373f6fc5aa1a3">audioCallback()</a>, <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">privateAudioDevice::audioEnabled</a>, <a class="el" href="../../d3/dad/structsound.html#ab08beb2016609af60b8be2ee0dce6684">sound::buffer</a>, <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">privateAudioDevice::device</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#aead5b624b88785e5df99ee5e9a552289">gSoundCount</a>, <a class="el" href="../../d3/dad/structsound.html#ad18c2f0a23299514a346fca7968ebbf2">sound::next</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#a0398585ffb30b83b6686b78e61317d1d">SDL_AUDIO_ALLOW_CHANGES</a>, <a class="el" href="../../d1/ddc/audio_8cpp.html#a59ae60979e26937b6934ebc4606307c9">unpauseAudio()</a>, and <a class="el" href="../../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732">privateAudioDevice::want</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_aa497dc0e932d8008a092680b6078ba0c_cgraph.png" border="0" usemap="#ada/d09/audio_8h_aa497dc0e932d8008a092680b6078ba0c_cgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_aa497dc0e932d8008a092680b6078ba0c_cgraph" id="ada/d09/audio_8h_aa497dc0e932d8008a092680b6078ba0c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,77,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a4d77eb648242c09f939373f6fc5aa1a3" title=" " alt="" coords="125,5,229,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a59ae60979e26937b6934ebc4606307c9" title=" " alt="" coords="125,56,229,83"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aa3730ab77fa3498af628a47bbe29fac0" title=" " alt="" coords="277,5,355,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -239,6 +448,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  208</span>{</div>
+<div class="line"><span class="lineno">  209</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">audioEnabled</a>)</div>
+<div class="line"><span class="lineno">  210</span>    {</div>
+<div class="line"><span class="lineno">  211</span>        SDL_PauseAudioDevice(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">device</a>, 1);</div>
+<div class="line"><span class="lineno">  212</span>    }</div>
+<div class="line"><span class="lineno">  213</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">privateAudioDevice::audioEnabled</a>, <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">privateAudioDevice::device</a>, and <a class="el" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/ddc/audio_8cpp.html#a3fae9ccf354612f523af6a8078ae11d9">endAudio()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_a80e7cce4d19baad74c85d0433e5920da_icgraph.png" border="0" usemap="#ada/d09/audio_8h_a80e7cce4d19baad74c85d0433e5920da_icgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_a80e7cce4d19baad74c85d0433e5920da_icgraph" id="ada/d09/audio_8h_a80e7cce4d19baad74c85d0433e5920da_icgraph">
+<area shape="rect" title=" " alt="" coords="129,5,220,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a3fae9ccf354612f523af6a8078ae11d9" title=" " alt="" coords="5,5,81,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -267,6 +495,24 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
+<div class="line"><span class="lineno">  124</span>    <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio</a>(filename, NULL, 1, volume);</div>
+<div class="line"><span class="lineno">  125</span>}</div>
+<div class="ttc" id="aaudio_8cpp_html_a7a8c2c1a553b4eb15711bccc4e950199"><div class="ttname"><a href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio</a></div><div class="ttdeci">static void playAudio(const char *filename, Audio *audio, uint8_t loop, int volume)</div><div class="ttdef"><b>Definition:</b> audio.cpp:278</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_a8fb0f93c63af671ba8a536f875f66f1d_cgraph.png" border="0" usemap="#ada/d09/audio_8h_a8fb0f93c63af671ba8a536f875f66f1d_cgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_a8fb0f93c63af671ba8a536f875f66f1d_cgraph" id="ada/d09/audio_8h_a8fb0f93c63af671ba8a536f875f66f1d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,87,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199" title=" " alt="" coords="135,31,213,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a69e06e4f016bfe4b233cac51d9811567" title=" " alt="" coords="400,5,476,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a71c23b68e73a0237e203960e974e096f" title=" " alt="" coords="267,31,346,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aeba78d51e790304f3a18f6daca4b31b4" title=" " alt="" coords="261,81,352,108"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -295,6 +541,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  133</span>{</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio</a>(NULL, audio, 1, volume);</div>
+<div class="line"><span class="lineno">  135</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_a95ded0954a20cfc7f3fb6ff68bb2452c_cgraph.png" border="0" usemap="#ada/d09/audio_8h_a95ded0954a20cfc7f3fb6ff68bb2452c_cgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_a95ded0954a20cfc7f3fb6ff68bb2452c_cgraph" id="ada/d09/audio_8h_a95ded0954a20cfc7f3fb6ff68bb2452c_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,164,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199" title=" " alt="" coords="212,31,291,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a69e06e4f016bfe4b233cac51d9811567" title=" " alt="" coords="477,5,553,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a71c23b68e73a0237e203960e974e096f" title=" " alt="" coords="345,31,423,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aeba78d51e790304f3a18f6daca4b31b4" title=" " alt="" coords="339,81,429,108"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -323,6 +586,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  118</span>{</div>
+<div class="line"><span class="lineno">  119</span>    <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio</a>(filename, NULL, 0, volume);</div>
+<div class="line"><span class="lineno">  120</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_aa2a1c236a8c22740fd92902a1929f36d_cgraph.png" border="0" usemap="#ada/d09/audio_8h_aa2a1c236a8c22740fd92902a1929f36d_cgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_aa2a1c236a8c22740fd92902a1929f36d_cgraph" id="ada/d09/audio_8h_aa2a1c236a8c22740fd92902a1929f36d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,88,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199" title=" " alt="" coords="136,31,215,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a69e06e4f016bfe4b233cac51d9811567" title=" " alt="" coords="401,5,477,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a71c23b68e73a0237e203960e974e096f" title=" " alt="" coords="269,31,347,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aeba78d51e790304f3a18f6daca4b31b4" title=" " alt="" coords="263,81,353,108"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -351,6 +631,23 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  128</span>{</div>
+<div class="line"><span class="lineno">  129</span>    <a class="code hl_function" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio</a>(NULL, audio, 0, volume);</div>
+<div class="line"><span class="lineno">  130</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199">playAudio()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_a5df7f8b69fad1f5fcd7ad6937f0c30cc_cgraph.png" border="0" usemap="#ada/d09/audio_8h_a5df7f8b69fad1f5fcd7ad6937f0c30cc_cgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_a5df7f8b69fad1f5fcd7ad6937f0c30cc_cgraph" id="ada/d09/audio_8h_a5df7f8b69fad1f5fcd7ad6937f0c30cc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a7a8c2c1a553b4eb15711bccc4e950199" title=" " alt="" coords="213,31,292,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a69e06e4f016bfe4b233cac51d9811567" title=" " alt="" coords="479,5,555,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#a71c23b68e73a0237e203960e974e096f" title=" " alt="" coords="346,31,425,57"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aeba78d51e790304f3a18f6daca4b31b4" title=" " alt="" coords="340,81,431,108"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -369,6 +666,25 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  216</span>{</div>
+<div class="line"><span class="lineno">  217</span>    <span class="keywordflow">if</span>(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">audioEnabled</a>)</div>
+<div class="line"><span class="lineno">  218</span>    {</div>
+<div class="line"><span class="lineno">  219</span>        SDL_PauseAudioDevice(<a class="code hl_variable" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>-&gt;<a class="code hl_variable" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">device</a>, 0);</div>
+<div class="line"><span class="lineno">  220</span>    }</div>
+<div class="line"><span class="lineno">  221</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae535238cb420721686872e55ec08ff02">privateAudioDevice::audioEnabled</a>, <a class="el" href="../../da/dcd/structprivateAudioDevice.html#ae92381be77b55b09b866131df1454ae2">privateAudioDevice::device</a>, and <a class="el" href="../../d1/ddc/audio_8cpp.html#af9ea75dd614f75c35ec73935e0fcf3e6">gDevice</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/ddc/audio_8cpp.html#aa497dc0e932d8008a092680b6078ba0c">initAudio()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../da/d09/audio_8h_a59ae60979e26937b6934ebc4606307c9_icgraph.png" border="0" usemap="#ada/d09/audio_8h_a59ae60979e26937b6934ebc4606307c9_icgraph" alt=""/></div>
+<map name="ada/d09/audio_8h_a59ae60979e26937b6934ebc4606307c9_icgraph" id="ada/d09/audio_8h_a59ae60979e26937b6934ebc4606307c9_icgraph">
+<area shape="rect" title=" " alt="" coords="125,5,229,32"/>
+<area shape="rect" href="../../d1/ddc/audio_8cpp.html#aa497dc0e932d8008a092680b6078ba0c" title=" " alt="" coords="5,5,77,32"/>
+</map>
+</div>
 
 </div>
 </div>

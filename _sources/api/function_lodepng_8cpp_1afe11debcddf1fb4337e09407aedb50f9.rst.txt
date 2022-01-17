@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1afe11debcddf1fb4337e09407aedb50f9:
+
+Function readChunk_sRGB
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: readChunk_sRGB(LodePNGInfo *, const unsigned char *, size_t)

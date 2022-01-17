@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aa429acf1f7fd6c5325c7c9f389494ccd:
+
+Function LodePNGIText_init
+==========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: LodePNGIText_init(LodePNGInfo *)

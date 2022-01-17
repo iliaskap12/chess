@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1a39bd951ee3a3a5a2a411fbec7b052fdd:
+
+Define LODEPNG_INLINE
+=====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: LODEPNG_INLINE

@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1afd2630695ae4456aa2a08e508dd352bf:
+
+Function lodepng_chunk_init
+===========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_chunk_init(unsigned char **, ucvector *, unsigned, const char *)

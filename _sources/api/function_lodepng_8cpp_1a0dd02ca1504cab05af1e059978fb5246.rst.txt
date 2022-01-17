@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a0dd02ca1504cab05af1e059978fb5246:
+
+Function postProcessScanlines
+=============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: postProcessScanlines(unsigned char *, unsigned char *, unsigned, unsigned, const LodePNGInfo *)

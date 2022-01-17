@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ae0c18287a11fa2fae4bcfb036461807a:
+
+Function LodePNGIText_cleanup
+=============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: LodePNGIText_cleanup(LodePNGInfo *)

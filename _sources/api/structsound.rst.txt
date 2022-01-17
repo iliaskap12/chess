@@ -3,7 +3,7 @@
 Struct sound
 ============
 
-- Defined in :ref:`file_include_sgg_audio.h`
+- Defined in :ref:`file_include_sgg_sgg_audio.h`
 
 
 Struct Documentation

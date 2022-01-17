@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: /Users/runner/work/chess/chess/include/sgg/AudioManager.h Source File</title>
+<title>Chess: /Users/runner/work/chess/chess/include/sgg/sgg/AudioManager.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_be7d6e03fafc92d202efbc43eb0da6f7.html">sgg</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_be7d6e03fafc92d202efbc43eb0da6f7.html">sgg</a></li><li class="navelem"><a class="el" href="../../dir_faf336227e98b69e0a6f7c47d802413c.html">sgg</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;SDL2/SDL_mixer.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;SDL_mixer.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="../../db/d48/classAudioManager.html">AudioManager</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
@@ -83,22 +83,22 @@ $(function() {
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">   11</a></span>  std::unordered_map&lt;std::string, Mix_Music*&gt; <a class="code hl_variable" href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">scores</a>;</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#a5e2550bbb784394e8936cb10bfcc5d1e">   12</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../db/d48/classAudioManager.html#a5e2550bbb784394e8936cb10bfcc5d1e">initialized</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#a8e9a9512518b857e606f9645f1f721c5">   14</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d48/classAudioManager.html#a8e9a9512518b857e606f9645f1f721c5">playSound</a>(std::string soundfile, <span class="keywordtype">float</span> volume, <span class="keywordtype">bool</span> looping = <span class="keyword">false</span>);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#a63cb0e6ac867b24d3b1d9f34749deedf">   15</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d48/classAudioManager.html#a63cb0e6ac867b24d3b1d9f34749deedf">playMusic</a>(std::string soundfile, <span class="keywordtype">float</span> volume, <span class="keywordtype">bool</span> looping = <span class="keyword">true</span>, <span class="keywordtype">int</span> fade_time = 0);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#ad0b3a6a5dd01cead7fcbf89da85ff47e">   16</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d48/classAudioManager.html#ad0b3a6a5dd01cead7fcbf89da85ff47e">stopMusic</a>(<span class="keywordtype">int</span> fade_time = 0);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#ae59d8605c1d706e7bab47d4e8f900d09">   17</a></span>  <a class="code hl_function" href="../../db/d48/classAudioManager.html#ae59d8605c1d706e7bab47d4e8f900d09">AudioManager</a>();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">   18</a></span>  <a class="code hl_function" href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">~AudioManager</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d48/classAudioManager.html#a8e9a9512518b857e606f9645f1f721c5">playSound</a>(std::string soundfile, <span class="keywordtype">float</span> volume, <span class="keywordtype">bool</span> looping = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d48/classAudioManager.html#a63cb0e6ac867b24d3b1d9f34749deedf">playMusic</a>(std::string soundfile, <span class="keywordtype">float</span> volume, <span class="keywordtype">bool</span> looping = <span class="keyword">true</span>, <span class="keywordtype">int</span> fade_time = 0);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d48/classAudioManager.html#ad0b3a6a5dd01cead7fcbf89da85ff47e">stopMusic</a>(<span class="keywordtype">int</span> fade_time = 0);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_function" href="../../db/d48/classAudioManager.html#ae59d8605c1d706e7bab47d4e8f900d09">AudioManager</a>();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_function" href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">~AudioManager</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 <div class="ttc" id="aclassAudioManager_html"><div class="ttname"><a href="../../db/d48/classAudioManager.html">AudioManager</a></div><div class="ttdef"><b>Definition:</b> AudioManager.h:9</div></div>
 <div class="ttc" id="aclassAudioManager_html_a0683aa7cc29a61968bf4383b09aa29c7"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7">AudioManager::sounds</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Mix_Chunk * &gt; sounds</div><div class="ttdef"><b>Definition:</b> AudioManager.h:10</div></div>
 <div class="ttc" id="aclassAudioManager_html_a5e2550bbb784394e8936cb10bfcc5d1e"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a5e2550bbb784394e8936cb10bfcc5d1e">AudioManager::initialized</a></div><div class="ttdeci">bool initialized</div><div class="ttdef"><b>Definition:</b> AudioManager.h:12</div></div>
-<div class="ttc" id="aclassAudioManager_html_a63cb0e6ac867b24d3b1d9f34749deedf"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a63cb0e6ac867b24d3b1d9f34749deedf">AudioManager::playMusic</a></div><div class="ttdeci">void playMusic(std::string soundfile, float volume, bool looping=true, int fade_time=0)</div></div>
-<div class="ttc" id="aclassAudioManager_html_a8e9a9512518b857e606f9645f1f721c5"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a8e9a9512518b857e606f9645f1f721c5">AudioManager::playSound</a></div><div class="ttdeci">void playSound(std::string soundfile, float volume, bool looping=false)</div></div>
+<div class="ttc" id="aclassAudioManager_html_a63cb0e6ac867b24d3b1d9f34749deedf"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a63cb0e6ac867b24d3b1d9f34749deedf">AudioManager::playMusic</a></div><div class="ttdeci">void playMusic(std::string soundfile, float volume, bool looping=true, int fade_time=0)</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:23</div></div>
+<div class="ttc" id="aclassAudioManager_html_a8e9a9512518b857e606f9645f1f721c5"><div class="ttname"><a href="../../db/d48/classAudioManager.html#a8e9a9512518b857e606f9645f1f721c5">AudioManager::playSound</a></div><div class="ttdeci">void playSound(std::string soundfile, float volume, bool looping=false)</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:3</div></div>
 <div class="ttc" id="aclassAudioManager_html_aacbc5a2a78b2da00019d8c3aefb9b109"><div class="ttname"><a href="../../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109">AudioManager::scores</a></div><div class="ttdeci">std::unordered_map&lt; std::string, Mix_Music * &gt; scores</div><div class="ttdef"><b>Definition:</b> AudioManager.h:11</div></div>
-<div class="ttc" id="aclassAudioManager_html_ad0b3a6a5dd01cead7fcbf89da85ff47e"><div class="ttname"><a href="../../db/d48/classAudioManager.html#ad0b3a6a5dd01cead7fcbf89da85ff47e">AudioManager::stopMusic</a></div><div class="ttdeci">void stopMusic(int fade_time=0)</div></div>
-<div class="ttc" id="aclassAudioManager_html_ad94dc46723c6d7cf8c81fc3772a842aa"><div class="ttname"><a href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">AudioManager::~AudioManager</a></div><div class="ttdeci">~AudioManager()</div></div>
-<div class="ttc" id="aclassAudioManager_html_ae59d8605c1d706e7bab47d4e8f900d09"><div class="ttname"><a href="../../db/d48/classAudioManager.html#ae59d8605c1d706e7bab47d4e8f900d09">AudioManager::AudioManager</a></div><div class="ttdeci">AudioManager()</div></div>
+<div class="ttc" id="aclassAudioManager_html_ad0b3a6a5dd01cead7fcbf89da85ff47e"><div class="ttname"><a href="../../db/d48/classAudioManager.html#ad0b3a6a5dd01cead7fcbf89da85ff47e">AudioManager::stopMusic</a></div><div class="ttdeci">void stopMusic(int fade_time=0)</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:43</div></div>
+<div class="ttc" id="aclassAudioManager_html_ad94dc46723c6d7cf8c81fc3772a842aa"><div class="ttname"><a href="../../db/d48/classAudioManager.html#ad94dc46723c6d7cf8c81fc3772a842aa">AudioManager::~AudioManager</a></div><div class="ttdeci">~AudioManager()</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:56</div></div>
+<div class="ttc" id="aclassAudioManager_html_ae59d8605c1d706e7bab47d4e8f900d09"><div class="ttname"><a href="../../db/d48/classAudioManager.html#ae59d8605c1d706e7bab47d4e8f900d09">AudioManager::AudioManager</a></div><div class="ttdeci">AudioManager()</div><div class="ttdef"><b>Definition:</b> AudioManager.cpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

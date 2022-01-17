@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1afff6d2d37364f0329eba8b54c380b1ff:
+
+Function generateFixedDistanceTree
+==================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: generateFixedDistanceTree(HuffmanTree *)

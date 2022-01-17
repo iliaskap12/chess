@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a19ca99a53f06c1a4626f12e0a0f01776:
+
+Function lodepng_get_raw_size_idat
+==================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_get_raw_size_idat(unsigned, unsigned, unsigned)

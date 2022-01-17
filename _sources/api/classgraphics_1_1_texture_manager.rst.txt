@@ -3,7 +3,7 @@
 Class TextureManager
 ====================
 
-- Defined in :ref:`file_include_sgg_texture.h`
+- Defined in :ref:`file_include_sgg_sgg_texture.h`
 
 
 Class Documentation

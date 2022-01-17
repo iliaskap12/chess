@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['gl3_5fprototypes_0',['GL3_PROTOTYPES',['../d8/d2c/GLbackend_8h.html#a513ae87770898727d346eced6be03bdd',1,'GLbackend.h']]]
+  ['cerror_5fbreak_0',['CERROR_BREAK',['../dd/dc0/lodepng_8cpp.html#af803b1b42c6d252d173df9cd0b32725a',1,'lodepng.cpp']]],
+  ['cerror_5freturn_1',['CERROR_RETURN',['../dd/dc0/lodepng_8cpp.html#ac432c606cccae0b22f9ec10948f56ec4',1,'lodepng.cpp']]],
+  ['cerror_5freturn_5ferror_2',['CERROR_RETURN_ERROR',['../dd/dc0/lodepng_8cpp.html#a22b750f75293315981ee75cada129717',1,'lodepng.cpp']]],
+  ['cerror_5ftry_5freturn_3',['CERROR_TRY_RETURN',['../dd/dc0/lodepng_8cpp.html#a84c132ca96d56cac57db68734db152b0',1,'lodepng.cpp']]]
 ];

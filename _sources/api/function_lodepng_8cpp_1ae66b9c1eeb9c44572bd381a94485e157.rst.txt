@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ae66b9c1eeb9c44572bd381a94485e157:
+
+Function lodepng_zlib_decompress(unsigned char \*\*, size_t \*, const unsigned char \*, size_t, const LodePNGDecompressSettings \*)
+===================================================================================================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_zlib_decompress(unsigned char **, size_t *, const unsigned char *, size_t, const LodePNGDecompressSettings *)

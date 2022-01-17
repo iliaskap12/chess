@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Program Listing for File fonts.cpp &mdash; Chess  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Chess
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">Library API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Chess</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Program Listing for File fonts.cpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/api/program_listing_file_include_sgg_sgg_fonts.cpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="program-listing-for-file-fonts-cpp">
+<span id="program-listing-file-include-sgg-sgg-fonts-cpp"></span><h1>Program Listing for File fonts.cpp<a class="headerlink" href="#program-listing-for-file-fonts-cpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="file_include_sgg_sgg_fonts.cpp.html#file-include-sgg-sgg-fonts-cpp"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">include/sgg/sgg/fonts.cpp</span></code>)</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;fonts.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glm/gtc/matrix_transform.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;glm/gtx/transform.hpp&gt;</span><span class="cp"></span>
+
+<span class="cp">#ifdef __APPLE__</span>
+<span class="cp">#define sggBindVertexArray glBindVertexArrayAPPLE</span>
+<span class="cp">#define sggGenVertexArrays glGenVertexArraysAPPLE</span>
+<span class="cp">#else</span>
+<span class="cp">#define sggBindVertexArray glBindVertexArray</span>
+<span class="cp">#define sggGenVertexArrays glGenVertexArrays</span>
+<span class="cp">#endif</span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">__FontVertexShader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s"></span>
+<span class="s">#version 120</span>
+
+<span class="s">attribute vec4 coord;</span>
+<span class="s">varying vec2 texcoord;</span>
+<span class="s">uniform mat4 projection;</span>
+<span class="s">uniform mat4 modelview;</span>
+
+<span class="s">void main(void) {</span>
+<span class="s">  gl_Position = projection * modelview * vec4(coord.xy, 0, 1);</span>
+<span class="s">  texcoord = coord.zw;</span>
+<span class="s">}</span>
+<span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">__FontFragmentShader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">R</span><span class="s">&quot;</span><span class="dl">(</span><span class="s"></span>
+<span class="s">#version 120</span>
+
+<span class="s">varying vec2 texcoord;</span>
+<span class="s">uniform vec4 color1;</span>
+<span class="s">uniform vec4 color2;</span>
+<span class="s">uniform sampler2D tex;</span>
+<span class="s">uniform vec2 gradient;</span>
+
+<span class="s">void main(void) {</span>
+<span class="s">    vec4 color = mix( color1, color2, dot(texcoord,gradient));</span>
+<span class="s">    gl_FragColor = vec4(1, 1, 1, texture2D(tex, texcoord).r) * color;</span>
+<span class="s">}</span>
+<span class="dl">)</span><span class="s">&quot;</span><span class="p">;</span><span class="w"></span>
+
+
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">FontLib::init</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">FT_Init_FreeType</span><span class="p">(</span><span class="o">&amp;</span><span class="n">m_ft</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glGetError</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="n">GLubyte</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glewGetErrorString</span><span class="p">(</span><span class="n">glGetError</span><span class="p">());</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">m_font_shader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Shader</span><span class="p">(</span><span class="n">__FontVertexShader</span><span class="p">,</span><span class="w"> </span><span class="n">__FontFragmentShader</span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">m_font_shader</span><span class="p">.</span><span class="n">init</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">attrib_position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_font_shader</span><span class="p">.</span><span class="n">getAttributeLocation</span><span class="p">(</span><span class="s">&quot;coord&quot;</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">sggGenVertexArrays</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m_font_vao</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">sggBindVertexArray</span><span class="p">(</span><span class="n">m_font_vao</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glGenBuffers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">m_font_vbo</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBindBuffer</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="n">m_font_vbo</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glEnableVertexAttribArray</span><span class="p">(</span><span class="n">attrib_position</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glVertexAttribPointer</span><span class="p">(</span><span class="n">attrib_position</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">GL_FLOAT</span><span class="p">,</span><span class="w"> </span><span class="n">GL_FALSE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">GLfloat</span><span class="w"> </span><span class="n">box</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBufferData</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">GL_DYNAMIC_DRAW</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">m_curr_font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_fonts</span><span class="p">.</span><span class="n">end</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">FontLib::submitText</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">TextRecord</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">text</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_curr_font</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_fonts</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Not a very elegant workaround,</span>
+<span class="w">    </span><span class="c1">// but helps keep changes minimal,</span>
+<span class="w">    </span><span class="c1">// without a performance impact:</span>
+<span class="w">    </span><span class="k">const_cast</span><span class="o">&lt;</span><span class="n">TextRecord</span><span class="o">&amp;&gt;</span><span class="p">(</span><span class="n">text</span><span class="p">).</span><span class="n">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="p">(</span><span class="n">m_curr_font</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_content</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">text</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">FontLib::drawText</span><span class="p">(</span><span class="n">TextRecord</span><span class="w"> </span><span class="n">entry</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">entry</span><span class="p">.</span><span class="n">font</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">Font</span><span class="w"> </span><span class="n">font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="n">font</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">FT_GlyphSlot</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">font</span><span class="p">.</span><span class="n">face</span><span class="o">-&gt;</span><span class="n">glyph</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">#ifndef __APPLE__</span>
+<span class="w">    </span><span class="c1">//glFrontFace(GL_CW);</span>
+<span class="cp">#endif</span>
+
+<span class="w">    </span><span class="n">glEnable</span><span class="p">(</span><span class="n">GL_BLEND</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBlendFunc</span><span class="p">(</span><span class="n">GL_SRC_ALPHA</span><span class="p">,</span><span class="w"> </span><span class="n">GL_ONE_MINUS_SRC_ALPHA</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glActiveTexture</span><span class="p">(</span><span class="n">GL_TEXTURE0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBindTexture</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="n">font</span><span class="p">.</span><span class="n">font_tex</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">.</span><span class="n">use</span><span class="p">();</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">[</span><span class="s">&quot;tex&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">[</span><span class="s">&quot;color1&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">color1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">[</span><span class="s">&quot;color2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="n">use_gradient</span><span class="o">?</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">color2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">color1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">[</span><span class="s">&quot;gradient&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">gradient</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">[</span><span class="s">&quot;projection&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">proj</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">c_str</span><span class="p">();</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="n">p</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">FT_Load_Char</span><span class="p">(</span><span class="n">font</span><span class="p">.</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="n">FT_LOAD_RENDER</span><span class="p">))</span><span class="w"></span>
+<span class="w">            </span><span class="k">continue</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="n">glTexImage2D</span><span class="p">(</span><span class="w"></span>
+<span class="w">            </span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">GL_RED</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">width</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">rows</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">GL_RED</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">GL_UNSIGNED_BYTE</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">buffer</span><span class="w"></span>
+<span class="w">            </span><span class="p">);</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">width</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">rows</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">width</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">m_font_res</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">bitmap</span><span class="p">.</span><span class="n">rows</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">m_font_res</span><span class="p">;</span><span class="w"></span>
+<span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="o">-&gt;</span><span class="n">metrics</span><span class="p">.</span><span class="n">horiBearingY</span><span class="o">/</span><span class="p">(</span><span class="mi">64</span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">m_font_res</span><span class="p">)</span><span class="o">*</span><span class="n">entry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">h</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">GLfloat</span><span class="w"> </span><span class="n">box</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">     </span><span class="n">y</span><span class="o">-</span><span class="n">b</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">-</span><span class="n">b</span><span class="w">    </span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w">     </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">w</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">};</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">m_font_shader</span><span class="p">[</span><span class="s">&quot;modelview&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">glm</span><span class="o">::</span><span class="n">translate</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec3</span><span class="p">(</span><span class="n">entry</span><span class="p">.</span><span class="n">pos</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">pos</span><span class="p">.</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0f</span><span class="p">))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">mv</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="w">        </span><span class="n">sggBindVertexArray</span><span class="p">(</span><span class="n">m_font_vao</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">glBindBuffer</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="n">m_font_vbo</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">glBufferData</span><span class="p">(</span><span class="n">GL_ARRAY_BUFFER</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="w"> </span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">box</span><span class="p">,</span><span class="w"> </span><span class="n">GL_DYNAMIC_DRAW</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">glDrawArrays</span><span class="p">(</span><span class="n">GL_TRIANGLE_STRIP</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">max</span><span class="p">(</span><span class="n">w</span><span class="o">+</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">x</span><span class="o">*</span><span class="mf">0.05f</span><span class="p">,</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">x</span><span class="o">*</span><span class="mf">0.15f</span><span class="p">);</span><span class="w"></span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">entry</span><span class="p">.</span><span class="n">size</span><span class="p">.</span><span class="n">y</span><span class="o">*</span><span class="mf">1.1f</span><span class="o">*</span><span class="p">(</span><span class="n">g</span><span class="o">-&gt;</span><span class="n">advance</span><span class="p">.</span><span class="n">y</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glBindTexture</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glFrontFace</span><span class="p">(</span><span class="n">GL_CCW</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">FontLib::commitText</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_font_shader</span><span class="p">.</span><span class="n">use</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">glEnable</span><span class="p">(</span><span class="n">GL_SCISSOR_TEST</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">m_content</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="n">drawText</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_content</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">FontLib::setCanvas</span><span class="p">(</span><span class="n">glm</span><span class="o">::</span><span class="n">vec2</span><span class="w"> </span><span class="n">sz</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_canvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sz</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="nf">FontLib::setCurrentFont</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">fontname</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">m_curr_font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_fonts</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">fontname</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_curr_font</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">m_fonts</span><span class="p">.</span><span class="n">end</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">Font</span><span class="w"> </span><span class="n">font</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">FT_New_Face</span><span class="p">(</span><span class="n">m_ft</span><span class="p">,</span><span class="w"> </span><span class="n">fontname</span><span class="p">.</span><span class="n">c_str</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">font</span><span class="p">.</span><span class="n">face</span><span class="p">))</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">FT_Set_Pixel_Sizes</span><span class="p">(</span><span class="n">font</span><span class="p">.</span><span class="n">face</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">m_font_res</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">glActiveTexture</span><span class="p">(</span><span class="n">GL_TEXTURE0</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glGenTextures</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">font</span><span class="p">.</span><span class="n">font_tex</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glBindTexture</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="n">font</span><span class="p">.</span><span class="n">font_tex</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glTexParameteri</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="n">GL_TEXTURE_WRAP_S</span><span class="p">,</span><span class="w"> </span><span class="n">GL_CLAMP_TO_EDGE</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glTexParameteri</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="n">GL_TEXTURE_WRAP_T</span><span class="p">,</span><span class="w"> </span><span class="n">GL_CLAMP_TO_EDGE</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glTexParameteri</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="n">GL_TEXTURE_MIN_FILTER</span><span class="p">,</span><span class="w"> </span><span class="n">GL_LINEAR</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glTexParameteri</span><span class="p">(</span><span class="n">GL_TEXTURE_2D</span><span class="p">,</span><span class="w"> </span><span class="n">GL_TEXTURE_MAG_FILTER</span><span class="p">,</span><span class="w"> </span><span class="n">GL_LINEAR</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">glPixelStorei</span><span class="p">(</span><span class="n">GL_UNPACK_ALIGNMENT</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">m_curr_font</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_fonts</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">Font</span><span class="o">&gt;</span><span class="p">(</span><span class="n">fontname</span><span class="p">,</span><span class="n">font</span><span class="p">)).</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+
+<span class="n">FT_Library</span><span class="w"> </span><span class="n">FontLib</span><span class="o">::</span><span class="n">m_ft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Kapareliotis Elias, Papantonis Christos.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

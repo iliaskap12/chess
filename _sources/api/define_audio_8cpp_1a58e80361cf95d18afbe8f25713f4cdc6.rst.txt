@@ -1,0 +1,13 @@
+.. _exhale_define_audio_8cpp_1a58e80361cf95d18afbe8f25713f4cdc6:
+
+Define AUDIO_SAMPLES
+====================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AUDIO_SAMPLES

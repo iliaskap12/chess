@@ -1,0 +1,16 @@
+.. _exhale_struct_struct_color_tree:
+
+Struct ColorTree
+================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: ColorTree
+   :members:
+   :protected-members:
+   :undoc-members:

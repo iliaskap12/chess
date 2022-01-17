@@ -1,0 +1,13 @@
+.. _exhale_typedef_audio_8cpp_1abb0fd72d54e807739b545cac64773bcf:
+
+Typedef PrivateAudioDevice
+==========================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: PrivateAudioDevice

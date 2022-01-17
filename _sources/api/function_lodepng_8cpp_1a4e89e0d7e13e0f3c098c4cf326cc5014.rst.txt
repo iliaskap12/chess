@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a4e89e0d7e13e0f3c098c4cf326cc5014:
+
+Function lodepng_has_palette_alpha(const LodePNGColorMode \*)
+=============================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_has_palette_alpha(const LodePNGColorMode *)

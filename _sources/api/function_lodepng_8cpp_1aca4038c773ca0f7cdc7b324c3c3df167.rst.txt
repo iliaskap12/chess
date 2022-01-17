@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1aca4038c773ca0f7cdc7b324c3c3df167:
+
+Function addChunk_IEND
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addChunk_IEND(ucvector *)

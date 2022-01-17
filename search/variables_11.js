@@ -8,7 +8,7 @@ var searchData=
   ['shouldmove_5',['shouldMove',['../de/dff/classPawn.html#a22a47e0e211aee521502b130d0ca75c2',1,'Pawn']]],
   ['side_6',['side',['../d2/d4b/classPlayer.html#acffed02071df30c5c73482abbd32de4d',1,'Player']]],
   ['sidesize_7',['sideSize',['../d7/d22/classCheckboard.html#a827dda3faa4d37821f0c7d6aebcf9498',1,'Checkboard']]],
-  ['size_8',['size',['../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a',1,'HUD::size()'],['../dc/d48/structTextRecord.html#ab93512d6a6a9ede4b78940d0d40fb395',1,'TextRecord::size()']]],
+  ['size_8',['size',['../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a',1,'HUD::size()'],['../dc/d48/structTextRecord.html#ab93512d6a6a9ede4b78940d0d40fb395',1,'TextRecord::size()'],['../d7/d4e/structuivector.html#aa999025945f0c93d0461192475ae2720',1,'uivector::size()'],['../d2/d0b/structucvector.html#a27c99c34de0c5b3ca0c242d402c69499',1,'ucvector::size()'],['../d6/d45/structLodePNGBitReader.html#a80a148b29e36301da77f3d2432cbd608',1,'LodePNGBitReader::size()']]],
   ['sounds_9',['sounds',['../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7',1,'AudioManager']]],
   ['square_5f_10',['square_',['../de/dff/classPawn.html#a5837bbc8751df1638468acb214f6d4b6',1,'Pawn']]],
   ['squares_11',['squares',['../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497',1,'Checkboard']]],

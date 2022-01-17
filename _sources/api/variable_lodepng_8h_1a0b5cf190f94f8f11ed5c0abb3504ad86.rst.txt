@@ -3,7 +3,7 @@
 Variable lodepng_default_compress_settings
 ==========================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Variable Documentation

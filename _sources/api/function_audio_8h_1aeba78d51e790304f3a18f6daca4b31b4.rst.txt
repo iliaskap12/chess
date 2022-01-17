@@ -1,9 +1,9 @@
 .. _exhale_function_audio_8h_1aeba78d51e790304f3a18f6daca4b31b4:
 
-Function createAudio
-====================
+Function createAudio(const char \*, uint8_t, int)
+=================================================
 
-- Defined in :ref:`file_include_sgg_audio.h`
+- Defined in :ref:`file_include_sgg_sgg_audio.h`
 
 
 Function Documentation

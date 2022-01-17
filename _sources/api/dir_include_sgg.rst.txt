@@ -11,19 +11,10 @@ Directory sgg
 
 *Directory path:* ``include/sgg``
 
+Subdirectories
+--------------
 
-Files
------
+- :ref:`dir_include_sgg_sgg`
 
-- :ref:`file_include_sgg_audio.h`
-- :ref:`file_include_sgg_AudioManager.h`
-- :ref:`file_include_sgg_commonshaders.h`
-- :ref:`file_include_sgg_fonts.h`
-- :ref:`file_include_sgg_GLbackend.h`
-- :ref:`file_include_sgg_graphics.h`
-- :ref:`file_include_sgg_lodepng.h`
-- :ref:`file_include_sgg_scancodes.h`
-- :ref:`file_include_sgg_shader.h`
-- :ref:`file_include_sgg_texture.h`
 
 

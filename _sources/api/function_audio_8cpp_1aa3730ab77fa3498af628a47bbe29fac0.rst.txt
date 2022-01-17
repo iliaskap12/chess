@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8cpp_1aa3730ab77fa3498af628a47bbe29fac0:
+
+Function freeAudio(Audio \*)
+============================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: freeAudio(Audio *)

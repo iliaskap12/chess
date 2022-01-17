@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1a5b48becc8f2653ba2bb90858d38fc9ec:
+
+Define NUM_DISTANCE_SYMBOLS
+===========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: NUM_DISTANCE_SYMBOLS

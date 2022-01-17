@@ -1,0 +1,13 @@
+.. _exhale_function_group_____c_a_l_l_b_a_c_k_1gab05d7d6f3bb5941b67d62a5707ce1c94:
+
+Function graphics::setUpdateFunction
+====================================
+
+- Defined in :ref:`file_include_sgg_sgg_graphics.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::setUpdateFunction(std::function<void(float)>)

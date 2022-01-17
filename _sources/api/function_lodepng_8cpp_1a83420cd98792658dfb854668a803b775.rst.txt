@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a83420cd98792658dfb854668a803b775:
+
+Function addUnknownChunks
+=========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addUnknownChunks(ucvector *, unsigned char *, size_t)

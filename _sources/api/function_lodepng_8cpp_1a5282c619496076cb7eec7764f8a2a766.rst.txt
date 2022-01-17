@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a5282c619496076cb7eec7764f8a2a766:
+
+Function filter
+===============
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: filter(unsigned char *, const unsigned char *, unsigned, unsigned, const LodePNGColorMode *, const LodePNGEncoderSettings *)

@@ -1,4 +1,7 @@
-<map id="/Users/runner/work/chess/chess/include/sgg/texture.h" name="/Users/runner/work/chess/chess/include/sgg/texture.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,151,61"/>
-<area shape="rect" id="node2" href="$d8/d2c/GLbackend_8h.html" title=" " alt="" coords="5,109,151,165"/>
+<map id="/Users/runner/work/chess/chess/include/sgg/sgg/texture.h" name="/Users/runner/work/chess/chess/include/sgg/sgg/texture.h">
+<area shape="rect" id="node1" title=" " alt="" coords="193,5,339,61"/>
+<area shape="rect" id="node2" href="$d8/d2c/GLbackend_8h.html" title=" " alt="" coords="103,109,256,165"/>
+<area shape="rect" id="node5" href="$d2/d20/texture_8cpp.html" title=" " alt="" coords="280,109,425,165"/>
+<area shape="rect" id="node3" href="$d3/dc9/GLbackend_8cpp.html" title=" " alt="" coords="5,213,172,269"/>
+<area shape="rect" id="node4" href="$d6/d99/graphics_8cpp.html" title=" " alt="" coords="196,213,347,269"/>
 </map>

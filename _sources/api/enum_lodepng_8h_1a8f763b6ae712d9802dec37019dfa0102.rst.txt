@@ -3,7 +3,7 @@
 Enum LodePNGColorType
 =====================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Enum Documentation

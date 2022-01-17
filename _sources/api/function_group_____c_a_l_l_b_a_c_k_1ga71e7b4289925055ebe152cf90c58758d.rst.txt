@@ -1,0 +1,13 @@
+.. _exhale_function_group_____c_a_l_l_b_a_c_k_1ga71e7b4289925055ebe152cf90c58758d:
+
+Function graphics::setResizeFunction
+====================================
+
+- Defined in :ref:`file_include_sgg_sgg_graphics.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: graphics::setResizeFunction(std::function<void(int, int)>)

@@ -3,7 +3,7 @@
 Variable __PrimitivesVertexShader
 =================================
 
-- Defined in :ref:`file_include_sgg_commonshaders.h`
+- Defined in :ref:`file_include_sgg_sgg_commonshaders.h`
 
 
 Variable Documentation

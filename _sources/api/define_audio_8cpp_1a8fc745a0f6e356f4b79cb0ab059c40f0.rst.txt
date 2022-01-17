@@ -1,0 +1,13 @@
+.. _exhale_define_audio_8cpp_1a8fc745a0f6e356f4b79cb0ab059c40f0:
+
+Define AUDIO_CHANNELS
+=====================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AUDIO_CHANNELS

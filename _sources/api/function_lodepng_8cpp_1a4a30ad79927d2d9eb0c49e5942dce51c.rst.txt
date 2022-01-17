@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a4a30ad79927d2d9eb0c49e5942dce51c:
+
+Function deflateDynamic
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: deflateDynamic(LodePNGBitWriter *, Hash *, const unsigned char *, size_t, size_t, const LodePNGCompressSettings *, unsigned)

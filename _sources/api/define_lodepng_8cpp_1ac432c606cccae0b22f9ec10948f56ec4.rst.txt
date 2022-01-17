@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1ac432c606cccae0b22f9ec10948f56ec4:
+
+Define CERROR_RETURN
+====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: CERROR_RETURN

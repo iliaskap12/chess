@@ -3,7 +3,7 @@
 Define ASSERT_GL
 ================
 
-- Defined in :ref:`file_include_sgg_shader.h`
+- Defined in :ref:`file_include_sgg_sgg_shader.h`
 
 
 Define Documentation

@@ -1,0 +1,61 @@
+
+.. _file_include_sgg_sgg_fonts.cpp:
+
+File fonts.cpp
+==============
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg_sgg>` (``include/sgg/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/sgg/fonts.cpp``)
+------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_sgg_fonts.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``algorithm``
+
+- ``fonts.h`` (:ref:`file_include_sgg_sgg_fonts.h`)
+
+- ``glm/gtc/matrix_transform.hpp``
+
+- ``glm/gtx/transform.hpp``
+
+
+
+
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define_fonts_8cpp_1a2ce31c52e5c818bb97998c03fcd0a3eb`
+
+- :ref:`exhale_define_fonts_8cpp_1a0fe050d1874b79949adebe4c2ca544b8`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_fonts_8cpp_1a5414de66b718807d68eec6ea190b67d7`
+
+- :ref:`exhale_variable_fonts_8cpp_1adc90589f68219c289f206ca45c0b10a9`
+

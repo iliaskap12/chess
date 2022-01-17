@@ -36,6 +36,11 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_include_sgg_sgg.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_include_sounds.rst
 
 .. toctree::
@@ -90,12 +95,22 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_audio.h.rst
+   file_include_sgg_sgg_audio.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_AudioManager.h.rst
+   file_include_sgg_sgg_audio.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_AudioManager.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_AudioManager.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -180,7 +195,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_commonshaders.h.rst
+   file_include_sgg_sgg_commonshaders.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -240,7 +255,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_fonts.h.rst
+   file_include_sgg_sgg_fonts.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_fonts.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -255,12 +275,22 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_GLbackend.h.rst
+   file_include_sgg_sgg_GLbackend.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_graphics.h.rst
+   file_include_sgg_sgg_GLbackend.h.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_graphics.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_graphics.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -315,7 +345,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_lodepng.h.rst
+   file_include_sgg_sgg_lodepng.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_lodepng.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -555,7 +590,7 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_scancodes.h.rst
+   file_include_sgg_sgg_scancodes.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -570,7 +605,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_shader.h.rst
+   file_include_sgg_sgg_shader.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_shader.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -605,7 +645,12 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_texture.h.rst
+   file_include_sgg_sgg_texture.cpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_include_sgg_sgg_texture.h.rst
 
 .. toctree::
    :maxdepth: 5

@@ -1,0 +1,13 @@
+.. _exhale_function_audio_8cpp_1a3fae9ccf354612f523af6a8078ae11d9:
+
+Function endAudio(void)
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: endAudio(void)

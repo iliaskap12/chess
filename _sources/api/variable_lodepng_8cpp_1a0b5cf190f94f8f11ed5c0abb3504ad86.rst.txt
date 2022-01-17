@@ -1,0 +1,13 @@
+.. _exhale_variable_lodepng_8cpp_1a0b5cf190f94f8f11ed5c0abb3504ad86:
+
+Variable lodepng_default_compress_settings
+==========================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: lodepng_default_compress_settings

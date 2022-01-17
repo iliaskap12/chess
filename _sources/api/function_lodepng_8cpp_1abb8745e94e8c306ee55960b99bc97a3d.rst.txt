@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1abb8745e94e8c306ee55960b99bc97a3d:
+
+Function ilog2i
+===============
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ilog2i(size_t)

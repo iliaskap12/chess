@@ -3,7 +3,7 @@
 Enum scancode_t
 ===============
 
-- Defined in :ref:`file_include_sgg_scancodes.h`
+- Defined in :ref:`file_include_sgg_sgg_scancodes.h`
 
 
 Enum Documentation

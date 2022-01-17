@@ -1,9 +1,9 @@
 .. _exhale_function_audio_8h_1aa2a1c236a8c22740fd92902a1929f36d:
 
-Function playSound
-==================
+Function playSound(const char \*, int)
+======================================
 
-- Defined in :ref:`file_include_sgg_audio.h`
+- Defined in :ref:`file_include_sgg_sgg_audio.h`
 
 
 Function Documentation

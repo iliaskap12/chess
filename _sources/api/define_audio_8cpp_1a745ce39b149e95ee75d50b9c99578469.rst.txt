@@ -1,0 +1,13 @@
+.. _exhale_define_audio_8cpp_1a745ce39b149e95ee75d50b9c99578469:
+
+Define AUDIO_MAX_SOUNDS
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_audio.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: AUDIO_MAX_SOUNDS

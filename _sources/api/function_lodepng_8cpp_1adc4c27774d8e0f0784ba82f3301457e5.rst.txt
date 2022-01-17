@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1adc4c27774d8e0f0784ba82f3301457e5:
+
+Function color_tree_add
+=======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: color_tree_add(ColorTree *, unsigned char, unsigned char, unsigned char, unsigned char, unsigned)

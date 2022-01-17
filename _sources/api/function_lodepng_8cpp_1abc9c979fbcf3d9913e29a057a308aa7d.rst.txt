@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1abc9c979fbcf3d9913e29a057a308aa7d:
+
+Function Adam7_deinterlace
+==========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: Adam7_deinterlace(unsigned char *, const unsigned char *, unsigned, unsigned, unsigned)

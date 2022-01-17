@@ -1,13 +1,20 @@
 var searchData=
 [
-  ['increasedangerreferencecount_0',['increaseDangerReferenceCount',['../d3/d72/classSquare.html#a75f96879be958b34fee2e1c225c88d33',1,'Square']]],
-  ['init_1',['init',['../d0/d57/classFontLib.html#a7592ec3d07d67a047f2e39f36150eb93',1,'FontLib::init()'],['../d6/df2/classgraphics_1_1GLBackend.html#a8e5584fcadb03503472e62c746bfaf93',1,'graphics::GLBackend::init()'],['../d9/d69/classShader.html#a34a5639bd5b3a138fdaf338c7da79da0',1,'Shader::init()']]],
-  ['initaudio_2',['initAudio',['../da/d09/audio_8h.html#aa497dc0e932d8008a092680b6078ba0c',1,'audio.h']]],
-  ['initialize_3',['initialize',['../d3/d72/classSquare.html#ae055a45904b986ac48dfa7c4e9bd66e7',1,'Square']]],
-  ['initprimitives_4',['initPrimitives',['../d6/df2/classgraphics_1_1GLBackend.html#ad8e7cb6e811a84ee3076d9fa4089e8eb',1,'graphics::GLBackend']]],
-  ['isblocked_5',['isBlocked',['../de/dff/classPawn.html#a0038ef05d7611d840132ae7f449ae528',1,'Pawn']]],
-  ['ischecked_6',['isChecked',['../d1/db5/classKing.html#ab8c3aa3bc1db243298949efaefbc80fd',1,'King']]],
-  ['isking_7',['isKing',['../d7/d22/classCheckboard.html#a3a1c09c2b69234c8e8e12dffd2344935',1,'Checkboard']]],
-  ['ismousedragging_8',['isMouseDragging',['../d6/df2/classgraphics_1_1GLBackend.html#a2b5e76d7caac6cb4d428176af86ecbd9',1,'graphics::GLBackend']]],
-  ['iswhiteturn_9',['isWhiteTurn',['../d9/d68/classGame.html#a4f9e673f75017c3f18bda708cd399080',1,'Game']]]
+  ['ilog2_0',['ilog2',['../dd/dc0/lodepng_8cpp.html#a111dc8194328d6a175ba0108908d408a',1,'lodepng.cpp']]],
+  ['ilog2i_1',['ilog2i',['../dd/dc0/lodepng_8cpp.html#abb8745e94e8c306ee55960b99bc97a3d',1,'lodepng.cpp']]],
+  ['increasedangerreferencecount_2',['increaseDangerReferenceCount',['../d3/d72/classSquare.html#a75f96879be958b34fee2e1c225c88d33',1,'Square']]],
+  ['inflatehuffmanblock_3',['inflateHuffmanBlock',['../dd/dc0/lodepng_8cpp.html#a96857931a17216f02a1fcca087f38f79',1,'lodepng.cpp']]],
+  ['inflatenocompression_4',['inflateNoCompression',['../dd/dc0/lodepng_8cpp.html#ae49d24df54a44d1d1c0c950e8894b4f8',1,'lodepng.cpp']]],
+  ['inflatev_5',['inflatev',['../dd/dc0/lodepng_8cpp.html#afae0f9259a36be914ddd0bb64d91a3bc',1,'lodepng.cpp']]],
+  ['init_6',['init',['../d0/d57/classFontLib.html#a7592ec3d07d67a047f2e39f36150eb93',1,'FontLib::init()'],['../d6/df2/classgraphics_1_1GLBackend.html#a4108aac064a60311749f5b55f84e746d',1,'graphics::GLBackend::init()'],['../d9/d69/classShader.html#a34a5639bd5b3a138fdaf338c7da79da0',1,'Shader::init()']]],
+  ['initaudio_7',['initAudio',['../d1/ddc/audio_8cpp.html#aa497dc0e932d8008a092680b6078ba0c',1,'initAudio(void):&#160;audio.cpp'],['../da/d09/audio_8h.html#aa497dc0e932d8008a092680b6078ba0c',1,'initAudio(void):&#160;audio.cpp']]],
+  ['initialize_8',['initialize',['../d3/d72/classSquare.html#ae055a45904b986ac48dfa7c4e9bd66e7',1,'Square']]],
+  ['initprimitives_9',['initPrimitives',['../d6/df2/classgraphics_1_1GLBackend.html#ad8e7cb6e811a84ee3076d9fa4089e8eb',1,'graphics::GLBackend']]],
+  ['isblocked_10',['isBlocked',['../de/dff/classPawn.html#a0038ef05d7611d840132ae7f449ae528',1,'Pawn']]],
+  ['ischecked_11',['isChecked',['../d1/db5/classKing.html#ab8c3aa3bc1db243298949efaefbc80fd',1,'King']]],
+  ['isgrayiccprofile_12',['isGrayICCProfile',['../dd/dc0/lodepng_8cpp.html#a16b1b72f943e43b4c718d51bedaf1710',1,'lodepng.cpp']]],
+  ['isking_13',['isKing',['../d7/d22/classCheckboard.html#a3a1c09c2b69234c8e8e12dffd2344935',1,'Checkboard']]],
+  ['ismousedragging_14',['isMouseDragging',['../d6/df2/classgraphics_1_1GLBackend.html#a2b5e76d7caac6cb4d428176af86ecbd9',1,'graphics::GLBackend']]],
+  ['isrgbiccprofile_15',['isRGBICCProfile',['../dd/dc0/lodepng_8cpp.html#a02469405ae9e4b5a94b8098f91b776c3',1,'lodepng.cpp']]],
+  ['iswhiteturn_16',['isWhiteTurn',['../d9/d68/classGame.html#a4f9e673f75017c3f18bda708cd399080',1,'Game']]]
 ];

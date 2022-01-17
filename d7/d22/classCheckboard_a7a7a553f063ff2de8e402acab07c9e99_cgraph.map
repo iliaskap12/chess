@@ -1,6 +1,7 @@
 <map id="Checkboard::movePawn" name="Checkboard::movePawn">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,171,57"/>
-<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="221,5,375,32"/>
-<area shape="rect" id="node3" href="$d7/d22/classCheckboard.html#a7203ce315bcf059fe127acd6ea627e1d" title=" " alt="" coords="219,56,377,83"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#a4f6f59174f926a24175c35065b286b1e" title=" " alt="" coords="425,56,589,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,42,171,69"/>
+<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="221,15,375,42"/>
+<area shape="rect" id="node4" href="$d7/d22/classCheckboard.html#a7203ce315bcf059fe127acd6ea627e1d" title=" " alt="" coords="219,67,377,94"/>
+<area shape="rect" id="node3" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="434,5,581,47"/>
+<area shape="rect" id="node5" href="$d3/d72/classSquare.html#a4f6f59174f926a24175c35065b286b1e" title=" " alt="" coords="425,71,589,98"/>
 </map>

@@ -1,0 +1,93 @@
+
+.. _file_include_sgg_sgg_GLbackend.cpp:
+
+File GLbackend.cpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_include_sgg_sgg>` (``include/sgg/sgg``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``include/sgg/sgg/GLbackend.cpp``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_include_sgg_sgg_GLbackend.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``GLbackend.h`` (:ref:`file_include_sgg_sgg_GLbackend.h`)
+
+- ``cctype``
+
+- ``chrono``
+
+- ``commonshaders.h`` (:ref:`file_include_sgg_sgg_commonshaders.h`)
+
+- ``cstdint``
+
+- ``cstring``
+
+- ``filesystem``
+
+- ``glm/gtc/matrix_transform.hpp``
+
+- ``glm/gtx/transform.hpp``
+
+- ``graphics.h`` (:ref:`file_include_sgg_sgg_graphics.h`)
+
+- ``iostream``
+
+- ``string`` (:ref:`file_src_util_custom-string.cpp`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_graphics`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespacegraphics_1a134b76e977001f1fea0b9977939c283d`
+
+- :ref:`exhale_function_namespacegraphics_1ad5e9f06e1b40b44582efe54b365f2deb`
+
+
+Defines
+-------
+
+
+- :ref:`exhale_define__g_lbackend_8cpp_1a2ce31c52e5c818bb97998c03fcd0a3eb`
+
+- :ref:`exhale_define__g_lbackend_8cpp_1a0fe050d1874b79949adebe4c2ca544b8`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespacegraphics_1a29154275bafc8df9610d33af93de8191`
+
+- :ref:`exhale_variable_namespacegraphics_1a16cf0a82ae8e2d6e236731cb0f3c58b1`
+

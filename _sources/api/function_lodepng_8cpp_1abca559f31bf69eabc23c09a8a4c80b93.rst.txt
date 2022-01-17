@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1abca559f31bf69eabc23c09a8a4c80b93:
+
+Function lodepng_get_channels(const LodePNGColorMode \*)
+========================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_get_channels(const LodePNGColorMode *)

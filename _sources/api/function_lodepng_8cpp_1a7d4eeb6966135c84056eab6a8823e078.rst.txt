@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a7d4eeb6966135c84056eab6a8823e078:
+
+Function ensureBits32
+=====================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: ensureBits32(LodePNGBitReader *, size_t)

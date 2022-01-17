@@ -1,0 +1,13 @@
+.. _exhale_variable_shader_8cpp_1a0c960d3220f4a1985fa6f14ef0c2a454:
+
+Variable __DefaultVertexShader
+==============================
+
+- Defined in :ref:`file_include_sgg_sgg_shader.cpp`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: __DefaultVertexShader

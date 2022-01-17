@@ -160,6 +160,74 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   51</span>{</div>
+<div class="line"><span class="lineno">   52</span> </div>
+<div class="line"><span class="lineno">   53</span>  <span class="keywordflow">if</span> (!vertex || !fragment)</div>
+<div class="line"><span class="lineno">   54</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   55</span> </div>
+<div class="line"><span class="lineno">   56</span>  <a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a> = glCreateShader(GL_VERTEX_SHADER);</div>
+<div class="line"><span class="lineno">   57</span>  glShaderSource(<a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>, 1, &amp;vertex, NULL);</div>
+<div class="line"><span class="lineno">   58</span> </div>
+<div class="line"><span class="lineno">   59</span>  <a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a> = glCreateShader(GL_FRAGMENT_SHADER);</div>
+<div class="line"><span class="lineno">   60</span>  glShaderSource(<a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>, 1, &amp;fragment, NULL);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>  GLint status;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>  glCompileShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>);</div>
+<div class="line"><span class="lineno">   65</span>  glGetShaderiv(<a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>, GL_COMPILE_STATUS, &amp;status);</div>
+<div class="line"><span class="lineno">   66</span>  <span class="keywordflow">if</span> (!status)</div>
+<div class="line"><span class="lineno">   67</span>  {</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_function" href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2">printLog</a>(<a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>);</div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   70</span>  }</div>
+<div class="line"><span class="lineno">   71</span>  glCompileShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>);</div>
+<div class="line"><span class="lineno">   72</span>  glGetShaderiv(<a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>, GL_COMPILE_STATUS, &amp;status);</div>
+<div class="line"><span class="lineno">   73</span>  <span class="keywordflow">if</span> (!status)</div>
+<div class="line"><span class="lineno">   74</span>  {</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_function" href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2">printLog</a>(<a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>);</div>
+<div class="line"><span class="lineno">   76</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   77</span>  }</div>
+<div class="line"><span class="lineno">   78</span> </div>
+<div class="line"><span class="lineno">   79</span>  <a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a> = glCreateProgram();</div>
+<div class="line"><span class="lineno">   80</span>  glAttachShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, <a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>);</div>
+<div class="line"><span class="lineno">   81</span>  glAttachShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, <a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>);</div>
+<div class="line"><span class="lineno">   82</span>  glLinkProgram(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>);</div>
+<div class="line"><span class="lineno">   83</span>  assert(glGetError() == GL_NO_ERROR);</div>
+<div class="line"><span class="lineno">   84</span><span class="comment">//  GLint status;</span></div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>  glGetProgramiv(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, GL_LINK_STATUS, &amp;status);</div>
+<div class="line"><span class="lineno">   87</span> </div>
+<div class="line"><span class="lineno">   88</span>  <span class="keywordflow">if</span> (!status)</div>
+<div class="line"><span class="lineno">   89</span>  {</div>
+<div class="line"><span class="lineno">   90</span>    <a class="code hl_function" href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2">printLog</a>(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>);</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   92</span>  }</div>
+<div class="line"><span class="lineno">   93</span> </div>
+<div class="line"><span class="lineno">   94</span>  glValidateProgram(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>);</div>
+<div class="line"><span class="lineno">   95</span> </div>
+<div class="line"><span class="lineno">   96</span>  glGetProgramiv(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, GL_VALIDATE_STATUS, &amp;status);</div>
+<div class="line"><span class="lineno">   97</span>  <span class="keywordflow">if</span> (!status)</div>
+<div class="line"><span class="lineno">   98</span>  {</div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_function" href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2">printLog</a>(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>);</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  101</span>  }</div>
+<div class="line"><span class="lineno">  102</span> </div>
+<div class="line"><span class="lineno">  103</span>}</div>
+<div class="ttc" id="aclassShader_html_a4db1ae3ced775ae8263706f59b391cc2"><div class="ttname"><a href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2">Shader::printLog</a></div><div class="ttdeci">void printLog(unsigned int obj)</div><div class="ttdef"><b>Definition:</b> shader.cpp:25</div></div>
+<div class="ttc" id="aclassShader_html_a55c8d4849ce813b51b687401da81ea91"><div class="ttname"><a href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">Shader::fshader</a></div><div class="ttdeci">unsigned int fshader</div><div class="ttdef"><b>Definition:</b> shader.h:41</div></div>
+<div class="ttc" id="aclassShader_html_ac579c2d2a359ee2d1c9acdd78f5e4ad6"><div class="ttname"><a href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">Shader::vshader</a></div><div class="ttdeci">unsigned int vshader</div><div class="ttdef"><b>Definition:</b> shader.h:41</div></div>
+<div class="ttc" id="aclassShader_html_aef2c8e52af39986935a5e5296e6d05e6"><div class="ttname"><a href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">Shader::program</a></div><div class="ttdeci">unsigned int program</div><div class="ttdef"><b>Definition:</b> shader.h:47</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>, <a class="el" href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2">printLog()</a>, <a class="el" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, and <a class="el" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d69/classShader_a94d74259261fa4f3070bbef6eebdf55d_cgraph.png" border="0" usemap="#ad9/d69/classShader_a94d74259261fa4f3070bbef6eebdf55d_cgraph" alt=""/></div>
+<map name="ad9/d69/classShader_a94d74259261fa4f3070bbef6eebdf55d_cgraph" id="ad9/d69/classShader_a94d74259261fa4f3070bbef6eebdf55d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,117,32"/>
+<area shape="rect" href="../../d9/d69/classShader.html#a4db1ae3ced775ae8263706f59b391cc2" title=" " alt="" coords="165,5,283,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -177,6 +245,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  160</span>{</div>
+<div class="line"><span class="lineno">  161</span>  glDetachShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, <a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>);</div>
+<div class="line"><span class="lineno">  162</span>  glDeleteShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>);</div>
+<div class="line"><span class="lineno">  163</span>  glDetachShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, <a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>);</div>
+<div class="line"><span class="lineno">  164</span>  glDeleteShader(<a class="code hl_variable" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>);</div>
+<div class="line"><span class="lineno">  165</span> </div>
+<div class="line"><span class="lineno">  166</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#a55c8d4849ce813b51b687401da81ea91">fshader</a>, <a class="el" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, and <a class="el" href="../../d9/d69/classShader.html#ac579c2d2a359ee2d1c9acdd78f5e4ad6">vshader</a>.</p>
 
 </div>
 </div>
@@ -196,6 +273,43 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  155</span>{</div>
+<div class="line"><span class="lineno">  156</span>  <span class="keywordflow">return</span> glGetAttribLocation(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, attrib);</div>
+<div class="line"><span class="lineno">  157</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a9a605a3e9dc2693bd441fe610f6c86d1">graphics::GLBackend::drawLine()</a>, <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f">graphics::GLBackend::drawRect()</a>, <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a1bad60b0da94d939620eaf250c36cd69">graphics::GLBackend::drawSector()</a>, <a class="el" href="../../d0/d57/classFontLib.html#a7592ec3d07d67a047f2e39f36150eb93">FontLib::init()</a>, and <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#ad8e7cb6e811a84ee3076d9fa4089e8eb">graphics::GLBackend::initPrimitives()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d69/classShader_a91f6b1b90751bf9bf1b4afe6d8f221c1_icgraph.png" border="0" usemap="#ad9/d69/classShader_a91f6b1b90751bf9bf1b4afe6d8f221c1_icgraph" alt=""/></div>
+<map name="ad9/d69/classShader_a91f6b1b90751bf9bf1b4afe6d8f221c1_icgraph" id="ad9/d69/classShader_a91f6b1b90751bf9bf1b4afe6d8f221c1_icgraph">
+<area shape="rect" title=" " alt="" coords="1344,223,1531,250"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a9a605a3e9dc2693bd441fe610f6c86d1" title=" " alt="" coords="1149,66,1296,108"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f" title=" " alt="" coords="1149,150,1296,192"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a1bad60b0da94d939620eaf250c36cd69" title=" " alt="" coords="1149,216,1296,257"/>
+<area shape="rect" href="../../d0/d57/classFontLib.html#a7592ec3d07d67a047f2e39f36150eb93" title=" " alt="" coords="1177,282,1268,308"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#ad8e7cb6e811a84ee3076d9fa4089e8eb" title=" " alt="" coords="1149,333,1296,374"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga488f9f55470509c58c1775d5ae899fa7" title=" " alt="" coords="963,55,1093,82"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a6787088d8497e7ca716c36b9d96cd48e" title=" " alt="" coords="955,106,1101,148"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="961,172,1095,199"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a20be665cb2cc0c426dfc67587b2e5017" title=" " alt="" coords="365,138,511,180"/>
+<area shape="rect" href="../../db/dbd/group____WINDOW.html#ga6f0d1f77d5c96479ec207487da829765" title=" " alt="" coords="124,146,311,172"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a8ae460e5b29268f9760c5ac5253c2430" title=" " alt="" coords="760,106,907,148"/>
+<area shape="rect" href="../../dd/d64/classApp.html#ae09dc71078b64c56c673b1ad1d25b5d1" title=" " alt="" coords="5,222,76,248"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a654daef58833ea70ecc511c64be6361f" title=" " alt="" coords="565,109,712,150"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a90df8aa87e4c1626f46096f845e5b8a9" title=" " alt="" coords="565,44,712,85"/>
+<area shape="rect" href="../../db/dbd/group____WINDOW.html#ga53c12d6e0a79932b6311a96194f0554f" title=" " alt="" coords="359,51,517,78"/>
+<area shape="rect" href="../../de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="775,226,892,252"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#aa051af06151ef320f81f6e748d0c5697" title=" " alt="" coords="575,276,703,303"/>
+<area shape="rect" href="../../de/dff/classPawn.html#acb0eaf180f4397c3d1f29864dece75ea" title=" " alt="" coords="593,226,684,252"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga9c79fad58ae3bd1f27d87d36628451f0" title=" " alt="" coords="961,223,1095,250"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga1e0bec23c43e2b4b7410b1348332d799" title=" " alt="" coords="955,274,1101,300"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a4108aac064a60311749f5b55f84e746d" title=" " alt="" coords="955,325,1101,366"/>
+<area shape="rect" href="../../db/dbd/group____WINDOW.html#ga19a00debf80ac503a696724514ceb663" title=" " alt="" coords="136,247,299,274"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -213,6 +327,30 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  142</span>{</div>
+<div class="line"><span class="lineno">  143</span> </div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>  <a class="code hl_variable" href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">ready</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  146</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
+<div class="ttc" id="aclassShader_html_ac1271bc1aef543fffd1c6e0b3c5d64aa"><div class="ttname"><a href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">Shader::ready</a></div><div class="ttdeci">bool ready</div><div class="ttdef"><b>Definition:</b> shader.h:38</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">ready</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/d57/classFontLib.html#a7592ec3d07d67a047f2e39f36150eb93">FontLib::init()</a>, and <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#ad8e7cb6e811a84ee3076d9fa4089e8eb">graphics::GLBackend::initPrimitives()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d69/classShader_a34a5639bd5b3a138fdaf338c7da79da0_icgraph.png" border="0" usemap="#ad9/d69/classShader_a34a5639bd5b3a138fdaf338c7da79da0_icgraph" alt=""/></div>
+<map name="ad9/d69/classShader_a34a5639bd5b3a138fdaf338c7da79da0_icgraph" id="ad9/d69/classShader_a34a5639bd5b3a138fdaf338c7da79da0_icgraph">
+<area shape="rect" title=" " alt="" coords="724,35,812,61"/>
+<area shape="rect" href="../../d0/d57/classFontLib.html#a7592ec3d07d67a047f2e39f36150eb93" title=" " alt="" coords="557,5,648,32"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#ad8e7cb6e811a84ee3076d9fa4089e8eb" title=" " alt="" coords="529,57,676,98"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a4108aac064a60311749f5b55f84e746d" title=" " alt="" coords="335,27,481,69"/>
+<area shape="rect" href="../../db/dbd/group____WINDOW.html#ga19a00debf80ac503a696724514ceb663" title=" " alt="" coords="124,35,287,61"/>
+<area shape="rect" href="../../dd/d64/classApp.html#ae09dc71078b64c56c673b1ad1d25b5d1" title=" " alt="" coords="5,35,76,61"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -231,7 +369,10 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><span class="lineno">  137</span>{</div>
+<div class="line"><span class="lineno">  138</span>  <span class="keywordflow">return</span> std::string();</div>
+<div class="line"><span class="lineno">  139</span>}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a5ecf4fd986daa15da071bb7c5c0c412f" name="a5ecf4fd986daa15da071bb7c5c0c412f"></a>
@@ -257,7 +398,6 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <div class="fragment"><div class="line"><span class="lineno">   48</span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">ready</a>; }</div>
-<div class="ttc" id="aclassShader_html_ac1271bc1aef543fffd1c6e0b3c5d64aa"><div class="ttname"><a href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">Shader::ready</a></div><div class="ttdeci">bool ready</div><div class="ttdef"><b>Definition:</b> shader.h:38</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">ready</a>.</p>
 
@@ -278,6 +418,26 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  106</span>{</div>
+<div class="line"><span class="lineno">  107</span> </div>
+<div class="line"><span class="lineno">  108</span>  <span class="keyword">auto</span> iter = <a class="code hl_variable" href="../../d9/d69/classShader.html#a3b03b5c9fa67fd71a8a04806a1864707">uniforms</a>.find(name);</div>
+<div class="line"><span class="lineno">  109</span>  <span class="keywordflow">if</span> (iter == <a class="code hl_variable" href="../../d9/d69/classShader.html#a3b03b5c9fa67fd71a8a04806a1864707">uniforms</a>.end())</div>
+<div class="line"><span class="lineno">  110</span>  {</div>
+<div class="line"><span class="lineno">  111</span>    <a class="code hl_class" href="../../dd/dd1/classUniform.html">Uniform</a> uni = glGetUniformLocation(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, name);</div>
+<div class="line"><span class="lineno">  112</span> </div>
+<div class="line"><span class="lineno">  113</span>    <a class="code hl_variable" href="../../d9/d69/classShader.html#a3b03b5c9fa67fd71a8a04806a1864707">uniforms</a>[name] = uni;</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="../../d9/d69/classShader.html#a3b03b5c9fa67fd71a8a04806a1864707">uniforms</a>[name];</div>
+<div class="line"><span class="lineno">  115</span>  }</div>
+<div class="line"><span class="lineno">  116</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  117</span>  {</div>
+<div class="line"><span class="lineno">  118</span>    <span class="keywordflow">return</span> iter-&gt;second;</div>
+<div class="line"><span class="lineno">  119</span>  }</div>
+<div class="line"><span class="lineno">  120</span> </div>
+<div class="line"><span class="lineno">  121</span>}</div>
+<div class="ttc" id="aclassShader_html_a3b03b5c9fa67fd71a8a04806a1864707"><div class="ttname"><a href="../../d9/d69/classShader.html#a3b03b5c9fa67fd71a8a04806a1864707">Shader::uniforms</a></div><div class="ttdeci">std::map&lt; const char *, Uniform &gt; uniforms</div><div class="ttdef"><b>Definition:</b> shader.h:37</div></div>
+<div class="ttc" id="aclassUniform_html"><div class="ttname"><a href="../../dd/dd1/classUniform.html">Uniform</a></div><div class="ttdef"><b>Definition:</b> shader.h:10</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, and <a class="el" href="../../d9/d69/classShader.html#a3b03b5c9fa67fd71a8a04806a1864707">uniforms</a>.</p>
 
 </div>
 </div>
@@ -304,6 +464,41 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">   26</span>{</div>
+<div class="line"><span class="lineno">   27</span>  GLint log_length = 0;</div>
+<div class="line"><span class="lineno">   28</span>  <span class="keywordflow">if</span> (glIsShader(<span class="keywordtype">object</span>))</div>
+<div class="line"><span class="lineno">   29</span>    glGetShaderiv(<span class="keywordtype">object</span>, GL_INFO_LOG_LENGTH, &amp;log_length);</div>
+<div class="line"><span class="lineno">   30</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (glIsProgram(<span class="keywordtype">object</span>))</div>
+<div class="line"><span class="lineno">   31</span>    glGetProgramiv(<span class="keywordtype">object</span>, GL_INFO_LOG_LENGTH, &amp;log_length);</div>
+<div class="line"><span class="lineno">   32</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   33</span>  {</div>
+<div class="line"><span class="lineno">   34</span>    printf(<span class="stringliteral">&quot;printlog: Not a shader or a program\n&quot;</span>);</div>
+<div class="line"><span class="lineno">   35</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   36</span>  }</div>
+<div class="line"><span class="lineno">   37</span>  <span class="keywordflow">if</span> (log_length == 0)</div>
+<div class="line"><span class="lineno">   38</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>  <span class="keywordtype">char</span>* log = <span class="keyword">new</span> <span class="keywordtype">char</span>[log_length];</div>
+<div class="line"><span class="lineno">   41</span> </div>
+<div class="line"><span class="lineno">   42</span>  <span class="keywordflow">if</span> (glIsShader(<span class="keywordtype">object</span>))</div>
+<div class="line"><span class="lineno">   43</span>    glGetShaderInfoLog(<span class="keywordtype">object</span>, log_length, NULL, log);</div>
+<div class="line"><span class="lineno">   44</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (glIsProgram(<span class="keywordtype">object</span>))</div>
+<div class="line"><span class="lineno">   45</span>    glGetProgramInfoLog(<span class="keywordtype">object</span>, log_length, NULL, log);</div>
+<div class="line"><span class="lineno">   46</span> </div>
+<div class="line"><span class="lineno">   47</span>  printf(<span class="stringliteral">&quot;%s&quot;</span>, log);</div>
+<div class="line"><span class="lineno">   48</span>  <span class="keyword">delete</span>[] log;</div>
+<div class="line"><span class="lineno">   49</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#a94d74259261fa4f3070bbef6eebdf55d">Shader()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d69/classShader_a4db1ae3ced775ae8263706f59b391cc2_icgraph.png" border="0" usemap="#ad9/d69/classShader_a4db1ae3ced775ae8263706f59b391cc2_icgraph" alt=""/></div>
+<map name="ad9/d69/classShader_a4db1ae3ced775ae8263706f59b391cc2_icgraph" id="ad9/d69/classShader_a4db1ae3ced775ae8263706f59b391cc2_icgraph">
+<area shape="rect" title=" " alt="" coords="165,5,283,32"/>
+<area shape="rect" href="../../d9/d69/classShader.html#a94d74259261fa4f3070bbef6eebdf55d" title=" " alt="" coords="5,5,117,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -332,6 +527,11 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  150</span>{</div>
+<div class="line"><span class="lineno">  151</span>  glBindFragDataLocation(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, location, name);</div>
+<div class="line"><span class="lineno">  152</span>}</div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>.</p>
 
 </div>
 </div>
@@ -350,6 +550,56 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="fragment"><div class="line"><span class="lineno">  124</span>{</div>
+<div class="line"><span class="lineno">  125</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">ready</a>)</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  127</span> </div>
+<div class="line"><span class="lineno">  128</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="../../d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100">use</a>)</div>
+<div class="line"><span class="lineno">  129</span>    glUseProgram(<a class="code hl_variable" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>);</div>
+<div class="line"><span class="lineno">  130</span>  <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  131</span>    glUseProgram(0);</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+<div class="ttc" id="aclassShader_html_aa9f62642afb446167c7a37045e5fc100"><div class="ttname"><a href="../../d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100">Shader::use</a></div><div class="ttdeci">bool use(bool use=true)</div><div class="ttdef"><b>Definition:</b> shader.cpp:123</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="../../d9/d69/classShader.html#aef2c8e52af39986935a5e5296e6d05e6">program</a>, <a class="el" href="../../d9/d69/classShader.html#ac1271bc1aef543fffd1c6e0b3c5d64aa">ready</a>, and <a class="el" href="../../d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100">use()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/d57/classFontLib.html#a3c0406afdb49e04f4d1b62e2840467d5">FontLib::commitText()</a>, <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a6787088d8497e7ca716c36b9d96cd48e">graphics::GLBackend::draw()</a>, <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f">graphics::GLBackend::drawRect()</a>, <a class="el" href="../../d6/df2/classgraphics_1_1GLBackend.html#a1bad60b0da94d939620eaf250c36cd69">graphics::GLBackend::drawSector()</a>, <a class="el" href="../../d0/d57/classFontLib.html#aefde9bd0c476d7f3ab0da7393346dda1">FontLib::drawText()</a>, and <a class="el" href="../../d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100">use()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_cgraph.png" border="0" usemap="#ad9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_cgraph" alt=""/></div>
+<map name="ad9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_cgraph" id="ad9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_cgraph">
+<area shape="rect" title=" " alt="" coords="5,29,97,56"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_icgraph.png" border="0" usemap="#ad9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_icgraph" alt=""/></div>
+<map name="ad9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_icgraph" id="ad9/d69/classShader_aa9f62642afb446167c7a37045e5fc100_icgraph">
+<area shape="rect" title=" " alt="" coords="1537,107,1629,133"/>
+<area shape="rect" href="../../d0/d57/classFontLib.html#a3c0406afdb49e04f4d1b62e2840467d5" title=" " alt="" coords="1151,56,1293,83"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a6787088d8497e7ca716c36b9d96cd48e" title=" " alt="" coords="955,95,1101,137"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f" title=" " alt="" coords="1343,158,1489,199"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a1bad60b0da94d939620eaf250c36cd69" title=" " alt="" coords="1343,251,1489,293"/>
+<area shape="rect" href="../../d0/d57/classFontLib.html#aefde9bd0c476d7f3ab0da7393346dda1" title=" " alt="" coords="1353,5,1479,32"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a20be665cb2cc0c426dfc67587b2e5017" title=" " alt="" coords="365,30,511,71"/>
+<area shape="rect" href="../../db/dbd/group____WINDOW.html#ga6f0d1f77d5c96479ec207487da829765" title=" " alt="" coords="124,100,311,127"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a8ae460e5b29268f9760c5ac5253c2430" title=" " alt="" coords="760,95,907,137"/>
+<area shape="rect" href="../../dd/d64/classApp.html#ae09dc71078b64c56c673b1ad1d25b5d1" title=" " alt="" coords="5,100,76,127"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a654daef58833ea70ecc511c64be6361f" title=" " alt="" coords="565,30,712,71"/>
+<area shape="rect" href="../../d6/df2/classgraphics_1_1GLBackend.html#a90df8aa87e4c1626f46096f845e5b8a9" title=" " alt="" coords="565,95,712,137"/>
+<area shape="rect" href="../../db/dbd/group____WINDOW.html#ga53c12d6e0a79932b6311a96194f0554f" title=" " alt="" coords="359,103,517,129"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="1155,208,1289,235"/>
+<area shape="rect" href="../../de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="969,212,1087,239"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#aa051af06151ef320f81f6e748d0c5697" title=" " alt="" coords="769,263,897,289"/>
+<area shape="rect" href="../../de/dff/classPawn.html#acb0eaf180f4397c3d1f29864dece75ea" title=" " alt="" coords="788,212,879,239"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga9c79fad58ae3bd1f27d87d36628451f0" title=" " alt="" coords="1155,259,1289,285"/>
+<area shape="rect" href="../../d9/d15/group____GRAPHICS.html#ga1e0bec23c43e2b4b7410b1348332d799" title=" " alt="" coords="1149,309,1295,336"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -374,6 +624,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#a94d74259261fa4f3070bbef6eebdf55d">Shader()</a>, and <a class="el" href="../../d9/d69/classShader.html#aff01df87e8a102f270b5b135a295e59d">~Shader()</a>.</p>
+
 </div>
 </div>
 <a id="aef2c8e52af39986935a5e5296e6d05e6" name="aef2c8e52af39986935a5e5296e6d05e6"></a>
@@ -387,6 +639,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#a91f6b1b90751bf9bf1b4afe6d8f221c1">getAttributeLocation()</a>, <a class="el" href="../../d9/d69/classShader.html#aeee1890c41b934ff972b56dc806220ee">operator[]()</a>, <a class="el" href="../../d9/d69/classShader.html#a466bf3d972cb343bd9c681994b59db15">setFragmentLocation()</a>, <a class="el" href="../../d9/d69/classShader.html#a94d74259261fa4f3070bbef6eebdf55d">Shader()</a>, <a class="el" href="../../d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100">use()</a>, and <a class="el" href="../../d9/d69/classShader.html#aff01df87e8a102f270b5b135a295e59d">~Shader()</a>.</p>
 
 </div>
 </div>
@@ -410,7 +664,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#a5ecf4fd986daa15da071bb7c5c0c412f">operator bool()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#a34a5639bd5b3a138fdaf338c7da79da0">init()</a>, <a class="el" href="../../d9/d69/classShader.html#a5ecf4fd986daa15da071bb7c5c0c412f">operator bool()</a>, and <a class="el" href="../../d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100">use()</a>.</p>
 
 </div>
 </div>
@@ -434,6 +688,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#aeee1890c41b934ff972b56dc806220ee">operator[]()</a>.</p>
+
 </div>
 </div>
 <a id="ac579c2d2a359ee2d1c9acdd78f5e4ad6" name="ac579c2d2a359ee2d1c9acdd78f5e4ad6"></a>
@@ -456,10 +712,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="reference">Referenced by <a class="el" href="../../d9/d69/classShader.html#a94d74259261fa4f3070bbef6eebdf55d">Shader()</a>, and <a class="el" href="../../d9/d69/classShader.html#aff01df87e8a102f270b5b135a295e59d">~Shader()</a>.</p>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>/Users/runner/work/chess/chess/include/sgg/<a class="el" href="../../d1/df4/shader_8h_source.html">shader.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>/Users/runner/work/chess/chess/include/sgg/sgg/<a class="el" href="../../d1/df4/shader_8h_source.html">shader.h</a></li>
+<li>/Users/runner/work/chess/chess/include/sgg/sgg/<a class="el" href="../../dd/d1e/shader_8cpp.html">shader.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

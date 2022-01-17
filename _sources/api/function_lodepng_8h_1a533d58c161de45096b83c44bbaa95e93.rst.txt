@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a533d58c161de45096b83c44bbaa95e93:
 
-Function lodepng_clear_text
-===========================
+Function lodepng_clear_text(LodePNGInfo \*)
+===========================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

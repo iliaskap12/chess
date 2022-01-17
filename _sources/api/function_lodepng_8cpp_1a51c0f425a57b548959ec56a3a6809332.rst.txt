@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a51c0f425a57b548959ec56a3a6809332:
+
+Function addChunk_tIME
+======================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: addChunk_tIME(ucvector *, const LodePNGTime *)

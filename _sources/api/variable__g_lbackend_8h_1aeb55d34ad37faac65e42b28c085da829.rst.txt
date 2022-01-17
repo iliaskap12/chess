@@ -3,7 +3,7 @@
 Variable CURVE_SUBDIVS
 ======================
 
-- Defined in :ref:`file_include_sgg_GLbackend.h`
+- Defined in :ref:`file_include_sgg_sgg_GLbackend.h`
 
 
 Variable Documentation

@@ -1,0 +1,13 @@
+.. _exhale_define_lodepng_8cpp_1a22ed04d49e008cb4295a8b366c4f2f3b:
+
+Define NUM_CODE_LENGTH_CODES
+============================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Define Documentation
+--------------------
+
+
+.. doxygendefine:: NUM_CODE_LENGTH_CODES

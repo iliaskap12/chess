@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a90e82b0ccc75cfb27ccc9756c8d96f07:
+
+Function lodepng_encode(unsigned char \*\*, size_t \*, const unsigned char \*, unsigned, unsigned, LodePNGState \*)
+===================================================================================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_encode(unsigned char **, size_t *, const unsigned char *, unsigned, unsigned, LodePNGState *)

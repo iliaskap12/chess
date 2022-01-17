@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a819a931fbc4f082d1095275a1eca588d:
+
+Function lode_png_test_bitreader
+================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lode_png_test_bitreader(const unsigned char *, size_t, size_t, const size_t *, unsigned *)

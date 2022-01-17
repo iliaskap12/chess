@@ -1,0 +1,13 @@
+.. _exhale_typedef_lodepng_8cpp_1a114d783ee4ee8e014094926912e2670d:
+
+Typedef ucvector
+================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: ucvector

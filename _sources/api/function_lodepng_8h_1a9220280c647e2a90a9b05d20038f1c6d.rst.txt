@@ -1,9 +1,9 @@
 .. _exhale_function_lodepng_8h_1a9220280c647e2a90a9b05d20038f1c6d:
 
-Function lodepng_decoder_settings_init
-======================================
+Function lodepng_decoder_settings_init(LodePNGDecoderSettings \*)
+=================================================================
 
-- Defined in :ref:`file_include_sgg_lodepng.h`
+- Defined in :ref:`file_include_sgg_sgg_lodepng.h`
 
 
 Function Documentation

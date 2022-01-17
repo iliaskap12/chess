@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1a5861bf2c5a7c8976ea2dd6d21e8d58bd:
+
+Function lodepng_get_raw_size(unsigned, unsigned, const LodePNGColorMode \*)
+============================================================================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_get_raw_size(unsigned, unsigned, const LodePNGColorMode *)

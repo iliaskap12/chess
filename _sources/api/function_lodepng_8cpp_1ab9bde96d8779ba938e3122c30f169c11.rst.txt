@@ -1,0 +1,13 @@
+.. _exhale_function_lodepng_8cpp_1ab9bde96d8779ba938e3122c30f169c11:
+
+Function lodepng_inflatev
+=========================
+
+- Defined in :ref:`file_include_sgg_sgg_lodepng.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: lodepng_inflatev(ucvector *, const unsigned char *, size_t, const LodePNGDecompressSettings *)
