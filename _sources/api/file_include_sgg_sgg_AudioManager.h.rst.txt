@@ -31,7 +31,7 @@ Includes
 
 - ``SDL2/SDL.h``
 
-- ``SDL_mixer.h``
+- ``SDL2/SDL_mixer.h``
 
 - ``string`` (:ref:`file_src_util_custom-string.cpp`)
 
