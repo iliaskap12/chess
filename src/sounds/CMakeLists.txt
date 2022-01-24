@@ -13,8 +13,7 @@ set(
         WinSound.cpp
 )
 
-add_library(SOUND STATIC ${SOUND_SRC})
+add_library(SOUND ${SOUND_SRC})
 
-target_compile_definitions(SOUND PRIVATE _SCL_SECURE_NO_WARNINGS _ITERATOR_DEBUG_LEVEL=0)
 target_include_directories(SOUND PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}")
 target_link_libraries(${PROJECT_NAME} PRIVATE SOUND)
