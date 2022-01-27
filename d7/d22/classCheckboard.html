@@ -430,63 +430,76 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">  432</span>  std::shared_ptr&lt;Pawn&gt; king{<span class="keyword">nullptr</span>};</div>
 <div class="line"><span class="lineno">  433</span>  <span class="keywordtype">bool</span> shouldCheckmate{<span class="keyword">true</span>};</div>
 <div class="line"><span class="lineno">  434</span> </div>
-<div class="line"><span class="lineno">  435</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> blackRefCount{threat-&gt;getSquare()-&gt;getDangerReferenceCount(<a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366a08d0012388564e95c3b4a7407cf04965">PawnColor::BLACK</a>)};</div>
-<div class="line"><span class="lineno">  436</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> whiteRefCount{threat-&gt;getSquare()-&gt;getDangerReferenceCount(<a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">PawnColor::WHITE</a>)};</div>
-<div class="line"><span class="lineno">  437</span> </div>
-<div class="line"><span class="lineno">  438</span>  <span class="keywordflow">if</span> (threat-&gt;getColor() == <a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">PawnColor::WHITE</a>) {</div>
-<div class="line"><span class="lineno">  439</span>    <span class="keywordflow">if</span> (blackRefCount &gt; whiteRefCount) {</div>
-<div class="line"><span class="lineno">  440</span>      shouldCheckmate = {<span class="keyword">false</span>};</div>
-<div class="line"><span class="lineno">  441</span>    }</div>
-<div class="line"><span class="lineno">  442</span>    king = {this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>};</div>
-<div class="line"><span class="lineno">  443</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  444</span>    <span class="keywordflow">if</span> (whiteRefCount &gt; blackRefCount) {</div>
-<div class="line"><span class="lineno">  445</span>      shouldCheckmate = {<span class="keyword">false</span>};</div>
-<div class="line"><span class="lineno">  446</span>    }</div>
-<div class="line"><span class="lineno">  447</span>    king = {this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>};</div>
-<div class="line"><span class="lineno">  448</span>  }</div>
-<div class="line"><span class="lineno">  449</span> </div>
-<div class="line"><span class="lineno">  450</span>  <span class="keywordflow">if</span> (!std::static_pointer_cast&lt;King&gt;(king)-&gt;isChecked()) {</div>
-<div class="line"><span class="lineno">  451</span>    shouldCheckmate = {<span class="keyword">false</span>};</div>
-<div class="line"><span class="lineno">  452</span>  }</div>
-<div class="line"><span class="lineno">  453</span> </div>
-<div class="line"><span class="lineno">  454</span>  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> advanceableSquares{king-&gt;getAdvanceableSquares()}; !advanceableSquares.empty()) {</div>
-<div class="line"><span class="lineno">  455</span>    shouldCheckmate = {<span class="keyword">false</span>};</div>
-<div class="line"><span class="lineno">  456</span>  }</div>
-<div class="line"><span class="lineno">  457</span> </div>
-<div class="line"><span class="lineno">  458</span>  <span class="keywordflow">if</span> (!shouldCheckmate) {</div>
-<div class="line"><span class="lineno">  459</span>    game-&gt;playCheckSound();</div>
-<div class="line"><span class="lineno">  460</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  461</span>  }</div>
-<div class="line"><span class="lineno">  462</span> </div>
-<div class="line"><span class="lineno">  463</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;row: *this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497">squares</a>) {</div>
-<div class="line"><span class="lineno">  464</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;square: row) {</div>
-<div class="line"><span class="lineno">  465</span>      <span class="keywordflow">if</span> (!square-&gt;hasPawn() || square-&gt;getPawn()-&gt;getColor() != king-&gt;getColor()) {</div>
-<div class="line"><span class="lineno">  466</span>        <span class="keywordflow">continue</span>;</div>
-<div class="line"><span class="lineno">  467</span>      }</div>
-<div class="line"><span class="lineno">  468</span>      <span class="keyword">auto</span> availableSquares{std::vector&lt;std::shared_ptr&lt;Square&gt;&gt;()};</div>
-<div class="line"><span class="lineno">  469</span>      <span class="keyword">auto</span> advanceableSquares{square-&gt;getPawn()-&gt;getAdvanceableSquares()};</div>
-<div class="line"><span class="lineno">  470</span>      std::ranges::for_each(advanceableSquares, [<span class="keyword">this</span>, &amp;threat, &amp;king, &amp;availableSquares](<span class="keyword">const</span> std::pair&lt;int, int&gt; &amp;pair) {</div>
-<div class="line"><span class="lineno">  471</span>        <span class="keywordflow">if</span> (*threat-&gt;getSquare() == *this-&gt;getSquare(pair)) {</div>
-<div class="line"><span class="lineno">  472</span>          availableSquares.push_back(this-&gt;getSquare(pair));</div>
-<div class="line"><span class="lineno">  473</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  474</span>          std::ranges::for_each(this-&gt;tryBlockCheck(pair, king, threat), [&amp;availableSquares](const std::shared_ptr&lt;Square&gt; step) {</div>
-<div class="line"><span class="lineno">  475</span>            availableSquares.push_back(step);</div>
-<div class="line"><span class="lineno">  476</span>          });</div>
-<div class="line"><span class="lineno">  477</span>        }</div>
-<div class="line"><span class="lineno">  478</span>      });</div>
-<div class="line"><span class="lineno">  479</span> </div>
-<div class="line"><span class="lineno">  480</span>      <span class="keywordflow">if</span> (!availableSquares.empty()) {</div>
-<div class="line"><span class="lineno">  481</span>        game-&gt;playCheckSound();</div>
-<div class="line"><span class="lineno">  482</span>        <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  483</span>      }</div>
-<div class="line"><span class="lineno">  484</span>    }</div>
-<div class="line"><span class="lineno">  485</span>  }</div>
-<div class="line"><span class="lineno">  486</span>  this-&gt;<a class="code hl_function" href="../../d7/d22/classCheckboard.html#adf754bb50f74220b4af2fd7e4ba29311">checkmate</a>(threat-&gt;getColor());</div>
-<div class="line"><span class="lineno">  487</span>}</div>
+<div class="line"><span class="lineno">  435</span>  this-&gt;<a class="code hl_function" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224">setReferenceCounts</a>();</div>
+<div class="line"><span class="lineno">  436</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> blackRefCount{threat-&gt;getSquare()-&gt;getDangerReferenceCount(<a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366a08d0012388564e95c3b4a7407cf04965">PawnColor::BLACK</a>)};</div>
+<div class="line"><span class="lineno">  437</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> whiteRefCount{threat-&gt;getSquare()-&gt;getDangerReferenceCount(<a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">PawnColor::WHITE</a>)};</div>
+<div class="line"><span class="lineno">  438</span> </div>
+<div class="line"><span class="lineno">  439</span>  <span class="keywordflow">if</span> (threat-&gt;getColor() == <a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">PawnColor::WHITE</a>) {</div>
+<div class="line"><span class="lineno">  440</span>    <span class="keywordflow">if</span> (blackRefCount &gt; whiteRefCount) {</div>
+<div class="line"><span class="lineno">  441</span>      shouldCheckmate = {<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">  442</span>    }</div>
+<div class="line"><span class="lineno">  443</span>    king = {this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>};</div>
+<div class="line"><span class="lineno">  444</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  445</span>    <span class="keywordflow">if</span> (whiteRefCount &gt; blackRefCount) {</div>
+<div class="line"><span class="lineno">  446</span>      shouldCheckmate = {<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">  447</span>    }</div>
+<div class="line"><span class="lineno">  448</span>    king = {this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>};</div>
+<div class="line"><span class="lineno">  449</span>  }</div>
+<div class="line"><span class="lineno">  450</span> </div>
+<div class="line"><span class="lineno">  451</span>  <span class="keywordflow">if</span> (!std::static_pointer_cast&lt;King&gt;(king)-&gt;isChecked()) {</div>
+<div class="line"><span class="lineno">  452</span>    shouldCheckmate = {<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">  453</span>  }</div>
+<div class="line"><span class="lineno">  454</span> </div>
+<div class="line"><span class="lineno">  455</span>  <span class="keywordflow">if</span> (<span class="keyword">const</span> <span class="keyword">auto</span> advanceableSquares{king-&gt;getAdvanceableSquares()}; !advanceableSquares.empty()) {</div>
+<div class="line"><span class="lineno">  456</span>    shouldCheckmate = {<span class="keyword">false</span>};</div>
+<div class="line"><span class="lineno">  457</span>  }</div>
+<div class="line"><span class="lineno">  458</span> </div>
+<div class="line"><span class="lineno">  459</span>  <span class="keywordflow">if</span> (!shouldCheckmate) {</div>
+<div class="line"><span class="lineno">  460</span>    game-&gt;playCheckSound();</div>
+<div class="line"><span class="lineno">  461</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  462</span>  }</div>
+<div class="line"><span class="lineno">  463</span> </div>
+<div class="line"><span class="lineno">  464</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;row: *this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497">squares</a>) {</div>
+<div class="line"><span class="lineno">  465</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;square: row) {</div>
+<div class="line"><span class="lineno">  466</span>      <span class="keywordflow">if</span> (!square-&gt;hasPawn() || square-&gt;getPawn()-&gt;getColor() != king-&gt;getColor()) {</div>
+<div class="line"><span class="lineno">  467</span>        <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  468</span>      }</div>
+<div class="line"><span class="lineno">  469</span>      <span class="keyword">auto</span> availableSquares{std::vector&lt;std::shared_ptr&lt;Square&gt;&gt;()};</div>
+<div class="line"><span class="lineno">  470</span>      <span class="keyword">auto</span> advanceableSquares{square-&gt;getPawn()-&gt;getAdvanceableSquares()};</div>
+<div class="line"><span class="lineno">  471</span>      std::ranges::for_each(advanceableSquares, [<span class="keyword">this</span>, &amp;threat, &amp;king, &amp;availableSquares](<span class="keyword">const</span> std::pair&lt;int, int&gt; &amp;pair) {</div>
+<div class="line"><span class="lineno">  472</span>        <span class="keywordflow">if</span> (*threat-&gt;getSquare() == *this-&gt;getSquare(pair)) {</div>
+<div class="line"><span class="lineno">  473</span>          availableSquares.push_back(this-&gt;getSquare(pair));</div>
+<div class="line"><span class="lineno">  474</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  475</span>          std::ranges::for_each(this-&gt;tryBlockCheck(pair, king, threat), [&amp;availableSquares](const std::shared_ptr&lt;Square&gt; step) {</div>
+<div class="line"><span class="lineno">  476</span>            availableSquares.push_back(step);</div>
+<div class="line"><span class="lineno">  477</span>          });</div>
+<div class="line"><span class="lineno">  478</span>        }</div>
+<div class="line"><span class="lineno">  479</span>      });</div>
+<div class="line"><span class="lineno">  480</span> </div>
+<div class="line"><span class="lineno">  481</span>      <span class="keywordflow">if</span> (!availableSquares.empty()) {</div>
+<div class="line"><span class="lineno">  482</span>        game-&gt;playCheckSound();</div>
+<div class="line"><span class="lineno">  483</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  484</span>      }</div>
+<div class="line"><span class="lineno">  485</span>    }</div>
+<div class="line"><span class="lineno">  486</span>  }</div>
+<div class="line"><span class="lineno">  487</span>  this-&gt;<a class="code hl_function" href="../../d7/d22/classCheckboard.html#adf754bb50f74220b4af2fd7e4ba29311">checkmate</a>(threat-&gt;getColor());</div>
+<div class="line"><span class="lineno">  488</span>}</div>
 <div class="ttc" id="aclassApp_html"><div class="ttname"><a href="../../dd/d64/classApp.html">App</a></div><div class="ttdef"><b>Definition:</b> App.h:14</div></div>
+<div class="ttc" id="aclassCheckboard_html_ab2cce7d4271ca13defbd495e25215224"><div class="ttname"><a href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224">Checkboard::setReferenceCounts</a></div><div class="ttdeci">void setReferenceCounts()</div><div class="ttdef"><b>Definition:</b> Checkboard.cpp:91</div></div>
 <div class="ttc" id="aclassCheckboard_html_adf754bb50f74220b4af2fd7e4ba29311"><div class="ttname"><a href="../../d7/d22/classCheckboard.html#adf754bb50f74220b4af2fd7e4ba29311">Checkboard::checkmate</a></div><div class="ttdeci">void checkmate(PawnColor winner)</div><div class="ttdef"><b>Definition:</b> Checkboard.cpp:426</div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366a08d0012388564e95c3b4a7407cf04965">BLACK</a>, <a class="el" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>, <a class="el" href="../../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497">squares</a>, <a class="el" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">WHITE</a>, and <a class="el" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>.</p>
+<p class="reference">References <a class="el" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366a08d0012388564e95c3b4a7407cf04965">BLACK</a>, <a class="el" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>, <a class="el" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224">setReferenceCounts()</a>, <a class="el" href="../../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497">squares</a>, <a class="el" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">WHITE</a>, and <a class="el" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d7/d22/classCheckboard_aa0c092a25118247fe8bdd1842377e106_cgraph.png" border="0" usemap="#ad7/d22/classCheckboard_aa0c092a25118247fe8bdd1842377e106_cgraph" alt=""/></div>
+<map name="ad7/d22/classCheckboard_aa0c092a25118247fe8bdd1842377e106_cgraph" id="ad7/d22/classCheckboard_aa0c092a25118247fe8bdd1842377e106_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,227,61"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="275,27,453,69"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa" title=" " alt="" coords="517,5,675,32"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ac6518f96d2609df334c7a39dc337c79c" title=" " alt="" coords="501,57,691,98"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -583,13 +596,13 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><span class="lineno">  489</span>                                                             {</div>
-<div class="line"><span class="lineno">  490</span>  <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">PawnColor::WHITE</a> == color) {</div>
-<div class="line"><span class="lineno">  491</span>    <span class="keywordflow">return</span> std::static_pointer_cast&lt;King&gt;(this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>);</div>
-<div class="line"><span class="lineno">  492</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><span class="lineno">  493</span>    <span class="keywordflow">return</span> std::static_pointer_cast&lt;King&gt;(this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>);</div>
-<div class="line"><span class="lineno">  494</span>  }</div>
-<div class="line"><span class="lineno">  495</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  490</span>                                                             {</div>
+<div class="line"><span class="lineno">  491</span>  <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">PawnColor::WHITE</a> == color) {</div>
+<div class="line"><span class="lineno">  492</span>    <span class="keywordflow">return</span> std::static_pointer_cast&lt;King&gt;(this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>);</div>
+<div class="line"><span class="lineno">  493</span>  } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  494</span>    <span class="keywordflow">return</span> std::static_pointer_cast&lt;King&gt;(this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>);</div>
+<div class="line"><span class="lineno">  495</span>  }</div>
+<div class="line"><span class="lineno">  496</span>}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d7/d22/classCheckboard.html#adbe1032779d2ce829245d1cb8d13d208">blackKing</a>, <a class="el" href="../../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d">WHITE</a>, and <a class="el" href="../../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945">whiteKing</a>.</p>
 
@@ -651,15 +664,16 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d22/classCheckboard_a8bf65dfb381014bdb3583a04191be9fa_icgraph.png" border="0" usemap="#ad7/d22/classCheckboard_a8bf65dfb381014bdb3583a04191be9fa_icgraph" alt=""/></div>
 <map name="ad7/d22/classCheckboard_a8bf65dfb381014bdb3583a04191be9fa_icgraph" id="ad7/d22/classCheckboard_a8bf65dfb381014bdb3583a04191be9fa_icgraph">
-<area shape="rect" title=" " alt="" coords="685,132,844,159"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#a3a1c09c2b69234c8e8e12dffd2344935" title=" " alt="" coords="456,5,592,32"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c" title=" " alt="" coords="185,107,363,133"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#a21a011e2390772722da4815b73e34287" title=" " alt="" coords="431,107,617,133"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="435,259,613,301"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#a935312efe3137e1eb72ceb4d9030d744" title=" " alt="" coords="431,208,617,235"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#a826c18b2cf0cf48c3ec85cc04c7b22cd" title=" " alt="" coords="411,157,637,184"/>
+<area shape="rect" title=" " alt="" coords="729,132,888,159"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#a3a1c09c2b69234c8e8e12dffd2344935" title=" " alt="" coords="500,5,636,32"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c" title=" " alt="" coords="207,107,385,133"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#a21a011e2390772722da4815b73e34287" title=" " alt="" coords="475,107,661,133"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="479,259,657,301"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#a935312efe3137e1eb72ceb4d9030d744" title=" " alt="" coords="475,208,661,235"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#a826c18b2cf0cf48c3ec85cc04c7b22cd" title=" " alt="" coords="455,157,681,184"/>
 <area shape="rect" href="../../d7/d22/classCheckboard.html#ab188b54b544caa7ae0d36278b11d572c" title=" " alt="" coords="5,107,137,133"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="205,267,343,293"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#aa0c092a25118247fe8bdd1842377e106" title=" " alt="" coords="185,292,407,319"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="227,241,365,268"/>
 </map>
 </div>
 
@@ -1127,9 +1141,10 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d22/classCheckboard_ac6518f96d2609df334c7a39dc337c79c_icgraph.png" border="0" usemap="#ad7/d22/classCheckboard_ac6518f96d2609df334c7a39dc337c79c_icgraph" alt=""/></div>
 <map name="ad7/d22/classCheckboard_ac6518f96d2609df334c7a39dc337c79c_icgraph" id="ad7/d22/classCheckboard_ac6518f96d2609df334c7a39dc337c79c_icgraph">
-<area shape="rect" title=" " alt="" coords="419,5,608,47"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="192,5,371,47"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="5,13,144,39"/>
+<area shape="rect" title=" " alt="" coords="501,23,691,65"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="275,23,453,65"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#aa0c092a25118247fe8bdd1842377e106" title=" " alt="" coords="5,5,227,32"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="47,56,185,83"/>
 </map>
 </div>
 
@@ -1323,7 +1338,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa">getSquare()</a>, <a class="el" href="../../d7/d22/classCheckboard.html#ac6518f96d2609df334c7a39dc337c79c">resetReferenceCounts()</a>, <a class="el" href="../../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497">squares</a>, and <a class="el" href="../../d7/d22/classCheckboard.html#a60a835cfe4c27c2a905efdaec6538c75">whiteKingThreat</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e">update()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d7/d22/classCheckboard.html#aa0c092a25118247fe8bdd1842377e106">checkForCheckmate()</a>, and <a class="el" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e">update()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -1339,8 +1354,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d7/d22/classCheckboard_ab2cce7d4271ca13defbd495e25215224_icgraph.png" border="0" usemap="#ad7/d22/classCheckboard_ab2cce7d4271ca13defbd495e25215224_icgraph" alt=""/></div>
 <map name="ad7/d22/classCheckboard_ab2cce7d4271ca13defbd495e25215224_icgraph" id="ad7/d22/classCheckboard_ab2cce7d4271ca13defbd495e25215224_icgraph">
-<area shape="rect" title=" " alt="" coords="192,5,371,47"/>
-<area shape="rect" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="5,13,144,39"/>
+<area shape="rect" title=" " alt="" coords="275,23,453,65"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#aa0c092a25118247fe8bdd1842377e106" title=" " alt="" coords="5,5,227,32"/>
+<area shape="rect" href="../../d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="47,56,185,83"/>
 </map>
 </div>
 
@@ -1576,7 +1592,6 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">  154</span>    this-&gt;<a class="code hl_variable" href="../../d7/d22/classCheckboard.html#a3c4293c0e08d4b60bd31bd9ace28690d">selectedPawn</a> = {<span class="keyword">nullptr</span>};</div>
 <div class="line"><span class="lineno">  155</span>  }</div>
 <div class="line"><span class="lineno">  156</span>}</div>
-<div class="ttc" id="aclassCheckboard_html_ab2cce7d4271ca13defbd495e25215224"><div class="ttname"><a href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224">Checkboard::setReferenceCounts</a></div><div class="ttdeci">void setReferenceCounts()</div><div class="ttdef"><b>Definition:</b> Checkboard.cpp:91</div></div>
 <div class="ttc" id="aclassCheckboard_html_ae6492b0cb2ee2dc21051c32803033ee7"><div class="ttname"><a href="../../d7/d22/classCheckboard.html#ae6492b0cb2ee2dc21051c32803033ee7">Checkboard::setBlockedPawns</a></div><div class="ttdeci">void setBlockedPawns() const</div><div class="ttdef"><b>Definition:</b> Checkboard.cpp:118</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="../../d7/d22/classCheckboard.html#a2b1732cb70b375f67c42f5a2d7792890">markedPawn</a>, <a class="el" href="../../d7/d22/classCheckboard.html#a76747f20b4d0aa7b17424ee7b45d7d18">markedSquares</a>, <a class="el" href="../../d7/d22/classCheckboard.html#a4962b122e4fbb403397f4ceb0feed855">movingSquare_</a>, <a class="el" href="../../d7/d22/classCheckboard.html#a3c4293c0e08d4b60bd31bd9ace28690d">selectedPawn</a>, <a class="el" href="../../d7/d22/classCheckboard.html#ae6492b0cb2ee2dc21051c32803033ee7">setBlockedPawns()</a>, <a class="el" href="../../d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224">setReferenceCounts()</a>, and <a class="el" href="../../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497">squares</a>.</p>
