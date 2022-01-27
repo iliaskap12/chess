@@ -3,7 +3,7 @@
 Function paths::getFontsPath
 ============================
 
-- Defined in :ref:`file_include_util_paths.h`
+- Defined in :ref:`file_src_util_util_paths.h`
 
 
 Function Documentation

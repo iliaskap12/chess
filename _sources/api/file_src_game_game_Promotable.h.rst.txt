@@ -1,0 +1,31 @@
+
+.. _file_src_game_game_Promotable.h:
+
+File Promotable.h
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game_game>` (``src/game/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/game/Promotable.h``)
+-------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_game_Promotable.h.rst
+
+
+
+
+
+
+
+
+

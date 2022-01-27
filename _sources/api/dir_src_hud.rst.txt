@@ -11,22 +11,11 @@ Directory hud
 
 *Directory path:* ``src/hud``
 
+Subdirectories
+--------------
 
-Files
------
+- :ref:`dir_src_hud_hud`
+- :ref:`dir_src_hud_src`
 
-- :ref:`file_src_hud_CheckIndicator.cpp`
-- :ref:`file_src_hud_Draw.cpp`
-- :ref:`file_src_hud_EndgameIndicator.cpp`
-- :ref:`file_src_hud_HUD.cpp`
-- :ref:`file_src_hud_Indicator.cpp`
-- :ref:`file_src_hud_Moveboard.cpp`
-- :ref:`file_src_hud_MoveTakeback.cpp`
-- :ref:`file_src_hud_Offer.cpp`
-- :ref:`file_src_hud_PawnCount.cpp`
-- :ref:`file_src_hud_Resignment.cpp`
-- :ref:`file_src_hud_TimeIncrement.cpp`
-- :ref:`file_src_hud_Timer.cpp`
-- :ref:`file_src_hud_TurnIndicator.cpp`
 
 

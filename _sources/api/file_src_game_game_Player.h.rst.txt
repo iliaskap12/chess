@@ -1,0 +1,54 @@
+
+.. _file_src_game_game_Player.h:
+
+File Player.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game_game>` (``src/game/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/game/Player.h``)
+---------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_game_Player.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``PawnColor.h`` (:ref:`file_src_game_game_PawnColor.h`)
+
+- ``string`` (:ref:`file_src_util_src_custom-string.cpp`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_game_game_Game.h`
+
+- :ref:`file_src_game_src_Player.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_player`
+

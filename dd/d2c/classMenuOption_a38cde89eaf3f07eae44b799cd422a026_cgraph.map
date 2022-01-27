@@ -1,0 +1,4 @@
+<map id="MenuOption::playSound" name="MenuOption::playSound">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,167,32"/>
+<area shape="rect" id="node2" href="$df/d49/classSound.html#ae06bc48280d87ac6bc3317a3f332efa2" title=" " alt="" coords="215,5,305,32"/>
+</map>

@@ -29,11 +29,11 @@ Includes
 --------
 
 
-- ``App.h`` (:ref:`file_include_App.h`)
+- ``App.h`` (:ref:`file_src_App.h`)
 
 - ``functional``
 
-- ``util/paths.h`` (:ref:`file_include_util_paths.h`)
+- ``util/paths.h`` (:ref:`file_src_util_util_paths.h`)
 
 
 

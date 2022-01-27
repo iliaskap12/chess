@@ -1,0 +1,48 @@
+
+.. _file_src_graphics_src_Rectangle.cpp:
+
+File Rectangle.cpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_graphics_src>` (``src/graphics/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/graphics/src/Rectangle.cpp``)
+-----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_graphics_src_Rectangle.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``App.h`` (:ref:`file_src_App.h`)
+
+- ``graphics/Rectangle.h`` (:ref:`file_src_graphics_graphics_Rectangle.h`)
+
+- ``sgg/graphics.h``
+
+
+
+
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function__rectangle_8cpp_1a09abfed52b7865bf069edadf2905ad86`
+

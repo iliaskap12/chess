@@ -1,0 +1,13 @@
+
+.. _program_listing_file_src_sounds_src_WinSound.cpp:
+
+Program Listing for File WinSound.cpp
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_src_WinSound.cpp>` (``src/sounds/src/WinSound.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <sounds/WinSound.h>

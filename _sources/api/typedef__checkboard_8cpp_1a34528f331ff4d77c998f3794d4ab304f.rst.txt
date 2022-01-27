@@ -3,7 +3,7 @@
 Typedef Squares
 ===============
 
-- Defined in :ref:`file_src_game_Checkboard.cpp`
+- Defined in :ref:`file_src_game_src_Checkboard.cpp`
 
 
 Typedef Documentation

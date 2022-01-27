@@ -1,26 +1,4 @@
 var searchData=
 [
-  ['want_0',['want',['../da/dcd/structprivateAudioDevice.html#aecf060271fb9c072a506c1247a89e732',1,'privateAudioDevice']]],
-  ['weight_1',['weight',['../de/de8/structBPMNode.html#a349ff0204b52858db88a47940509f14e',1,'BPMNode']]],
-  ['welcomemessage_2',['welcomeMessage',['../d1/d9f/classOpeningScreen.html#a4f29c51b2ecdcff6efd1098e8ca2d620',1,'OpeningScreen']]],
-  ['white_3',['WHITE',['../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366ab5bf627e448384cf3a4c35121ca6008d',1,'PawnColor.h']]],
-  ['whitedangerreferencecount_5f_4',['whiteDangerReferenceCount_',['../d3/d72/classSquare.html#ab1c5f065ac52732619c4606447c6d505',1,'Square']]],
-  ['whiteking_5',['whiteKing',['../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945',1,'Checkboard']]],
-  ['whitekingid_6',['whiteKingId',['../d7/d22/classCheckboard.html#a301c8455ed26dd4a787ca015faf4d2d5',1,'Checkboard']]],
-  ['whitekingthreat_7',['whiteKingThreat',['../d7/d22/classCheckboard.html#a60a835cfe4c27c2a905efdaec6538c75',1,'Checkboard']]],
-  ['whiteturn_5f_8',['whiteTurn_',['../d9/d68/classGame.html#a01eedea8a7ca214462daefd675d20d28',1,'Game']]],
-  ['width_5f_9',['width_',['../de/d00/classRectangle.html#ace0b7ee72c79ddc002bfaf55b93e414f',1,'Rectangle']]],
-  ['window_20initialization_20and_20handling_10',['Window initialization and handling',['../db/dbd/group____WINDOW.html',1,'']]],
-  ['windowsize_11',['windowsize',['../d7/df2/structLodePNGCompressSettings.html#a01e77a9db5c2c4dfe6c79bf04f0bf84e',1,'LodePNGCompressSettings']]],
-  ['windowtocanvasx_12',['WindowToCanvasX',['../d6/df2/classgraphics_1_1GLBackend.html#ab2d8907eafbaa1630574e1d29c5f7cc0',1,'graphics::GLBackend']]],
-  ['windowtocanvasx_13',['windowToCanvasX',['../db/dbd/group____WINDOW.html#ga3f2ee4d02546ed6f4c1f2eeaa908d2f4',1,'graphics']]],
-  ['windowtocanvasy_14',['WindowToCanvasY',['../d6/df2/classgraphics_1_1GLBackend.html#a5e159f5bae43ecd707ba006506905962',1,'graphics::GLBackend']]],
-  ['windowtocanvasy_15',['windowToCanvasY',['../db/dbd/group____WINDOW.html#gaf94e1e139ae60348554118e19aa0c8f6',1,'graphics']]],
-  ['winsound_2ecpp_16',['WinSound.cpp',['../d1/d06/WinSound_8cpp.html',1,'']]],
-  ['winsound_2eh_17',['WinSound.h',['../df/d9d/WinSound_8h.html',1,'']]],
-  ['writebit_18',['WRITEBIT',['../dd/dc0/lodepng_8cpp.html#a602f86e3a6524f960c6aff8f9639269d',1,'lodepng.cpp']]],
-  ['writebits_19',['writeBits',['../dd/dc0/lodepng_8cpp.html#ade73aa505ea4367b61bda5e630e6e817',1,'lodepng.cpp']]],
-  ['writebitsreversed_20',['writeBitsReversed',['../dd/dc0/lodepng_8cpp.html#a1d87ae6a5bf23e0a387ac0edeef0d33d',1,'lodepng.cpp']]],
-  ['writelz77data_21',['writeLZ77data',['../dd/dc0/lodepng_8cpp.html#a78f547f073e3307c4f8356bb30847fe7',1,'lodepng.cpp']]],
-  ['writesignature_22',['writeSignature',['../dd/dc0/lodepng_8cpp.html#ac202d917387c9dfba4170f190d8ee891',1,'lodepng.cpp']]]
+  ['y_0',['y',['../dc/d4f/classPoint.html#a6101960c8d2d4e8ea1d32c9234bbeb8d',1,'Point']]]
 ];

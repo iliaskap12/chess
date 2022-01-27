@@ -3,7 +3,7 @@
 Enum ButtonType
 ===============
 
-- Defined in :ref:`file_include_graphics_ButtonType.h`
+- Defined in :ref:`file_src_graphics_graphics_ButtonType.h`
 
 
 Enum Documentation

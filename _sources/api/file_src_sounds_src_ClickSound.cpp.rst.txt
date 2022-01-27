@@ -1,0 +1,37 @@
+
+.. _file_src_sounds_src_ClickSound.cpp:
+
+File ClickSound.cpp
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_sounds_src>` (``src/sounds/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/sounds/src/ClickSound.cpp``)
+----------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_sounds_src_ClickSound.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``sounds/ClickSound.h`` (:ref:`file_src_sounds_sounds_ClickSound.h`)
+
+
+
+
+

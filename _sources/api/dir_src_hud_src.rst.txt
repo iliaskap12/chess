@@ -1,0 +1,32 @@
+.. _dir_src_hud_src:
+
+
+Directory src
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_src_hud>` (``src/hud``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``src/hud/src``
+
+
+Files
+-----
+
+- :ref:`file_src_hud_src_CheckIndicator.cpp`
+- :ref:`file_src_hud_src_Draw.cpp`
+- :ref:`file_src_hud_src_EndgameIndicator.cpp`
+- :ref:`file_src_hud_src_HUD.cpp`
+- :ref:`file_src_hud_src_Indicator.cpp`
+- :ref:`file_src_hud_src_Moveboard.cpp`
+- :ref:`file_src_hud_src_MoveTakeback.cpp`
+- :ref:`file_src_hud_src_Offer.cpp`
+- :ref:`file_src_hud_src_PawnCount.cpp`
+- :ref:`file_src_hud_src_Resignment.cpp`
+- :ref:`file_src_hud_src_TimeIncrement.cpp`
+- :ref:`file_src_hud_src_Timer.cpp`
+- :ref:`file_src_hud_src_TurnIndicator.cpp`
+
+

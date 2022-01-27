@@ -3,7 +3,7 @@
 Class Rectangle
 ===============
 
-- Defined in :ref:`file_include_graphics_Rectangle.h`
+- Defined in :ref:`file_src_graphics_graphics_Rectangle.h`
 
 
 Inheritance Relationships

@@ -1,0 +1,26 @@
+
+.. _program_listing_file_src_sounds_sounds_CaptureSound.h:
+
+Program Listing for File CaptureSound.h
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_CaptureSound.h>` (``src/sounds/sounds/CaptureSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CAPTURESOUND_H
+   #define CAPTURESOUND_H
+   
+   #include "Sound.h"
+   #include <util/paths.h>
+   
+   class CaptureSound : public Sound {
+     const std::string soundPath{paths::getSoundsPath() + "fall.mp3"};
+   
+   public:
+     CaptureSound();
+   };
+   
+   #endif// CAPTURESOUND_H

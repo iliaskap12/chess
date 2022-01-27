@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['terminate_0',['terminate',['../d6/df2/classgraphics_1_1GLBackend.html#af9fa07ce02ef8c48790c7af8b435a62d',1,'graphics::GLBackend']]],
-  ['texture_1',['Texture',['../d1/dea/classgraphics_1_1Texture.html#a488b717294c5f0654206a3e3c72841fb',1,'graphics::Texture']]],
-  ['tryblockcheck_2',['tryBlockCheck',['../d7/d22/classCheckboard.html#ab2acd69adae4e135113b94b876c9c513',1,'Checkboard']]],
-  ['trymoveblockedpawn_3',['tryMoveBlockedPawn',['../d7/d22/classCheckboard.html#a826c18b2cf0cf48c3ec85cc04c7b22cd',1,'Checkboard']]]
+  ['_7edrawable_0',['~Drawable',['../de/db8/classDrawable.html#a489905d7db51e37ceee8fc7eaff6a762',1,'Drawable']]],
+  ['_7emovable_1',['~Movable',['../da/dfc/classMovable.html#a0997581e2c7a143c5a737b640084fd16',1,'Movable']]],
+  ['_7eupdateable_2',['~Updateable',['../d2/d7d/classUpdateable.html#a08a8382b054ae6bc34a8ca2415b8f1ca',1,'Updateable']]]
 ];

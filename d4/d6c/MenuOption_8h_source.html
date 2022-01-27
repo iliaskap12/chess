@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: /Users/runner/work/chess/chess/include/graphics/MenuOption.h Source File</title>
+<title>Chess: /Users/runner/work/chess/chess/src/graphics/graphics/MenuOption.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_c17ed8a99c2aafc6034c524ffcf900dc.html">graphics</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_560415a5d2bc4999842279f4fc1debef.html">graphics</a></li><li class="navelem"><a class="el" href="../../dir_c7415b52afe9e14b2efa45ac4d46f1ee.html">graphics</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,30 +73,37 @@ $(function() {
 <a href="../../d4/d6c/MenuOption_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef MENUOPTION_H</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define MENUOPTION_H</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d0b/HUD_8h.html">hud/HUD.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d04/Rectangle_8h.html">Rectangle.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dd/d2c/classMenuOption.html">MenuOption</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html#a7791dacbfca2a2e39e9d5c2869243b29">    8</a></span>  <a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> <a class="code hl_variable" href="../../dd/d2c/classMenuOption.html#a7791dacbfca2a2e39e9d5c2869243b29">optionHUD</a>;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b">    9</a></span>  <a class="code hl_class" href="../../de/d00/classRectangle.html">Rectangle</a> <a class="code hl_variable" href="../../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b">button</a>;</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93">MenuOption</a>(<a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> hud);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  [[nodiscard]] <a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#a7ee16144f6f71e57deb23e2bcceb8694">getMessage</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  [[nodiscard]] <a class="code hl_class" href="../../de/d00/classRectangle.html">Rectangle</a> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#aa673cced02db1045e9cbfba025aee4a0">getButton</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">// MENUOPTION_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;<a class="code" href="../../d0/d0b/HUD_8h.html">hud/HUD.h</a>&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="../../df/d2a/ClickSound_8h.html">sounds/ClickSound.h</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="../../dc/d04/Rectangle_8h.html">Rectangle.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dd/d2c/classMenuOption.html">MenuOption</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html#a7791dacbfca2a2e39e9d5c2869243b29">    9</a></span>  <a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> <a class="code hl_variable" href="../../dd/d2c/classMenuOption.html#a7791dacbfca2a2e39e9d5c2869243b29">optionHUD</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b">   10</a></span>  <a class="code hl_class" href="../../de/d00/classRectangle.html">Rectangle</a> <a class="code hl_variable" href="../../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b">button</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="../../dd/d2c/classMenuOption.html#ac2b0be5b7461601ad49a905337ef0e34">   11</a></span>  <a class="code hl_class" href="../../df/dc4/classClickSound.html">ClickSound</a> <a class="code hl_variable" href="../../dd/d2c/classMenuOption.html#ac2b0be5b7461601ad49a905337ef0e34">clickSound</a>{<a class="code hl_class" href="../../df/dc4/classClickSound.html">ClickSound</a>()};</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93">MenuOption</a>(<a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> hud);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  [[nodiscard]] <a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#a7ee16144f6f71e57deb23e2bcceb8694">getMessage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  [[nodiscard]] <a class="code hl_class" href="../../de/d00/classRectangle.html">Rectangle</a> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#aa673cced02db1045e9cbfba025aee4a0">getButton</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../dd/d2c/classMenuOption.html#a38cde89eaf3f07eae44b799cd422a026">playSound</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>};</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif </span><span class="comment">// MENUOPTION_H</span></div>
+<div class="ttc" id="aClickSound_8h_html"><div class="ttname"><a href="../../df/d2a/ClickSound_8h.html">ClickSound.h</a></div></div>
 <div class="ttc" id="aHUD_8h_html"><div class="ttname"><a href="../../d0/d0b/HUD_8h.html">HUD.h</a></div></div>
 <div class="ttc" id="aRectangle_8h_html"><div class="ttname"><a href="../../dc/d04/Rectangle_8h.html">Rectangle.h</a></div></div>
-<div class="ttc" id="aclassHUD_html"><div class="ttname"><a href="../../d0/df0/classHUD.html">HUD</a></div><div class="ttdef"><b>Definition:</b> HUD.h:18</div></div>
-<div class="ttc" id="aclassMenuOption_html"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html">MenuOption</a></div><div class="ttdef"><b>Definition:</b> MenuOption.h:7</div></div>
+<div class="ttc" id="aclassClickSound_html"><div class="ttname"><a href="../../df/dc4/classClickSound.html">ClickSound</a></div><div class="ttdef"><b>Definition:</b> ClickSound.h:7</div></div>
+<div class="ttc" id="aclassHUD_html"><div class="ttname"><a href="../../d0/df0/classHUD.html">HUD</a></div><div class="ttdef"><b>Definition:</b> HUD.h:13</div></div>
+<div class="ttc" id="aclassMenuOption_html"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html">MenuOption</a></div><div class="ttdef"><b>Definition:</b> MenuOption.h:8</div></div>
+<div class="ttc" id="aclassMenuOption_html_a38cde89eaf3f07eae44b799cd422a026"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#a38cde89eaf3f07eae44b799cd422a026">MenuOption::playSound</a></div><div class="ttdeci">void playSound() const</div><div class="ttdef"><b>Definition:</b> MenuOption.cpp:22</div></div>
 <div class="ttc" id="aclassMenuOption_html_a61049566587943bb967f7a0eb3ab3f93"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93">MenuOption::MenuOption</a></div><div class="ttdeci">MenuOption(HUD hud)</div><div class="ttdef"><b>Definition:</b> MenuOption.cpp:4</div></div>
-<div class="ttc" id="aclassMenuOption_html_a7791dacbfca2a2e39e9d5c2869243b29"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#a7791dacbfca2a2e39e9d5c2869243b29">MenuOption::optionHUD</a></div><div class="ttdeci">HUD optionHUD</div><div class="ttdef"><b>Definition:</b> MenuOption.h:8</div></div>
+<div class="ttc" id="aclassMenuOption_html_a7791dacbfca2a2e39e9d5c2869243b29"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#a7791dacbfca2a2e39e9d5c2869243b29">MenuOption::optionHUD</a></div><div class="ttdeci">HUD optionHUD</div><div class="ttdef"><b>Definition:</b> MenuOption.h:9</div></div>
 <div class="ttc" id="aclassMenuOption_html_a7ee16144f6f71e57deb23e2bcceb8694"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#a7ee16144f6f71e57deb23e2bcceb8694">MenuOption::getMessage</a></div><div class="ttdeci">HUD getMessage() const</div><div class="ttdef"><b>Definition:</b> MenuOption.cpp:14</div></div>
 <div class="ttc" id="aclassMenuOption_html_aa673cced02db1045e9cbfba025aee4a0"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#aa673cced02db1045e9cbfba025aee4a0">MenuOption::getButton</a></div><div class="ttdeci">Rectangle getButton() const</div><div class="ttdef"><b>Definition:</b> MenuOption.cpp:18</div></div>
-<div class="ttc" id="aclassMenuOption_html_ac0e8fae01063ee7e00cbafe2e156116b"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b">MenuOption::button</a></div><div class="ttdeci">Rectangle button</div><div class="ttdef"><b>Definition:</b> MenuOption.h:9</div></div>
-<div class="ttc" id="aclassRectangle_html"><div class="ttname"><a href="../../de/d00/classRectangle.html">Rectangle</a></div><div class="ttdef"><b>Definition:</b> Rectangle.h:16</div></div>
+<div class="ttc" id="aclassMenuOption_html_ac0e8fae01063ee7e00cbafe2e156116b"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#ac0e8fae01063ee7e00cbafe2e156116b">MenuOption::button</a></div><div class="ttdeci">Rectangle button</div><div class="ttdef"><b>Definition:</b> MenuOption.h:10</div></div>
+<div class="ttc" id="aclassMenuOption_html_ac2b0be5b7461601ad49a905337ef0e34"><div class="ttname"><a href="../../dd/d2c/classMenuOption.html#ac2b0be5b7461601ad49a905337ef0e34">MenuOption::clickSound</a></div><div class="ttdeci">ClickSound clickSound</div><div class="ttdef"><b>Definition:</b> MenuOption.h:11</div></div>
+<div class="ttc" id="aclassRectangle_html"><div class="ttname"><a href="../../de/d00/classRectangle.html">Rectangle</a></div><div class="ttdef"><b>Definition:</b> Rectangle.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

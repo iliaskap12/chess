@@ -3,7 +3,7 @@
 Class App
 =========
 
-- Defined in :ref:`file_include_App.h`
+- Defined in :ref:`file_src_App.h`
 
 
 Inheritance Relationships

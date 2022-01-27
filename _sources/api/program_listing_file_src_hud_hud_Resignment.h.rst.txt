@@ -1,0 +1,18 @@
+
+.. _program_listing_file_src_hud_hud_Resignment.h:
+
+Program Listing for File Resignment.h
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_hud_hud_Resignment.h>` (``src/hud/hud/Resignment.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef RESIGNMENT_H
+   #define RESIGNMENT_H
+   
+   
+   #endif // RESIGNMENT_H

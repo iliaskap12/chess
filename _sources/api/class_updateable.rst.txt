@@ -3,7 +3,7 @@
 Class Updateable
 ================
 
-- Defined in :ref:`file_include_graphics_Updateable.h`
+- Defined in :ref:`file_src_graphics_graphics_Updateable.h`
 
 
 Inheritance Relationships

@@ -1,0 +1,68 @@
+
+.. _file_src_game_game_Checkboard.h:
+
+File Checkboard.h
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game_game>` (``src/game/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/game/Checkboard.h``)
+-------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_game_Checkboard.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``King.h`` (:ref:`file_src_game_game_King.h`)
+
+- ``Pawn.h`` (:ref:`file_src_game_game_Pawn.h`)
+
+- ``Square.h`` (:ref:`file_src_game_game_Square.h`)
+
+- ``array``
+
+- ``optional``
+
+- ``sounds/CheckSound.h`` (:ref:`file_src_sounds_sounds_CheckSound.h`)
+
+- ``sounds/EndGameSound.h`` (:ref:`file_src_sounds_sounds_EndGameSound.h`)
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_game_game_Game.h`
+
+- :ref:`file_src_game_game_King.h`
+
+- :ref:`file_src_game_src_Checkboard.cpp`
+
+- :ref:`file_src_game_src_Pawn.cpp`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_checkboard`
+

@@ -1,0 +1,62 @@
+
+.. _file_src_game_game_Game.h:
+
+File Game.h
+===========
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game_game>` (``src/game/game``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/game/Game.h``)
+-------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_game_Game.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Checkboard.h`` (:ref:`file_src_game_game_Checkboard.h`)
+
+- ``Player.h`` (:ref:`file_src_game_game_Player.h`)
+
+- ``graphics/Drawable.h`` (:ref:`file_src_graphics_graphics_Drawable.h`)
+
+- ``graphics/Updateable.h`` (:ref:`file_src_graphics_graphics_Updateable.h`)
+
+- ``optional``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_App.h`
+
+- :ref:`file_src_game_src_Game.cpp`
+
+- :ref:`file_src_graphics_graphics_PlayingScreen.h`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_game`
+

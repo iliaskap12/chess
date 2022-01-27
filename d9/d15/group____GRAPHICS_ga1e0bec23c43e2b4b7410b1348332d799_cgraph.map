@@ -1,7 +1,0 @@
-<map id="graphics::drawSector" name="graphics::drawSector">
-<area shape="rect" id="node1" title=" " alt="" coords="5,64,151,91"/>
-<area shape="rect" id="node2" href="$d6/df2/classgraphics_1_1GLBackend.html#a1bad60b0da94d939620eaf250c36cd69" title=" " alt="" coords="199,57,345,98"/>
-<area shape="rect" id="node3" href="$d9/d69/classShader.html#a91f6b1b90751bf9bf1b4afe6d8f221c1" title=" " alt="" coords="393,5,580,32"/>
-<area shape="rect" id="node4" href="$d0/d9c/classgraphics_1_1TextureManager.html#ad7d48b913ed7c8fedfec1349cb0de687" title=" " alt="" coords="401,57,573,98"/>
-<area shape="rect" id="node5" href="$d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100" title=" " alt="" coords="441,147,533,173"/>
-</map>

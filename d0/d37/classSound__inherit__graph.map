@@ -1,0 +1,8 @@
+<map id="Sound" name="Sound">
+<area shape="rect" id="node1" title=" " alt="" coords="453,5,607,185"/>
+<area shape="rect" id="node2" href="$d9/d32/classCaptureSound.html" title=" " alt="" coords="5,233,196,311"/>
+<area shape="rect" id="node3" href="$d3/d3c/classCheckSound.html" title=" " alt="" coords="220,233,411,311"/>
+<area shape="rect" id="node4" href="$df/dc4/classClickSound.html" title=" " alt="" coords="435,233,625,311"/>
+<area shape="rect" id="node5" href="$dc/d1a/classEndgameSound.html" title=" " alt="" coords="649,233,840,311"/>
+<area shape="rect" id="node6" href="$d5/d69/classMoveSound.html" title=" " alt="" coords="864,233,1055,311"/>
+</map>

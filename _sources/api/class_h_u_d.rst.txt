@@ -3,7 +3,7 @@
 Class HUD
 =========
 
-- Defined in :ref:`file_include_hud_HUD.h`
+- Defined in :ref:`file_src_hud_hud_HUD.h`
 
 
 Inheritance Relationships
@@ -16,10 +16,13 @@ Base Types
 - ``public Updateable`` (:ref:`exhale_class_class_updateable`)
 
 
-Derived Type
-************
+Derived Types
+*************
 
+- ``public CheckIndicator`` (:ref:`exhale_class_class_check_indicator`)
+- ``public EndgameIndicator`` (:ref:`exhale_class_class_endgame_indicator`)
 - ``public PawnCount`` (:ref:`exhale_class_class_pawn_count`)
+- ``public TurnIndicator`` (:ref:`exhale_class_class_turn_indicator`)
 
 
 Class Documentation

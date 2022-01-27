@@ -1,0 +1,23 @@
+
+.. _program_listing_file_src_graphics_graphics_Drawable.h:
+
+Program Listing for File Drawable.h
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_graphics_graphics_Drawable.h>` (``src/graphics/graphics/Drawable.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef DRAWABLE_H
+   #define DRAWABLE_H
+   
+   class Drawable {
+   public:
+     virtual void draw() = 0;
+     virtual ~Drawable() = default;
+   };
+   
+   #endif // DRAWABLE_H

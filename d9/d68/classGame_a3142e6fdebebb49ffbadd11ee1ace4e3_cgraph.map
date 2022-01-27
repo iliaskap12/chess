@@ -1,6 +1,4 @@
 <map id="Game::start" name="Game::start">
-<area shape="rect" id="node1" title=" " alt="" coords="5,38,96,65"/>
-<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="144,13,297,39"/>
-<area shape="rect" id="node4" href="$dd/d64/classApp.html#a2155097882b9b682f9c5ce9345a0f230" title=" " alt="" coords="155,63,286,90"/>
-<area shape="rect" id="node3" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="345,5,492,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node2" href="$dd/d64/classApp.html#a2155097882b9b682f9c5ce9345a0f230" title=" " alt="" coords="144,5,275,32"/>
 </map>

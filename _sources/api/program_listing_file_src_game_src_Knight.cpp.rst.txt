@@ -1,0 +1,34 @@
+
+.. _program_listing_file_src_game_src_Knight.cpp:
+
+Program Listing for File Knight.cpp
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_game_src_Knight.cpp>` (``src/game/src/Knight.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <game/Knight.h>
+   
+   Knight::Knight(PawnColor color) : Pawn(color) {
+     Pawn::setTexture("knight");
+     this->steps.push_back(std::make_pair<int, int>(2, 1));
+     this->steps.push_back(std::make_pair<int, int>(-2, 1));
+     this->steps.push_back(std::make_pair<int, int>(2, -1));
+     this->steps.push_back(std::make_pair<int, int>(-2, -1));
+     this->steps.push_back(std::make_pair<int, int>(1, 2));
+     this->steps.push_back(std::make_pair<int, int>(1, -2));
+     this->steps.push_back(std::make_pair<int, int>(-1, 2));
+     this->steps.push_back(std::make_pair<int, int>(-1, -2));
+   }
+   
+   std::vector<std::pair<int, int>> Knight::getAdvanceableSquares() {
+     return Pawn::getAdvanceableSquares(this->steps, Knight::maxSteps, false);
+   }
+   
+   std::vector<std::pair<int, int>> Knight::getHoldingSquares() {
+     auto squares = Pawn::getAdvanceableSquares(this->steps, Knight::maxSteps, true);
+     return squares;
+   }

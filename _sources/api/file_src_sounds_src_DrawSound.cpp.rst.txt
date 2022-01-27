@@ -1,0 +1,37 @@
+
+.. _file_src_sounds_src_DrawSound.cpp:
+
+File DrawSound.cpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_sounds_src>` (``src/sounds/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/sounds/src/DrawSound.cpp``)
+---------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_sounds_src_DrawSound.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``sounds/DrawSound.h`` (:ref:`file_src_sounds_sounds_DrawSound.h`)
+
+
+
+
+

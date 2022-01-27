@@ -3,7 +3,7 @@
 Class Screen
 ============
 
-- Defined in :ref:`file_include_graphics_Screen.h`
+- Defined in :ref:`file_src_graphics_graphics_Screen.h`
 
 
 Inheritance Relationships

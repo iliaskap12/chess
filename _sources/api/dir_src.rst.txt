@@ -21,6 +21,7 @@ Files
 -----
 
 - :ref:`file_src_App.cpp`
+- :ref:`file_src_App.h`
 - :ref:`file_src_main.cpp`
 
 

@@ -1,0 +1,41 @@
+
+.. _file_src_game_src_Soldier.cpp:
+
+File Soldier.cpp
+================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_game_src>` (``src/game/src``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/game/src/Soldier.cpp``)
+-----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_game_src_Soldier.cpp.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``App.h`` (:ref:`file_src_App.h`)
+
+- ``algorithm``
+
+- ``game/Soldier.h`` (:ref:`file_src_game_game_Soldier.h`)
+
+
+
+
+

@@ -1,11 +1,11 @@
 <map id="Checkboard::getSquare" name="Checkboard::getSquare">
-<area shape="rect" id="node1" title=" " alt="" coords="920,132,1079,159"/>
-<area shape="rect" id="node2" href="$d7/d22/classCheckboard.html#a3a1c09c2b69234c8e8e12dffd2344935" title=" " alt="" coords="711,5,847,32"/>
-<area shape="rect" id="node3" href="$d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c" title=" " alt="" coords="185,132,363,159"/>
-<area shape="rect" id="node5" href="$d7/d22/classCheckboard.html#a21a011e2390772722da4815b73e34287" title=" " alt="" coords="431,132,617,159"/>
-<area shape="rect" id="node6" href="$d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="689,209,868,250"/>
-<area shape="rect" id="node8" href="$d7/d22/classCheckboard.html#ab2acd69adae4e135113b94b876c9c513" title=" " alt="" coords="685,157,872,184"/>
-<area shape="rect" id="node9" href="$d7/d22/classCheckboard.html#a826c18b2cf0cf48c3ec85cc04c7b22cd" title=" " alt="" coords="411,271,637,297"/>
-<area shape="rect" id="node4" href="$d7/d22/classCheckboard.html#ab188b54b544caa7ae0d36278b11d572c" title=" " alt="" coords="5,132,137,159"/>
-<area shape="rect" id="node7" href="$d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="455,216,593,243"/>
+<area shape="rect" id="node1" title=" " alt="" coords="685,132,844,159"/>
+<area shape="rect" id="node2" href="$d7/d22/classCheckboard.html#a3a1c09c2b69234c8e8e12dffd2344935" title=" " alt="" coords="456,5,592,32"/>
+<area shape="rect" id="node3" href="$d7/d22/classCheckboard.html#a470502f9a1893dbf2152a07a41e6e38c" title=" " alt="" coords="185,107,363,133"/>
+<area shape="rect" id="node5" href="$d7/d22/classCheckboard.html#a21a011e2390772722da4815b73e34287" title=" " alt="" coords="431,107,617,133"/>
+<area shape="rect" id="node6" href="$d7/d22/classCheckboard.html#ab2cce7d4271ca13defbd495e25215224" title=" " alt="" coords="435,259,613,301"/>
+<area shape="rect" id="node8" href="$d7/d22/classCheckboard.html#a935312efe3137e1eb72ceb4d9030d744" title=" " alt="" coords="431,208,617,235"/>
+<area shape="rect" id="node9" href="$d7/d22/classCheckboard.html#a826c18b2cf0cf48c3ec85cc04c7b22cd" title=" " alt="" coords="411,157,637,184"/>
+<area shape="rect" id="node4" href="$d7/d22/classCheckboard.html#ab188b54b544caa7ae0d36278b11d572c" title=" " alt="" coords="5,107,137,133"/>
+<area shape="rect" id="node7" href="$d7/d22/classCheckboard.html#ae3ee1a3a146ad9dabc0199212e12fe6e" title=" " alt="" coords="205,267,343,293"/>
 </map>

@@ -3,7 +3,7 @@
 Function operator==(const Rectangle&, const Rectangle&)
 =======================================================
 
-- Defined in :ref:`file_src_graphics_Rectangle.cpp`
+- Defined in :ref:`file_src_graphics_src_Rectangle.cpp`
 
 
 Function Documentation

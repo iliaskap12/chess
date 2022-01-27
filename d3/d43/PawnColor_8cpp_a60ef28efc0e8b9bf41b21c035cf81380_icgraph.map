@@ -1,5 +1,8 @@
 <map id="pawnColorToString" name="pawnColorToString">
-<area shape="rect" id="node1" title=" " alt="" coords="139,31,271,57"/>
-<area shape="rect" id="node2" href="$d3/d43/PawnColor_8cpp.html#a1535c4ed0687663633c368c8bf026d2c" title=" " alt="" coords="9,5,87,32"/>
-<area shape="rect" id="node3" href="$d3/d43/PawnColor_8cpp.html#a7160b90052fec47bed434f8739145de2" title=" " alt="" coords="5,56,91,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="477,81,609,108"/>
+<area shape="rect" id="node2" href="$d7/df6/classPlayingScreen.html#acea3aa0469d30a220ce9a980a64311a2" title=" " alt="" coords="221,5,415,32"/>
+<area shape="rect" id="node4" href="$d7/df6/classPlayingScreen.html#a10e6d61ff906a02d9a9fdf409bafae74" title=" " alt="" coords="207,56,429,83"/>
+<area shape="rect" id="node5" href="$d3/d43/PawnColor_8cpp.html#a1535c4ed0687663633c368c8bf026d2c" title=" " alt="" coords="279,107,357,133"/>
+<area shape="rect" id="node6" href="$d3/d43/PawnColor_8cpp.html#a7160b90052fec47bed434f8739145de2" title=" " alt="" coords="275,157,361,184"/>
+<area shape="rect" id="node3" href="$d7/df6/classPlayingScreen.html#ac598faff2ae04efad4e31072bd6f85e7" title=" " alt="" coords="5,31,159,57"/>
 </map>

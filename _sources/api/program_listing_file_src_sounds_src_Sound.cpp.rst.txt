@@ -1,0 +1,24 @@
+
+.. _program_listing_file_src_sounds_src_Sound.cpp:
+
+Program Listing for File Sound.cpp
+==================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_src_Sound.cpp>` (``src/sounds/src/Sound.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <sgg/graphics.h>
+   #include <sounds/Sound.h>
+   
+   Sound::Sound() = default;
+   
+   void Sound::setSound(const std::string &path) {
+     this->soundPath = {path};
+   }
+   
+   void Sound::play() const {
+     graphics::playSound(this->soundPath, Sound::volume, Sound::looping);
+   }

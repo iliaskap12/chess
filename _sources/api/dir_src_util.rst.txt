@@ -11,11 +11,11 @@ Directory util
 
 *Directory path:* ``src/util``
 
+Subdirectories
+--------------
 
-Files
------
+- :ref:`dir_src_util_src`
+- :ref:`dir_src_util_util`
 
-- :ref:`file_src_util_custom-string.cpp`
-- :ref:`file_src_util_paths.cpp`
 
 

@@ -3,7 +3,7 @@
 Template Function operator+(const PawnColor&, const T&)
 =======================================================
 
-- Defined in :ref:`file_include_game_PawnColor.h`
+- Defined in :ref:`file_src_game_game_PawnColor.h`
 
 
 Function Documentation

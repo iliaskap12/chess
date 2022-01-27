@@ -3,7 +3,7 @@
 Class OpeningScreen
 ===================
 
-- Defined in :ref:`file_include_graphics_OpeningScreen.h`
+- Defined in :ref:`file_src_graphics_graphics_OpeningScreen.h`
 
 
 Inheritance Relationships

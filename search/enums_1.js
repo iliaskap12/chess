@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['lodepngcolortype_0',['LodePNGColorType',['../d2/ddf/lodepng_8h.html#a8f763b6ae712d9802dec37019dfa0102',1,'lodepng.h']]],
-  ['lodepngfilterstrategy_1',['LodePNGFilterStrategy',['../d2/ddf/lodepng_8h.html#ad5215c95d5bedc9103d8e6490398254f',1,'lodepng.h']]]
+  ['pawncolor_0',['PawnColor',['../d3/d03/PawnColor_8h.html#aeee24e28f5cb186a9b7f3becafafa366',1,'PawnColor.h']]]
 ];

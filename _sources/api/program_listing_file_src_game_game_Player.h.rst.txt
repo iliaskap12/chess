@@ -1,0 +1,29 @@
+
+.. _program_listing_file_src_game_game_Player.h:
+
+Program Listing for File Player.h
+=================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_game_game_Player.h>` (``src/game/game/Player.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef PLAYER_H
+   #define PLAYER_H
+   
+   #include <string>
+   #include "PawnColor.h"
+   
+   class Player {
+   private:
+     PawnColor side;
+   
+   public:
+     explicit Player(PawnColor side);
+     [[nodiscard]] const PawnColor &getSide() const;
+   };
+   
+   #endif // PLAYER_H

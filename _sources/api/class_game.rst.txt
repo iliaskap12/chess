@@ -3,7 +3,7 @@
 Class Game
 ==========
 
-- Defined in :ref:`file_include_game_Game.h`
+- Defined in :ref:`file_src_game_game_Game.h`
 
 
 Inheritance Relationships

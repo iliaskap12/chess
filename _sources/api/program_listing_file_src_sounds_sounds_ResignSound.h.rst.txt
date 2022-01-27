@@ -1,0 +1,18 @@
+
+.. _program_listing_file_src_sounds_sounds_ResignSound.h:
+
+Program Listing for File ResignSound.h
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_ResignSound.h>` (``src/sounds/sounds/ResignSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef RESIGNSOUND_H
+   #define RESIGNSOUND_H
+   
+   
+   #endif // RESIGNSOUND_H

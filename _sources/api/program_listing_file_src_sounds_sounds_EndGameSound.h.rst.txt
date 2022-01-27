@@ -1,0 +1,26 @@
+
+.. _program_listing_file_src_sounds_sounds_EndGameSound.h:
+
+Program Listing for File EndGameSound.h
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_EndGameSound.h>` (``src/sounds/sounds/EndGameSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef ENDGAMESOUND_H
+   #define ENDGAMESOUND_H
+   
+   #include "Sound.h"
+   #include <util/paths.h>
+   
+   class EndgameSound : public Sound {
+     const std::string soundPath{paths::getSoundsPath() + "checkmate.mp3"};
+   
+   public:
+     EndgameSound();
+   };
+   
+   #endif// ENDGAMESOUND_H

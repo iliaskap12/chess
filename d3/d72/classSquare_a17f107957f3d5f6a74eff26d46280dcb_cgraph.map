@@ -1,6 +1,4 @@
 <map id="Square::update" name="Square::update">
-<area shape="rect" id="node1" title=" " alt="" coords="5,38,116,65"/>
-<area shape="rect" id="node2" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="164,13,317,39"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="178,63,303,90"/>
-<area shape="rect" id="node3" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="365,5,512,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node2" href="$d3/d72/classSquare.html#a75b9ac39d3718749b5b6e39d1eda7cc0" title=" " alt="" coords="164,5,289,32"/>
 </map>

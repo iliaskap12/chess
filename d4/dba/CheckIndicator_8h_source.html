@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: /Users/runner/work/chess/chess/include/hud/CheckIndicator.h Source File</title>
+<title>Chess: /Users/runner/work/chess/chess/src/hud/hud/CheckIndicator.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,19 +63,32 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e94c18d52246dc2a84c458562d820761.html">hud</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_47f8c9664a0c75d525313679f84f9445.html">hud</a></li><li class="navelem"><a class="el" href="../../dir_b19ec5512cd981ffed86b8dbf0358d9e.html">hud</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">CheckIndicator.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d4/dba/CheckIndicator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef CHECKINDICATOR_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define CHECKINDICATOR_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<a href="../../d4/dba/CheckIndicator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef CHECKINDICATOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define CHECKINDICATOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d0b/HUD_8h.html">HUD.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#endif </span><span class="comment">// CHECKINDICATOR_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../dc/d91/classCheckIndicator.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dc/d91/classCheckIndicator.html">CheckIndicator</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="../../dc/d91/classCheckIndicator.html#aaf57f5704f526406b3daf3ae11fb871f">CheckIndicator</a>(<span class="keyword">const</span> std::string &amp;<a class="code hl_variable" href="../../d0/df0/classHUD.html#afb8f8e88b9a72b4b52973c92cb2fe4c6">message</a>, <span class="keyword">const</span> std::pair&lt;float, float&gt; &amp;<a class="code hl_variable" href="../../d0/df0/classHUD.html#a6d376fc147049c86dd9e56d4a8a5c8aa">coordinates</a>, std::size_t <a class="code hl_variable" href="../../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a">size</a>);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>};</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif</span><span class="comment">// CHECKINDICATOR_H</span></div>
+<div class="ttc" id="aHUD_8h_html"><div class="ttname"><a href="../../d0/d0b/HUD_8h.html">HUD.h</a></div></div>
+<div class="ttc" id="aclassCheckIndicator_html"><div class="ttname"><a href="../../dc/d91/classCheckIndicator.html">CheckIndicator</a></div><div class="ttdef"><b>Definition:</b> CheckIndicator.h:6</div></div>
+<div class="ttc" id="aclassCheckIndicator_html_aaf57f5704f526406b3daf3ae11fb871f"><div class="ttname"><a href="../../dc/d91/classCheckIndicator.html#aaf57f5704f526406b3daf3ae11fb871f">CheckIndicator::CheckIndicator</a></div><div class="ttdeci">CheckIndicator(const std::string &amp;message, const std::pair&lt; float, float &gt; &amp;coordinates, std::size_t size)</div><div class="ttdef"><b>Definition:</b> CheckIndicator.cpp:3</div></div>
+<div class="ttc" id="aclassHUD_html"><div class="ttname"><a href="../../d0/df0/classHUD.html">HUD</a></div><div class="ttdef"><b>Definition:</b> HUD.h:13</div></div>
+<div class="ttc" id="aclassHUD_html_a544a7d892630e79fcd66119566300f3a"><div class="ttname"><a href="../../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a">HUD::size</a></div><div class="ttdeci">std::size_t size</div><div class="ttdef"><b>Definition:</b> HUD.h:16</div></div>
+<div class="ttc" id="aclassHUD_html_a6d376fc147049c86dd9e56d4a8a5c8aa"><div class="ttname"><a href="../../d0/df0/classHUD.html#a6d376fc147049c86dd9e56d4a8a5c8aa">HUD::coordinates</a></div><div class="ttdeci">std::pair&lt; float, float &gt; coordinates</div><div class="ttdef"><b>Definition:</b> HUD.h:15</div></div>
+<div class="ttc" id="aclassHUD_html_afb8f8e88b9a72b4b52973c92cb2fe4c6"><div class="ttname"><a href="../../d0/df0/classHUD.html#afb8f8e88b9a72b4b52973c92cb2fe4c6">HUD::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition:</b> HUD.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

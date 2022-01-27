@@ -1,0 +1,31 @@
+.. _dir_src_sounds_sounds:
+
+
+Directory sounds
+================
+
+
+|exhale_lsh| :ref:`Parent directory <dir_src_sounds>` (``src/sounds``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``src/sounds/sounds``
+
+
+Files
+-----
+
+- :ref:`file_src_sounds_sounds_CaptureSound.h`
+- :ref:`file_src_sounds_sounds_CheckSound.h`
+- :ref:`file_src_sounds_sounds_ClickSound.h`
+- :ref:`file_src_sounds_sounds_ClockSound.h`
+- :ref:`file_src_sounds_sounds_DrawSound.h`
+- :ref:`file_src_sounds_sounds_EndGameSound.h`
+- :ref:`file_src_sounds_sounds_LoseSound.h`
+- :ref:`file_src_sounds_sounds_MoveSound.h`
+- :ref:`file_src_sounds_sounds_ResignSound.h`
+- :ref:`file_src_sounds_sounds_Sound.h`
+- :ref:`file_src_sounds_sounds_TimeOutSound.h`
+- :ref:`file_src_sounds_sounds_WinSound.h`
+
+

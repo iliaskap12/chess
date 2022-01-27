@@ -3,7 +3,7 @@
 Class Player
 ============
 
-- Defined in :ref:`file_include_game_Player.h`
+- Defined in :ref:`file_src_game_game_Player.h`
 
 
 Class Documentation

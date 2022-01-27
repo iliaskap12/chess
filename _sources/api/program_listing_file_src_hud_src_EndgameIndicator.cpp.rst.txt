@@ -1,0 +1,15 @@
+
+.. _program_listing_file_src_hud_src_EndgameIndicator.cpp:
+
+Program Listing for File EndgameIndicator.cpp
+=============================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_hud_src_EndgameIndicator.cpp>` (``src/hud/src/EndgameIndicator.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <hud/EndgameIndicator.h>
+   
+   EndgameIndicator::EndgameIndicator(const std::string &message, const std::pair<float, float> &coordinates, std::size_t size) : HUD(message, coordinates, size) {}

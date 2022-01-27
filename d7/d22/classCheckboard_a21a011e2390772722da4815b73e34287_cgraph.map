@@ -1,9 +1,5 @@
 <map id="Checkboard::secureTheKing" name="Checkboard::secureTheKing">
-<area shape="rect" id="node1" title=" " alt="" coords="5,89,192,115"/>
-<area shape="rect" id="node2" href="$d7/d22/classCheckboard.html#adf754bb50f74220b4af2fd7e4ba29311" title=" " alt="" coords="251,13,415,39"/>
-<area shape="rect" id="node5" href="$d3/d72/classSquare.html#aaac1678853db13ff16f25a8fc4096294" title=" " alt="" coords="493,75,615,102"/>
-<area shape="rect" id="node6" href="$d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa" title=" " alt="" coords="475,151,633,178"/>
-<area shape="rect" id="node7" href="$d7/d22/classCheckboard.html#ab2acd69adae4e135113b94b876c9c513" title=" " alt="" coords="240,114,427,141"/>
-<area shape="rect" id="node3" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="477,13,631,39"/>
-<area shape="rect" id="node4" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="681,5,828,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,192,57"/>
+<area shape="rect" id="node2" href="$d3/d72/classSquare.html#aaac1678853db13ff16f25a8fc4096294" title=" " alt="" coords="258,5,381,32"/>
+<area shape="rect" id="node3" href="$d7/d22/classCheckboard.html#a8bf65dfb381014bdb3583a04191be9fa" title=" " alt="" coords="240,56,399,83"/>
 </map>

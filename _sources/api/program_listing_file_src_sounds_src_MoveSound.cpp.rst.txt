@@ -1,0 +1,17 @@
+
+.. _program_listing_file_src_sounds_src_MoveSound.cpp:
+
+Program Listing for File MoveSound.cpp
+======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_src_MoveSound.cpp>` (``src/sounds/src/MoveSound.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <sounds/MoveSound.h>
+   
+   MoveSound::MoveSound() {
+     Sound::setSound(this->soundPath);
+   }

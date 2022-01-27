@@ -1,0 +1,29 @@
+
+.. _program_listing_file_src_game_game_Rook.h:
+
+Program Listing for File Rook.h
+===============================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_game_game_Rook.h>` (``src/game/game/Rook.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef ROOK_H
+   #define ROOK_H
+   
+   #include "Pawn.h"
+   
+   class Rook : public Pawn {
+     std::vector<std::pair<int, int>> steps { std::vector<std::pair<int, int>>() };
+     static constexpr unsigned short int maxSteps { 8 };
+   
+   public:
+     explicit Rook(PawnColor color);
+     std::vector<std::pair<int, int>> getAdvanceableSquares() override;
+     std::vector<std::pair<int, int>> getHoldingSquares() override;
+     std::shared_ptr<Pawn> getBlockedPawn() override;
+   };
+   
+   #endif // ROOK_H

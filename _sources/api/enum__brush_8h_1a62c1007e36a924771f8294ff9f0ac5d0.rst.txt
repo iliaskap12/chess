@@ -3,7 +3,7 @@
 Enum Brush
 ==========
 
-- Defined in :ref:`file_include_graphics_Brush.h`
+- Defined in :ref:`file_src_graphics_graphics_Brush.h`
 
 
 Enum Documentation

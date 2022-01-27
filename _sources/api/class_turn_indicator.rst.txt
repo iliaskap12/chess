@@ -1,0 +1,25 @@
+.. _exhale_class_class_turn_indicator:
+
+Class TurnIndicator
+===================
+
+- Defined in :ref:`file_src_hud_hud_TurnIndicator.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public HUD`` (:ref:`exhale_class_class_h_u_d`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: TurnIndicator
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -11,46 +11,6 @@ Directories
 .. toctree::
    :maxdepth: 5
 
-   dir_include.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_game.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_graphics.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_hud.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_sgg.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_sgg_sgg.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_sounds.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   dir_include_util.rst
-
-.. toctree::
-   :maxdepth: 5
-
    dir_src.rst
 
 .. toctree::
@@ -61,7 +21,27 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_src_game_game.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_game_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_src_graphics.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_graphics_graphics.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_graphics_src.rst
 
 .. toctree::
    :maxdepth: 5
@@ -71,12 +51,42 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_src_hud_hud.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_hud_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_src_sounds.rst
 
 .. toctree::
    :maxdepth: 5
 
+   dir_src_sounds_sounds.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_sounds_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_src_util.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_util_src.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_src_util_util.rst
 
 Files
 *****
@@ -90,277 +100,222 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_include_App.h.rst
+   file_src_App.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_audio.cpp.rst
+   file_src_game_src_Bishop.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_audio.h.rst
+   file_src_game_game_Bishop.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_AudioManager.cpp.rst
+   file_src_graphics_graphics_Brush.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_AudioManager.h.rst
+   file_src_graphics_graphics_ButtonType.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Bishop.cpp.rst
+   file_src_sounds_src_CaptureSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Bishop.h.rst
+   file_src_sounds_sounds_CaptureSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_Brush.h.rst
+   file_src_game_src_Checkboard.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_ButtonType.h.rst
+   file_src_game_game_Checkboard.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_CaptureSound.cpp.rst
+   file_src_hud_src_CheckIndicator.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_CaptureSound.h.rst
+   file_src_hud_hud_CheckIndicator.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Checkboard.cpp.rst
+   file_src_sounds_src_CheckSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Checkboard.h.rst
+   file_src_sounds_sounds_CheckSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_CheckIndicator.cpp.rst
+   file_src_sounds_src_ClickSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_CheckIndicator.h.rst
+   file_src_sounds_sounds_ClickSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_ClickSound.cpp.rst
+   file_src_game_src_Clock.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_ClickSound.h.rst
+   file_src_game_game_Clock.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Clock.cpp.rst
+   file_src_sounds_src_ClockSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Clock.h.rst
+   file_src_sounds_sounds_ClockSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_ClockSound.cpp.rst
+   file_src_util_src_custom-string.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_ClockSound.h.rst
+   file_src_util_util_custom-string.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_commonshaders.h.rst
+   file_src_hud_src_Draw.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_util_custom-string.cpp.rst
+   file_src_hud_hud_Draw.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_util_custom-string.h.rst
+   file_src_graphics_graphics_Drawable.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_Draw.cpp.rst
+   file_src_sounds_src_DrawSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_Draw.h.rst
+   file_src_sounds_sounds_DrawSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_Drawable.h.rst
+   file_src_hud_src_EndgameIndicator.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_DrawSound.cpp.rst
+   file_src_hud_hud_EndgameIndicator.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_DrawSound.h.rst
+   file_src_sounds_src_EndGameSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_EndgameIndicator.cpp.rst
+   file_src_sounds_sounds_EndGameSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_EndgameIndicator.h.rst
+   file_src_game_src_Game.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_EndGameSound.cpp.rst
+   file_src_game_game_Game.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_EndGameSound.h.rst
+   file_src_hud_src_HUD.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_fonts.cpp.rst
+   file_src_hud_hud_HUD.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_fonts.h.rst
+   file_src_hud_src_Indicator.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Game.cpp.rst
+   file_src_hud_hud_Indicator.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Game.h.rst
+   file_src_graphics_src_InGameMenu.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_GLbackend.cpp.rst
+   file_src_graphics_graphics_InGameMenu.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_GLbackend.h.rst
+   file_src_game_src_King.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_graphics.cpp.rst
+   file_src_game_game_King.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_graphics.h.rst
+   file_src_game_src_Knight.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_HUD.cpp.rst
+   file_src_game_game_Knight.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_HUD.h.rst
+   file_src_sounds_src_LoseSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_Indicator.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_hud_Indicator.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_src_graphics_InGameMenu.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_graphics_InGameMenu.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_src_game_King.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_game_King.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_src_game_Knight.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_game_Knight.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_sgg_sgg_lodepng.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_sgg_sgg_lodepng.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_src_sounds_LoseSound.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_sounds_LoseSound.h.rst
+   file_src_sounds_sounds_LoseSound.h.rst
 
 .. toctree::
    :maxdepth: 5
@@ -370,339 +325,314 @@ Files
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_MainMenu.cpp.rst
+   file_src_graphics_src_MainMenu.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_MainMenu.h.rst
+   file_src_graphics_graphics_MainMenu.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_Menu.cpp.rst
+   file_src_graphics_src_Menu.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_Menu.h.rst
+   file_src_graphics_graphics_Menu.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_MenuOption.cpp.rst
+   file_src_graphics_src_MenuOption.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_MenuOption.h.rst
+   file_src_graphics_graphics_MenuOption.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_MenuScreen.cpp.rst
+   file_src_graphics_src_MenuScreen.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_MenuScreen.h.rst
+   file_src_graphics_graphics_MenuScreen.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Movable.h.rst
+   file_src_game_game_Movable.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_Moveboard.cpp.rst
+   file_src_hud_src_Moveboard.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_Moveboard.h.rst
+   file_src_hud_hud_Moveboard.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_MoveSound.cpp.rst
+   file_src_sounds_src_MoveSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_MoveSound.h.rst
+   file_src_sounds_sounds_MoveSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_MoveTakeback.cpp.rst
+   file_src_hud_src_MoveTakeback.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_MoveTakeback.h.rst
+   file_src_hud_hud_MoveTakeback.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_Offer.cpp.rst
+   file_src_hud_src_Offer.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_Offer.h.rst
+   file_src_hud_hud_Offer.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_OpeningScreen.cpp.rst
+   file_src_graphics_src_OpeningScreen.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_OpeningScreen.h.rst
+   file_src_graphics_graphics_OpeningScreen.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_util_paths.cpp.rst
+   file_src_util_src_paths.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_util_paths.h.rst
+   file_src_util_util_paths.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Pawn.cpp.rst
+   file_src_game_src_Pawn.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Pawn.h.rst
+   file_src_game_game_Pawn.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_PawnColor.cpp.rst
+   file_src_game_src_PawnColor.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_PawnColor.h.rst
+   file_src_game_game_PawnColor.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_PawnCount.cpp.rst
+   file_src_hud_src_PawnCount.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_PawnCount.h.rst
+   file_src_hud_hud_PawnCount.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Player.cpp.rst
+   file_src_game_src_Player.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Player.h.rst
+   file_src_game_game_Player.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_PlayingScreen.cpp.rst
+   file_src_graphics_src_PlayingScreen.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_PlayingScreen.h.rst
+   file_src_graphics_graphics_PlayingScreen.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_Point.cpp.rst
+   file_src_graphics_src_Point.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_Point.h.rst
+   file_src_graphics_graphics_Point.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Promotable.h.rst
+   file_src_game_game_Promotable.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Queen.cpp.rst
+   file_src_game_src_Queen.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Queen.h.rst
+   file_src_game_game_Queen.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_Rectangle.cpp.rst
+   file_src_graphics_src_Rectangle.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_Rectangle.h.rst
+   file_src_graphics_graphics_Rectangle.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_Resignment.cpp.rst
+   file_src_hud_src_Resignment.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_Resignment.h.rst
+   file_src_hud_hud_Resignment.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_ResignSound.cpp.rst
+   file_src_sounds_src_ResignSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_ResignSound.h.rst
+   file_src_sounds_sounds_ResignSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Rook.cpp.rst
+   file_src_game_src_Rook.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Rook.h.rst
+   file_src_game_game_Rook.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_scancodes.h.rst
+   file_src_graphics_src_Screen.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_graphics_Screen.cpp.rst
+   file_src_graphics_graphics_Screen.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_graphics_Screen.h.rst
+   file_src_game_src_Soldier.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_shader.cpp.rst
+   file_src_game_game_Soldier.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_shader.h.rst
+   file_src_sounds_src_Sound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Soldier.cpp.rst
+   file_src_sounds_sounds_Sound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Soldier.h.rst
+   file_src_game_src_Square.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_Sound.cpp.rst
+   file_src_game_game_Square.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_Sound.h.rst
+   file_src_hud_src_TimeIncrement.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_game_Square.cpp.rst
+   file_src_hud_hud_TimeIncrement.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_game_Square.h.rst
+   file_src_sounds_src_TimeOutSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_texture.cpp.rst
+   file_src_sounds_sounds_TimeOutSound.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sgg_sgg_texture.h.rst
+   file_src_hud_src_Timer.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_TimeIncrement.cpp.rst
+   file_src_hud_hud_Timer.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_TimeIncrement.h.rst
+   file_src_hud_src_TurnIndicator.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_sounds_TimeOutSound.cpp.rst
+   file_src_hud_hud_TurnIndicator.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_sounds_TimeOutSound.h.rst
+   file_src_graphics_graphics_Updateable.h.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_src_hud_Timer.cpp.rst
+   file_src_sounds_src_WinSound.cpp.rst
 
 .. toctree::
    :maxdepth: 5
 
-   file_include_hud_Timer.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_src_hud_TurnIndicator.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_hud_TurnIndicator.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_graphics_Updateable.h.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_src_sounds_WinSound.cpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_include_sounds_WinSound.h.rst
+   file_src_sounds_sounds_WinSound.h.rst

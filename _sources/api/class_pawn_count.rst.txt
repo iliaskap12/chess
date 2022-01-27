@@ -3,7 +3,7 @@
 Class PawnCount
 ===============
 
-- Defined in :ref:`file_include_hud_PawnCount.h`
+- Defined in :ref:`file_src_hud_hud_PawnCount.h`
 
 
 Inheritance Relationships

@@ -3,7 +3,7 @@
 Function operator+(const PawnColor&, const PawnColor&)
 ======================================================
 
-- Defined in :ref:`file_src_game_PawnColor.cpp`
+- Defined in :ref:`file_src_game_src_PawnColor.cpp`
 
 
 Function Documentation

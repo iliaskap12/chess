@@ -1,0 +1,17 @@
+
+.. _program_listing_file_src_hud_hud_MoveTakeback.h:
+
+Program Listing for File MoveTakeback.h
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_hud_hud_MoveTakeback.h>` (``src/hud/hud/MoveTakeback.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef MOVETAKEBACK_H
+   #define MOVETAKEBACK_H
+   
+   #endif // MOVETAKEBACK_H

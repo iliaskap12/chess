@@ -1,5 +1,5 @@
-<map id="/Users/runner/work/chess/chess/include/hud/PawnCount.h" name="/Users/runner/work/chess/chess/include/hud/PawnCount.h">
-<area shape="rect" id="node1" title=" " alt="" coords="383,5,528,61"/>
+<map id="/Users/runner/work/chess/chess/src/hud/hud/PawnCount.h" name="/Users/runner/work/chess/chess/src/hud/hud/PawnCount.h">
+<area shape="rect" id="node1" title=" " alt="" coords="382,5,529,61"/>
 <area shape="rect" id="node2" href="$d9/d63/PlayingScreen_8h.html" title=" " alt="" coords="224,109,399,165"/>
 <area shape="rect" id="node5" href="$df/dfe/PlayingScreen_8cpp.html" title=" " alt="" coords="387,213,561,269"/>
 <area shape="rect" id="node6" href="$d4/dc2/PawnCount_8cpp.html" title=" " alt="" coords="493,109,639,165"/>

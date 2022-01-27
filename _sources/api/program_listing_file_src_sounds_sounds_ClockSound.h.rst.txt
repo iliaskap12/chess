@@ -1,0 +1,19 @@
+
+.. _program_listing_file_src_sounds_sounds_ClockSound.h:
+
+Program Listing for File ClockSound.h
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_ClockSound.h>` (``src/sounds/sounds/ClockSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   
+   #ifndef CLOCKSOUND_H
+   #define CLOCKSOUND_H
+   
+   
+   
+   #endif // CLOCKSOUND_H

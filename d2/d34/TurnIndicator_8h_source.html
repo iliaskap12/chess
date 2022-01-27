@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: /Users/runner/work/chess/chess/include/hud/TurnIndicator.h Source File</title>
+<title>Chess: /Users/runner/work/chess/chess/src/hud/hud/TurnIndicator.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,20 +63,42 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_e94c18d52246dc2a84c458562d820761.html">hud</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_47f8c9664a0c75d525313679f84f9445.html">hud</a></li><li class="navelem"><a class="el" href="../../dir_b19ec5512cd981ffed86b8dbf0358d9e.html">hud</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">TurnIndicator.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d2/d34/TurnIndicator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef TURNINDICATOR_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define TURNINDICATOR_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<a href="../../d2/d34/TurnIndicator_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef TURNINDICATOR_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define TURNINDICATOR_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d0/d0b/HUD_8h.html">HUD.h</a>&quot;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#endif </span><span class="comment">// TURNINDICATOR_H</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="../../de/d14/classTurnIndicator.html">    6</a></span><span class="keyword">class </span><a class="code hl_class" href="../../de/d14/classTurnIndicator.html">TurnIndicator</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d0/df0/classHUD.html">HUD</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../de/d14/classTurnIndicator.html#aff50d8e81730e47e61608a5e40253ed5">    7</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="../../de/d14/classTurnIndicator.html#aff50d8e81730e47e61608a5e40253ed5">whitesTurn</a>{<span class="keyword">true</span>};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../de/d14/classTurnIndicator.html#a8b33778bfb0218e30c21e81ba24a5a48">    8</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="../../de/d14/classTurnIndicator.html#a8b33778bfb0218e30c21e81ba24a5a48">whitesTurnMessage</a>{<span class="stringliteral">&quot;White&#39;s turn&quot;</span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="../../de/d14/classTurnIndicator.html#aec1dbc6e8f86460eb83fd60d75394ae6">    9</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="../../de/d14/classTurnIndicator.html#aec1dbc6e8f86460eb83fd60d75394ae6">blacksTurnMessage</a>{<span class="stringliteral">&quot;Black&#39;s turn&quot;</span>};</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="../../de/d14/classTurnIndicator.html#adbe3df045465df502833a7faf9c6991e">TurnIndicator</a>(<span class="keyword">const</span> std::string &amp;<a class="code hl_variable" href="../../d0/df0/classHUD.html#afb8f8e88b9a72b4b52973c92cb2fe4c6">message</a>, <span class="keyword">const</span> std::pair&lt;float, float&gt; &amp;<a class="code hl_variable" href="../../d0/df0/classHUD.html#a6d376fc147049c86dd9e56d4a8a5c8aa">coordinates</a>, std::size_t <a class="code hl_variable" href="../../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a">size</a>);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d14/classTurnIndicator.html#a91316f336b8adaa469f46fdeb99abb31">progress</a>();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="../../de/d14/classTurnIndicator.html#aa123fb6d9e82887ba11397cfa81af8cf">setTurn</a>(<span class="keywordtype">bool</span> white);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif </span><span class="comment">// TURNINDICATOR_H</span></div>
+<div class="ttc" id="aHUD_8h_html"><div class="ttname"><a href="../../d0/d0b/HUD_8h.html">HUD.h</a></div></div>
+<div class="ttc" id="aclassHUD_html"><div class="ttname"><a href="../../d0/df0/classHUD.html">HUD</a></div><div class="ttdef"><b>Definition:</b> HUD.h:13</div></div>
+<div class="ttc" id="aclassHUD_html_a544a7d892630e79fcd66119566300f3a"><div class="ttname"><a href="../../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a">HUD::size</a></div><div class="ttdeci">std::size_t size</div><div class="ttdef"><b>Definition:</b> HUD.h:16</div></div>
+<div class="ttc" id="aclassHUD_html_a6d376fc147049c86dd9e56d4a8a5c8aa"><div class="ttname"><a href="../../d0/df0/classHUD.html#a6d376fc147049c86dd9e56d4a8a5c8aa">HUD::coordinates</a></div><div class="ttdeci">std::pair&lt; float, float &gt; coordinates</div><div class="ttdef"><b>Definition:</b> HUD.h:15</div></div>
+<div class="ttc" id="aclassHUD_html_afb8f8e88b9a72b4b52973c92cb2fe4c6"><div class="ttname"><a href="../../d0/df0/classHUD.html#afb8f8e88b9a72b4b52973c92cb2fe4c6">HUD::message</a></div><div class="ttdeci">std::string message</div><div class="ttdef"><b>Definition:</b> HUD.h:14</div></div>
+<div class="ttc" id="aclassTurnIndicator_html"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html">TurnIndicator</a></div><div class="ttdef"><b>Definition:</b> TurnIndicator.h:6</div></div>
+<div class="ttc" id="aclassTurnIndicator_html_a8b33778bfb0218e30c21e81ba24a5a48"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html#a8b33778bfb0218e30c21e81ba24a5a48">TurnIndicator::whitesTurnMessage</a></div><div class="ttdeci">const std::string whitesTurnMessage</div><div class="ttdef"><b>Definition:</b> TurnIndicator.h:8</div></div>
+<div class="ttc" id="aclassTurnIndicator_html_a91316f336b8adaa469f46fdeb99abb31"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html#a91316f336b8adaa469f46fdeb99abb31">TurnIndicator::progress</a></div><div class="ttdeci">void progress()</div><div class="ttdef"><b>Definition:</b> TurnIndicator.cpp:7</div></div>
+<div class="ttc" id="aclassTurnIndicator_html_aa123fb6d9e82887ba11397cfa81af8cf"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html#aa123fb6d9e82887ba11397cfa81af8cf">TurnIndicator::setTurn</a></div><div class="ttdeci">void setTurn(bool white)</div><div class="ttdef"><b>Definition:</b> TurnIndicator.cpp:15</div></div>
+<div class="ttc" id="aclassTurnIndicator_html_adbe3df045465df502833a7faf9c6991e"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html#adbe3df045465df502833a7faf9c6991e">TurnIndicator::TurnIndicator</a></div><div class="ttdeci">TurnIndicator(const std::string &amp;message, const std::pair&lt; float, float &gt; &amp;coordinates, std::size_t size)</div><div class="ttdef"><b>Definition:</b> TurnIndicator.cpp:3</div></div>
+<div class="ttc" id="aclassTurnIndicator_html_aec1dbc6e8f86460eb83fd60d75394ae6"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html#aec1dbc6e8f86460eb83fd60d75394ae6">TurnIndicator::blacksTurnMessage</a></div><div class="ttdeci">const std::string blacksTurnMessage</div><div class="ttdef"><b>Definition:</b> TurnIndicator.h:9</div></div>
+<div class="ttc" id="aclassTurnIndicator_html_aff50d8e81730e47e61608a5e40253ed5"><div class="ttname"><a href="../../de/d14/classTurnIndicator.html#aff50d8e81730e47e61608a5e40253ed5">TurnIndicator::whitesTurn</a></div><div class="ttdeci">bool whitesTurn</div><div class="ttdef"><b>Definition:</b> TurnIndicator.h:7</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

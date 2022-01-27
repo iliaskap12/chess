@@ -3,7 +3,7 @@
 Function stringHash
 ===================
 
-- Defined in :ref:`file_include_util_custom-string.h`
+- Defined in :ref:`file_src_util_util_custom-string.h`
 
 
 Function Documentation

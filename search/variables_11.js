@@ -1,19 +1,13 @@
 var searchData=
 [
-  ['scores_0',['scores',['../db/d48/classAudioManager.html#aacbc5a2a78b2da00019d8c3aefb9b109',1,'AudioManager']]],
-  ['second_1',['second',['../d9/da9/structLodePNGTime.html#a6c691c5821e828488a8bb8a90751a2f0',1,'LodePNGTime']]],
-  ['selected_2',['selected',['../de/d00/classRectangle.html#af45bb803db2f38e228b1ae6446b2fcaf',1,'Rectangle']]],
-  ['selectedpawn_3',['selectedPawn',['../d7/d22/classCheckboard.html#a3c4293c0e08d4b60bd31bd9ace28690d',1,'Checkboard']]],
-  ['self_5f_4',['self_',['../de/dff/classPawn.html#afc0fe9cbeface0b268f421215f99c3d9',1,'Pawn']]],
-  ['shouldmove_5',['shouldMove',['../de/dff/classPawn.html#a22a47e0e211aee521502b130d0ca75c2',1,'Pawn']]],
-  ['side_6',['side',['../d2/d4b/classPlayer.html#acffed02071df30c5c73482abbd32de4d',1,'Player']]],
-  ['sidesize_7',['sideSize',['../d7/d22/classCheckboard.html#a827dda3faa4d37821f0c7d6aebcf9498',1,'Checkboard']]],
-  ['size_8',['size',['../d0/df0/classHUD.html#a544a7d892630e79fcd66119566300f3a',1,'HUD::size()'],['../dc/d48/structTextRecord.html#ab93512d6a6a9ede4b78940d0d40fb395',1,'TextRecord::size()'],['../d7/d4e/structuivector.html#aa999025945f0c93d0461192475ae2720',1,'uivector::size()'],['../d2/d0b/structucvector.html#a27c99c34de0c5b3ca0c242d402c69499',1,'ucvector::size()'],['../d6/d45/structLodePNGBitReader.html#a80a148b29e36301da77f3d2432cbd608',1,'LodePNGBitReader::size()']]],
-  ['sounds_9',['sounds',['../db/d48/classAudioManager.html#a0683aa7cc29a61968bf4383b09aa29c7',1,'AudioManager']]],
-  ['square_5f_10',['square_',['../de/dff/classPawn.html#a5837bbc8751df1638468acb214f6d4b6',1,'Pawn']]],
-  ['squares_11',['squares',['../d7/d22/classCheckboard.html#a3e9dd8c7716a612abe7b4116707d8497',1,'Checkboard']]],
-  ['srgb_5fdefined_12',['srgb_defined',['../d0/dd6/structLodePNGInfo.html#a3a0795a8ec1ddcaac245ba3337054e46',1,'LodePNGInfo']]],
-  ['srgb_5fintent_13',['srgb_intent',['../d0/dd6/structLodePNGInfo.html#a35a37c55a3b6c5ff3d064dd26531c72b',1,'LodePNGInfo']]],
-  ['steps_14',['steps',['../de/dfb/classBishop.html#a8f940cdd80d23d276455ee5eb3c8e1ea',1,'Bishop::steps()'],['../d1/db5/classKing.html#aff8276ee25d837a859b447ddb7b77085',1,'King::steps()'],['../d5/d23/classKnight.html#a0dba378f388d1d4c7fb8f8ed237c6b7a',1,'Knight::steps()'],['../d5/d3f/classQueen.html#a25e5b9ce5bac73f322a8695645c87250',1,'Queen::steps()'],['../db/d7e/classRook.html#a8974a0b81797782e4837bfde8a1b5775',1,'Rook::steps()']]],
-  ['swapped_15',['swapped',['../de/d00/classRectangle.html#a6541d0c693bee6ecb071fa209eee5702',1,'Rectangle']]]
+  ['welcomemessage_0',['welcomeMessage',['../d1/d9f/classOpeningScreen.html#a4f29c51b2ecdcff6efd1098e8ca2d620',1,'OpeningScreen']]],
+  ['whitedangerreferencecount_5f_1',['whiteDangerReferenceCount_',['../d3/d72/classSquare.html#ab1c5f065ac52732619c4606447c6d505',1,'Square']]],
+  ['whiteking_2',['whiteKing',['../d7/d22/classCheckboard.html#ab603fd039fb1befd77313938f94f1945',1,'Checkboard']]],
+  ['whitekingid_3',['whiteKingId',['../d7/d22/classCheckboard.html#a301c8455ed26dd4a787ca015faf4d2d5',1,'Checkboard']]],
+  ['whitekingthreat_4',['whiteKingThreat',['../d7/d22/classCheckboard.html#a60a835cfe4c27c2a905efdaec6538c75',1,'Checkboard']]],
+  ['whitesturn_5',['whitesTurn',['../de/d14/classTurnIndicator.html#aff50d8e81730e47e61608a5e40253ed5',1,'TurnIndicator']]],
+  ['whitesturnmessage_6',['whitesTurnMessage',['../de/d14/classTurnIndicator.html#a8b33778bfb0218e30c21e81ba24a5a48',1,'TurnIndicator']]],
+  ['whiteturn_5f_7',['whiteTurn_',['../d9/d68/classGame.html#a01eedea8a7ca214462daefd675d20d28',1,'Game']]],
+  ['width_5f_8',['width_',['../de/d00/classRectangle.html#ace0b7ee72c79ddc002bfaf55b93e414f',1,'Rectangle']]],
+  ['winner_9',['winner',['../d9/d68/classGame.html#a25017ddff2e7c406dd154e7bf0be7925',1,'Game']]]
 ];

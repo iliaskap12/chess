@@ -3,7 +3,7 @@
 Class Checkboard
 ================
 
-- Defined in :ref:`file_include_game_Checkboard.h`
+- Defined in :ref:`file_src_game_game_Checkboard.h`
 
 
 Inheritance Relationships

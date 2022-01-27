@@ -3,7 +3,7 @@
 Function operator==(const Square&, const Square&)
 =================================================
 
-- Defined in :ref:`file_src_game_Square.cpp`
+- Defined in :ref:`file_src_game_src_Square.cpp`
 
 
 Function Documentation

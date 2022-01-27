@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.3"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Chess: /Users/runner/work/chess/chess/include/sounds/EndGameSound.h Source File</title>
+<title>Chess: /Users/runner/work/chess/chess/src/sounds/sounds/EndGameSound.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -63,18 +63,34 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dir_2b592ff0ed6d8392a8cf762e353b147f.html">sounds</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../dir_a96564f6348ccf85c63c82abdf96cc4c.html">sounds</a></li><li class="navelem"><a class="el" href="../../dir_39d19aa73d69a667105f3b1b386c9599.html">sounds</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">EndGameSound.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="../../d6/d6f/EndGameSound_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef ENDGAMESOUND_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define ENDGAMESOUND_H</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#endif </span><span class="comment">// ENDGAMESOUND_H</span></div>
+<a href="../../d6/d6f/EndGameSound_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ENDGAMESOUND_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ENDGAMESOUND_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="../../d6/dca/Sound_8h.html">Sound.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="../../dd/df2/paths_8h.html">util/paths.h</a>&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../dc/d1a/classEndgameSound.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="../../dc/d1a/classEndgameSound.html">EndgameSound</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../df/d49/classSound.html">Sound</a> {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../dc/d1a/classEndgameSound.html#a2cd5552ea33977b4ba5ea033f9389ea8">    8</a></span>  <span class="keyword">const</span> std::string <a class="code hl_variable" href="../../dc/d1a/classEndgameSound.html#a2cd5552ea33977b4ba5ea033f9389ea8">soundPath</a>{<a class="code hl_function" href="../../d5/dc0/namespacepaths.html#a35aed0b28fb410111221a3abd28644f3">paths::getSoundsPath</a>() + <span class="stringliteral">&quot;checkmate.mp3&quot;</span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_function" href="../../dc/d1a/classEndgameSound.html#ada29571fb484cce374589a279a452cee">EndgameSound</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>};</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span><span class="comment">// ENDGAMESOUND_H</span></div>
+<div class="ttc" id="aSound_8h_html"><div class="ttname"><a href="../../d6/dca/Sound_8h.html">Sound.h</a></div></div>
+<div class="ttc" id="aclassEndgameSound_html"><div class="ttname"><a href="../../dc/d1a/classEndgameSound.html">EndgameSound</a></div><div class="ttdef"><b>Definition:</b> EndGameSound.h:7</div></div>
+<div class="ttc" id="aclassEndgameSound_html_a2cd5552ea33977b4ba5ea033f9389ea8"><div class="ttname"><a href="../../dc/d1a/classEndgameSound.html#a2cd5552ea33977b4ba5ea033f9389ea8">EndgameSound::soundPath</a></div><div class="ttdeci">const std::string soundPath</div><div class="ttdef"><b>Definition:</b> EndGameSound.h:8</div></div>
+<div class="ttc" id="aclassEndgameSound_html_ada29571fb484cce374589a279a452cee"><div class="ttname"><a href="../../dc/d1a/classEndgameSound.html#ada29571fb484cce374589a279a452cee">EndgameSound::EndgameSound</a></div><div class="ttdeci">EndgameSound()</div><div class="ttdef"><b>Definition:</b> EndGameSound.cpp:3</div></div>
+<div class="ttc" id="aclassSound_html"><div class="ttname"><a href="../../df/d49/classSound.html">Sound</a></div><div class="ttdef"><b>Definition:</b> Sound.h:6</div></div>
+<div class="ttc" id="anamespacepaths_html_a35aed0b28fb410111221a3abd28644f3"><div class="ttname"><a href="../../d5/dc0/namespacepaths.html#a35aed0b28fb410111221a3abd28644f3">paths::getSoundsPath</a></div><div class="ttdeci">std::string getSoundsPath()</div><div class="ttdef"><b>Definition:</b> paths.cpp:14</div></div>
+<div class="ttc" id="apaths_8h_html"><div class="ttname"><a href="../../dd/df2/paths_8h.html">paths.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

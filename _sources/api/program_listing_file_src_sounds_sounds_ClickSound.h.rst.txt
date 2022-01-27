@@ -1,0 +1,26 @@
+
+.. _program_listing_file_src_sounds_sounds_ClickSound.h:
+
+Program Listing for File ClickSound.h
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_ClickSound.h>` (``src/sounds/sounds/ClickSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CLICKSOUND_H
+   #define CLICKSOUND_H
+   
+   #include "Sound.h"
+   #include <util/paths.h>
+   
+   class ClickSound : public Sound {
+     const std::string soundPath{paths::getSoundsPath() + "click.mp3"};
+   
+   public:
+     ClickSound();
+   };
+   
+   #endif// CLICKSOUND_H

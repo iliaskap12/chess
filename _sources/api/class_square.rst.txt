@@ -3,7 +3,7 @@
 Class Square
 ============
 
-- Defined in :ref:`file_include_game_Square.h`
+- Defined in :ref:`file_src_game_game_Square.h`
 
 
 Inheritance Relationships

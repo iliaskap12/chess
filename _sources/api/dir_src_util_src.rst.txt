@@ -1,0 +1,21 @@
+.. _dir_src_util_src:
+
+
+Directory src
+=============
+
+
+|exhale_lsh| :ref:`Parent directory <dir_src_util>` (``src/util``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+*Directory path:* ``src/util/src``
+
+
+Files
+-----
+
+- :ref:`file_src_util_src_custom-string.cpp`
+- :ref:`file_src_util_src_paths.cpp`
+
+

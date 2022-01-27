@@ -1,0 +1,26 @@
+
+.. _program_listing_file_src_sounds_sounds_CheckSound.h:
+
+Program Listing for File CheckSound.h
+=====================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_CheckSound.h>` (``src/sounds/sounds/CheckSound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CHESS_CHECKSOUND_H
+   #define CHESS_CHECKSOUND_H
+   
+   #include "Sound.h"
+   #include <util/paths.h>
+   
+   class CheckSound : public Sound {
+     const std::string soundPath{paths::getSoundsPath() + "check.mp3"};
+   
+   public:
+     CheckSound();
+   };
+   
+   #endif//CHESS_CHECKSOUND_H

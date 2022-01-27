@@ -3,7 +3,7 @@
 Class MainMenu
 ==============
 
-- Defined in :ref:`file_include_graphics_MainMenu.h`
+- Defined in :ref:`file_src_graphics_graphics_MainMenu.h`
 
 
 Inheritance Relationships

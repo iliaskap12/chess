@@ -1,0 +1,25 @@
+.. _exhale_class_class_check_indicator:
+
+Class CheckIndicator
+====================
+
+- Defined in :ref:`file_src_hud_hud_CheckIndicator.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public HUD`` (:ref:`exhale_class_class_h_u_d`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: CheckIndicator
+   :members:
+   :protected-members:
+   :undoc-members:

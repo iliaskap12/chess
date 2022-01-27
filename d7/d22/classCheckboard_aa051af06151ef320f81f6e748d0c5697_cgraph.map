@@ -1,12 +1,5 @@
 <map id="Checkboard::draw" name="Checkboard::draw">
-<area shape="rect" id="node1" title=" " alt="" coords="5,140,133,167"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="181,115,299,141"/>
-<area shape="rect" id="node8" href="$db/dbd/group____WINDOW.html#ga27157b99fb5299f21170fb89fd54e93e" title=" " alt="" coords="347,165,500,192"/>
-<area shape="rect" id="node3" href="$d9/d15/group____GRAPHICS.html#ga34400186a71a631f1780acafc2ca7241" title=" " alt="" coords="356,64,491,91"/>
-<area shape="rect" id="node10" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="380,115,467,141"/>
-<area shape="rect" id="node4" href="$d6/df2/classgraphics_1_1GLBackend.html#a89c0e51ac6f23848378ca90dfc64f33f" title=" " alt="" coords="548,57,695,98"/>
-<area shape="rect" id="node5" href="$d9/d69/classShader.html#a91f6b1b90751bf9bf1b4afe6d8f221c1" title=" " alt="" coords="743,5,929,32"/>
-<area shape="rect" id="node6" href="$d0/d9c/classgraphics_1_1TextureManager.html#ad7d48b913ed7c8fedfec1349cb0de687" title=" " alt="" coords="750,57,922,98"/>
-<area shape="rect" id="node7" href="$d9/d69/classShader.html#aa9f62642afb446167c7a37045e5fc100" title=" " alt="" coords="790,147,882,173"/>
-<area shape="rect" id="node9" href="$d6/df2/classgraphics_1_1GLBackend.html#a2373ae872e599333abba1a417185cc05" title=" " alt="" coords="548,158,695,199"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,133,32"/>
+<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="181,5,299,32"/>
+<area shape="rect" id="node3" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="347,5,433,32"/>
 </map>

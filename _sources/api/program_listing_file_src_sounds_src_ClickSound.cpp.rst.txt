@@ -1,0 +1,17 @@
+
+.. _program_listing_file_src_sounds_src_ClickSound.cpp:
+
+Program Listing for File ClickSound.cpp
+=======================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_src_ClickSound.cpp>` (``src/sounds/src/ClickSound.cpp``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #include <sounds/ClickSound.h>
+   
+   ClickSound::ClickSound() {
+     Sound::setSound(this->soundPath);
+   }

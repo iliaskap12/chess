@@ -1,0 +1,24 @@
+
+.. _program_listing_file_src_hud_hud_CheckIndicator.h:
+
+Program Listing for File CheckIndicator.h
+=========================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_hud_hud_CheckIndicator.h>` (``src/hud/hud/CheckIndicator.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef CHECKINDICATOR_H
+   #define CHECKINDICATOR_H
+   
+   #include "HUD.h"
+   
+   class CheckIndicator : public HUD {
+   
+   public:
+     explicit CheckIndicator(const std::string &message, const std::pair<float, float> &coordinates, std::size_t size);
+   };
+   
+   #endif// CHECKINDICATOR_H

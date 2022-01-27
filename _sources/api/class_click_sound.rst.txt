@@ -1,0 +1,25 @@
+.. _exhale_class_class_click_sound:
+
+Class ClickSound
+================
+
+- Defined in :ref:`file_src_sounds_sounds_ClickSound.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Sound`` (:ref:`exhale_class_class_sound`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: ClickSound
+   :members:
+   :protected-members:
+   :undoc-members:

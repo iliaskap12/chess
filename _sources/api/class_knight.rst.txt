@@ -3,7 +3,7 @@
 Class Knight
 ============
 
-- Defined in :ref:`file_include_game_Knight.h`
+- Defined in :ref:`file_src_game_game_Knight.h`
 
 
 Inheritance Relationships

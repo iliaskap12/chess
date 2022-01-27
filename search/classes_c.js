@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['queen_0',['Queen',['../d5/d3f/classQueen.html',1,'']]]
+  ['rectangle_0',['Rectangle',['../de/d00/classRectangle.html',1,'']]],
+  ['rook_1',['Rook',['../db/d7e/classRook.html',1,'']]]
 ];

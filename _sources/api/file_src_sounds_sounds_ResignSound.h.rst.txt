@@ -1,0 +1,37 @@
+
+.. _file_src_sounds_sounds_ResignSound.h:
+
+File ResignSound.h
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_src_sounds_sounds>` (``src/sounds/sounds``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``src/sounds/sounds/ResignSound.h``)
+------------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_src_sounds_sounds_ResignSound.h.rst
+
+
+
+
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_src_sounds_src_ResignSound.cpp`
+
+
+

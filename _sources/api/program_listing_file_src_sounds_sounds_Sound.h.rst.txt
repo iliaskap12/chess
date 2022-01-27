@@ -1,0 +1,31 @@
+
+.. _program_listing_file_src_sounds_sounds_Sound.h:
+
+Program Listing for File Sound.h
+================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_src_sounds_sounds_Sound.h>` (``src/sounds/sounds/Sound.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #ifndef SOUND_H
+   #define SOUND_H
+   
+   #include <string>
+   
+   class Sound {
+     std::string soundPath{};
+     static constexpr bool looping{false};
+     static constexpr float volume{1.0f};
+   
+   protected:
+     Sound();
+   
+   public:
+     void play() const;
+     void setSound(const std::string &path);
+   };
+   
+   #endif// SOUND_H

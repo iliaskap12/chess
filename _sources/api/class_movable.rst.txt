@@ -3,7 +3,7 @@
 Class Movable
 =============
 
-- Defined in :ref:`file_include_game_Movable.h`
+- Defined in :ref:`file_src_game_game_Movable.h`
 
 
 Inheritance Relationships
