@@ -1,30 +1,33 @@
 set(
         GAME_SRC
-        Bishop.cpp
-        Checkboard.cpp
-        Clock.cpp
-        Game.cpp
-        King.cpp
-        Knight.cpp
-        Pawn.cpp
-        Player.cpp
-        Queen.cpp
-        Rook.cpp
-        Soldier.cpp
-        Square.cpp
-        PawnColor.cpp
+        src/Bishop.cpp
+        src/Checkboard.cpp
+        src/Clock.cpp
+        src/Game.cpp
+        src/King.cpp
+        src/Knight.cpp
+        src/Pawn.cpp
+        src/Player.cpp
+        src/Queen.cpp
+        src/Rook.cpp
+        src/Soldier.cpp
+        src/Square.cpp
+        src/PawnColor.cpp
 )
 
 add_library(GAME ${GAME_SRC})
 
-#if(WIN32)
-#    target_link_libraries(GAME PRIVATE sgglib)
-#    target_include_directories(GAME PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}" "${CMAKE_SOURCE_DIR}/${HEADER_DIR}/sgg")
-#else()
-#    target_include_directories(GRAPHICS PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}")
-#    target_link_libraries(GRAPHICS PRIVATE sgg)
-#endif()
+target_include_directories(
+        GAME
+        PRIVATE
+        "${SRC_DIR}"
+        "${SRC_DIR}/game"
+        "${SRC_DIR}/game/game"
+        "${SRC_DIR}/graphics"
+        "${SRC_DIR}/util"
+        "${SRC_DIR}/hud"
+        "${SRC_DIR}/sounds"
+)
 
-#target_link_libraries(GAME PRIVATE sgg)
-target_include_directories(GAME PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}" "${CMAKE_SOURCE_DIR}/${HEADER_DIR}/sgg")
+target_link_libraries(GAME PRIVATE SOUND)
 target_link_libraries(${PROJECT_NAME} PRIVATE GAME)

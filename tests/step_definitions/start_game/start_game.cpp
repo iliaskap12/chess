@@ -1,17 +1,17 @@
 #define CATCH_CONFIG_MAIN
 #include <catch2/catch.hpp>
-#include <graphics/Screen.h>
-#include <App.h>
+#include "../../../src/graphics/include/Screen.h"
+#include "../../../src/App.h"
 #include <game/Player.h>
 
-SCENARIO ( "Pressing play" ) {
+SCENARIO("Pressing play") {
   auto app = App();
   app.run();
-  GIVEN ( "that I'm on the opening screen" ) {
+  GIVEN("that I'm on the opening screen") {
     auto screen = app.getScreen();
     // No active game on opening screen
-    REQUIRE ( app.getGame() == nullptr );
-    WHEN ( "I press the play button" ) {
+    REQUIRE(app.getGame() == nullptr);
+    WHEN("I press the play button") {
       REQUIRE_NOTHROW( screen->pressButton(ButtonType::PLAY) );
       app.createNewGame();
       auto game = app.getGame();

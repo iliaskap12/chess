@@ -1,4 +1,9 @@
-add_library(UTIL paths.cpp custom-string.cpp)
+add_library(UTIL src/paths.cpp src/custom-string.cpp)
 
-target_include_directories(UTIL PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}")
+target_include_directories(
+        UTIL
+        PRIVATE
+        "${SRC_DIR}/util"
+        "${SRC_DIR}/util/util"
+)
 target_link_libraries(${PROJECT_NAME} PRIVATE UTIL)

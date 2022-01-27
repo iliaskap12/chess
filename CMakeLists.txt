@@ -54,9 +54,8 @@ if (${CMAKE_VERSION} VERSION_LESS 3.14)
 endif ()
 
 set(CMAKE_CURRENT_SOURCE_DIR src)
-set(SRC_DIR src)
-set(HEADER_DIR include)
-add_subdirectory(${HEADER_DIR}/sgg)
+set(SRC_DIR ${CMAKE_SOURCE_DIR}/src)
+
 set(
         GAME_LIBS
         GAME

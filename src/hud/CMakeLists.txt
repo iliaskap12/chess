@@ -1,32 +1,27 @@
 set(
         HUD_SRC
-        CheckIndicator.cpp
-        Draw.cpp
-        EndgameIndicator.cpp
-        HUD.cpp
-        Indicator.cpp
-        Moveboard.cpp
-        MoveTakeback.cpp
-        Offer.cpp
-        Resignment.cpp
-        TimeIncrement.cpp
-        Timer.cpp
-        TurnIndicator.cpp
-        PawnCount.cpp)
+        src/CheckIndicator.cpp
+        src/Draw.cpp
+        src/EndgameIndicator.cpp
+        src/HUD.cpp
+        src/Indicator.cpp
+        src/Moveboard.cpp
+        src/MoveTakeback.cpp
+        src/Offer.cpp
+        src/Resignment.cpp
+        src/TimeIncrement.cpp
+        src/Timer.cpp
+        src/TurnIndicator.cpp
+        src/PawnCount.cpp)
 
 add_library(HUD ${HUD_SRC})
 
-#target_include_directories(HUD PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}")
-
-#if(WIN32)
-#    target_link_libraries(HUD PRIVATE sgglib GRAPHICS)
-#    target_include_directories(HUD PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}" "${CMAKE_SOURCE_DIR}/${HEADER_DIR}/sgg")
-#else()
-#    target_include_directories(HUD PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}")
-##    target_link_libraries(HUD PRIVATE GRA)
-#endif()
-
-#target_link_libraries(HUD PRIVATE GRAPHICS)
-target_include_directories(HUD PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}" "${CMAKE_SOURCE_DIR}/${HEADER_DIR}/sgg")
+target_include_directories(
+        HUD
+        PRIVATE
+        "${SRC_DIR}/hud"
+        "${SRC_DIR}/hud/hud"
+        "${SRC_DIR}/graphics"
+)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE HUD)

@@ -1,27 +1,31 @@
 set(
         GRAPHICS_SRC
-        InGameMenu.cpp
-        MainMenu.cpp
-        Menu.cpp
-        MenuOption.cpp
-        MenuScreen.cpp
-        OpeningScreen.cpp
-        PlayingScreen.cpp
-        Screen.cpp
-        Point.cpp
-        Rectangle.cpp
+        src/InGameMenu.cpp
+        src/MainMenu.cpp
+        src/Menu.cpp
+        src/MenuOption.cpp
+        src/MenuScreen.cpp
+        src/OpeningScreen.cpp
+        src/PlayingScreen.cpp
+        src/Screen.cpp
+        src/Point.cpp
+        src/Rectangle.cpp
 )
 
 add_library(GRAPHICS ${GRAPHICS_SRC})
+target_include_directories(
+        GRAPHICS
+        PRIVATE
+        "${SRC_DIR}"
+        "${SRC_DIR}/graphics"
+        "${SRC_DIR}/graphics/graphics"
+        "${SRC_DIR}/game"
+        "${SRC_DIR}/util"
+        "${SRC_DIR}/hud"
+        "${SRC_DIR}/sounds"
+)
 
-#if(WIN32)
-#    target_link_libraries(GRAPHICS PRIVATE HUD sgglib)
-#    target_include_directories(GRAPHICS PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}" "${CMAKE_SOURCE_DIR}/${HEADER_DIR}/sgg")
-#else()
-#    target_include_directories(GRAPHICS PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}")
-#    target_link_libraries(GRAPHICS PRIVATE HUD)
-#endif()
+message("${SRC_DIR}/hud")
 
-target_link_libraries(GRAPHICS PRIVATE HUD)
-target_include_directories(GRAPHICS PRIVATE "${CMAKE_SOURCE_DIR}/${HEADER_DIR}" "${CMAKE_SOURCE_DIR}/${HEADER_DIR}/sgg")
+target_link_libraries(GRAPHICS PRIVATE HUD UTIL)
 target_link_libraries(${PROJECT_NAME} PRIVATE GRAPHICS)

@@ -1,2 +1,0 @@
-#include <hud/CheckIndicator.h>
-
