@@ -99,10 +99,10 @@ void Rectangle::setCenter(const Point &center) {
 
 void Rectangle::draw() {
   if (const auto &game { static_cast<App*>(graphics::getUserData())->getGame() }; game != nullptr) {
-    if (game->getCheckboard()->amISelected(this) || game->getCheckboard()->amIinDanger(this)) {
-      this->selected = { true };
+    if (game->getCheckboard() != nullptr && (game->getCheckboard()->amISelected(this) || game->getCheckboard()->amIinDanger(this))) {
+      this->selected = {true};
     } else {
-      this->selected = { false };
+      this->selected = {false};
     }
   } else {
     this->selected = { false };
@@ -119,7 +119,7 @@ void Rectangle::draw() {
 
 void Rectangle::update(float ms) {
   if (const auto& game { static_cast<App*>(graphics::getUserData())->getGame() }; game != nullptr) {
-    if (game->getCheckboard()->shouldMark(this)) {
+    if (game->getCheckboard() != nullptr && game->getCheckboard()->shouldMark(this)) {
       if (!this->swapped) {
         this->swapBrushes();
       }

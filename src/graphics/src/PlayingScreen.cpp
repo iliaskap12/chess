@@ -26,6 +26,9 @@ PlayingScreen::PlayingScreen() {
 }
 
 void PlayingScreen::draw() {
+  if (this->game == nullptr) {
+    return;
+  }
   this->game->draw();
   if (!this->game->hasGameEnded().first) {
     if (this->turn != nullptr) {
@@ -50,9 +53,13 @@ void PlayingScreen::draw() {
       (*this->capturedBlackSquares)[i].second.second->draw();
     }
   }
+  this->gameMenu->draw();
 }
 
 void PlayingScreen::update(float ms) {
+  if (this->game == nullptr) {
+    return;
+  }
   this->game->update(ms);
   if (!this->game->hasGameEnded().first) {
     this->displayCheck(ms);
@@ -61,6 +68,7 @@ void PlayingScreen::update(float ms) {
   }
   this->updatePawnCount(ms, PawnColor::WHITE);
   this->updatePawnCount(ms, PawnColor::BLACK);
+  this->gameMenu->update(ms);
 }
 
 void PlayingScreen::updatePawnCount(float ms, PawnColor color) {

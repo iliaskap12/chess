@@ -7,6 +7,7 @@
 #include <hud/PawnCount.h>
 #include <hud/TurnIndicator.h>
 #include <hud/CheckIndicator.h>
+#include "InGameMenu.h"
 
 class PlayingScreen : public Screen {
   static constexpr unsigned short int numberOfUniquePawns{6};
@@ -21,6 +22,7 @@ class PlayingScreen : public Screen {
   std::shared_ptr<TurnIndicator> turn{std::make_shared<TurnIndicator>(this->message, this->coordinates, this->size)};
   std::shared_ptr<EndgameIndicator> endgame{nullptr};
   std::shared_ptr<CheckIndicator> check{nullptr};
+  std::unique_ptr<Menu> gameMenu = std::make_unique<InGameMenu>();
 
 public:
   PlayingScreen();

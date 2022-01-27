@@ -26,14 +26,20 @@ void App::run() {
 }
 
 void App::draw() {
-  this->activeScreen->draw();
+  if (this->activeScreen != nullptr) {
+    this->activeScreen->draw();
+  }
 }
 
 void App::update(float ms) {
-  this->activeScreen->update(ms);
+  if (this->activeScreen != nullptr) {
+    this->activeScreen->update(ms);
+  }
 }
 
 void App::changeScreen(std::shared_ptr<Screen> screen) {
+  this->activeScreen = {nullptr};
+  this->game_ = {nullptr};
   this->activeScreen = {std::move(screen)};
 }
 

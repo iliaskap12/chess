@@ -1,7 +1,3 @@
-//
-// Created by ilias on 2/1/22.
-//
-
 #ifndef CHESS_APP_H
 #define CHESS_APP_H
 
