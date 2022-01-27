@@ -432,6 +432,7 @@ void Checkboard::checkForCheckmate(const std::shared_ptr<Pawn> &threat) {
   std::shared_ptr<Pawn> king{nullptr};
   bool shouldCheckmate{true};
 
+  this->setReferenceCounts();
   const int blackRefCount{threat->getSquare()->getDangerReferenceCount(PawnColor::BLACK)};
   const int whiteRefCount{threat->getSquare()->getDangerReferenceCount(PawnColor::WHITE)};
 
