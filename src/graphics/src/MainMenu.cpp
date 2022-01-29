@@ -41,7 +41,8 @@ MenuOption MainMenu::createMenuOption(std::string message, float verticalPoint) 
 
 void MainMenu::pressButton(const ButtonType &type) const {
   if (type == ButtonType::PLAY) {
-    App *app {static_cast<App *>(graphics::getUserData())};
-    app->changeScreen(std::make_shared<PlayingScreen>());
+    App *app{static_cast<App *>(graphics::getUserData())};
+    const auto playingScreen{std::make_shared<PlayingScreen>()};
+    app->changeScreen(playingScreen);
   }
 }

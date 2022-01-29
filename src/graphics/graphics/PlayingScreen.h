@@ -17,9 +17,9 @@ class PlayingScreen : public Screen {
   std::shared_ptr<Squares> capturedBlackSquares{std::make_shared<Squares>()};
   std::shared_ptr<Game> game{std::make_shared<Game>()};
   const std::string message{"White's turn"};
-  const std::pair<float, float> coordinates{std::make_pair(2100 - static_cast<float>(this->message.length() * 180) / 2, 240)};
+  std::pair<float, float> coordinates;
   const std::size_t size{180};
-  std::shared_ptr<TurnIndicator> turn{std::make_shared<TurnIndicator>(this->message, this->coordinates, this->size)};
+  std::shared_ptr<TurnIndicator> turn{nullptr};
   std::shared_ptr<EndgameIndicator> endgame{nullptr};
   std::shared_ptr<CheckIndicator> check{nullptr};
   std::unique_ptr<Menu> gameMenu = std::make_unique<InGameMenu>();
@@ -33,6 +33,7 @@ public:
   void updatePawnCount(float ms, PawnColor color);
   void displayCheckmate(float ms);
   void displayCheck(float ms);
+  const std::shared_ptr<Game> &getGame() const;
 };
 
 #endif // PLAYINGSCREEN_H

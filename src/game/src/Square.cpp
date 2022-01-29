@@ -1,7 +1,6 @@
 #include <game/Square.h>
 #include <sgg/graphics.h>
 #include <App.h>
-#include <iostream>
 
 Square::Square() = default;
 
@@ -41,9 +40,16 @@ void Square::update(float ms) {
   }
 
   if (this->drawingArea != nullptr && this->drawingArea->clicked()) {
-    static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard()->notify(this);
+    if (const auto game{static_cast<App *>(graphics::getUserData())->getGame()}; !game.expired()) {
+      const auto checkboard{static_cast<App *>(graphics::getUserData())->getGame().lock()->getCheckboard()};
+      if (checkboard != nullptr) {
+        checkboard->notify(this->shared_from_this());
+      }
+    }
   }
-  this->drawingArea->update(ms);
+  if (this->drawingArea != nullptr) {
+    this->drawingArea->update(ms);
+  }
 }
 unsigned short int Square::getRow() const { return this->row_; }
 unsigned short int Square::getColumn() const { return this->column_; }
@@ -54,8 +60,8 @@ char Square::getColumnAsChar() const {
 }
 
 void Square::registerPawn(std::shared_ptr<Pawn> pawn) {
-  this->pawn_ = { std::move(pawn) };
-  this->pawn_->setSquare(this);
+  this->pawn_ = {pawn};
+  this->pawn_->setSquare(this->shared_from_this());
 }
 
 void Square::unregisterPawn() {
@@ -70,8 +76,8 @@ bool Square::hasPawn() const {
   return this->pawn_ != nullptr;
 }
 
-std::shared_ptr<Rectangle> Square::getDrawingArea() const {
-  return this->drawingArea;
+std::weak_ptr<Rectangle> Square::getDrawingArea() const {
+  return std::weak_ptr<Rectangle>(this->drawingArea);
 }
 
 bool operator==(const Square &lhs, const Square &rhs) {

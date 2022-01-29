@@ -14,22 +14,22 @@
 
 class Square;// break cyclic dependency
 
-class Pawn : public Drawable, public Updateable, public Movable {
+class Pawn : public Drawable, public Updateable, public Movable, public std::enable_shared_from_this<Pawn> {
 
   using pair = std::pair<int, int>;
 
   PawnColor color;
-  Square *square_{nullptr};
-  Square *movingSquare{nullptr};
+  std::weak_ptr<Square> square_{std::weak_ptr<Square>()};
+  std::weak_ptr<Square> movingSquare{std::weak_ptr<Square>()};
   Rectangle drawingArea{Rectangle()};
   std::string texture_{};
   const std::string png{".png"};
   bool shouldMove{false};
   std::pair<float, float> moveSteps{};
-  Square *destination_{nullptr};
+  std::weak_ptr<Square> destination_{std::weak_ptr<Square>()};
   std::shared_ptr<Pawn> self_{nullptr};
   bool blocked{false};
-  std::shared_ptr<Pawn> blockingPawn{nullptr};
+  std::weak_ptr<Pawn> blockingPawn{std::weak_ptr<Pawn>()};
   ClickSound clickSound{ClickSound()};
   MoveSound moveSound{MoveSound()};
   CaptureSound captureSound{CaptureSound()};
@@ -38,15 +38,15 @@ public:
   explicit Pawn(PawnColor color);
 
   // square
-  void setSquare(Square *square);
+  void setSquare(const std::shared_ptr<Square> &square);
   void capture(const std::shared_ptr<Pawn> &pawn);
-  [[nodiscard]] Square *getSquare() const;
+  [[nodiscard]] std::weak_ptr<Square> getSquare() const;
 
   // Rectangle
   [[nodiscard]] PawnColor getColor() const;
   void setTexture(std::string texture);
   [[nodiscard]] const std::string &getTexture() const;
-  [[nodiscard]] std::shared_ptr<Rectangle> getDrawingArea() const;
+  [[nodiscard]] std::weak_ptr<Rectangle> getDrawingArea() const;
 
   // Interfaces
   void draw() override;
@@ -54,15 +54,15 @@ public:
 
   // Moving
   void move(float ms) override;
-  void moveTo(Square *squarePtr, const std::shared_ptr<Pawn>& self);
+  void moveTo(const std::shared_ptr<Square> &squarePtr, const std::shared_ptr<Pawn> &self);
   virtual std::vector<std::pair<int, int>> getAdvanceableSquares() = 0;
   virtual std::vector<std::pair<int, int>> getHoldingSquares() = 0;
   [[nodiscard]] virtual std::vector<std::pair<int, int>>
   getAdvanceableSquares(const std::vector<pair> &steps, unsigned short int maxSteps, bool holding) const;
   [[nodiscard]] std::vector<std::pair<int, int>> correctDirection(std::vector<std::pair<int, int>> steps) const;
 
-  virtual std::shared_ptr<Pawn> getBlockedPawn();
-  std::shared_ptr<Pawn> getBlockingPawn();
+  virtual std::weak_ptr<Pawn> getBlockedPawn();
+  std::weak_ptr<Pawn> getBlockingPawn();
   [[nodiscard]] bool isBlocked() const;
   void block();
   void unblock();

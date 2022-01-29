@@ -25,9 +25,19 @@ std::string operator+(const PawnColor &color1, const PawnColor &color2) {
   return pawnColorToString(color1) + pawnColorToString(color2);
 }
 
-std::ostream& operator<<(std::ostream& lhs, const PawnColor &color) {
+std::ostream &operator<<(std::ostream &lhs, const PawnColor &color) {
   return lhs << pawnColorToString(color);
 }
 
-template std::string operator+(const std::string& lhs, const PawnColor &color);
-template std::string operator+(const PawnColor &color, const std::string& rhs);
+PawnColor operator!(const PawnColor &color) {
+  PawnColor oppositeColor;
+  if (color == PawnColor::WHITE) {
+    oppositeColor = PawnColor::BLACK;
+  } else {
+    oppositeColor = PawnColor::WHITE;
+  }
+  return oppositeColor;
+}
+
+template std::string operator+(const std::string &lhs, const PawnColor &color);
+template std::string operator+(const PawnColor &color, const std::string &rhs);

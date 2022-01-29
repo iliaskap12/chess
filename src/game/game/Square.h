@@ -9,13 +9,13 @@
 
 class Pawn;// break cyclic dependency
 
-class Square : public Drawable, public Updateable {
+class Square : public Drawable, public Updateable, public std::enable_shared_from_this<Square> {
   unsigned short int row_{0};
   unsigned short int column_{0};
   std::shared_ptr<Pawn> pawn_{nullptr};
   std::shared_ptr<Rectangle> drawingArea{std::make_shared<Rectangle>()};
   unsigned short int whiteDangerReferenceCount_{0};
-  unsigned short int blackDangerReferenceCount_ { 0 };
+  unsigned short int blackDangerReferenceCount_{0};
 
 public:
   Square();
@@ -33,7 +33,7 @@ public:
   [[nodiscard]] std::shared_ptr<Pawn> getPawn() const;
   [[nodiscard]] bool hasPawn() const;
 
-  [[nodiscard]] std::shared_ptr<Rectangle> getDrawingArea() const;
+  [[nodiscard]] std::weak_ptr<Rectangle> getDrawingArea() const;
 
   void draw() override;
   void update(float ms) override;

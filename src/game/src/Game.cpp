@@ -17,7 +17,7 @@ const Player &Game::getPlayer(PawnColor side) {
 
 bool Game::start() {
   App* app { static_cast<App*>(graphics::getUserData()) };
-  app->registerGame(this);
+  app->registerGame(std::make_shared<Game>(*this));
 
   return true;
 }
@@ -29,7 +29,7 @@ void Game::draw() {
 void Game::update(float ms) {
   this->checkboard->update(ms);
 
-  if (const App* app { static_cast<App*>(graphics::getUserData()) }; app->getGame() == nullptr) {
+  if (const App * app{static_cast<App *>(graphics::getUserData())}; app->getGame().expired()) {
     this->start();
   }
 }
@@ -59,14 +59,14 @@ std::pair<bool, std::optional<PawnColor>> Game::hasGameEnded() const {
 std::optional<PawnColor> Game::isChecked() {
   const auto whiteKing{this->checkboard->getKing(PawnColor::WHITE)};
   const auto blackKing{this->checkboard->getKing(PawnColor::BLACK)};
-  if ((blackKing != nullptr) && (whiteKing != nullptr)) {
-    if (whiteKing->isChecked()) {
+  if ((!blackKing.expired()) && (!whiteKing.expired())) {
+    if (whiteKing.lock()->isChecked()) {
       this->checkedColor = {std::make_optional(PawnColor::WHITE)};
     }
-    if (blackKing->isChecked()) {
+    if (blackKing.lock()->isChecked()) {
       this->checkedColor = {std::make_optional(PawnColor::BLACK)};
     }
-    if (!whiteKing->isChecked() && !blackKing->isChecked()) {
+    if (!whiteKing.lock()->isChecked() && !blackKing.lock()->isChecked()) {
       this->checkedColor.reset();
     }
   }
@@ -76,7 +76,7 @@ std::optional<PawnColor> Game::isChecked() {
 void Game::playCheckSound() const {
   const auto whiteKing{this->checkboard->getKing(PawnColor::WHITE)};
   const auto blackKing{this->checkboard->getKing(PawnColor::BLACK)};
-  if ((whiteKing->isChecked() && this->whiteTurn_) || (blackKing->isChecked() && !this->whiteTurn_)) {
+  if ((whiteKing.lock()->isChecked() && this->whiteTurn_) || (blackKing.lock()->isChecked() && !this->whiteTurn_)) {
     this->checkSound.play();
   }
 }

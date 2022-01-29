@@ -5,23 +5,25 @@
 #include <util/paths.h>
 
 PlayingScreen::PlayingScreen() {
+  this->coordinates = {std::make_pair(2100 - static_cast<float>(this->message.length() * 180) / 2, 240)};
+  this->turn = {std::make_shared<TurnIndicator>(this->message, this->coordinates, this->size)};
   constexpr float squareWidth{125.0f};
   for (unsigned short int white{0}; white < PlayingScreen::numberOfUniquePawns; ++white) {
     const Point leftBottom{Point(825.0f, 425.0f + static_cast<float>(white) * 125.0f)};
     (*this->capturedWhiteSquares)[white].first = {std::make_shared<Square>()};
     (*this->capturedWhiteSquares)[white].first->initialize(leftBottom, Rectangle::colors.at(Brush::TEXTURE), Brush::TEXTURE, squareWidth);
-    const std::pair<float, float> coordinates{(*this->capturedWhiteSquares)[white].first->getDrawingArea()->getCenter().getX() - 125.0f,
-                                              (*this->capturedWhiteSquares)[white].first->getDrawingArea()->getCenter().getY() + 50.0f};
-    (*this->capturedWhiteSquares)[white].second = {std::make_pair(0, std::make_shared<PawnCount>(coordinates, squareWidth - 20.0f))};
+    const std::pair<float, float> coords{(*this->capturedWhiteSquares)[white].first->getDrawingArea().lock()->getCenter().getX() - 125.0f,
+                                         (*this->capturedWhiteSquares)[white].first->getDrawingArea().lock()->getCenter().getY() + 50.0f};
+    (*this->capturedWhiteSquares)[white].second = {std::make_pair(0, std::make_shared<PawnCount>(coords, squareWidth - 20.0f))};
   }
 
   for (unsigned short int black { 0 }; black < PlayingScreen::numberOfUniquePawns; ++black) {
     const Point leftBottom{Point(825.0f, 1550.0f - static_cast<float>(black) * 125.0f)};
     (*this->capturedBlackSquares)[black].first = {std::make_shared<Square>()};
     (*this->capturedBlackSquares)[black].first->initialize(leftBottom, Rectangle::colors.at(Brush::TEXTURE), Brush::TEXTURE, squareWidth);
-    const std::pair<float, float> coordinates{(*this->capturedBlackSquares)[black].first->getDrawingArea()->getCenter().getX() - 125.0f,
-                                              (*this->capturedBlackSquares)[black].first->getDrawingArea()->getCenter().getY() + 50.0f};
-    (*this->capturedBlackSquares)[black].second = {std::make_pair(0, std::make_shared<PawnCount>(coordinates, squareWidth - 20.0f))};
+    const std::pair<float, float> coords{(*this->capturedBlackSquares)[black].first->getDrawingArea().lock()->getCenter().getX() - 125.0f,
+                                         (*this->capturedBlackSquares)[black].first->getDrawingArea().lock()->getCenter().getY() + 50.0f};
+    (*this->capturedBlackSquares)[black].second = {std::make_pair(0, std::make_shared<PawnCount>(coords, squareWidth - 20.0f))};
   }
 }
 
@@ -61,7 +63,7 @@ void PlayingScreen::update(float ms) {
     return;
   }
   this->game->update(ms);
-  if (!this->game->hasGameEnded().first) {
+  if (this->game != nullptr && !this->game->hasGameEnded().first) {
     this->displayCheck(ms);
   } else {
     this->displayCheckmate(ms);
@@ -127,7 +129,7 @@ std::shared_ptr<Square> PlayingScreen::getSquare(const std::shared_ptr<Pawn>& pa
   graphics::Brush textureBrush{Rectangle::colors.at(Brush::TEXTURE)};
   textureBrush.texture = {paths::getImagesPath() + texture + "-" + color + ".png"};
 
-  square->initialize(square->getDrawingArea()->getLeftBottom(), textureBrush, Brush::TEXTURE, square->getDrawingArea()->getWidth());
+  square->initialize(square->getDrawingArea().lock()->getLeftBottom(), textureBrush, Brush::TEXTURE, square->getDrawingArea().lock()->getWidth());
 
   return square;
 }
@@ -162,4 +164,8 @@ void PlayingScreen::displayCheck(float ms) {
     this->turn = {std::make_shared<TurnIndicator>(this->message, this->coordinates, this->size)};
     this->changeTurn(ms);
   }
+}
+
+const std::shared_ptr<Game> &PlayingScreen::getGame() const {
+  return this->game;
 }

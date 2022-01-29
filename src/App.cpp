@@ -1,6 +1,7 @@
 #include <App.h>
 #include <functional>
 #include <util/paths.h>
+#include "graphics/PlayingScreen.h"
 
 App::App() = default;
 
@@ -37,16 +38,21 @@ void App::update(float ms) {
   }
 }
 
-void App::changeScreen(std::shared_ptr<Screen> screen) {
+void App::changeScreen(const std::shared_ptr<Screen> &screen) {
   this->activeScreen = {nullptr};
-  this->game_ = {nullptr};
-  this->activeScreen = {std::move(screen)};
+  this->game_.reset();
+  this->activeScreen = {screen};
 }
 
-void App::registerGame(Game *game) {
+void App::registerGame(const std::shared_ptr<Game> &game) {
   this->game_ = {game};
 }
 
-Game *App::getGame() const {
+std::weak_ptr<Game> App::getGame() const {
+  if (this->game_.lock() == nullptr) {
+    if (const auto playingScreen{std::dynamic_pointer_cast<PlayingScreen>(this->activeScreen)}; nullptr != playingScreen) {
+      return playingScreen->getGame();
+    }
+  }
   return this->game_;
 }

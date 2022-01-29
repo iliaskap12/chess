@@ -16,13 +16,15 @@ enum class PawnColor {
 template <typename T>
 std::string operator+(const T& lhs, const PawnColor &color);
 
-template <typename T>
-std::string operator+(const PawnColor &color, const T& rhs);
+template<typename T>
+std::string operator+(const PawnColor &color, const T &rhs);
 
 std::string operator+(const PawnColor &color1, const PawnColor &color2);
 
-std::ostream& operator<<(std::ostream& lhs, const PawnColor &color);
+std::ostream &operator<<(std::ostream &lhs, const PawnColor &color);
 
-std::string pawnColorToString(const PawnColor& color);
+std::string pawnColorToString(const PawnColor &color);
+
+PawnColor operator!(const PawnColor &color);
 
 #endif//CHESS_PAWNCOLOR_H

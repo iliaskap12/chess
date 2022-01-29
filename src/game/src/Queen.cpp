@@ -21,18 +21,21 @@ std::vector<std::pair<int, int>> Queen::getHoldingSquares() {
   return Pawn::getAdvanceableSquares(this->steps, Queen::maxSteps, true);
 }
 
-std::shared_ptr<Pawn> Queen::getBlockedPawn() {
-  const unsigned short int currentRow { this->getSquare()->getRow() };
-  const unsigned short int currentColumn { this->getSquare()->getColumn() };
+std::weak_ptr<Pawn> Queen::getBlockedPawn() {
+  auto game{static_cast<App *>(graphics::getUserData())->getGame().lock()};
+  auto checkboard{game->getCheckboard()};
 
-  unsigned short int nextRow { currentRow };
-  unsigned short int nextColumn { currentColumn };
-  for (const auto& [rowStep, columnStep] : Pawn::correctDirection(this->steps)) {
-    bool shouldTerminate { false };
-    bool foundPawn { false };
-    std::shared_ptr<Pawn> pawn { nullptr };
+  const unsigned short int currentRow{this->getSquare().lock()->getRow()};
+  const unsigned short int currentColumn{this->getSquare().lock()->getColumn()};
 
-    unsigned short int numberOfSteps { 0 };
+  unsigned short int nextRow{currentRow};
+  unsigned short int nextColumn{currentColumn};
+  for (const auto &[rowStep, columnStep]: Pawn::correctDirection(this->steps)) {
+    bool shouldTerminate{false};
+    bool foundPawn{false};
+    std::shared_ptr<Pawn> pawn{nullptr};
+
+    unsigned short int numberOfSteps{0};
     while (!shouldTerminate) {
       nextRow += rowStep;
       nextColumn += columnStep;
@@ -42,7 +45,6 @@ std::shared_ptr<Pawn> Queen::getBlockedPawn() {
       }
       ++numberOfSteps;
 
-      auto checkboard { static_cast<App *>(graphics::getUserData())->getGame()->getCheckboard() };
       std::pair<int, int> squareCoordinates { std::make_pair<int, int>(nextRow, nextColumn) };
       auto [hasPawn, pawnColor] { checkboard->getSquareInfo(squareCoordinates) };
 
@@ -55,8 +57,8 @@ std::shared_ptr<Pawn> Queen::getBlockedPawn() {
       }
 
       if (hasPawn && pawnColor != Pawn::getColor()) {
-        pawn = { checkboard->getSquare(squareCoordinates)->getPawn() };
-        foundPawn = { true };
+        pawn = {checkboard->getSquare(squareCoordinates).lock()->getPawn()};
+        foundPawn = {true};
       }
     }
 
@@ -64,5 +66,5 @@ std::shared_ptr<Pawn> Queen::getBlockedPawn() {
     nextColumn = { currentColumn };
   }
 
-  return nullptr;
+  return std::weak_ptr<Pawn>();
 }
