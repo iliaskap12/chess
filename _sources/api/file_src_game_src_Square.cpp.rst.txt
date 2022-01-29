@@ -33,8 +33,6 @@ Includes
 
 - ``game/Square.h`` (:ref:`file_src_game_game_Square.h`)
 
-- ``iostream``
-
 - ``sgg/graphics.h``
 
 

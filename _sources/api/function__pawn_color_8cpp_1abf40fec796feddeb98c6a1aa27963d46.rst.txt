@@ -1,0 +1,13 @@
+.. _exhale_function__pawn_color_8cpp_1abf40fec796feddeb98c6a1aa27963d46:
+
+Function operator!(const PawnColor&)
+====================================
+
+- Defined in :ref:`file_src_game_src_PawnColor.cpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: operator!(const PawnColor&)

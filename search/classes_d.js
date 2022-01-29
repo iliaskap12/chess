@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['screen_0',['Screen',['../df/dc5/classScreen.html',1,'']]],
-  ['soldier_1',['Soldier',['../d9/dbe/classSoldier.html',1,'']]],
-  ['sound_2',['Sound',['../df/d49/classSound.html',1,'']]],
-  ['square_3',['Square',['../d3/d72/classSquare.html',1,'']]]
+  ['rectangle_0',['Rectangle',['../de/d00/classRectangle.html',1,'']]],
+  ['rook_1',['Rook',['../db/d7e/classRook.html',1,'']]]
 ];

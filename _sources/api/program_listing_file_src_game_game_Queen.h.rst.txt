@@ -24,7 +24,7 @@ Program Listing for File Queen.h
      explicit Queen(PawnColor color);
      std::vector<std::pair<int, int>> getAdvanceableSquares() override;
      std::vector<std::pair<int, int>> getHoldingSquares() override;
-     std::shared_ptr<Pawn> getBlockedPawn() override;
+     std::weak_ptr<Pawn> getBlockedPawn() override;
    };
    
    #endif // QUEEN_H

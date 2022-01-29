@@ -29,7 +29,13 @@ Includes
 --------
 
 
+- ``App.h`` (:ref:`file_src_App.h`)
+
+- ``algorithm``
+
 - ``graphics/InGameMenu.h`` (:ref:`file_src_graphics_graphics_InGameMenu.h`)
+
+- ``graphics/OpeningScreen.h`` (:ref:`file_src_graphics_graphics_OpeningScreen.h`)
 
 
 

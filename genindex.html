@@ -76,6 +76,7 @@
  | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
  | <a href="#K"><strong>K</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#O"><strong>O</strong></a>
@@ -94,7 +95,7 @@
 </li>
       <li><a href="api/class_app.html#_CPPv4N3App3AppEv">App::App (C++ function)</a>
 </li>
-      <li><a href="api/class_app.html#_CPPv4N3App12changeScreenENSt10shared_ptrI6ScreenEE">App::changeScreen (C++ function)</a>
+      <li><a href="api/class_app.html#_CPPv4N3App12changeScreenERKNSt10shared_ptrI6ScreenEE">App::changeScreen (C++ function)</a>
 </li>
       <li><a href="api/class_app.html#_CPPv4N3App4drawEv">App::draw (C++ function)</a>
 </li>
@@ -104,7 +105,7 @@
 </li>
       <li><a href="api/class_app.html#_CPPv4NK3App9getScreenEv">App::getScreen (C++ function)</a>
 </li>
-      <li><a href="api/class_app.html#_CPPv4N3App12registerGameEP4Game">App::registerGame (C++ function)</a>
+      <li><a href="api/class_app.html#_CPPv4N3App12registerGameERKNSt10shared_ptrI4GameEE">App::registerGame (C++ function)</a>
 </li>
       <li><a href="api/class_app.html#_CPPv4N3App3runEv">App::run (C++ function)</a>
 </li>
@@ -130,10 +131,10 @@
 </li>
       <li><a href="api/enum__brush_8h_1a62c1007e36a924771f8294ff9f0ac5d0.html#_CPPv4N5Brush10CHECKBOARDE">Brush::CHECKBOARD (C++ enumerator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/enum__brush_8h_1a62c1007e36a924771f8294ff9f0ac5d0.html#_CPPv4N5Brush10DARK_BROWNE">Brush::DARK_BROWN (C++ enumerator)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/enum__brush_8h_1a62c1007e36a924771f8294ff9f0ac5d0.html#_CPPv4N5Brush10DARK_GREENE">Brush::DARK_GREEN (C++ enumerator)</a>
 </li>
       <li><a href="api/enum__brush_8h_1a62c1007e36a924771f8294ff9f0ac5d0.html#_CPPv4N5Brush11LIGHT_BROWNE">Brush::LIGHT_BROWN (C++ enumerator)</a>
@@ -148,6 +149,8 @@
 </li>
       <li><a href="api/enum__button_type_8h_1ae2d5c50fae96a83cc4f5974af78e6943.html#_CPPv4N10ButtonType4PLAYE">ButtonType::PLAY (C++ enumerator)</a>
 </li>
+      <li><a href="api/enum__button_type_8h_1ae2d5c50fae96a83cc4f5974af78e6943.html#_CPPv4N10ButtonType4QUITE">ButtonType::QUIT (C++ enumerator)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -160,19 +163,19 @@
 </li>
       <li><a href="api/class_checkboard.html#_CPPv410Checkboard">Checkboard (C++ class)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard11amIinDangerEPK9Rectangle">Checkboard::amIinDanger (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard11amIinDangerERKNSt10shared_ptrI9RectangleEE">Checkboard::amIinDanger (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard11amISelectedEPK9Rectangle">Checkboard::amISelected (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard11amISelectedERKNSt10shared_ptrI9RectangleEE">Checkboard::amISelected (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard10CheckboardEv">Checkboard::Checkboard (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard17checkForCheckmateERKNSt10shared_ptrI4PawnEE">Checkboard::checkForCheckmate (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard9checkmateE9PawnColor">Checkboard::checkmate (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard9checkmateERK9PawnColor">Checkboard::checkmate (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard4drawEv">Checkboard::draw (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard7getKingE9PawnColor">Checkboard::getKing (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard7getKingERK9PawnColor">Checkboard::getKing (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard15getMovingSquareEv">Checkboard::getMovingSquare (C++ function)</a>
 </li>
@@ -182,33 +185,35 @@
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard10getSquaresEv">Checkboard::getSquares (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard6isKingE9PawnColorRKNSt4pairIiiEE">Checkboard::isKing (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard6isKingERK9PawnColorRKNSt4pairIiiEE">Checkboard::isKing (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard11markSquaresEPK6Square">Checkboard::markSquares (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard11markSquaresERKNSt10shared_ptrI6SquareEE">Checkboard::markSquares (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard8moveKingEPK6Square">Checkboard::moveKing (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard8moveKingERKNSt10shared_ptrI6SquareEE">Checkboard::moveKing (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard8movePawnEP6Square">Checkboard::movePawn (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard8movePawnERKNSt10shared_ptrI6SquareEE">Checkboard::movePawn (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard6notifyEP6Square">Checkboard::notify (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard6notifyERKNSt10shared_ptrI6SquareEE">Checkboard::notify (C++ function)</a>
+</li>
+      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard17resetBlockedPawnsEv">Checkboard::resetBlockedPawns (C++ function)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard17resetBlockedPawnsEv">Checkboard::resetBlockedPawns (C++ function)</a>
-</li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard17resetMovingSquareEv">Checkboard::resetMovingSquare (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard20resetReferenceCountsEv">Checkboard::resetReferenceCounts (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard13secureTheKingEPK6Square">Checkboard::secureTheKing (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard13secureTheKingERKNSt10shared_ptrI6SquareEE">Checkboard::secureTheKing (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard15setBlockedPawnsEv">Checkboard::setBlockedPawns (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard15setMovingSquareE5PointRKN8graphics5BrushE5Brush">Checkboard::setMovingSquare (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4NK10Checkboard15setMovingSquareERK5PointRKN8graphics5BrushERK5Brush">Checkboard::setMovingSquare (C++ function)</a>
+</li>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard13setPawnMovingEb">Checkboard::setPawnMoving (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard18setReferenceCountsEv">Checkboard::setReferenceCounts (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard10shouldMarkEPK9Rectangle">Checkboard::shouldMark (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard10shouldMarkERKNSt10shared_ptrI9RectangleEE">Checkboard::shouldMark (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard8sideSizeE">Checkboard::sideSize (C++ member)</a>
 </li>
@@ -216,7 +221,7 @@
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard13tryBlockCheckERKNSt4pairIiiEERKNSt10shared_ptrI4PawnEERKNSt10shared_ptrI4PawnEE">Checkboard::tryBlockCheck (C++ function)</a>
 </li>
-      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard18tryMoveBlockedPawnEPK6Square">Checkboard::tryMoveBlockedPawn (C++ function)</a>
+      <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard18tryMoveBlockedPawnERKNSt10shared_ptrI6SquareEE">Checkboard::tryMoveBlockedPawn (C++ function)</a>
 </li>
       <li><a href="api/class_checkboard.html#_CPPv4N10Checkboard6updateEf">Checkboard::update (C++ function)</a>
 </li>
@@ -329,10 +334,30 @@
   </ul></td>
 </tr></table>
 
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/class_in_game_menu.html#_CPPv410InGameMenu">InGameMenu (C++ class)</a>
+</li>
+      <li><a href="api/class_in_game_menu.html#_CPPv4N10InGameMenu4drawEv">InGameMenu::draw (C++ function)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/class_in_game_menu.html#_CPPv4N10InGameMenu10InGameMenuEv">InGameMenu::InGameMenu (C++ function)</a>
+</li>
+      <li><a href="api/class_in_game_menu.html#_CPPv4NK10InGameMenu11pressButtonERK10ButtonType">InGameMenu::pressButton (C++ function)</a>
+</li>
+      <li><a href="api/class_in_game_menu.html#_CPPv4N10InGameMenu6updateEf">InGameMenu::update (C++ function)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="K">K</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/class_king.html#_CPPv44King">King (C++ class)</a>
+</li>
+      <li><a href="api/class_king.html#_CPPv4N4King6castleEv">King::castle (C++ function)</a>
 </li>
       <li><a href="api/class_king.html#_CPPv4N4King21getAdvanceableSquaresEv">King::getAdvanceableSquares (C++ function)</a>
 </li>
@@ -342,9 +367,15 @@
 </li>
       <li><a href="api/class_king.html#_CPPv4NK4King9isCheckedEv">King::isChecked (C++ function)</a>
 </li>
+      <li><a href="api/class_king.html#_CPPv4N4King4KingE9PawnColor">King::King (C++ function)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/class_king.html#_CPPv4N4King4KingE9PawnColor">King::King (C++ function)</a>
+      <li><a href="api/class_king.html#_CPPv4NK4King5movedEv">King::moved (C++ function)</a>
+</li>
+      <li><a href="api/class_king.html#_CPPv4N4King8setMovedEv">King::setMoved (C++ function)</a>
+</li>
+      <li><a href="api/class_king.html#_CPPv4N4King12setRookMovedEi">King::setRookMoved (C++ function)</a>
 </li>
       <li><a href="api/class_knight.html#_CPPv46Knight">Knight (C++ class)</a>
 </li>
@@ -424,9 +455,11 @@
 </li>
       <li><a href="api/class_opening_screen.html#_CPPv4N13OpeningScreen13OpeningScreenEv">OpeningScreen::OpeningScreen (C++ function)</a>
 </li>
+      <li><a href="api/class_opening_screen.html#_CPPv4N13OpeningScreen6updateEf">OpeningScreen::update (C++ function)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/class_opening_screen.html#_CPPv4N13OpeningScreen6updateEf">OpeningScreen::update (C++ function)</a>
+      <li><a href="api/function__pawn_color_8cpp_1abf40fec796feddeb98c6a1aa27963d46.html#_CPPv4ntRK9PawnColor">operator! (C++ function)</a>, <a href="api/function__pawn_color_8h_1abf40fec796feddeb98c6a1aa27963d46.html#_CPPv4ntRK9PawnColor">[1]</a>
 </li>
       <li><a href="api/function_custom-string_8h_1a2540af292cc3ecdfe6c0d389078b554a.html#_CPPv4li5_hashPKcNSt6size_tE">operator&#34;&#34;_hash (C++ function)</a>
 </li>
@@ -480,11 +513,11 @@
 </li>
       <li><a href="api/class_pawn.html#_CPPv4N4Pawn4moveEf">Pawn::move (C++ function)</a>
 </li>
-      <li><a href="api/class_pawn.html#_CPPv4N4Pawn6moveToEP6SquareRKNSt10shared_ptrI4PawnEE">Pawn::moveTo (C++ function)</a>
+      <li><a href="api/class_pawn.html#_CPPv4N4Pawn6moveToERKNSt10shared_ptrI6SquareEERKNSt10shared_ptrI4PawnEE">Pawn::moveTo (C++ function)</a>
 </li>
       <li><a href="api/class_pawn.html#_CPPv4N4Pawn4PawnE9PawnColor">Pawn::Pawn (C++ function)</a>
 </li>
-      <li><a href="api/class_pawn.html#_CPPv4N4Pawn9setSquareEP6Square">Pawn::setSquare (C++ function)</a>
+      <li><a href="api/class_pawn.html#_CPPv4N4Pawn9setSquareERKNSt10shared_ptrI6SquareEE">Pawn::setSquare (C++ function)</a>
 </li>
       <li><a href="api/class_pawn.html#_CPPv4N4Pawn10setTextureENSt6stringE">Pawn::setTexture (C++ function)</a>
 </li>
@@ -521,6 +554,8 @@
       <li><a href="api/class_playing_screen.html#_CPPv4N13PlayingScreen16displayCheckmateEf">PlayingScreen::displayCheckmate (C++ function)</a>
 </li>
       <li><a href="api/class_playing_screen.html#_CPPv4N13PlayingScreen4drawEv">PlayingScreen::draw (C++ function)</a>
+</li>
+      <li><a href="api/class_playing_screen.html#_CPPv4NK13PlayingScreen7getGameEv">PlayingScreen::getGame (C++ function)</a>
 </li>
       <li><a href="api/class_playing_screen.html#_CPPv4NK13PlayingScreen9getSquareERKNSt10shared_ptrI4PawnEE">PlayingScreen::getSquare (C++ function)</a>
 </li>
@@ -596,10 +631,10 @@
 </li>
       <li><a href="api/class_rectangle.html#_CPPv4N9RectangleeqERK9RectangleRK9Rectangle">Rectangle::operator== (C++ function)</a>, <a href="api/function__rectangle_8cpp_1a09abfed52b7865bf069edadf2905ad86.html#_CPPv4N9RectangleeqERK9RectangleRK9Rectangle">[1]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/class_rectangle.html#_CPPv4N9Rectangle15populateBrushesEv">Rectangle::populateBrushes (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/class_rectangle.html#_CPPv4N9Rectangle9RectangleE5Pointff">Rectangle::Rectangle (C++ function)</a>, <a href="api/class_rectangle.html#_CPPv4N9Rectangle9RectangleE5PointffRKN8graphics5BrushERK5Brush">[1]</a>, <a href="api/class_rectangle.html#_CPPv4N9Rectangle9RectangleEv">[2]</a>
 </li>
       <li><a href="api/class_rectangle.html#_CPPv4N9Rectangle8setBrushE5BrushN8graphics5BrushE">Rectangle::setBrush (C++ function)</a>
@@ -626,7 +661,11 @@
 </li>
       <li><a href="api/class_rook.html#_CPPv4N4Rook17getHoldingSquaresEv">Rook::getHoldingSquares (C++ function)</a>
 </li>
+      <li><a href="api/class_rook.html#_CPPv4NK4Rook8getMovedEv">Rook::getMoved (C++ function)</a>
+</li>
       <li><a href="api/class_rook.html#_CPPv4N4Rook4RookE9PawnColor">Rook::Rook (C++ function)</a>
+</li>
+      <li><a href="api/class_rook.html#_CPPv4N4Rook8setMovedEv">Rook::setMoved (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>

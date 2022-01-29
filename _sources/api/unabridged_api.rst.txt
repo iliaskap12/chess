@@ -16,6 +16,11 @@ Namespaces
 
    namespace_paths.rst
 
+.. toctree::
+   :maxdepth: 5
+
+   namespace_std.rst
+
 Classes and Structs
 *******************
 
@@ -79,6 +84,11 @@ Classes and Structs
    :maxdepth: 5
 
    class_h_u_d.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   class_in_game_menu.rst
 
 .. toctree::
    :maxdepth: 5
@@ -222,6 +232,16 @@ Functions
    :maxdepth: 5
 
    function_main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__pawn_color_8h_1abf40fec796feddeb98c6a1aa27963d46.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   function__pawn_color_8cpp_1abf40fec796feddeb98c6a1aa27963d46.rst
 
 .. toctree::
    :maxdepth: 5

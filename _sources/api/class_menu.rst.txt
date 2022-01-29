@@ -16,9 +16,10 @@ Base Types
 - ``public Updateable`` (:ref:`exhale_class_class_updateable`)
 
 
-Derived Type
-************
+Derived Types
+*************
 
+- ``public InGameMenu`` (:ref:`exhale_class_class_in_game_menu`)
 - ``public MainMenu`` (:ref:`exhale_class_class_main_menu`)
 
 

@@ -1,8 +1,0 @@
-<map id="Rook::getBlockedPawn" name="Rook::getBlockedPawn">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,164,133"/>
-<area shape="rect" id="node2" href="$de/dff/classPawn.html#aa8b652277db0c52e930b5e50718da96b" title=" " alt="" coords="212,5,367,32"/>
-<area shape="rect" id="node3" href="$de/dff/classPawn.html#a1d20441a964b5c43ec27a0bafcda56dd" title=" " alt="" coords="233,56,345,83"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#ab40f208fe44bfac6d38c000ae30baacb" title=" " alt="" coords="222,107,357,133"/>
-<area shape="rect" id="node5" href="$d3/d72/classSquare.html#af4307f89fb7470caf2c74171cc165dce" title=" " alt="" coords="231,157,347,184"/>
-<area shape="rect" id="node6" href="$de/dff/classPawn.html#aeb5d6f6e869e8b9c08e43d27670aef6e" title=" " alt="" coords="228,208,351,235"/>
-</map>

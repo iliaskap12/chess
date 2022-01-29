@@ -1,7 +1,8 @@
 <map id="Bishop" name="Bishop">
-<area shape="rect" id="node1" title=" " alt="" coords="151,1283,359,1521"/>
-<area shape="rect" id="node2" href="$de/dff/classPawn.html" title=" " alt="" coords="145,189,365,1235"/>
+<area shape="rect" id="node1" title=" " alt="" coords="240,1356,448,1609"/>
+<area shape="rect" id="node2" href="$de/dff/classPawn.html" title=" " alt="" coords="234,189,454,1308"/>
 <area shape="rect" id="node3" href="$de/db8/classDrawable.html" title=" " alt="" coords="5,20,157,127"/>
 <area shape="rect" id="node4" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="181,13,328,134"/>
 <area shape="rect" id="node5" href="$da/dfc/classMovable.html" title=" " alt="" coords="352,5,515,141"/>
+<area shape="rect" id="node6" title=" " alt="" coords="539,27,679,119"/>
 </map>

@@ -33,50 +33,55 @@ Program Listing for File Checkboard.h
    
      std::shared_ptr<Squares> squares{std::make_shared<Squares>()};
      std::vector<std::shared_ptr<Square>> markedSquares{std::vector<std::shared_ptr<Square>>()};
-     std::shared_ptr<Pawn> markedPawn{nullptr};
+     std::weak_ptr<Pawn> markedPawn{std::weak_ptr<Pawn>()};
      std::shared_ptr<Square> movingSquare_{std::make_shared<Square>(10, 10)};
-     std::shared_ptr<Rectangle> selectedPawn{nullptr};
+     std::weak_ptr<Rectangle> selectedPawn{std::weak_ptr<Rectangle>()};
      Rectangle drawingArea{Rectangle(Point(1000, 1550), 1200, 1200, Rectangle::colors.at(Brush::CHECKBOARD), Brush::CHECKBOARD)};
      std::optional<long> whiteKingId{std::optional<long>()};
      std::optional<long> blackKingId{std::optional<long>()};
-     std::shared_ptr<Pawn> whiteKing{nullptr};
-     std::shared_ptr<Pawn> blackKing{nullptr};
-     std::shared_ptr<Pawn> whiteKingThreat{nullptr};
-     std::shared_ptr<Pawn> blackKingThreat{nullptr};
+     std::weak_ptr<Pawn> whiteKing{std::weak_ptr<Pawn>()};
+     std::weak_ptr<Pawn> blackKing{std::weak_ptr<Pawn>()};
+     std::weak_ptr<Pawn> whiteKingThreat{std::weak_ptr<Pawn>()};
+     std::weak_ptr<Pawn> blackKingThreat{std::weak_ptr<Pawn>()};
+     bool castling{false};
+     bool leftRookCastling{false};
+     bool rightRookCastling{false};
+     bool pawnMoving{false};
    
    public:
      Checkboard();
    
      // squares
-     [[nodiscard]] std::shared_ptr<Squares> getSquares() const;
-     [[nodiscard]] std::shared_ptr<Square> getSquare(const std::pair<int, int> &coordinates) const;
+     [[nodiscard]] std::weak_ptr<Squares> getSquares() const;
+     [[nodiscard]] std::weak_ptr<Square> getSquare(const std::pair<int, int> &coordinates) const;
      [[nodiscard]] std::pair<bool, std::optional<PawnColor>> getSquareInfo(std::pair<int, int> indexes) const;
-     bool markSquares(const Square *square);
-     void moveKing(const Square *square);
-     void movePawn(Square *square);
+     bool markSquares(const std::shared_ptr<Square> &square);
+     void moveKing(const std::shared_ptr<Square> &square);
+     void movePawn(const std::shared_ptr<Square> &square);
      void resetReferenceCounts();
      void setReferenceCounts();
      void setBlockedPawns() const;
      void resetBlockedPawns() const;
-     void tryMoveBlockedPawn(const Square *square);
-     void secureTheKing(const Square *square);
+     void tryMoveBlockedPawn(const std::shared_ptr<Square> &square);
+     void secureTheKing(const std::shared_ptr<Square> &square);
      std::vector<std::shared_ptr<Square>> tryBlockCheck(const std::pair<int, int> &pair, const std::shared_ptr<Pawn> &king, const std::shared_ptr<Pawn> &kingThreat);
    
-     [[nodiscard]] bool shouldMark(const Rectangle *rect);
-     [[nodiscard]] bool amISelected(const Rectangle *rect) const;
-     [[nodiscard]] bool amIinDanger(const Rectangle *rect) const;
-     [[nodiscard]] bool isKing(PawnColor color, const std::pair<int, int> &coordinates) const;
+     [[nodiscard]] bool shouldMark(const std::shared_ptr<Rectangle> &rect);
+     [[nodiscard]] bool amISelected(const std::shared_ptr<Rectangle> &rect) const;
+     [[nodiscard]] bool amIinDanger(const std::shared_ptr<Rectangle> &rect) const;
+     [[nodiscard]] bool isKing(const PawnColor &color, const std::pair<int, int> &coordinates) const;
      void draw() override;
      void update(float ms) override;
-     void notify(Square *square);
+     void notify(const std::shared_ptr<Square> &square);
    
      // moving square
-     [[nodiscard]] const std::shared_ptr<Square> &getMovingSquare() const;
-     void setMovingSquare(Point leftBottom, const graphics::Brush &brush, Brush type) const;
+     [[nodiscard]] const std::weak_ptr<Square> getMovingSquare() const;
+     void setMovingSquare(const Point &leftBottom, const graphics::Brush &brush, const Brush &type) const;
      void resetMovingSquare();
-     void checkmate(PawnColor winner);
+     void checkmate(const PawnColor &winner);
      void checkForCheckmate(const std::shared_ptr<Pawn> &threat);
-     std::shared_ptr<King> getKing(PawnColor color) const;
+     std::weak_ptr<King> getKing(const PawnColor &color) const;
+     void setPawnMoving(bool pawn_moving);
    };
    
    #endif// CHECKBOARD_H

@@ -29,6 +29,8 @@ Includes
 --------
 
 
+- ``InGameMenu.h`` (:ref:`file_src_graphics_graphics_InGameMenu.h`)
+
 - ``Screen.h`` (:ref:`file_src_graphics_graphics_MenuScreen.h`)
 
 - ``game/Game.h`` (:ref:`file_src_game_game_Game.h`)
@@ -46,6 +48,8 @@ Includes
 Included By
 -----------
 
+
+- :ref:`file_src_App.cpp`
 
 - :ref:`file_src_game_src_Pawn.cpp`
 

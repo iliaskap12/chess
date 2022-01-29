@@ -70,11 +70,7 @@
   <section id="program-listing-for-file-app-h">
 <span id="program-listing-file-src-app-h"></span><h1>Program Listing for File App.h<a class="headerlink" href="#program-listing-for-file-app-h" title="Permalink to this headline"></a></h1>
 <p>↰ <a class="reference internal" href="file_src_App.h.html#file-src-app-h"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/App.h</span></code>)</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">//</span>
-<span class="c1">// Created by ilias on 2/1/22.</span>
-<span class="c1">//</span>
-
-<span class="cp">#ifndef CHESS_APP_H</span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#ifndef CHESS_APP_H</span>
 <span class="cp">#define CHESS_APP_H</span>
 
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span><span class="cp"></span>
@@ -85,15 +81,15 @@
 
 <span class="k">class</span><span class="w"> </span><span class="nc">App</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Drawable</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Updateable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Screen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">activeScreen</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
-<span class="w">  </span><span class="n">Game</span><span class="w"> </span><span class="o">*</span><span class="n">game_</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Game</span><span class="o">&gt;</span><span class="w"> </span><span class="n">game_</span><span class="p">{};</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">input</span><span class="p">{};</span><span class="w"></span>
 
 <span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">  </span><span class="n">App</span><span class="p">();</span><span class="w"></span>
 <span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Screen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getScreen</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">changeScreen</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Screen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">screen</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">registerGame</span><span class="p">(</span><span class="n">Game</span><span class="o">*</span><span class="w"> </span><span class="n">game</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">Game</span><span class="w"> </span><span class="o">*</span><span class="n">getGame</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">changeScreen</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Screen</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">screen</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">registerGame</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Game</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">game</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">[[</span><span class="n">nodiscard</span><span class="p">]]</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Game</span><span class="o">&gt;</span><span class="w"> </span><span class="n">getGame</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">();</span><span class="w"></span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">draw</span><span class="p">()</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">ms</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>

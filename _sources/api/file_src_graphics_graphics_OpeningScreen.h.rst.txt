@@ -43,6 +43,8 @@ Included By
 
 - :ref:`file_src_App.h`
 
+- :ref:`file_src_graphics_src_InGameMenu.cpp`
+
 - :ref:`file_src_graphics_src_OpeningScreen.cpp`
 
 

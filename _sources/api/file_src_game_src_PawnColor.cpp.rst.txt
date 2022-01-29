@@ -40,6 +40,8 @@ Functions
 ---------
 
 
+- :ref:`exhale_function__pawn_color_8cpp_1abf40fec796feddeb98c6a1aa27963d46`
+
 - :ref:`exhale_function__pawn_color_8cpp_1a1535c4ed0687663633c368c8bf026d2c`
 
 - :ref:`exhale_function__pawn_color_8cpp_1ac696b8bf8176fd87edbb08d0c68d11d4`

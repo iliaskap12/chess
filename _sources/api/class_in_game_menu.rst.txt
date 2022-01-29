@@ -1,0 +1,25 @@
+.. _exhale_class_class_in_game_menu:
+
+Class InGameMenu
+================
+
+- Defined in :ref:`file_src_graphics_graphics_InGameMenu.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public Menu`` (:ref:`exhale_class_class_menu`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: InGameMenu
+   :members:
+   :protected-members:
+   :undoc-members:

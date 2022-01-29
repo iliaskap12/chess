@@ -65,6 +65,8 @@ Included By
 
 - :ref:`file_src_game_src_Square.cpp`
 
+- :ref:`file_src_graphics_src_InGameMenu.cpp`
+
 - :ref:`file_src_graphics_src_MainMenu.cpp`
 
 - :ref:`file_src_graphics_src_Rectangle.cpp`

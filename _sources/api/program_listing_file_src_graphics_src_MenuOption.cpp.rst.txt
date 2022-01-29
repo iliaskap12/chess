@@ -15,11 +15,11 @@ Program Listing for File MenuOption.cpp
    
    MenuOption::MenuOption(HUD hud) : optionHUD(std::move(hud)) {
      const auto [buttonX, buttonY] { this->optionHUD.getCoordinates() };
-     const std::size_t size { this->optionHUD.getSize() };
-     const float length { this->optionHUD.getLength() * 1.25f * static_cast<float>(size) / 2};
+     const std::size_t size{this->optionHUD.getSize()};
+     const float length{(this->optionHUD.getLength() * static_cast<float>(size) / 2) + 200.0f};
      this->button.setHeight(static_cast<float>(size) * 1.5f);
      this->button.setWidth(length);
-     this->button.setLeftBottom(Point(buttonX * 0.925f, buttonY * 1.075f));
+     this->button.setLeftBottom(Point(buttonX - 50.0f, buttonY + (static_cast<float>(size) / 2)));
      this->button.setBrush(Brush::DARK_BROWN, Rectangle::colors.at(Brush::DARK_BROWN));
    }
    

@@ -1,7 +1,8 @@
 <map id="HUD::setTextBrush" name="HUD::setTextBrush">
-<area shape="rect" id="node1" title=" " alt="" coords="448,56,585,83"/>
+<area shape="rect" id="node1" title=" " alt="" coords="448,81,585,108"/>
 <area shape="rect" id="node2" href="$d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302" title=" " alt="" coords="204,5,400,32"/>
-<area shape="rect" id="node4" href="$d5/d4d/classPawnCount.html#a9e233480c807cf6eb2955aee7d84c24c" title=" " alt="" coords="219,56,385,83"/>
-<area shape="rect" id="node5" href="$de/d14/classTurnIndicator.html#adbe3df045465df502833a7faf9c6991e" title=" " alt="" coords="211,107,393,133"/>
+<area shape="rect" id="node4" href="$d7/d96/classInGameMenu.html#a695a5a607cfaa25b5d632c12578d482d" title=" " alt="" coords="209,56,395,83"/>
+<area shape="rect" id="node5" href="$d5/d4d/classPawnCount.html#a9e233480c807cf6eb2955aee7d84c24c" title=" " alt="" coords="219,107,385,133"/>
+<area shape="rect" id="node6" href="$de/d14/classTurnIndicator.html#adbe3df045465df502833a7faf9c6991e" title=" " alt="" coords="211,157,393,184"/>
 <area shape="rect" id="node3" href="$d9/d0a/classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf" title=" " alt="" coords="5,5,156,32"/>
 </map>

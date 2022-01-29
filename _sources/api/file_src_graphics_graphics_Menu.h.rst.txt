@@ -45,6 +45,8 @@ Included By
 -----------
 
 
+- :ref:`file_src_graphics_graphics_InGameMenu.h`
+
 - :ref:`file_src_graphics_graphics_MainMenu.h`
 
 - :ref:`file_src_graphics_src_Menu.cpp`

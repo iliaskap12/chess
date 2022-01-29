@@ -1,8 +1,0 @@
-<map id="Queen::getBlockedPawn" name="Queen::getBlockedPawn">
-<area shape="rect" id="node1" title=" " alt="" coords="5,107,172,133"/>
-<area shape="rect" id="node2" href="$de/dff/classPawn.html#aa8b652277db0c52e930b5e50718da96b" title=" " alt="" coords="220,5,375,32"/>
-<area shape="rect" id="node3" href="$de/dff/classPawn.html#a1d20441a964b5c43ec27a0bafcda56dd" title=" " alt="" coords="241,56,353,83"/>
-<area shape="rect" id="node4" href="$d3/d72/classSquare.html#ab40f208fe44bfac6d38c000ae30baacb" title=" " alt="" coords="230,107,365,133"/>
-<area shape="rect" id="node5" href="$d3/d72/classSquare.html#af4307f89fb7470caf2c74171cc165dce" title=" " alt="" coords="239,157,355,184"/>
-<area shape="rect" id="node6" href="$de/dff/classPawn.html#aeb5d6f6e869e8b9c08e43d27670aef6e" title=" " alt="" coords="236,208,359,235"/>
-</map>

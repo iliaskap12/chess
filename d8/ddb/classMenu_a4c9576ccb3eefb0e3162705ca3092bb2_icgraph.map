@@ -1,5 +1,7 @@
 <map id="Menu::getMenuOptions" name="Menu::getMenuOptions">
-<area shape="rect" id="node1" title=" " alt="" coords="183,43,340,69"/>
-<area shape="rect" id="node2" href="$d9/d0a/classMainMenu.html#a54ec1eed16b49cac99d640feab93e119" title=" " alt="" coords="11,5,129,32"/>
-<area shape="rect" id="node3" href="$d9/d0a/classMainMenu.html#ac262fa9d82962d065076cc5a0bff96c9" title=" " alt="" coords="5,80,135,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="200,93,357,120"/>
+<area shape="rect" id="node2" href="$d7/d96/classInGameMenu.html#aaa9aa57c988578e9e7e8713e13c2d1b0" title=" " alt="" coords="11,5,147,32"/>
+<area shape="rect" id="node3" href="$d9/d0a/classMainMenu.html#a54ec1eed16b49cac99d640feab93e119" title=" " alt="" coords="19,56,138,83"/>
+<area shape="rect" id="node4" href="$d7/d96/classInGameMenu.html#a550b3bb0a46fe35b0c01d29e2a53a486" title=" " alt="" coords="5,131,152,157"/>
+<area shape="rect" id="node5" href="$d9/d0a/classMainMenu.html#ac262fa9d82962d065076cc5a0bff96c9" title=" " alt="" coords="14,205,143,232"/>
 </map>

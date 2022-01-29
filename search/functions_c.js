@@ -10,6 +10,6 @@ var searchData=
   ['playsound_7',['playSound',['../dd/d2c/classMenuOption.html#a38cde89eaf3f07eae44b799cd422a026',1,'MenuOption']]],
   ['point_8',['Point',['../dc/d4f/classPoint.html#ad92f2337b839a94ce97dcdb439b4325a',1,'Point::Point()'],['../dc/d4f/classPoint.html#a30bc8409287de4f43e160664be834636',1,'Point::Point(float x, float y)']]],
   ['populatebrushes_9',['populateBrushes',['../de/d00/classRectangle.html#a246d6e2cea953c600af4ed1d2259e9e1',1,'Rectangle']]],
-  ['pressbutton_10',['pressButton',['../d9/d0a/classMainMenu.html#aac4f4adfa7e69473adfd5a4976c52d4b',1,'MainMenu::pressButton()'],['../d8/ddb/classMenu.html#a8bde03da554249da4b2aa8b9bcb31f9e',1,'Menu::pressButton()']]],
+  ['pressbutton_10',['pressButton',['../d7/d96/classInGameMenu.html#ad81f0f8e9c2616e0191499facf4fe151',1,'InGameMenu::pressButton()'],['../d9/d0a/classMainMenu.html#aac4f4adfa7e69473adfd5a4976c52d4b',1,'MainMenu::pressButton()'],['../d8/ddb/classMenu.html#a8bde03da554249da4b2aa8b9bcb31f9e',1,'Menu::pressButton()']]],
   ['progress_11',['progress',['../de/d14/classTurnIndicator.html#a91316f336b8adaa469f46fdeb99abb31',1,'TurnIndicator']]]
 ];

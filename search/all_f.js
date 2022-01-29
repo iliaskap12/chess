@@ -4,7 +4,7 @@ var searchData=
   ['rectangle_2ecpp_1',['Rectangle.cpp',['../d5/dfd/Rectangle_8cpp.html',1,'']]],
   ['rectangle_2eh_2',['Rectangle.h',['../dc/d04/Rectangle_8h.html',1,'']]],
   ['red_3',['RED',['../dc/d90/Brush_8h.html#a62c1007e36a924771f8294ff9f0ac5d0aa2d9547b5d3dd9f05984475f7c926da0',1,'Brush.h']]],
-  ['registergame_4',['registerGame',['../dd/d64/classApp.html#a2155097882b9b682f9c5ce9345a0f230',1,'App']]],
+  ['registergame_4',['registerGame',['../dd/d64/classApp.html#a2a0d1658260440e1de82f30ede566d9c',1,'App']]],
   ['registerpawn_5',['registerPawn',['../d3/d72/classSquare.html#a2db5e4c2cece65ed55829d7953367b46',1,'Square']]],
   ['registerplayers_6',['registerPlayers',['../d9/d68/classGame.html#a8249d8c379b65f4e4e58c3977c9a7f88',1,'Game']]],
   ['resetblockedpawns_7',['resetBlockedPawns',['../d7/d22/classCheckboard.html#a9925dab5f1a892b7231c9407c8d1288b',1,'Checkboard']]],
@@ -16,10 +16,12 @@ var searchData=
   ['resignsound_2ecpp_13',['ResignSound.cpp',['../d7/d6c/ResignSound_8cpp.html',1,'']]],
   ['resignsound_2eh_14',['ResignSound.h',['../de/d40/ResignSound_8h.html',1,'']]],
   ['rightbottom_15',['rightBottom',['../de/d00/classRectangle.html#a3927e594dd832e199dfc25c162413d68',1,'Rectangle']]],
-  ['righttop_16',['rightTop',['../de/d00/classRectangle.html#a7c2d9d16764b685fb50193d0b7209302',1,'Rectangle']]],
-  ['rook_17',['Rook',['../db/d7e/classRook.html',1,'Rook'],['../db/d7e/classRook.html#a4bebceacb3a729c274964b00285d186d',1,'Rook::Rook()']]],
-  ['rook_2ecpp_18',['Rook.cpp',['../d5/d25/Rook_8cpp.html',1,'']]],
-  ['rook_2eh_19',['Rook.h',['../d0/d64/Rook_8h.html',1,'']]],
-  ['row_5f_20',['row_',['../d3/d72/classSquare.html#a3faa071aa56a3ce35f74becd45bdbe68',1,'Square']]],
-  ['run_21',['run',['../dd/d64/classApp.html#ae09dc71078b64c56c673b1ad1d25b5d1',1,'App']]]
+  ['rightrookcastling_16',['rightRookCastling',['../d7/d22/classCheckboard.html#ac587dcf9a3484fa6b1f0b61ef9cb2e7f',1,'Checkboard']]],
+  ['rightrookhasmoved_17',['rightRookHasMoved',['../d1/db5/classKing.html#a78ae3f328adc626e2814de5d8a654140',1,'King']]],
+  ['righttop_18',['rightTop',['../de/d00/classRectangle.html#a7c2d9d16764b685fb50193d0b7209302',1,'Rectangle']]],
+  ['rook_19',['Rook',['../db/d7e/classRook.html',1,'Rook'],['../db/d7e/classRook.html#a4bebceacb3a729c274964b00285d186d',1,'Rook::Rook()']]],
+  ['rook_2ecpp_20',['Rook.cpp',['../d5/d25/Rook_8cpp.html',1,'']]],
+  ['rook_2eh_21',['Rook.h',['../d0/d64/Rook_8h.html',1,'']]],
+  ['row_5f_22',['row_',['../d3/d72/classSquare.html#a3faa071aa56a3ce35f74becd45bdbe68',1,'Square']]],
+  ['run_23',['run',['../dd/d64/classApp.html#ae09dc71078b64c56c673b1ad1d25b5d1',1,'App']]]
 ];

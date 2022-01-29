@@ -33,6 +33,8 @@ Includes
 
 - ``functional``
 
+- ``graphics/PlayingScreen.h`` (:ref:`file_src_graphics_graphics_PlayingScreen.h`)
+
 - ``util/paths.h`` (:ref:`file_src_util_util_paths.h`)
 
 
