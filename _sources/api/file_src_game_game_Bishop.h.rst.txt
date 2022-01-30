@@ -41,8 +41,6 @@ Included By
 
 - :ref:`file_src_game_src_Checkboard.cpp`
 
-- :ref:`file_src_game_src_Soldier.cpp`
-
 - :ref:`file_src_graphics_src_PlayingScreen.cpp`
 
 

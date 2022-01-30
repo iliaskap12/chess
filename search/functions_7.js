@@ -6,7 +6,8 @@ var searchData=
   ['initiatepromotion_3',['initiatePromotion',['../d9/dbe/classSoldier.html#abb00d9291930e29b2fbcd09500b4bc09',1,'Soldier']]],
   ['isblocked_4',['isBlocked',['../de/dff/classPawn.html#a0038ef05d7611d840132ae7f449ae528',1,'Pawn']]],
   ['ischecked_5',['isChecked',['../d9/d68/classGame.html#ab2cd7d32e2a30c25b68478504bec6537',1,'Game::isChecked()'],['../d1/db5/classKing.html#ab8c3aa3bc1db243298949efaefbc80fd',1,'King::isChecked()']]],
-  ['isking_6',['isKing',['../d7/d22/classCheckboard.html#aa66c11405434946189e38bfce8efb845',1,'Checkboard']]],
-  ['ispawnmoving_7',['isPawnMoving',['../d7/d22/classCheckboard.html#a19ba55bf294034c8b7054e7c896140cc',1,'Checkboard']]],
-  ['iswhiteturn_8',['isWhiteTurn',['../d9/d68/classGame.html#a4f9e673f75017c3f18bda708cd399080',1,'Game']]]
+  ['isenpassant_6',['isEnPassant',['../d9/dbe/classSoldier.html#a1d727bb0cde097e91d4dd6fecefa3c5c',1,'Soldier']]],
+  ['isking_7',['isKing',['../d7/d22/classCheckboard.html#aa66c11405434946189e38bfce8efb845',1,'Checkboard']]],
+  ['ispawnmoving_8',['isPawnMoving',['../d7/d22/classCheckboard.html#a19ba55bf294034c8b7054e7c896140cc',1,'Checkboard']]],
+  ['iswhiteturn_9',['isWhiteTurn',['../d9/d68/classGame.html#a4f9e673f75017c3f18bda708cd399080',1,'Game']]]
 ];

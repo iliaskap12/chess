@@ -79,6 +79,7 @@
 
 <span class="k">class</span><span class="w"> </span><span class="nc">Soldier</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Pawn</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Promotable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Pawn</span><span class="o">&gt;</span><span class="w"> </span><span class="n">selectedPawn</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">enPassant</span><span class="p">{</span><span class="nb">false</span><span class="p">};</span><span class="w"></span>
 
 <span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">Soldier</span><span class="p">(</span><span class="n">PawnColor</span><span class="w"> </span><span class="n">color</span><span class="p">);</span><span class="w"></span>
@@ -88,6 +89,9 @@
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">ms</span><span class="p">)</span><span class="w"> </span><span class="k">override</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">initiatePromotion</span><span class="p">();</span><span class="w"></span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPromotion</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Pawn</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pawn</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="nf">setEnPassant</span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="n">en_passant</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="nf">isEnPassant</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">addEnPassant</span><span class="p">();</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 
 <span class="cp">#endif </span><span class="c1">// SOLDIER_H</span>

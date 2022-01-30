@@ -33,13 +33,7 @@ Includes
 
 - ``algorithm``
 
-- ``game/Bishop.h`` (:ref:`file_src_game_game_Bishop.h`)
-
 - ``game/Knight.h`` (:ref:`file_src_game_game_Knight.h`)
-
-- ``game/Queen.h`` (:ref:`file_src_game_game_Queen.h`)
-
-- ``game/Rook.h`` (:ref:`file_src_game_game_Rook.h`)
 
 - ``game/Soldier.h`` (:ref:`file_src_game_game_Soldier.h`)
 
