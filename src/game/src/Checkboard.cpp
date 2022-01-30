@@ -63,7 +63,7 @@ std::weak_ptr<Squares> Checkboard::getSquares() const {
 }
 
 void Checkboard::draw() {
-  this->drawingArea.draw();
+  this->drawingArea->draw();
   for (const auto &row: *this->squares) {
     for (auto &square: row) {
       square->draw();
@@ -128,12 +128,13 @@ void Checkboard::update(float ms) {
   graphics::MouseState mouse{graphics::MouseState()};
   graphics::getMouseState(mouse);
 
-  this->setReferenceCounts();
-  this->setBlockedPawns();
 
   if (this->pawnMoving && mouse.button_left_pressed) {
     return;
   }
+
+  this->setReferenceCounts();
+  this->setBlockedPawns();
 
   for (const auto &row: *this->squares) {
     for (auto &square: row) {
@@ -141,11 +142,11 @@ void Checkboard::update(float ms) {
     }
   }
 
-  if (this->movingSquare_ != nullptr) {
+  if (!this->pawnMoving && this->movingSquare_ != nullptr) {
     this->movingSquare_->update(ms);
   }
 
-  if (mouse.button_left_pressed && !this->drawingArea.clicked()) {
+  if (mouse.button_left_pressed && !this->drawingArea->clicked()) {
     this->markedSquares.clear();
     this->markedPawn.reset();
     this->selectedPawn.reset();
@@ -305,7 +306,7 @@ void Checkboard::setMovingSquare(const Point &leftBottom, const graphics::Brush 
 }
 
 void Checkboard::resetMovingSquare() {
-  this->movingSquare_ = {nullptr};
+  this->movingSquare_.reset();
   this->movingSquare_ = {std::make_shared<Square>(10, 10)};
 }
 
@@ -539,4 +540,8 @@ void Checkboard::setPawnMoving(bool pawn_moving) {
     }
     game.lock()->setWhiteTurn(!game.lock()->isWhiteTurn());
   }
+}
+
+bool Checkboard::isPawnMoving() const {
+  return this->pawnMoving;
 }

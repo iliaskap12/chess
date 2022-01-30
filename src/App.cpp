@@ -39,7 +39,8 @@ void App::update(float ms) {
 }
 
 void App::changeScreen(const std::shared_ptr<Screen> &screen) {
-  this->activeScreen = {nullptr};
+  this->activeScreen->cleanup();
+  this->activeScreen.reset();
   this->game_.reset();
   this->activeScreen = {screen};
 }
@@ -49,7 +50,7 @@ void App::registerGame(const std::shared_ptr<Game> &game) {
 }
 
 std::weak_ptr<Game> App::getGame() const {
-  if (this->game_.lock() == nullptr) {
+  if (this->game_ == nullptr) {
     if (const auto playingScreen{std::dynamic_pointer_cast<PlayingScreen>(this->activeScreen)}; nullptr != playingScreen) {
       return playingScreen->getGame();
     }

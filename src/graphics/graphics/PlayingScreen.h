@@ -8,6 +8,7 @@
 #include <hud/TurnIndicator.h>
 #include <hud/CheckIndicator.h>
 #include "InGameMenu.h"
+#include <game/Soldier.h>
 
 class PlayingScreen : public Screen {
   static constexpr unsigned short int numberOfUniquePawns{6};
@@ -22,7 +23,11 @@ class PlayingScreen : public Screen {
   std::shared_ptr<TurnIndicator> turn{nullptr};
   std::shared_ptr<EndgameIndicator> endgame{nullptr};
   std::shared_ptr<CheckIndicator> check{nullptr};
-  std::unique_ptr<Menu> gameMenu = std::make_unique<InGameMenu>();
+  std::unique_ptr<Menu> gameMenu{std::make_unique<InGameMenu>()};
+  std::shared_ptr<std::array<std::shared_ptr<Square>, static_cast<std::size_t>(4)>> choices{std::make_shared<std::array<std::shared_ptr<Square>, static_cast<std::size_t>(4)>>()};
+  bool promotion{false};
+  std::weak_ptr<Soldier> promotionPawn_{std::weak_ptr<Soldier>()};
+  bool stopUpdating{false};
 
 public:
   PlayingScreen();
@@ -33,7 +38,11 @@ public:
   void updatePawnCount(float ms, PawnColor color);
   void displayCheckmate(float ms);
   void displayCheck(float ms);
-  const std::shared_ptr<Game> &getGame() const;
+  [[nodiscard]] const std::shared_ptr<Game> &getGame() const;
+  void setPromotion(const std::shared_ptr<Soldier> &promotionPawn);
+  void destroyChoices();
+  void drawPromotionChoices();
+  void cleanup() override;
 };
 
 #endif // PLAYINGSCREEN_H

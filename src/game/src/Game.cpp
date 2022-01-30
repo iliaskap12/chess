@@ -17,7 +17,7 @@ const Player &Game::getPlayer(PawnColor side) {
 
 bool Game::start() {
   App* app { static_cast<App*>(graphics::getUserData()) };
-  app->registerGame(std::make_shared<Game>(*this));
+  app->registerGame(this->shared_from_this());
 
   return true;
 }

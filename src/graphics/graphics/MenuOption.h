@@ -6,14 +6,14 @@
 #include "Rectangle.h"
 
 class MenuOption {
-  HUD optionHUD;
-  Rectangle button;
+  std::shared_ptr<HUD> optionHUD;
+  std::shared_ptr<Rectangle> button{std::make_shared<Rectangle>()};
   ClickSound clickSound{ClickSound()};
 
 public:
-  explicit MenuOption(HUD hud);
-  [[nodiscard]] HUD getMessage() const;
-  [[nodiscard]] Rectangle getButton() const;
+  explicit MenuOption(const HUD &hud);
+  [[nodiscard]] std::weak_ptr<HUD> getMessage() const;
+  [[nodiscard]] std::weak_ptr<Rectangle> getButton() const;
   void playSound() const;
 };
 

@@ -16,21 +16,21 @@ InGameMenu::InGameMenu() {
 
 void InGameMenu::draw() {
   for (const auto &[type, option]: Menu::getMenuOptions()) {
-    option.getMessage().draw();
-    option.getButton().draw();
+    option.getMessage().lock()->draw();
+    option.getButton().lock()->draw();
   }
 }
 
 void InGameMenu::update(float ms) {
-  std::ranges::for_each(this->getMenuOptions().begin(), this->getMenuOptions().end(), [&ms](const auto &pair) {
-    pair.second.getMessage().update(ms);
-    pair.second.getButton().update(ms);
-    if (pair.second.getButton().clicked()) {
+  std::for_each(this->getMenuOptions().begin(), this->getMenuOptions().end(), [&ms](const auto &pair) {
+    pair.second.getMessage().lock()->update(ms);
+    pair.second.getButton().lock()->update(ms);
+    if (pair.second.getButton().lock()->clicked()) {
       pair.second.playSound();
     }
   });
 
-  if (Menu::getMenuOption(ButtonType::QUIT).getButton().clicked()) {
+  if (Menu::getMenuOption(ButtonType::QUIT).getButton().lock()->clicked()) {
     this->pressButton(ButtonType::QUIT);
   }
 }
@@ -38,6 +38,8 @@ void InGameMenu::update(float ms) {
 void InGameMenu::pressButton(const ButtonType &type) const {
   if (type == ButtonType::QUIT) {
     App *app{static_cast<App *>(graphics::getUserData())};
-    app->changeScreen(std::make_shared<OpeningScreen>());
+    if (!app->getGame().expired() && app->getGame().lock()->getCheckboard() != nullptr && !app->getGame().lock()->getCheckboard()->isPawnMoving()) {
+      app->changeScreen(std::make_shared<OpeningScreen>());
+    }
   }
 }

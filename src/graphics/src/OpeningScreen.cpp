@@ -10,13 +10,22 @@ OpeningScreen::OpeningScreen() {
 }
 
 void OpeningScreen::draw() {
-  graphics::setWindowBackground(Rectangle::colors.at(Brush::LIGHT_BROWN));
+  if (!this->stopUpdating) {
+    graphics::setWindowBackground(Rectangle::colors.at(Brush::LIGHT_BROWN));
 
-  this->mainMenu->draw();
-  this->welcomeMessage->draw();
+    this->mainMenu->draw();
+    this->welcomeMessage->draw();
+  }
 }
 
 void OpeningScreen::update(float ms) {
-  this->mainMenu->update(ms);
+  if (!this->stopUpdating) {
+    this->mainMenu->update(ms);
+  }
 }
 
+void OpeningScreen::cleanup() {
+  this->mainMenu.reset();
+  this->welcomeMessage.reset();
+  this->stopUpdating = {true};
+}

@@ -14,7 +14,7 @@ class HUD : public Drawable, public Updateable {
   std::string message{};
   std::pair<float, float> coordinates{};
   std::size_t size{};
-  Rectangle drawingArea{Rectangle()};
+  std::shared_ptr<Rectangle> drawingArea{std::make_shared<Rectangle>()};
   std::pair<bool, std::optional<std::string>> newMessage{std::make_pair(false, std::optional<std::string>())};
 
 public:

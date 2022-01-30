@@ -3,7 +3,6 @@
 
 #include <string>
 #include <filesystem>
-#include <iostream>
 
 namespace paths {
   std::string getProjectRootPath();

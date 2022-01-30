@@ -99,7 +99,7 @@ void Rectangle::setCenter(const Point &center) {
 
 void Rectangle::draw() {
   if (const auto &game{static_cast<App *>(graphics::getUserData())->getGame()}; !game.expired()) {
-    if (game.lock()->getCheckboard() != nullptr && (game.lock()->getCheckboard()->amISelected(std::make_shared<Rectangle>(*this)) || game.lock()->getCheckboard()->amIinDanger(std::make_shared<Rectangle>(*this)))) {
+    if (game.lock()->getCheckboard() != nullptr && (game.lock()->getCheckboard()->amISelected(this->shared_from_this()) || game.lock()->getCheckboard()->amIinDanger(this->shared_from_this()))) {
       this->selected = {true};
     } else {
       this->selected = {false};
@@ -119,7 +119,7 @@ void Rectangle::draw() {
 
 void Rectangle::update(float ms) {
   if (const auto &game{static_cast<App *>(graphics::getUserData())->getGame()}; !game.expired()) {
-    if (game.lock()->getCheckboard() != nullptr && game.lock()->getCheckboard()->shouldMark(std::make_shared<Rectangle>(*this))) {
+    if (game.lock()->getCheckboard() != nullptr && game.lock()->getCheckboard()->shouldMark(this->shared_from_this())) {
       if (!this->swapped) {
         this->swapBrushes();
       }

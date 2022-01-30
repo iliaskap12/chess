@@ -1,6 +1,11 @@
 #include <game/Soldier.h>
+#include <game/Knight.h>
+#include <game/Rook.h>
+#include <game/Queen.h>
+#include <game/Bishop.h>
 #include <App.h>
 #include <algorithm>
+#include <graphics/PlayingScreen.h>
 
 Soldier::Soldier(PawnColor color) : Pawn(color) {
   Pawn::setTexture("soldier");
@@ -72,4 +77,29 @@ std::vector<std::pair<int, int>> Soldier::getHoldingSquares() {
   });
 
   return advanceableSquares;
+}
+
+void Soldier::promote() {
+  Pawn::getSquare().lock()->unregisterPawn();
+  Pawn::getSquare().lock()->registerPawn(this->selectedPawn);
+}
+
+void Soldier::update(float ms) {
+  Pawn::update(ms);
+  if (Pawn::getSquare().lock()->getRow() == 7 && Pawn::getColor() == PawnColor::WHITE) {
+    this->initiatePromotion();
+  }
+  if (Pawn::getSquare().lock()->getRow() == 0 && Pawn::getColor() == PawnColor::BLACK) {
+    this->initiatePromotion();
+  }
+}
+
+void Soldier::initiatePromotion() {
+  const auto playingScreen{std::static_pointer_cast<PlayingScreen>(static_cast<App *>(graphics::getUserData())->getScreen())};
+  playingScreen->getGame()->getCheckboard()->setPawnMoving(true);
+  playingScreen->setPromotion(std::dynamic_pointer_cast<Soldier>(this->shared_from_this()));
+}
+
+void Soldier::setPromotion(std::shared_ptr<Pawn> pawn) {
+  this->selectedPawn = {pawn};
 }

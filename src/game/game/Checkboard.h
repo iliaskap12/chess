@@ -24,7 +24,7 @@ private:
   std::weak_ptr<Pawn> markedPawn{std::weak_ptr<Pawn>()};
   std::shared_ptr<Square> movingSquare_{std::make_shared<Square>(10, 10)};
   std::weak_ptr<Rectangle> selectedPawn{std::weak_ptr<Rectangle>()};
-  Rectangle drawingArea{Rectangle(Point(1000, 1550), 1200, 1200, Rectangle::colors.at(Brush::CHECKBOARD), Brush::CHECKBOARD)};
+  std::shared_ptr<Rectangle> drawingArea{std::make_shared<Rectangle>(Point(1000, 1550), 1200, 1200, Rectangle::colors.at(Brush::CHECKBOARD), Brush::CHECKBOARD)};
   std::optional<long> whiteKingId{std::optional<long>()};
   std::optional<long> blackKingId{std::optional<long>()};
   std::weak_ptr<Pawn> whiteKing{std::weak_ptr<Pawn>()};
@@ -70,6 +70,7 @@ public:
   void checkForCheckmate(const std::shared_ptr<Pawn> &threat);
   std::weak_ptr<King> getKing(const PawnColor &color) const;
   void setPawnMoving(bool pawn_moving);
+  bool isPawnMoving() const;
 };
 
 #endif// CHECKBOARD_H

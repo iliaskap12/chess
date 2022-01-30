@@ -2,7 +2,6 @@
 #include <graphics/MainMenu.h>
 #include <graphics/PlayingScreen.h>
 #include <utility>
-#include <iostream>
 #include <algorithm>
 
 MainMenu::MainMenu() {
@@ -11,21 +10,21 @@ MainMenu::MainMenu() {
 
 void MainMenu::draw() {
   for (const auto& [type, option] : Menu::getMenuOptions()) {
-    option.getMessage().draw();
-    option.getButton().draw();
+    option.getMessage().lock()->draw();
+    option.getButton().lock()->draw();
   }
 }
 
 void MainMenu::update(float ms) {
-  std::ranges::for_each(this->getMenuOptions().begin(), this->getMenuOptions().end(), [&ms](const auto &pair) {
-    pair.second.getMessage().update(ms);
-    pair.second.getButton().update(ms);
-    if (pair.second.getButton().clicked()) {
+  std::for_each(this->getMenuOptions().begin(), this->getMenuOptions().end(), [&ms](const auto &pair) {
+    pair.second.getMessage().lock()->update(ms);
+    pair.second.getButton().lock()->update(ms);
+    if (pair.second.getButton().lock()->clicked()) {
       pair.second.playSound();
     }
   });
 
-  if (Menu::getMenuOption(ButtonType::PLAY).getButton().clicked()) {
+  if (Menu::getMenuOption(ButtonType::PLAY).getButton().lock()->clicked()) {
     this->pressButton(ButtonType::PLAY);
   }
 }

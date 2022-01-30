@@ -8,7 +8,7 @@
 #include <graphics/Updateable.h>
 #include "Checkboard.h"
 
-class Game : public Drawable, public Updateable {
+class Game : public Drawable, public Updateable, public std::enable_shared_from_this<Game> {
 private:
   std::optional<std::pair<Player, Player>> players;
   std::shared_ptr<Checkboard> checkboard{std::make_shared<Checkboard>()};

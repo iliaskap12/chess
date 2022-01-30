@@ -7,10 +7,11 @@
 #include "Brush.h"
 #include <sgg/graphics.h>
 #include <chrono>
+#include <memory>
 
-class Rectangle : public Drawable, public Updateable {
+class Rectangle : public Drawable, public Updateable, public std::enable_shared_from_this<Rectangle> {
 public:
-  inline static std::unordered_map<Brush, graphics::Brush> colors { std::unordered_map<Brush, graphics::Brush>() };
+  inline static std::unordered_map<Brush, graphics::Brush> colors{std::unordered_map<Brush, graphics::Brush>()};
 
 private:
   Point leftTop;

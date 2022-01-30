@@ -12,6 +12,8 @@ public:
   Screen();
   void draw() override = 0;
   void update(float ms) override = 0;
+  virtual void cleanup() = 0;
+  virtual ~Screen() = default;
 };
 
 #endif // SCREEN_H
