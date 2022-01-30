@@ -70,6 +70,7 @@ public:
   void block();
   void unblock();
   void blockedBy(const std::shared_ptr<Pawn> &blocking);
+  void playCaptureSound();
 };
 
 #endif // PAWN_H

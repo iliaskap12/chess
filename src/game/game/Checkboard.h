@@ -31,6 +31,7 @@ private:
   std::weak_ptr<Pawn> blackKing{std::weak_ptr<Pawn>()};
   std::weak_ptr<Pawn> whiteKingThreat{std::weak_ptr<Pawn>()};
   std::weak_ptr<Pawn> blackKingThreat{std::weak_ptr<Pawn>()};
+  std::weak_ptr<Pawn> enPassantCapture{std::weak_ptr<Pawn>()};
   bool castling{false};
   bool leftRookCastling{false};
   bool rightRookCastling{false};
@@ -50,7 +51,7 @@ public:
   void setReferenceCounts();
   void setBlockedPawns() const;
   void resetBlockedPawns() const;
-  void tryMoveBlockedPawn(const std::shared_ptr<Square> &square);
+  void tryMoveBlockedPawn(const std::shared_ptr<Square> &square, std::vector<std::shared_ptr<Square>> &squaresVec);
   void secureTheKing(const std::shared_ptr<Square> &square);
   std::vector<std::shared_ptr<Square>> tryBlockCheck(const std::pair<int, int> &pair, const std::shared_ptr<Pawn> &king, const std::shared_ptr<Pawn> &kingThreat);
 

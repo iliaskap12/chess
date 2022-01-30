@@ -187,9 +187,13 @@ void Pawn::unblock() {
 }
 
 void Pawn::blockedBy(const std::shared_ptr<Pawn> &blocking) {
-  this->blockingPawn = { blocking };
+  this->blockingPawn = {blocking};
 }
 
 std::weak_ptr<Pawn> Pawn::getBlockingPawn() {
   return this->blockingPawn;
+}
+
+void Pawn::playCaptureSound() {
+  this->captureSound.play();
 }

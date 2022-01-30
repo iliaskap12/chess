@@ -1,8 +1,5 @@
 #include <game/Soldier.h>
 #include <game/Knight.h>
-#include <game/Rook.h>
-#include <game/Queen.h>
-#include <game/Bishop.h>
 #include <App.h>
 #include <algorithm>
 #include <graphics/PlayingScreen.h>
@@ -53,6 +50,12 @@ std::vector<std::pair<int, int>> Soldier::getAdvanceableSquares() {
     return false;
   });
 
+  const auto enPassantMove{this->addEnPassant()};
+
+  if (enPassantMove.first != 0) {
+    advanceableSquares.push_back(enPassantMove);
+  }
+
   return advanceableSquares;
 }
 
@@ -102,4 +105,41 @@ void Soldier::initiatePromotion() {
 
 void Soldier::setPromotion(std::shared_ptr<Pawn> pawn) {
   this->selectedPawn = {pawn};
+}
+
+void Soldier::setEnPassant(bool en_passant) {
+  this->enPassant = {en_passant};
+}
+
+std::pair<int, int> Soldier::addEnPassant() {
+  // left && right square
+  const auto checkboard{static_cast<App *>(graphics::getUserData())->getGame().lock()->getCheckboard()};
+  const int nextRow{Pawn::getColor() == PawnColor::WHITE ? 1 : -1};
+  if (Pawn::getSquare().lock()->getColumn() != 0) {
+    // left
+    const auto nextPawn{std::make_pair(Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() - 1)};
+    const bool hasPawn{checkboard->getSquare(nextPawn).lock()->hasPawn()};
+    if (hasPawn && (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn()))) {
+      if (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn())->isEnPassant()) {
+        return std::make_pair(nextRow + Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() - 1);
+      }
+    }
+  }
+
+  if (Pawn::getSquare().lock()->getColumn() != 7) {
+    // right
+    const auto nextPawn{std::make_pair(Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() + 1)};
+    const bool hasPawn{checkboard->getSquare(nextPawn).lock()->hasPawn()};
+    if (hasPawn && (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn()))) {
+      if (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn())->isEnPassant()) {
+        return std::make_pair(nextRow + Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() + 1);
+      }
+    }
+  }
+
+  return std::pair<int, int>(0, 0);
+}
+
+bool Soldier::isEnPassant() const {
+  return this->enPassant;
 }

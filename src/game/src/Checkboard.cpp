@@ -225,7 +225,7 @@ bool Checkboard::markSquares(const std::shared_ptr<Square> &square) {
     }
 
     if (square->getPawn()->isBlocked()) {
-      this->tryMoveBlockedPawn(square);
+      this->tryMoveBlockedPawn(square, this->markedSquares);
       if (this->markedSquares.empty()) {
         this->markedPawn.reset();
         this->selectedPawn.reset();
@@ -283,6 +283,44 @@ void Checkboard::movePawn(const std::shared_ptr<Square> &square) {
       this->rightRookCastling = {6 == square->getColumn()};
       if (this->leftRookCastling || this->rightRookCastling) {
         this->castling = {true};
+      }
+    }
+
+    if (const auto soldier{std::dynamic_pointer_cast<Soldier>(this->markedPawn.lock())}; nullptr != soldier) {
+      bool firstMove{2 == std::abs(square->getRow() - soldier->getSquare().lock()->getRow())};
+      if (firstMove) {
+        soldier->setEnPassant(true);
+      } else {
+        soldier->setEnPassant(false);
+      }
+    }
+
+    // soldier != markedPawn, if en passant, set en passant = false
+    for (const auto &row: *this->squares) {
+      for (auto &soldierSquare: row) {
+        if (*soldierSquare == *this->markedPawn.lock()->getSquare().lock()) {
+          continue;
+        }
+
+        if (soldierSquare->hasPawn()) {
+          const auto soldier{std::dynamic_pointer_cast<Soldier>(soldierSquare->getPawn())};
+          const int currectRow{this->markedPawn.lock()->getSquare().lock()->getRow()};
+          const int currectColumn{this->markedPawn.lock()->getSquare().lock()->getColumn()};
+
+          const int soldierDirection{square->getColumn() - currectColumn};
+          //          const auto enPassantSquare { this->getSquare(std::make_pair(currectRow, currectColumn > 0 ? 1 : -1)) };
+          // next squares
+
+          if ((soldier != nullptr) && (soldier->isEnPassant())) {
+            const auto sameRow{std::abs(soldier->getSquare().lock()->getRow() - currectRow) == 0};
+            const auto nextColumn{std::abs(soldierDirection) == 1};
+            const auto diagonalMove{(soldier->getSquare().lock()->getColumn() - square->getColumn()) == 0};
+            if ((std::dynamic_pointer_cast<Soldier>(this->markedPawn.lock()) != nullptr) && (sameRow && nextColumn && diagonalMove)) {
+              this->enPassantCapture = {soldier};
+            }
+            soldier->setEnPassant(false);
+          }
+        }
       }
     }
 
@@ -360,9 +398,9 @@ bool Checkboard::isKing(const PawnColor &color, const std::pair<int, int> &coord
   return *this->blackKing.lock()->getSquare().lock() == *this->getSquare(coordinates).lock();
 }
 
-void Checkboard::tryMoveBlockedPawn(const std::shared_ptr<Square> &square) {
-  auto advanceableSquares{this->markedPawn.lock()->getAdvanceableSquares()};
-  auto king{this->markedPawn.lock()->getColor() == PawnColor::WHITE ? this->whiteKing : this->blackKing};
+void Checkboard::tryMoveBlockedPawn(const std::shared_ptr<Square> &square, std::vector<std::shared_ptr<Square>> &squaresVec) {
+  auto advanceableSquares{square->getPawn()->getAdvanceableSquares()};
+  auto king{square->getPawn()->getColor() == PawnColor::WHITE ? this->whiteKing : this->blackKing};
 
   const int kingsRow{king.lock()->getSquare().lock()->getRow()};
   const int kingsColumn{king.lock()->getSquare().lock()->getColumn()};
@@ -374,6 +412,7 @@ void Checkboard::tryMoveBlockedPawn(const std::shared_ptr<Square> &square) {
   std::ranges::for_each(advanceableSquares,
                         [&square,
                          this,
+                         &squaresVec,
                          &kingsRow,
                          &kingsColumn,
                          &blockingPawnRow,
@@ -387,9 +426,9 @@ void Checkboard::tryMoveBlockedPawn(const std::shared_ptr<Square> &square) {
                           const bool canCapture{*square->getPawn()->getBlockingPawn().lock()->getSquare().lock() == *this->getSquare(pair).lock()};
 
                           if (canCapture) {
-                            this->markedSquares.push_back(std::make_shared<Square>(*this->markedPawn.lock()->getBlockingPawn().lock()->getSquare().lock()));
+                            squaresVec.push_back(std::make_shared<Square>(*square->getPawn()->getBlockingPawn().lock()->getSquare().lock()));
                           } else if (sameRow || sameColumn || sameUpwardsDiagonal || sameDownwardsDiagonal) {
-                            this->markedSquares.push_back(this->getSquare(pair).lock());
+                            squaresVec.push_back(this->getSquare(pair).lock());
                           }
                         });
 }
@@ -404,10 +443,13 @@ void Checkboard::secureTheKing(const std::shared_ptr<Square> &square) {
     });
   } else {
     auto advanceableSquares{square->getPawn()->getAdvanceableSquares()};
-    std::ranges::for_each(advanceableSquares, [this, &kingThreat, &king](const std::pair<int, int> &pair) {
+    std::ranges::for_each(advanceableSquares, [&square, this, &kingThreat, &king](const std::pair<int, int> &pair) {
       if (*kingThreat.lock()->getSquare().lock() == *this->getSquare(pair).lock()) {
         this->markedSquares.push_back(this->getSquare(pair).lock());
       } else {
+        if (square->getPawn()->isBlocked()) {
+          return;
+        }
         std::ranges::for_each(this->tryBlockCheck(pair, king, kingThreat.lock()), [this](const std::shared_ptr<Square> step) {
           this->markedSquares.push_back(step);
         });
@@ -490,7 +532,12 @@ void Checkboard::checkForCheckmate(const std::shared_ptr<Pawn> &threat) {
       }
       auto availableSquares{std::vector<std::shared_ptr<Square>>()};
       auto advanceableSquares{square->getPawn()->getAdvanceableSquares()};
-      std::ranges::for_each(advanceableSquares, [this, &threat, &king, &availableSquares](const std::pair<int, int> &pair) {
+
+      if (square->getPawn()->isBlocked()) {
+        continue;
+      }
+
+      std::ranges::for_each(advanceableSquares, [&square, this, &threat, &king, &availableSquares](const std::pair<int, int> &pair) {
         if (*threat->getSquare().lock() == *this->getSquare(pair).lock()) {
           availableSquares.push_back(this->getSquare(pair).lock());
         } else {
@@ -519,6 +566,12 @@ std::weak_ptr<King> Checkboard::getKing(const PawnColor &color) const {
 
 void Checkboard::setPawnMoving(bool pawn_moving) {
   this->pawnMoving = pawn_moving;
+  if (!this->enPassantCapture.expired()) {
+    this->enPassantCapture.lock()->playCaptureSound();
+    this->enPassantCapture.lock()->getSquare().lock()->unregisterPawn();
+    this->enPassantCapture.reset();
+  }
+
   auto game{static_cast<App *>(graphics::getUserData())->getGame()};
   if (this->castling) {
     this->castling = {false};
