@@ -1,14 +1,15 @@
 <map id="Pawn::getColor" name="Pawn::getColor">
-<area shape="rect" id="node1" title=" " alt="" coords="724,205,836,232"/>
-<area shape="rect" id="node2" href="$d1/db5/classKing.html#a71ef5d1e118b2f02a605634482aca8b1" title=" " alt="" coords="289,281,379,308"/>
-<area shape="rect" id="node4" href="$d9/dbe/classSoldier.html#ac24f5d7c8f0f5078c40c213c57df90e3" title=" " alt="" coords="465,53,676,80"/>
-<area shape="rect" id="node5" href="$de/dff/classPawn.html#a962b686adfeb638d802ea5756173d138" title=" " alt="" coords="469,104,673,131"/>
-<area shape="rect" id="node6" href="$de/dfb/classBishop.html#a7e76d4bf74f941eebe33f79b55da0a22" title=" " alt="" coords="487,155,655,181"/>
-<area shape="rect" id="node7" href="$d5/d3f/classQueen.html#ac2ac82cea00008539f66a339ce45daad" title=" " alt="" coords="487,205,654,232"/>
-<area shape="rect" id="node8" href="$db/d7e/classRook.html#a139f698b7076f5bb11024ff4124736b7" title=" " alt="" coords="491,256,650,283"/>
-<area shape="rect" id="node9" href="$d1/db5/classKing.html#a59dc08cd9d88fe15998f59e255fd8fd8" title=" " alt="" coords="497,357,645,384"/>
-<area shape="rect" id="node11" href="$d1/db5/classKing.html#ab8c3aa3bc1db243298949efaefbc80fd" title=" " alt="" coords="511,307,630,333"/>
-<area shape="rect" id="node12" href="$de/dff/classPawn.html#ad4ce04a2cbdf08cc76f3694136e7c19c" title=" " alt="" coords="509,408,632,435"/>
-<area shape="rect" id="node3" href="$d1/db5/classKing.html#ad1b4127f0cf0f27c8dd285c2a2a44198" title=" " alt="" coords="5,307,203,333"/>
-<area shape="rect" id="node10" href="$d1/db5/classKing.html#ac87d4c206214d1f7a3cc11983417674c" title=" " alt="" coords="251,383,417,409"/>
+<area shape="rect" id="node1" title=" " alt="" coords="724,231,836,258"/>
+<area shape="rect" id="node2" href="$d1/db5/classKing.html#a71ef5d1e118b2f02a605634482aca8b1" title=" " alt="" coords="289,282,379,309"/>
+<area shape="rect" id="node4" href="$d9/dbe/classSoldier.html#ac24f5d7c8f0f5078c40c213c57df90e3" title=" " alt="" coords="465,54,676,81"/>
+<area shape="rect" id="node5" href="$de/dff/classPawn.html#a962b686adfeb638d802ea5756173d138" title=" " alt="" coords="469,105,673,131"/>
+<area shape="rect" id="node6" href="$de/dfb/classBishop.html#a7e76d4bf74f941eebe33f79b55da0a22" title=" " alt="" coords="487,155,655,182"/>
+<area shape="rect" id="node7" href="$d5/d3f/classQueen.html#ac2ac82cea00008539f66a339ce45daad" title=" " alt="" coords="487,206,654,233"/>
+<area shape="rect" id="node8" href="$db/d7e/classRook.html#a139f698b7076f5bb11024ff4124736b7" title=" " alt="" coords="491,257,650,283"/>
+<area shape="rect" id="node9" href="$d1/db5/classKing.html#a59dc08cd9d88fe15998f59e255fd8fd8" title=" " alt="" coords="497,358,645,385"/>
+<area shape="rect" id="node11" href="$d1/db5/classKing.html#ab8c3aa3bc1db243298949efaefbc80fd" title=" " alt="" coords="511,307,630,334"/>
+<area shape="rect" id="node12" href="$de/dff/classPawn.html#ad4ce04a2cbdf08cc76f3694136e7c19c" title=" " alt="" coords="509,409,632,435"/>
+<area shape="rect" id="node13" href="$d9/dbe/classSoldier.html#a8cb1f3550024cefec263bc8351c55ce8" title=" " alt="" coords="516,459,625,486"/>
+<area shape="rect" id="node3" href="$d1/db5/classKing.html#ad1b4127f0cf0f27c8dd285c2a2a44198" title=" " alt="" coords="5,307,203,334"/>
+<area shape="rect" id="node10" href="$d1/db5/classKing.html#ac87d4c206214d1f7a3cc11983417674c" title=" " alt="" coords="251,383,417,410"/>
 </map>

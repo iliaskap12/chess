@@ -1,16 +1,9 @@
 <map id="Point::getX" name="Point::getX">
-<area shape="rect" id="node1" title=" " alt="" coords="621,132,708,159"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264" title=" " alt="" coords="409,5,539,32"/>
-<area shape="rect" id="node4" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="415,56,533,83"/>
-<area shape="rect" id="node7" href="$d7/df6/classPlayingScreen.html#a286b0871189219a59e30ece3947c347f" title=" " alt="" coords="375,107,573,133"/>
-<area shape="rect" id="node8" href="$de/d00/classRectangle.html#a3dbdc43f4f0afd63efa52140392c2ccf" title=" " alt="" coords="400,157,548,184"/>
-<area shape="rect" id="node9" href="$de/d00/classRectangle.html#a79dfec3348ef91c3b1fd2417a7ecb00d" title=" " alt="" coords="401,208,547,235"/>
-<area shape="rect" id="node11" href="$de/d00/classRectangle.html#a7ac21b881b056fb32578c76df8fcb160" title=" " alt="" coords="389,259,559,285"/>
-<area shape="rect" id="node3" href="$de/dff/classPawn.html#ac89566858a41eb4d7ca2f1dee55faac6" title=" " alt="" coords="5,132,108,159"/>
-<area shape="rect" id="node5" href="$d7/d22/classCheckboard.html#aa051af06151ef320f81f6e748d0c5697" title=" " alt="" coords="177,56,305,83"/>
-<area shape="rect" id="node6" href="$de/dff/classPawn.html#acb0eaf180f4397c3d1f29864dece75ea" title=" " alt="" coords="196,107,287,133"/>
-<area shape="rect" id="node10" href="$d0/df0/classHUD.html#ad71e31d39ce667f7a7b0d4e6f473150e" title=" " alt="" coords="196,157,287,184"/>
-<area shape="rect" id="node12" href="$dd/d2c/classMenuOption.html#a61049566587943bb967f7a0eb3ab3f93" title=" " alt="" coords="156,208,327,235"/>
-<area shape="rect" id="node13" href="$de/dff/classPawn.html#a96f71005c77711d47025e0d517d09520" title=" " alt="" coords="194,259,289,285"/>
-<area shape="rect" id="node14" href="$de/dff/classPawn.html#ad4ce04a2cbdf08cc76f3694136e7c19c" title=" " alt="" coords="180,309,303,336"/>
+<area shape="rect" id="node1" title=" " alt="" coords="252,132,339,159"/>
+<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264" title=" " alt="" coords="39,5,170,32"/>
+<area shape="rect" id="node3" href="$de/d00/classRectangle.html#a8339715d8e96e6968e8c25977199271d" title=" " alt="" coords="46,56,163,83"/>
+<area shape="rect" id="node4" href="$d7/df6/classPlayingScreen.html#a286b0871189219a59e30ece3947c347f" title=" " alt="" coords="5,107,204,133"/>
+<area shape="rect" id="node5" href="$de/d00/classRectangle.html#a3dbdc43f4f0afd63efa52140392c2ccf" title=" " alt="" coords="31,157,179,184"/>
+<area shape="rect" id="node6" href="$de/d00/classRectangle.html#a79dfec3348ef91c3b1fd2417a7ecb00d" title=" " alt="" coords="31,208,178,235"/>
+<area shape="rect" id="node7" href="$de/d00/classRectangle.html#a7ac21b881b056fb32578c76df8fcb160" title=" " alt="" coords="19,259,190,285"/>
 </map>

@@ -1,0 +1,25 @@
+.. _exhale_class_class_promotable:
+
+Class Promotable
+================
+
+- Defined in :ref:`file_src_game_game_Promotable.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Type
+************
+
+- ``public Soldier`` (:ref:`exhale_class_class_soldier`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: Promotable
+   :members:
+   :protected-members:
+   :undoc-members:

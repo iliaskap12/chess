@@ -1,9 +1,9 @@
 <map id="HUD" name="HUD">
-<area shape="rect" id="node1" title=" " alt="" coords="293,175,479,575"/>
-<area shape="rect" id="node4" href="$dc/d91/classCheckIndicator.html" title=" " alt="" coords="5,667,175,803"/>
-<area shape="rect" id="node5" href="$d1/de3/classEndgameIndicator.html" title=" " alt="" coords="199,667,373,803"/>
-<area shape="rect" id="node6" href="$d5/d4d/classPawnCount.html" title=" " alt="" coords="398,681,577,788"/>
-<area shape="rect" id="node7" href="$de/d14/classTurnIndicator.html" title=" " alt="" coords="601,623,774,847"/>
+<area shape="rect" id="node1" title=" " alt="" coords="292,175,480,589"/>
+<area shape="rect" id="node4" href="$dc/d91/classCheckIndicator.html" title=" " alt="" coords="5,681,175,817"/>
+<area shape="rect" id="node5" href="$d1/de3/classEndgameIndicator.html" title=" " alt="" coords="199,681,373,817"/>
+<area shape="rect" id="node6" href="$d5/d4d/classPawnCount.html" title=" " alt="" coords="398,696,577,803"/>
+<area shape="rect" id="node7" href="$de/d14/classTurnIndicator.html" title=" " alt="" coords="601,637,774,861"/>
 <area shape="rect" id="node2" href="$de/db8/classDrawable.html" title=" " alt="" coords="223,13,375,119"/>
 <area shape="rect" id="node3" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="399,5,546,127"/>
 </map>

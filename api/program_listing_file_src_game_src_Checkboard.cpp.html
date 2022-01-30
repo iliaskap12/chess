@@ -135,7 +135,7 @@
 <span class="p">}</span><span class="w"></span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">Checkboard</span><span class="o">::</span><span class="n">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">drawingArea</span><span class="p">.</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">drawingArea</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">row</span><span class="o">:</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">squares</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">square</span><span class="o">:</span><span class="w"> </span><span class="n">row</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="n">square</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
@@ -200,12 +200,13 @@
 <span class="w">  </span><span class="n">graphics</span><span class="o">::</span><span class="n">MouseState</span><span class="w"> </span><span class="n">mouse</span><span class="p">{</span><span class="n">graphics</span><span class="o">::</span><span class="n">MouseState</span><span class="p">()};</span><span class="w"></span>
 <span class="w">  </span><span class="n">graphics</span><span class="o">::</span><span class="n">getMouseState</span><span class="p">(</span><span class="n">mouse</span><span class="p">);</span><span class="w"></span>
 
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">setReferenceCounts</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">setBlockedPawns</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pawnMoving</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">mouse</span><span class="p">.</span><span class="n">button_left_pressed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">setReferenceCounts</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">setBlockedPawns</span><span class="p">();</span><span class="w"></span>
 
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">row</span><span class="o">:</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">squares</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="o">&amp;</span><span class="n">square</span><span class="o">:</span><span class="w"> </span><span class="n">row</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -213,11 +214,11 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">movingSquare_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pawnMoving</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">movingSquare_</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">movingSquare_</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span><span class="n">ms</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mouse</span><span class="p">.</span><span class="n">button_left_pressed</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">drawingArea</span><span class="p">.</span><span class="n">clicked</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">mouse</span><span class="p">.</span><span class="n">button_left_pressed</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">drawingArea</span><span class="o">-&gt;</span><span class="n">clicked</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">markedSquares</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">markedPawn</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
 <span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">selectedPawn</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
@@ -377,7 +378,7 @@
 <span class="p">}</span><span class="w"></span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">Checkboard</span><span class="o">::</span><span class="n">resetMovingSquare</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">movingSquare_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">movingSquare_</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
 <span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">movingSquare_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">std</span><span class="o">::</span><span class="n">make_shared</span><span class="o">&lt;</span><span class="n">Square</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)};</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
@@ -611,6 +612,10 @@
 <span class="w">    </span><span class="p">}</span><span class="w"></span>
 <span class="w">    </span><span class="n">game</span><span class="p">.</span><span class="n">lock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">setWhiteTurn</span><span class="p">(</span><span class="o">!</span><span class="n">game</span><span class="p">.</span><span class="n">lock</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">isWhiteTurn</span><span class="p">());</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">Checkboard</span><span class="o">::</span><span class="n">isPawnMoving</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">pawnMoving</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>

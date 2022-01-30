@@ -35,6 +35,8 @@ Includes
 
 - ``game/Game.h`` (:ref:`file_src_game_game_Game.h`)
 
+- ``game/Soldier.h`` (:ref:`file_src_game_game_Soldier.h`)
+
 - ``hud/CheckIndicator.h`` (:ref:`file_src_hud_hud_CheckIndicator.h`)
 
 - ``hud/EndgameIndicator.h`` (:ref:`file_src_hud_hud_EndgameIndicator.h`)
@@ -52,6 +54,8 @@ Included By
 - :ref:`file_src_App.cpp`
 
 - :ref:`file_src_game_src_Pawn.cpp`
+
+- :ref:`file_src_game_src_Soldier.cpp`
 
 - :ref:`file_src_graphics_src_MainMenu.cpp`
 

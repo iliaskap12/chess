@@ -10,8 +10,9 @@ var searchData=
   ['checkindicator_7',['CheckIndicator',['../dc/d91/classCheckIndicator.html#aaf57f5704f526406b3daf3ae11fb871f',1,'CheckIndicator']]],
   ['checkmate_8',['checkmate',['../d7/d22/classCheckboard.html#a7fb99bf0c263b8e02d2f45a0319abb61',1,'Checkboard']]],
   ['checksound_9',['CheckSound',['../d3/d3c/classCheckSound.html#a39a40a59682b4fe4239966888cda197c',1,'CheckSound']]],
-  ['clicked_10',['clicked',['../de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264',1,'Rectangle']]],
-  ['clicksound_11',['ClickSound',['../df/dc4/classClickSound.html#a7468bdc869104fc5f520f08f56c8fe2b',1,'ClickSound']]],
-  ['correctdirection_12',['correctDirection',['../de/dff/classPawn.html#aa8b652277db0c52e930b5e50718da96b',1,'Pawn']]],
-  ['createmenuoption_13',['createMenuOption',['../d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302',1,'MainMenu']]]
+  ['cleanup_10',['cleanup',['../d1/d9f/classOpeningScreen.html#a15dafc9c90f3838ac5104644f00273cb',1,'OpeningScreen::cleanup()'],['../d7/df6/classPlayingScreen.html#a7551188fe340c2a893df40b0f61fc228',1,'PlayingScreen::cleanup()'],['../df/dc5/classScreen.html#a68625d134befb8caf603889a3c237249',1,'Screen::cleanup()']]],
+  ['clicked_11',['clicked',['../de/d00/classRectangle.html#a0027f561c0ca4dfd6180ee3395532264',1,'Rectangle']]],
+  ['clicksound_12',['ClickSound',['../df/dc4/classClickSound.html#a7468bdc869104fc5f520f08f56c8fe2b',1,'ClickSound']]],
+  ['correctdirection_13',['correctDirection',['../de/dff/classPawn.html#aa8b652277db0c52e930b5e50718da96b',1,'Pawn']]],
+  ['createmenuoption_14',['createMenuOption',['../d9/d0a/classMainMenu.html#a06f72f049c7a2ed6b2e35866e7b84302',1,'MainMenu']]]
 ];

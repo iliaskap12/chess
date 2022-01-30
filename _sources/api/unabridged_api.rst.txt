@@ -158,6 +158,11 @@ Classes and Structs
 .. toctree::
    :maxdepth: 5
 
+   class_promotable.rst
+
+.. toctree::
+   :maxdepth: 5
+
    class_queen.rst
 
 .. toctree::

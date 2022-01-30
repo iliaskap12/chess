@@ -18,18 +18,18 @@ Program Listing for File King.cpp
    
    King::King(PawnColor color) : Pawn(color) {
      Pawn::setTexture("king");
-     this->steps.push_back(std::make_pair<int, int>(1, 1));
-     this->steps.push_back(std::make_pair<int, int>(-1, 1));
-     this->steps.push_back(std::make_pair<int, int>(1, -1));
-     this->steps.push_back(std::make_pair<int, int>(-1, -1));
-     this->steps.push_back(std::make_pair<int, int>(1, 0));
-     this->steps.push_back(std::make_pair<int, int>(-1, 0));
-     this->steps.push_back(std::make_pair<int, int>(0, 1));
-     this->steps.push_back(std::make_pair<int, int>(0, -1));
+     this->steps_.push_back(std::make_pair<int, int>(1, 1));
+     this->steps_.push_back(std::make_pair<int, int>(-1, 1));
+     this->steps_.push_back(std::make_pair<int, int>(1, -1));
+     this->steps_.push_back(std::make_pair<int, int>(-1, -1));
+     this->steps_.push_back(std::make_pair<int, int>(1, 0));
+     this->steps_.push_back(std::make_pair<int, int>(-1, 0));
+     this->steps_.push_back(std::make_pair<int, int>(0, 1));
+     this->steps_.push_back(std::make_pair<int, int>(0, -1));
    }
    
    std::vector<std::pair<int, int>> King::getAdvanceableSquares() {
-     auto squares{Pawn::getAdvanceableSquares(this->steps, King::maxSteps, false)};
+     auto squares{Pawn::getAdvanceableSquares(this->steps_, King::maxSteps_, false)};
      auto kingSquares{this->getKingSquares(squares)};
      auto castlingSquares{this->castle()};
      kingSquares.insert(kingSquares.end(), castlingSquares.begin(), castlingSquares.end());
@@ -38,20 +38,21 @@ Program Listing for File King.cpp
    }
    
    std::vector<std::pair<int, int>> King::getHoldingSquares() {
-     auto squares { Pawn::getAdvanceableSquares(this->steps, King::maxSteps, true) };
+     auto squares{Pawn::getAdvanceableSquares(this->steps_, King::maxSteps_, true)};
    
      return this->getKingSquares(squares);
    }
    
    std::vector<std::pair<int, int>> King::getKingSquares(std::vector<std::pair<int, int>> &pairs) const {
-     std::erase_if(pairs, [this](const std::pair<int, int> &pair) {
-       return static_cast<App *>(graphics::getUserData())
-                  ->getGame()
-                  .lock()
-                  ->getCheckboard()
-                  ->getSquare(pair)
-                  .lock()
-                  ->getDangerReferenceCount(!Pawn::getColor()) > 0;
+     auto checkboard{static_cast<App *>(graphics::getUserData())->getGame().lock()->getCheckboard()};
+     std::erase_if(pairs, [this, &checkboard](const std::pair<int, int> &pair) {
+       return checkboard->getSquare(pair).lock()->getDangerReferenceCount(!Pawn::getColor()) > 0;
+     });
+   
+     auto enemyKing{checkboard->getKing(!Pawn::getColor())};
+     auto enemyKingHoldingSquares{enemyKing.lock()->getAdvanceableSquares(this->steps_, King::maxSteps_, true)};
+     std::erase_if(pairs, [&enemyKingHoldingSquares](const std::pair<int, int> &pair) {
+       return std::ranges::find(enemyKingHoldingSquares, pair) != enemyKingHoldingSquares.end();
      });
    
      return pairs;
@@ -121,4 +122,8 @@ Program Listing for File King.cpp
    
    bool King::moved() const {
      return this->hasMoved;
+   }
+   
+   std::vector<std::pair<int, int>> King::getAdvanceableSquares(const std::vector<std::pair<int, int>> &steps, unsigned short maxSteps, bool holding) const {
+     return Pawn::getAdvanceableSquares(steps, maxSteps, holding);
    }

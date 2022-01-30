@@ -21,7 +21,7 @@ Program Listing for File App.h
    
    class App : public Drawable, public Updateable {
      std::shared_ptr<Screen> activeScreen{nullptr};
-     std::weak_ptr<Game> game_{};
+     std::shared_ptr<Game> game_{nullptr};
      std::string input{};
    
    public:

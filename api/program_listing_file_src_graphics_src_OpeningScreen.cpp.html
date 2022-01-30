@@ -82,14 +82,24 @@
 <span class="p">}</span><span class="w"></span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">OpeningScreen</span><span class="o">::</span><span class="n">draw</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">graphics</span><span class="o">::</span><span class="n">setWindowBackground</span><span class="p">(</span><span class="n">Rectangle</span><span class="o">::</span><span class="n">colors</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">Brush</span><span class="o">::</span><span class="n">LIGHT_BROWN</span><span class="p">));</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">stopUpdating</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">graphics</span><span class="o">::</span><span class="n">setWindowBackground</span><span class="p">(</span><span class="n">Rectangle</span><span class="o">::</span><span class="n">colors</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">Brush</span><span class="o">::</span><span class="n">LIGHT_BROWN</span><span class="p">));</span><span class="w"></span>
 
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mainMenu</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">welcomeMessage</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mainMenu</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">welcomeMessage</span><span class="o">-&gt;</span><span class="n">draw</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 
 <span class="kt">void</span><span class="w"> </span><span class="n">OpeningScreen</span><span class="o">::</span><span class="n">update</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">ms</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mainMenu</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span><span class="n">ms</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">stopUpdating</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mainMenu</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span><span class="n">ms</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="n">OpeningScreen</span><span class="o">::</span><span class="n">cleanup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">mainMenu</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">welcomeMessage</span><span class="p">.</span><span class="n">reset</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">stopUpdating</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">};</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>

@@ -33,6 +33,8 @@ Includes
 
 - ``PawnColor.h`` (:ref:`file_src_game_game_PawnColor.h`)
 
+- ``Promotable.h`` (:ref:`file_src_game_game_Promotable.h`)
+
 
 
 Included By
@@ -42,6 +44,8 @@ Included By
 - :ref:`file_src_game_src_Checkboard.cpp`
 
 - :ref:`file_src_game_src_Soldier.cpp`
+
+- :ref:`file_src_graphics_graphics_PlayingScreen.h`
 
 
 

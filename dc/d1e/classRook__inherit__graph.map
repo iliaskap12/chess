@@ -1,6 +1,6 @@
 <map id="Rook" name="Rook">
-<area shape="rect" id="node1" title=" " alt="" coords="240,1356,448,1653"/>
-<area shape="rect" id="node2" href="$de/dff/classPawn.html" title=" " alt="" coords="234,189,454,1308"/>
+<area shape="rect" id="node1" title=" " alt="" coords="240,1371,448,1668"/>
+<area shape="rect" id="node2" href="$de/dff/classPawn.html" title=" " alt="" coords="234,189,454,1323"/>
 <area shape="rect" id="node3" href="$de/db8/classDrawable.html" title=" " alt="" coords="5,20,157,127"/>
 <area shape="rect" id="node4" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="181,13,328,134"/>
 <area shape="rect" id="node5" href="$da/dfc/classMovable.html" title=" " alt="" coords="352,5,515,141"/>

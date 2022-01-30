@@ -1,5 +1,6 @@
 <map id="Pawn::capture" name="Pawn::capture">
-<area shape="rect" id="node1" title=" " alt="" coords="299,5,405,32"/>
-<area shape="rect" id="node2" href="$de/dff/classPawn.html#a96f71005c77711d47025e0d517d09520" title=" " alt="" coords="156,5,251,32"/>
-<area shape="rect" id="node3" href="$de/dff/classPawn.html#ac89566858a41eb4d7ca2f1dee55faac6" title=" " alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="456,5,563,32"/>
+<area shape="rect" id="node2" href="$de/dff/classPawn.html#a96f71005c77711d47025e0d517d09520" title=" " alt="" coords="313,5,408,32"/>
+<area shape="rect" id="node3" href="$de/dff/classPawn.html#ac89566858a41eb4d7ca2f1dee55faac6" title=" " alt="" coords="163,5,265,32"/>
+<area shape="rect" id="node4" href="$d9/dbe/classSoldier.html#a8cb1f3550024cefec263bc8351c55ce8" title=" " alt="" coords="5,5,115,32"/>
 </map>

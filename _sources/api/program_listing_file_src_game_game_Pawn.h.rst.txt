@@ -26,19 +26,22 @@ Program Listing for File Pawn.h
    
    class Square;// break cyclic dependency
    
-   class Pawn : public Drawable, public Updateable, public Movable, public std::enable_shared_from_this<Pawn> {
+   class Pawn : public Drawable,
+                public Updateable,
+                public Movable,
+                public std::enable_shared_from_this<Pawn> {
    
      using pair = std::pair<int, int>;
    
      PawnColor color;
-     std::weak_ptr<Square> square_{std::weak_ptr<Square>()};
-     std::weak_ptr<Square> movingSquare{std::weak_ptr<Square>()};
-     Rectangle drawingArea{Rectangle()};
+     std::shared_ptr<Square> square_{nullptr};
+     std::shared_ptr<Square> movingSquare{nullptr};
+     std::shared_ptr<Rectangle> drawingArea{std::make_shared<Rectangle>()};
      std::string texture_{};
      const std::string png{".png"};
      bool shouldMove{false};
      std::pair<float, float> moveSteps{};
-     std::weak_ptr<Square> destination_{std::weak_ptr<Square>()};
+     std::shared_ptr<Square> destination_{nullptr};
      std::shared_ptr<Pawn> self_{nullptr};
      bool blocked{false};
      std::weak_ptr<Pawn> blockingPawn{std::weak_ptr<Pawn>()};

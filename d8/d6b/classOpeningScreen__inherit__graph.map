@@ -1,6 +1,6 @@
 <map id="OpeningScreen" name="OpeningScreen">
-<area shape="rect" id="node1" title=" " alt="" coords="88,344,248,509"/>
-<area shape="rect" id="node2" href="$df/dc5/classScreen.html" title=" " alt="" coords="87,175,249,296"/>
+<area shape="rect" id="node1" title=" " alt="" coords="85,373,251,568"/>
+<area shape="rect" id="node2" href="$df/dc5/classScreen.html" title=" " alt="" coords="79,175,257,325"/>
 <area shape="rect" id="node3" href="$de/db8/classDrawable.html" title=" " alt="" coords="5,13,157,119"/>
 <area shape="rect" id="node4" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="181,5,328,127"/>
 </map>

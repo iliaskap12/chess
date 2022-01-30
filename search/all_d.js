@@ -4,7 +4,7 @@ var searchData=
   ['paths_1',['paths',['../d5/dc0/namespacepaths.html',1,'']]],
   ['paths_2ecpp_2',['paths.cpp',['../d5/d26/paths_8cpp.html',1,'']]],
   ['paths_2eh_3',['paths.h',['../dd/df2/paths_8h.html',1,'']]],
-  ['pawn_4',['Pawn',['../de/dff/classPawn.html#a9450b787fdac103e0691c5c50c6935b5',1,'Pawn::Pawn()'],['../de/dff/classPawn.html',1,'Pawn']]],
+  ['pawn_4',['Pawn',['../de/dff/classPawn.html',1,'Pawn'],['../de/dff/classPawn.html#a9450b787fdac103e0691c5c50c6935b5',1,'Pawn::Pawn()']]],
   ['pawn_2ecpp_5',['Pawn.cpp',['../d9/d55/Pawn_8cpp.html',1,'']]],
   ['pawn_2eh_6',['Pawn.h',['../db/d0a/Pawn_8h.html',1,'']]],
   ['pawn_5f_7',['pawn_',['../d3/d72/classSquare.html#ab3a678073b82a9a023b368369355095d',1,'Square']]],
@@ -23,7 +23,7 @@ var searchData=
   ['player_2ecpp_20',['Player.cpp',['../d5/d11/Player_8cpp.html',1,'']]],
   ['player_2eh_21',['Player.h',['../da/dbf/Player_8h.html',1,'']]],
   ['players_22',['players',['../d9/d68/classGame.html#a95b81be07dcdf723468300dc862f0762',1,'Game']]],
-  ['playingscreen_23',['PlayingScreen',['../d7/df6/classPlayingScreen.html#a286b0871189219a59e30ece3947c347f',1,'PlayingScreen::PlayingScreen()'],['../d7/df6/classPlayingScreen.html',1,'PlayingScreen']]],
+  ['playingscreen_23',['PlayingScreen',['../d7/df6/classPlayingScreen.html',1,'PlayingScreen'],['../d7/df6/classPlayingScreen.html#a286b0871189219a59e30ece3947c347f',1,'PlayingScreen::PlayingScreen()']]],
   ['playingscreen_2ecpp_24',['PlayingScreen.cpp',['../df/dfe/PlayingScreen_8cpp.html',1,'']]],
   ['playingscreen_2eh_25',['PlayingScreen.h',['../d9/d63/PlayingScreen_8h.html',1,'']]],
   ['playsound_26',['playSound',['../dd/d2c/classMenuOption.html#a38cde89eaf3f07eae44b799cd422a026',1,'MenuOption']]],
@@ -34,5 +34,9 @@ var searchData=
   ['populatebrushes_31',['populateBrushes',['../de/d00/classRectangle.html#a246d6e2cea953c600af4ed1d2259e9e1',1,'Rectangle']]],
   ['pressbutton_32',['pressButton',['../d7/d96/classInGameMenu.html#ad81f0f8e9c2616e0191499facf4fe151',1,'InGameMenu::pressButton()'],['../d9/d0a/classMainMenu.html#aac4f4adfa7e69473adfd5a4976c52d4b',1,'MainMenu::pressButton()'],['../d8/ddb/classMenu.html#a8bde03da554249da4b2aa8b9bcb31f9e',1,'Menu::pressButton()']]],
   ['progress_33',['progress',['../de/d14/classTurnIndicator.html#a91316f336b8adaa469f46fdeb99abb31',1,'TurnIndicator']]],
-  ['promotable_2eh_34',['Promotable.h',['../d4/d65/Promotable_8h.html',1,'']]]
+  ['promotable_34',['Promotable',['../de/d75/classPromotable.html#ae7f97d842866029dc21a41e226960ceb',1,'Promotable::Promotable()'],['../de/d75/classPromotable.html',1,'Promotable']]],
+  ['promotable_2eh_35',['Promotable.h',['../d4/d65/Promotable_8h.html',1,'']]],
+  ['promote_36',['promote',['../de/d75/classPromotable.html#a019cbeaa776a64b5cc838de12726cb63',1,'Promotable::promote()'],['../d9/dbe/classSoldier.html#ac43c7d8b2655788cd9d71ff3485cbedb',1,'Soldier::promote()']]],
+  ['promotion_37',['promotion',['../d7/df6/classPlayingScreen.html#a224444cbd5cc64b35e59f8c38936311f',1,'PlayingScreen']]],
+  ['promotionpawn_5f_38',['promotionPawn_',['../d7/df6/classPlayingScreen.html#ade7fa355ec727d4eb8f02c4d0fae854f',1,'PlayingScreen']]]
 ];

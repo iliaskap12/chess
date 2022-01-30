@@ -27,5 +27,18 @@ Definition (``src/game/game/Promotable.h``)
 
 
 
+Included By
+-----------
 
+
+- :ref:`file_src_game_game_Soldier.h`
+
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_class_promotable`
 

@@ -39,8 +39,6 @@ Includes
 
 - ``graphics/PlayingScreen.h`` (:ref:`file_src_graphics_graphics_PlayingScreen.h`)
 
-- ``ranges``
-
 - ``util/paths.h`` (:ref:`file_src_util_util_paths.h`)
 
 - ``utility``

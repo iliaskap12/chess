@@ -9,10 +9,11 @@ Class Soldier
 Inheritance Relationships
 -------------------------
 
-Base Type
-*********
+Base Types
+**********
 
 - ``public Pawn`` (:ref:`exhale_class_class_pawn`)
+- ``public Promotable`` (:ref:`exhale_class_class_promotable`)
 
 
 Class Documentation

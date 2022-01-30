@@ -1,12 +1,12 @@
 var searchData=
 [
   ['game_0',['Game',['../d9/d68/classGame.html#ad59df6562a58a614fda24622d3715b65',1,'Game']]],
-  ['getadvanceablesquares_1',['getAdvanceableSquares',['../de/dfb/classBishop.html#abe012f4d6d464e4ddef6fa3a9219a8dd',1,'Bishop::getAdvanceableSquares()'],['../d1/db5/classKing.html#ad1b4127f0cf0f27c8dd285c2a2a44198',1,'King::getAdvanceableSquares()'],['../d5/d23/classKnight.html#ab0a61681866a9c2abc3142e23e949494',1,'Knight::getAdvanceableSquares()'],['../de/dff/classPawn.html#a9f4a8080acbef499c72508682eba9dd6',1,'Pawn::getAdvanceableSquares()=0'],['../de/dff/classPawn.html#a962b686adfeb638d802ea5756173d138',1,'Pawn::getAdvanceableSquares(const std::vector&lt; pair &gt; &amp;steps, unsigned short int maxSteps, bool holding) const'],['../d5/d3f/classQueen.html#a0f7271be58d1b330adb16acfa96ed278',1,'Queen::getAdvanceableSquares()'],['../db/d7e/classRook.html#a7a1dea84fc9eadfe99665fe91dd09232',1,'Rook::getAdvanceableSquares()'],['../d9/dbe/classSoldier.html#ac24f5d7c8f0f5078c40c213c57df90e3',1,'Soldier::getAdvanceableSquares()']]],
+  ['getadvanceablesquares_1',['getAdvanceableSquares',['../de/dfb/classBishop.html#abe012f4d6d464e4ddef6fa3a9219a8dd',1,'Bishop::getAdvanceableSquares()'],['../d1/db5/classKing.html#ad1b4127f0cf0f27c8dd285c2a2a44198',1,'King::getAdvanceableSquares() override'],['../d1/db5/classKing.html#abc39a656775515a883bea8d661ba7ba7',1,'King::getAdvanceableSquares(const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;steps, unsigned short int maxSteps, bool holding) const override'],['../d5/d23/classKnight.html#ab0a61681866a9c2abc3142e23e949494',1,'Knight::getAdvanceableSquares()'],['../de/dff/classPawn.html#a9f4a8080acbef499c72508682eba9dd6',1,'Pawn::getAdvanceableSquares()=0'],['../de/dff/classPawn.html#a962b686adfeb638d802ea5756173d138',1,'Pawn::getAdvanceableSquares(const std::vector&lt; pair &gt; &amp;steps, unsigned short int maxSteps, bool holding) const'],['../d5/d3f/classQueen.html#a0f7271be58d1b330adb16acfa96ed278',1,'Queen::getAdvanceableSquares()'],['../db/d7e/classRook.html#a7a1dea84fc9eadfe99665fe91dd09232',1,'Rook::getAdvanceableSquares()'],['../d9/dbe/classSoldier.html#ac24f5d7c8f0f5078c40c213c57df90e3',1,'Soldier::getAdvanceableSquares()']]],
   ['getblockedpawn_2',['getBlockedPawn',['../de/dfb/classBishop.html#a7e76d4bf74f941eebe33f79b55da0a22',1,'Bishop::getBlockedPawn()'],['../de/dff/classPawn.html#a4f43e79929b2dd50dc27e189091e33eb',1,'Pawn::getBlockedPawn()'],['../d5/d3f/classQueen.html#ac2ac82cea00008539f66a339ce45daad',1,'Queen::getBlockedPawn()'],['../db/d7e/classRook.html#a139f698b7076f5bb11024ff4124736b7',1,'Rook::getBlockedPawn()']]],
   ['getblockingpawn_3',['getBlockingPawn',['../de/dff/classPawn.html#acd78c496dbe7307d19aed611c749df0e',1,'Pawn']]],
   ['getbrush_4',['getBrush',['../de/d00/classRectangle.html#aab6cf212cb0d8bd05a197420ca1a87ee',1,'Rectangle']]],
   ['getbrushtype_5',['getBrushType',['../de/d00/classRectangle.html#a5a33b93672044b12c1e9ce4db8c627ee',1,'Rectangle']]],
-  ['getbutton_6',['getButton',['../dd/d2c/classMenuOption.html#aa673cced02db1045e9cbfba025aee4a0',1,'MenuOption']]],
+  ['getbutton_6',['getButton',['../dd/d2c/classMenuOption.html#a66e3e3a5314280b9f7fa4755b2a3dd42',1,'MenuOption']]],
   ['getcenter_7',['getCenter',['../de/d00/classRectangle.html#ad47adce7f7926d3098b8f92e74dc05f6',1,'Rectangle']]],
   ['getcheckboard_8',['getCheckboard',['../d9/d68/classGame.html#a63c3d8ccb5ad2ca82f04078b3f289aad',1,'Game']]],
   ['getcolor_9',['getColor',['../de/dff/classPawn.html#a1d20441a964b5c43ec27a0bafcda56dd',1,'Pawn']]],
@@ -28,7 +28,7 @@ var searchData=
   ['getlength_25',['getLength',['../d0/df0/classHUD.html#a466a3d89d6771931af298d740bca740c',1,'HUD']]],
   ['getmenuoption_26',['getMenuOption',['../d8/ddb/classMenu.html#a336e49205d5d62443c6dd90c170a39f8',1,'Menu']]],
   ['getmenuoptions_27',['getMenuOptions',['../d8/ddb/classMenu.html#a4c9576ccb3eefb0e3162705ca3092bb2',1,'Menu']]],
-  ['getmessage_28',['getMessage',['../dd/d2c/classMenuOption.html#a7ee16144f6f71e57deb23e2bcceb8694',1,'MenuOption']]],
+  ['getmessage_28',['getMessage',['../dd/d2c/classMenuOption.html#a4e0a174e560f5ec6323b92c26544a774',1,'MenuOption']]],
   ['getmoved_29',['getMoved',['../db/d7e/classRook.html#aecc66c480206a9d41be73a1618eddc8f',1,'Rook']]],
   ['getmovingsquare_30',['getMovingSquare',['../d7/d22/classCheckboard.html#a1dd54b22f15bdb0f8f88f657e8f07cbe',1,'Checkboard']]],
   ['getpawn_31',['getPawn',['../d3/d72/classSquare.html#aaac1678853db13ff16f25a8fc4096294',1,'Square']]],

@@ -77,10 +77,11 @@
 </ul>
 <section id="inheritance-relationships">
 <h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
-<section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<section id="base-types">
+<h3>Base Types<a class="headerlink" href="#base-types" title="Permalink to this headline"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Pawn</span></code> (<a class="reference internal" href="class_pawn.html#exhale-class-class-pawn"><span class="std std-ref">Class Pawn</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Promotable</span></code> (<a class="reference internal" href="class_promotable.html#exhale-class-class-promotable"><span class="std std-ref">Class Promotable</span></a>)</p></li>
 </ul>
 </section>
 </section>
@@ -88,7 +89,7 @@
 <h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv47Soldier">
-<span id="_CPPv37Soldier"></span><span id="_CPPv27Soldier"></span><span id="Soldier"></span><span class="target" id="class_soldier"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Soldier</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="class_pawn.html#_CPPv44Pawn" title="Pawn"><span class="n"><span class="pre">Pawn</span></span></a><a class="headerlink" href="#_CPPv47Soldier" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv37Soldier"></span><span id="_CPPv27Soldier"></span><span id="Soldier"></span><span class="target" id="class_soldier"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Soldier</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="class_pawn.html#_CPPv44Pawn" title="Pawn"><span class="n"><span class="pre">Pawn</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="class_promotable.html#_CPPv410Promotable" title="Promotable"><span class="n"><span class="pre">Promotable</span></span></a><a class="headerlink" href="#_CPPv47Soldier" title="Permalink to this definition"></a><br /></dt>
 <dd><div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
@@ -104,6 +105,26 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7Soldier17getHoldingSquaresEv">
 <span id="_CPPv3N7Soldier17getHoldingSquaresEv"></span><span id="_CPPv2N7Soldier17getHoldingSquaresEv"></span><span id="Soldier::getHoldingSquares"></span><span class="target" id="class_soldier_1a6c2536ff3614233b70add2c0951436b9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHoldingSquares</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7Soldier17getHoldingSquaresEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Soldier7promoteEv">
+<span id="_CPPv3N7Soldier7promoteEv"></span><span id="_CPPv2N7Soldier7promoteEv"></span><span id="Soldier::promote"></span><span class="target" id="class_soldier_1ac43c7d8b2655788cd9d71ff3485cbedb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">promote</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7Soldier7promoteEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Soldier6updateEf">
+<span id="_CPPv3N7Soldier6updateEf"></span><span id="_CPPv2N7Soldier6updateEf"></span><span id="Soldier::update__float"></span><span class="target" id="class_soldier_1a8cb1f3550024cefec263bc8351c55ce8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ms</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7Soldier6updateEf" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Soldier17initiatePromotionEv">
+<span id="_CPPv3N7Soldier17initiatePromotionEv"></span><span id="_CPPv2N7Soldier17initiatePromotionEv"></span><span id="Soldier::initiatePromotion"></span><span class="target" id="class_soldier_1abb00d9291930e29b2fbcd09500b4bc09"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initiatePromotion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Soldier17initiatePromotionEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7Soldier12setPromotionENSt10shared_ptrI4PawnEE">
+<span id="_CPPv3N7Soldier12setPromotionENSt10shared_ptrI4PawnEE"></span><span id="_CPPv2N7Soldier12setPromotionENSt10shared_ptrI4PawnEE"></span><span id="Soldier::setPromotion__std::shared_ptr:Pawn:"></span><span class="target" id="class_soldier_1a1f4ce16f7b4c627dfb31a0e579319104"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPromotion</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="class_pawn.html#_CPPv44Pawn" title="Pawn"><span class="n"><span class="pre">Pawn</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pawn</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7Soldier12setPromotionENSt10shared_ptrI4PawnEE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>

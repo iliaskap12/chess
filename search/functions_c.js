@@ -11,5 +11,7 @@ var searchData=
   ['point_8',['Point',['../dc/d4f/classPoint.html#ad92f2337b839a94ce97dcdb439b4325a',1,'Point::Point()'],['../dc/d4f/classPoint.html#a30bc8409287de4f43e160664be834636',1,'Point::Point(float x, float y)']]],
   ['populatebrushes_9',['populateBrushes',['../de/d00/classRectangle.html#a246d6e2cea953c600af4ed1d2259e9e1',1,'Rectangle']]],
   ['pressbutton_10',['pressButton',['../d7/d96/classInGameMenu.html#ad81f0f8e9c2616e0191499facf4fe151',1,'InGameMenu::pressButton()'],['../d9/d0a/classMainMenu.html#aac4f4adfa7e69473adfd5a4976c52d4b',1,'MainMenu::pressButton()'],['../d8/ddb/classMenu.html#a8bde03da554249da4b2aa8b9bcb31f9e',1,'Menu::pressButton()']]],
-  ['progress_11',['progress',['../de/d14/classTurnIndicator.html#a91316f336b8adaa469f46fdeb99abb31',1,'TurnIndicator']]]
+  ['progress_11',['progress',['../de/d14/classTurnIndicator.html#a91316f336b8adaa469f46fdeb99abb31',1,'TurnIndicator']]],
+  ['promotable_12',['Promotable',['../de/d75/classPromotable.html#ae7f97d842866029dc21a41e226960ceb',1,'Promotable']]],
+  ['promote_13',['promote',['../de/d75/classPromotable.html#a019cbeaa776a64b5cc838de12726cb63',1,'Promotable::promote()'],['../d9/dbe/classSoldier.html#ac43c7d8b2655788cd9d71ff3485cbedb',1,'Soldier::promote()']]]
 ];

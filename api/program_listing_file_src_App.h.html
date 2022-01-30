@@ -81,7 +81,7 @@
 
 <span class="k">class</span><span class="w"> </span><span class="nc">App</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Drawable</span><span class="p">,</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Updateable</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Screen</span><span class="o">&gt;</span><span class="w"> </span><span class="n">activeScreen</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">weak_ptr</span><span class="o">&lt;</span><span class="n">Game</span><span class="o">&gt;</span><span class="w"> </span><span class="n">game_</span><span class="p">{};</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Game</span><span class="o">&gt;</span><span class="w"> </span><span class="n">game_</span><span class="p">{</span><span class="k">nullptr</span><span class="p">};</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">input</span><span class="p">{};</span><span class="w"></span>
 
 <span class="k">public</span><span class="o">:</span><span class="w"></span>

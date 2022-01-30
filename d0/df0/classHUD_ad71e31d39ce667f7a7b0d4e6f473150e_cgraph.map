@@ -1,7 +1,0 @@
-<map id="HUD::HUD" name="HUD::HUD">
-<area shape="rect" id="node1" title=" " alt="" coords="5,56,96,83"/>
-<area shape="rect" id="node2" href="$de/d00/classRectangle.html#a79dfec3348ef91c3b1fd2417a7ecb00d" title=" " alt="" coords="144,5,291,32"/>
-<area shape="rect" id="node4" href="$de/d00/classRectangle.html#abd898045fa9d76bf53726f7704eea159" title=" " alt="" coords="145,56,290,83"/>
-<area shape="rect" id="node5" href="$de/d00/classRectangle.html#a36c66d15140984949c70a29198b0195c" title=" " alt="" coords="147,107,288,133"/>
-<area shape="rect" id="node3" href="$dc/d4f/classPoint.html#a29c44ec7c7279e02629645a06cdaf7d5" title=" " alt="" coords="339,5,425,32"/>
-</map>

@@ -1,22 +1,25 @@
 <map id="TurnIndicator" name="TurnIndicator">
-<area shape="rect" id="node1" title=" " alt="" coords="1011,1689,1184,1855"/>
-<area shape="rect" id="node2" href="$d0/df0/classHUD.html" title=" " alt="" coords="1004,1343,1191,1640"/>
-<area shape="rect" id="node3" href="$de/db8/classDrawable.html" title=" " alt="" coords="1195,337,1347,443"/>
-<area shape="rect" id="node9" href="$de/d00/classRectangle.html" title=" " alt="" coords="638,587,846,1280"/>
-<area shape="rect" id="node4" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="143,329,290,451"/>
-<area shape="rect" id="node5" title=" " alt="" coords="1406,895,1486,972"/>
-<area shape="rect" id="node6" title=" " alt="" coords="1382,344,1509,436"/>
-<area shape="rect" id="node7" title=" " alt="" coords="1135,895,1260,972"/>
-<area shape="rect" id="node8" title=" " alt="" coords="1285,895,1342,972"/>
-<area shape="rect" id="node10" title=" " alt="" coords="566,344,744,436"/>
-<area shape="rect" id="node11" title=" " alt="" coords="763,153,819,230"/>
-<area shape="rect" id="node12" title=" " alt="" coords="455,153,511,230"/>
-<area shape="rect" id="node13" title=" " alt="" coords="545,145,682,237"/>
-<area shape="rect" id="node14" title=" " alt="" coords="558,5,597,83"/>
-<area shape="rect" id="node15" title=" " alt="" coords="630,5,669,83"/>
-<area shape="rect" id="node16" href="$dc/d4f/classPoint.html" title=" " alt="" coords="1012,315,1170,465"/>
-<area shape="rect" id="node17" title=" " alt="" coords="962,153,1009,230"/>
-<area shape="rect" id="node18" title=" " alt="" coords="72,351,118,429"/>
-<area shape="rect" id="node19" title=" " alt="" coords="314,351,425,429"/>
-<area shape="rect" id="node20" title=" " alt="" coords="148,887,306,979"/>
+<area shape="rect" id="node1" title=" " alt="" coords="375,1892,549,2057"/>
+<area shape="rect" id="node2" href="$d0/df0/classHUD.html" title=" " alt="" coords="689,1545,875,1843"/>
+<area shape="rect" id="node3" href="$de/db8/classDrawable.html" title=" " alt="" coords="1149,385,1301,491"/>
+<area shape="rect" id="node10" href="$de/d00/classRectangle.html" title=" " alt="" coords="655,635,863,1328"/>
+<area shape="rect" id="node4" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="1325,377,1471,499"/>
+<area shape="rect" id="node5" title=" " alt="" coords="583,1398,663,1475"/>
+<area shape="rect" id="node6" title=" " alt="" coords="504,935,631,1027"/>
+<area shape="rect" id="node7" title=" " alt="" coords="434,1398,559,1475"/>
+<area shape="rect" id="node8" title=" " alt="" coords="688,1398,745,1475"/>
+<area shape="rect" id="node9" title=" " alt="" coords="953,1398,1145,1475"/>
+<area shape="rect" id="node11" title=" " alt="" coords="76,392,243,484"/>
+<area shape="rect" id="node12" title=" " alt="" coords="519,392,698,484"/>
+<area shape="rect" id="node13" title=" " alt="" coords="678,153,734,230"/>
+<area shape="rect" id="node14" title=" " alt="" coords="349,153,405,230"/>
+<area shape="rect" id="node15" title=" " alt="" coords="504,145,641,237"/>
+<area shape="rect" id="node16" title=" " alt="" coords="553,5,592,83"/>
+<area shape="rect" id="node17" title=" " alt="" coords="863,5,901,83"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1225,261,1366,339"/>
+<area shape="rect" id="node18" href="$dc/d4f/classPoint.html" title=" " alt="" coords="965,363,1124,513"/>
+<area shape="rect" id="node19" title=" " alt="" coords="916,153,963,230"/>
+<area shape="rect" id="node20" title=" " alt="" coords="5,399,52,477"/>
+<area shape="rect" id="node21" title=" " alt="" coords="384,399,495,477"/>
+<area shape="rect" id="node23" title=" " alt="" coords="769,1391,928,1483"/>
 </map>
