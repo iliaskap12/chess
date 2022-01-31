@@ -53,6 +53,8 @@ Included By
 
 - :ref:`file_src_App.cpp`
 
+- :ref:`file_src_game_src_Checkboard.cpp`
+
 - :ref:`file_src_game_src_Pawn.cpp`
 
 - :ref:`file_src_game_src_Soldier.cpp`

@@ -33,6 +33,8 @@ Includes
 
 - ``game/Queen.h`` (:ref:`file_src_game_game_Queen.h`)
 
+- ``game/Soldier.h`` (:ref:`file_src_game_game_Soldier.h`)
+
 
 
 

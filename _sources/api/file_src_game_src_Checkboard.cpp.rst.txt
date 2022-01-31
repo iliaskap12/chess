@@ -49,6 +49,8 @@ Includes
 
 - ``game/Soldier.h`` (:ref:`file_src_game_game_Soldier.h`)
 
+- ``graphics/PlayingScreen.h`` (:ref:`file_src_graphics_graphics_PlayingScreen.h`)
+
 - ``memory``
 
 - ``sgg/graphics.h``

@@ -1,5 +1,5 @@
 <map id="Soldier" name="Soldier">
-<area shape="rect" id="node1" title=" " alt="" coords="349,1385,557,1771"/>
+<area shape="rect" id="node1" title=" " alt="" coords="349,1385,557,1859"/>
 <area shape="rect" id="node2" href="$de/dff/classPawn.html" title=" " alt="" coords="234,189,454,1337"/>
 <area shape="rect" id="node3" href="$de/db8/classDrawable.html" title=" " alt="" coords="5,20,157,127"/>
 <area shape="rect" id="node4" href="$d2/d7d/classUpdateable.html" title=" " alt="" coords="181,13,328,134"/>

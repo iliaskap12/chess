@@ -35,13 +35,21 @@ Includes
 
 - ``Promotable.h`` (:ref:`file_src_game_game_Promotable.h`)
 
+- ``optional``
+
 
 
 Included By
 -----------
 
 
+- :ref:`file_src_game_src_Bishop.cpp`
+
 - :ref:`file_src_game_src_Checkboard.cpp`
+
+- :ref:`file_src_game_src_Queen.cpp`
+
+- :ref:`file_src_game_src_Rook.cpp`
 
 - :ref:`file_src_game_src_Soldier.cpp`
 
