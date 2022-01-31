@@ -5,13 +5,15 @@
 We installed and built on Ubuntu using the following:
 
 - Ubuntu 21.04 hirsute hippo
-- g++11
+- g++11 or clang-13 (possibly works also with older versions, but it is not tested)
 - -std=c++20
-- cmake version 3.22.1
-- Ninja generator
+- cmake version 3.7+
+- Ninja generator with g++-11 / gmake with clang-13
 
-We used CMake with FetchContent to include the SGG Library so there souldn't be many dependencies issues - at least  
-we didn't face any. If OpenGL is missing - a common enough issue on Ubuntu, to install run the following:
+We used CMake with the vcpkg package manager to include the SGG Library so there shouldn't be many dependencies issues
+
+- at least  
+  we didn't face any. If OpenGL is missing - a common enough issue on Ubuntu, to install run the following:
 
 ```
 sudo apt-get update
@@ -52,7 +54,7 @@ sudo apt-get update
 sudo apt-get install -y ninja-build
 ```
 
-On our systems the default installation for each respectively was:
+On our systems the default installation for each respectively is:
 
 - /usr/bin/gcc-11
 - /usr/bin/g++-11
@@ -93,10 +95,7 @@ cmake -S . \
  -B cmake-build-release \
  -DCMAKE_CXX_COMPILER=/usr/bin/g++-11 \
  -DCMAKE_MAKE_PROGRAM=/usr/bin/ninja \
- -DCMAKE_CXX_STANDARD=20 \
- -DCMAKE_CXX_STANDARD_REQUIRED=ON \
  -DCMAKE_BUILD_TYPE=Release \
- -DCMAKE_CXX_EXTENSIONS=OFF \
  -G Ninja && \
 cmake --build cmake-build-release --target chess
 ```
@@ -104,8 +103,9 @@ cmake --build cmake-build-release --target chess
 Be sure to change the installation paths of the compiler and the generator build engine if they are different on your
 system or you want to use other tools. ***The program hasn't been tested with different toolchains though.***
 
-FInally, to run the program run:
+Finally, to run the program run:
 
 ```
-./cmake-build-release/src/chess
+cd ./cmake-build-release/src 
+./chess
 ```
