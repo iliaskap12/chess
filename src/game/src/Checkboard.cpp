@@ -10,6 +10,7 @@
 #include <game/Soldier.h>
 #include <memory>
 #include <sgg/graphics.h>
+#include "graphics/PlayingScreen.h"
 
 using Squares = std::array<std::array<std::shared_ptr<Square>, Checkboard::sideSize>, Checkboard::sideSize>;
 
@@ -308,8 +309,6 @@ void Checkboard::movePawn(const std::shared_ptr<Square> &square) {
           const int currectColumn{this->markedPawn.lock()->getSquare().lock()->getColumn()};
 
           const int soldierDirection{square->getColumn() - currectColumn};
-          //          const auto enPassantSquare { this->getSquare(std::make_pair(currectRow, currectColumn > 0 ? 1 : -1)) };
-          // next squares
 
           if ((soldier != nullptr) && (soldier->isEnPassant())) {
             const auto sameRow{std::abs(soldier->getSquare().lock()->getRow() - currectRow) == 0};
@@ -537,7 +536,7 @@ void Checkboard::checkForCheckmate(const std::shared_ptr<Pawn> &threat) {
         continue;
       }
 
-      std::ranges::for_each(advanceableSquares, [&square, this, &threat, &king, &availableSquares](const std::pair<int, int> &pair) {
+      std::ranges::for_each(advanceableSquares, [this, &threat, &king, &availableSquares](const std::pair<int, int> &pair) {
         if (*threat->getSquare().lock() == *this->getSquare(pair).lock()) {
           availableSquares.push_back(this->getSquare(pair).lock());
         } else {
@@ -567,8 +566,16 @@ std::weak_ptr<King> Checkboard::getKing(const PawnColor &color) const {
 void Checkboard::setPawnMoving(bool pawn_moving) {
   this->pawnMoving = pawn_moving;
   if (!this->enPassantCapture.expired()) {
+    std::shared_ptr<PlayingScreen> playingScreen{static_pointer_cast<PlayingScreen>(static_cast<App *>(graphics::getUserData())->getScreen())};
+    std::shared_ptr<Square> square{playingScreen->getSquare(this->enPassantCapture.lock())};
+    if (square != nullptr) {
+      square->setRow(20);
+      this->enPassantCapture.lock()->getSquare().lock()->unregisterPawn();
+      square->registerPawn(this->enPassantCapture.lock());
+    } else {
+      this->enPassantCapture.lock()->getSquare().lock()->unregisterPawn();
+    }
     this->enPassantCapture.lock()->playCaptureSound();
-    this->enPassantCapture.lock()->getSquare().lock()->unregisterPawn();
     this->enPassantCapture.reset();
   }
 

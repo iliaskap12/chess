@@ -121,7 +121,15 @@ std::pair<int, int> Soldier::addEnPassant() {
     const bool hasPawn{checkboard->getSquare(nextPawn).lock()->hasPawn()};
     if (hasPawn && (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn()))) {
       if (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn())->isEnPassant()) {
-        return std::make_pair(nextRow + Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() - 1);
+        const auto candidate{std::make_pair(nextRow + Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() - 1)};
+        if (this->bannedEnPassantSquare.has_value()) {
+          const auto bannedSquare{std::make_pair(this->bannedEnPassantSquare.value().first + nextRow, this->bannedEnPassantSquare.value().second)};
+          if (bannedSquare != candidate) {
+            return candidate;
+          }
+        } else {
+          return candidate;
+        }
       }
     }
   }
@@ -132,7 +140,15 @@ std::pair<int, int> Soldier::addEnPassant() {
     const bool hasPawn{checkboard->getSquare(nextPawn).lock()->hasPawn()};
     if (hasPawn && (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn()))) {
       if (std::dynamic_pointer_cast<Soldier>(checkboard->getSquare(nextPawn).lock()->getPawn())->isEnPassant()) {
-        return std::make_pair(nextRow + Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() + 1);
+        const auto candidate{std::make_pair(nextRow + Pawn::getSquare().lock()->getRow(), Pawn::getSquare().lock()->getColumn() + 1)};
+        if (this->bannedEnPassantSquare.has_value()) {
+          const auto bannedSquare{std::make_pair(this->bannedEnPassantSquare.value().first + nextRow, this->bannedEnPassantSquare.value().second)};
+          if (bannedSquare != candidate) {
+            return candidate;
+          }
+        } else {
+          return candidate;
+        }
       }
     }
   }
@@ -142,4 +158,8 @@ std::pair<int, int> Soldier::addEnPassant() {
 
 bool Soldier::isEnPassant() const {
   return this->enPassant;
+}
+
+void Soldier::banEnPassantOn(const std::pair<int, int> &square) {
+  this->bannedEnPassantSquare.emplace(std::move(square));
 }
