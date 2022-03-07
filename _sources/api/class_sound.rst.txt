@@ -24,6 +24,7 @@ Class Documentation
 
 
 .. doxygenclass:: Sound
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

@@ -11,3 +11,4 @@ Enum Documentation
 
 
 .. doxygenenum:: PawnColor
+   :project: Chess

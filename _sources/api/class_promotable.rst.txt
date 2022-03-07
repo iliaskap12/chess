@@ -20,6 +20,7 @@ Class Documentation
 
 
 .. doxygenclass:: Promotable
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

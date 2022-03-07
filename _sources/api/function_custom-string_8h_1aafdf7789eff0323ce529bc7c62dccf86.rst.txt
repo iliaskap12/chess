@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: stringHash(const char *)
+   :project: Chess

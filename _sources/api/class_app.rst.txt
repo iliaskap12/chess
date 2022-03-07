@@ -21,6 +21,7 @@ Class Documentation
 
 
 .. doxygenclass:: App
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

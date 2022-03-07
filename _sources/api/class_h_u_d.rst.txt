@@ -30,6 +30,7 @@ Class Documentation
 
 
 .. doxygenclass:: HUD
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

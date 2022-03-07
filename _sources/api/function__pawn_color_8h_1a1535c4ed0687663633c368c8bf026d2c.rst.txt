@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: operator+(const T&, const PawnColor&)
+   :project: Chess

@@ -20,6 +20,7 @@ Class Documentation
 
 
 .. doxygenclass:: OpeningScreen
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

@@ -11,3 +11,4 @@ Function Documentation
 
 
 .. doxygenfunction:: custom_string::split(const std::string&, const std::string&)
+   :project: Chess

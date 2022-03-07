@@ -20,6 +20,7 @@ Class Documentation
 
 
 .. doxygenclass:: Movable
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

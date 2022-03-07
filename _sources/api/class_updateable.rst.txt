@@ -28,6 +28,7 @@ Class Documentation
 
 
 .. doxygenclass:: Updateable
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

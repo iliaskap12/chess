@@ -20,6 +20,7 @@ Class Documentation
 
 
 .. doxygenclass:: MoveSound
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:

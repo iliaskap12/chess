@@ -28,6 +28,7 @@ Class Documentation
 
 
 .. doxygenclass:: Drawable
+   :project: Chess
    :members:
    :protected-members:
    :undoc-members:
